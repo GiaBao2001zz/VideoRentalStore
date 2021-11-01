@@ -1,0 +1,16 @@
+C:\Users\Chikitori\source\repos\VideoRentalStore\bin\Debug\VideoRentalStore.exe.config
+C:\Users\Chikitori\source\repos\VideoRentalStore\bin\Debug\VideoRentalStore.exe
+C:\Users\Chikitori\source\repos\VideoRentalStore\bin\Debug\VideoRentalStore.pdb
+C:\Users\Chikitori\source\repos\VideoRentalStore\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.Login.resources
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.Properties.Resources.resources
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.GenerateResource.cache
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CoreCompileInputs.cache
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.exe
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.pdb
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.Main_User.resources
+C:\Users\Chikitori\source\repos\VideoRentalStore\bin\Debug\dje-NE\VideoRentalStore.resources.dll
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\VideoRentalStore.Login.dje-NE.resources
+C:\Users\Chikitori\source\repos\VideoRentalStore\obj\Debug\dje-NE\VideoRentalStore.resources.dll

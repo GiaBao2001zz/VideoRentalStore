@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TextBox_UserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="TextBox_UserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 253</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBox_UserName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TextBox_UserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>457, 44</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBox_UserName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TextBox_UserName.Name" xml:space="preserve">
+    <value>TextBox_UserName</value>
+  </data>
+  <data name="&gt;&gt;TextBox_UserName.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBox_UserName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_UserName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>995, 571</value>
+  </data>
+  <data name="Button_CancelLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM4AAAA0CAYAAADCFge7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKwSURBVHhe7d3PS1RRGMbx/qJ2bdq1alWbgiBalAsJCozA
+        iIhoEWFIqIsRIsOgHyYmIwZJDMUUDsWElUg4CdrPEdSiIVxILd54zty5Ns2dO/oune8HHhDGmdV5mHuO
+        ct5dlUrFCCHbC8UhxBGKQ4gjFIcQRygOIY5QHEIcSS3Oyvc1G5/J2dnsdTt+75Ltv3HKdvceIWRHRutb
+        6/z0wx4bKU7Zt9XlxF4oTYvzZG46fFD3ZL9NzRfs9Zf3Vq6sGrBTaX1rnT9dKNrFx5mw/lWgpH40FEct
+        Oz85YCfHrtra+s/oI4H282tjPRSoc/SKLS5/rutJXXFUmkPD3TYxl4/eCmB66a0dvXPBSl8Xk4ujbxpK
+        AzTSI5z2Pw3F0Z5Gj2cAkvW/uG+Dz0c3i6PTM22E2NMAzW38+W2Hb5+z2U+lanF0cqBNEIB0t15N2LXc
+        cLU4OrfWERyAdKWVj+EALRTnwM0uW/pRjl4C0Iwe1/b0HasWZ+/AiXBmDaA1/ZdBKI5+ALA1FAdwoDiA
+        A8UBHCgO4EBxAAeKAzhQHMCB4gAOFAdwoDiAA8UBHCgO4EBxAAeKAzhQHMCB4gAOFAdwoDiAQ1wcXT6g
+        SwgAtBYXR5cRMokA2Jq4OLqNXRdLA0ina9R0nVooTib/INyLCyCdhhJoOEEojsYXHBw6wz4HaKEr22uP
+        3uWrxVH6nt21wcJY9DKA/2kyocZ6qi9xcTSxQPM/ZssL0a8BqNEkDz2V1eaCxsVRNL5AYwy4RxrYpNJ0
+        jFy2/Hwx7kpdcZTChzfhNvahl9nobUD70hQPfdP8WxqloTiKHts0A0Qt0ykCA6fQTjSAQPsZTVzXCJyk
+        se2JxalFLdPR275MZ/ijDyHtEE3v0CHA+EwusRdKanEIIcmhOIQ4QnEIcYTiEOIIxSFk26nYX63onEHk
+        yca3AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Button_CancelLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="Button_CancelLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>709, 475</value>
+  </data>
+  <data name="Button_CancelLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Button_CancelLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 52</value>
+  </data>
+  <data name="Button_CancelLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Button_CancelLogin.Name" xml:space="preserve">
+    <value>Button_CancelLogin</value>
+  </data>
+  <data name="&gt;&gt;Button_CancelLogin.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuThinButton2, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Button_CancelLogin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button_CancelLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label_ForgotPass.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_ForgotPass.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Underline</value>
+  </data>
+  <data name="Label_ForgotPass.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_ForgotPass.Location" type="System.Drawing.Point, System.Drawing">
+    <value>781, 417</value>
+  </data>
+  <data name="Label_ForgotPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="Label_ForgotPass.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label_ForgotPass.Text" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="&gt;&gt;Label_ForgotPass.Name" xml:space="preserve">
+    <value>Label_ForgotPass</value>
+  </data>
+  <data name="&gt;&gt;Label_ForgotPass.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_ForgotPass.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_ForgotPass.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button_Login.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAM4AAAA0CAYAAADCFge7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKwSURBVHhe7d3PS1RRGMbx/qJ2bdq1alWbgiBalAsJCozA
+        iIhoEWFIqIsRIsOgHyYmIwZJDMUUDsWElUg4CdrPEdSiIVxILd54zty5Ns2dO/oune8HHhDGmdV5mHuO
+        ct5dlUrFCCHbC8UhxBGKQ4gjFIcQRygOIY5QHEIcSS3Oyvc1G5/J2dnsdTt+75Ltv3HKdvceIWRHRutb
+        6/z0wx4bKU7Zt9XlxF4oTYvzZG46fFD3ZL9NzRfs9Zf3Vq6sGrBTaX1rnT9dKNrFx5mw/lWgpH40FEct
+        Oz85YCfHrtra+s/oI4H282tjPRSoc/SKLS5/rutJXXFUmkPD3TYxl4/eCmB66a0dvXPBSl8Xk4ujbxpK
+        AzTSI5z2Pw3F0Z5Gj2cAkvW/uG+Dz0c3i6PTM22E2NMAzW38+W2Hb5+z2U+lanF0cqBNEIB0t15N2LXc
+        cLU4OrfWERyAdKWVj+EALRTnwM0uW/pRjl4C0Iwe1/b0HasWZ+/AiXBmDaA1/ZdBKI5+ALA1FAdwoDiA
+        A8UBHCgO4EBxAAeKAzhQHMCB4gAOFAdwoDiAA8UBHCgO4EBxAAeKAzhQHMCB4gAOFAdwoDiAQ1wcXT6g
+        SwgAtBYXR5cRMokA2Jq4OLqNXRdLA0ina9R0nVooTib/INyLCyCdhhJoOEEojsYXHBw6wz4HaKEr22uP
+        3uWrxVH6nt21wcJY9DKA/2kyocZ6qi9xcTSxQPM/ZssL0a8BqNEkDz2V1eaCxsVRNL5AYwy4RxrYpNJ0
+        jFy2/Hwx7kpdcZTChzfhNvahl9nobUD70hQPfdP8WxqloTiKHts0A0Qt0ykCA6fQTjSAQPsZTVzXCJyk
+        se2JxalFLdPR275MZ/ijDyHtEE3v0CHA+EwusRdKanEIIcmhOIQ4QnEIcYTiEOIIxSFk26nYX63onEHk
+        yca3AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Button_Login.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="Button_Login.Location" type="System.Drawing.Point, System.Drawing">
+    <value>445, 475</value>
+  </data>
+  <data name="Button_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="Button_Login.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 52</value>
+  </data>
+  <data name="Button_Login.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Button_Login.Name" xml:space="preserve">
+    <value>Button_Login</value>
+  </data>
+  <data name="&gt;&gt;Button_Login.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuThinButton2, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Button_Login.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Button_Login.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label_CreateAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_CreateAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Underline</value>
+  </data>
+  <data name="Label_CreateAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_CreateAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>710, 143</value>
+  </data>
+  <data name="Label_CreateAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 21</value>
+  </data>
+  <data name="Label_CreateAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_CreateAccount.Text" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="&gt;&gt;Label_CreateAccount.Name" xml:space="preserve">
+    <value>Label_CreateAccount</value>
+  </data>
+  <data name="&gt;&gt;Label_CreateAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_CreateAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_CreateAccount.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label_DontHaveAccount.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_DontHaveAccount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Label_DontHaveAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_DontHaveAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 143</value>
+  </data>
+  <data name="Label_DontHaveAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 21</value>
+  </data>
+  <data name="Label_DontHaveAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_DontHaveAccount.Text" xml:space="preserve">
+    <value>Don't have an account? Create one</value>
+  </data>
+  <data name="&gt;&gt;Label_DontHaveAccount.Name" xml:space="preserve">
+    <value>Label_DontHaveAccount</value>
+  </data>
+  <data name="&gt;&gt;Label_DontHaveAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_DontHaveAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_DontHaveAccount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label_TitleLogin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_TitleLogin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 32pt</value>
+  </data>
+  <data name="Label_TitleLogin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_TitleLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, 62</value>
+  </data>
+  <data name="Label_TitleLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 59</value>
+  </data>
+  <data name="Label_TitleLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_TitleLogin.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;Label_TitleLogin.Name" xml:space="preserve">
+    <value>Label_TitleLogin</value>
+  </data>
+  <data name="&gt;&gt;Label_TitleLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_TitleLogin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_TitleLogin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Label_RememberMe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_RememberMe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Label_RememberMe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_RememberMe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 417</value>
+  </data>
+  <data name="Label_RememberMe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 21</value>
+  </data>
+  <data name="Label_RememberMe.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_RememberMe.Text" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="&gt;&gt;Label_RememberMe.Name" xml:space="preserve">
+    <value>Label_RememberMe</value>
+  </data>
+  <data name="&gt;&gt;Label_RememberMe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_RememberMe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Label_RememberMe.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="CheckBox_RememberMe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 419</value>
+  </data>
+  <data name="CheckBox_RememberMe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="CheckBox_RememberMe.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_RememberMe.Name" xml:space="preserve">
+    <value>CheckBox_RememberMe</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_RememberMe.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCheckbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_RememberMe.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_RememberMe.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TextBox_Password.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="TextBox_Password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 324</value>
+  </data>
+  <data name="TextBox_Password.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="TextBox_Password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>457, 44</value>
+  </data>
+  <data name="TextBox_Password.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Password.Name" xml:space="preserve">
+    <value>TextBox_Password</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Password.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuMaterialTextbox, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Password.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextBox_Password.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Picture_Store_SM3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Picture_Store_SM3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 456</value>
+  </data>
+  <data name="Picture_Store_SM3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 71</value>
+  </data>
+  <data name="Picture_Store_SM3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Picture_Store_SM3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM3.Name" xml:space="preserve">
+    <value>Picture_Store_SM3</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM3.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuImageButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Picture_Store_SM2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Picture_Store_SM2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 456</value>
+  </data>
+  <data name="Picture_Store_SM2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 71</value>
+  </data>
+  <data name="Picture_Store_SM2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Picture_Store_SM2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM2.Name" xml:space="preserve">
+    <value>Picture_Store_SM2</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM2.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuImageButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Picture_Store_SM1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Picture_Store_SM1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 456</value>
+  </data>
+  <data name="Picture_Store_SM1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 71</value>
+  </data>
+  <data name="Picture_Store_SM1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Picture_Store_SM1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM1.Name" xml:space="preserve">
+    <value>Picture_Store_SM1</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuImageButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Picture_Store_SM1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label_StoreInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_StoreInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="Label_StoreInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_StoreInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 385</value>
+  </data>
+  <data name="Label_StoreInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 42</value>
+  </data>
+  <data name="Label_StoreInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Label_StoreInfo.Text" xml:space="preserve">
+    <value>Want to know more about us? 
+Check out our social media!</value>
+  </data>
+  <data name="&gt;&gt;Label_StoreInfo.Name" xml:space="preserve">
+    <value>Label_StoreInfo</value>
+  </data>
+  <data name="&gt;&gt;Label_StoreInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_StoreInfo.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Label_StoreInfo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label_NameOfStore.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label_NameOfStore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 36pt, style=Underline</value>
+  </data>
+  <data name="Label_NameOfStore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label_NameOfStore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 186</value>
+  </data>
+  <data name="Label_NameOfStore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 130</value>
+  </data>
+  <data name="Label_NameOfStore.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Label_NameOfStore.Text" xml:space="preserve">
+    <value>Name of 
+the store</value>
+  </data>
+  <data name="Label_NameOfStore.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Label_NameOfStore.Name" xml:space="preserve">
+    <value>Label_NameOfStore</value>
+  </data>
+  <data name="&gt;&gt;Label_NameOfStore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label_NameOfStore.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Label_NameOfStore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Picture_StoreLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Picture_StoreLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 33</value>
+  </data>
+  <data name="Picture_StoreLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 131</value>
+  </data>
+  <data name="Picture_StoreLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Picture_StoreLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Picture_StoreLogo.Name" xml:space="preserve">
+    <value>Picture_StoreLogo</value>
+  </data>
+  <data name="&gt;&gt;Picture_StoreLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Picture_StoreLogo.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Picture_StoreLogo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 571</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;bunifuDragControl1.Name" xml:space="preserve">
+    <value>bunifuDragControl1</value>
+  </data>
+  <data name="&gt;&gt;bunifuDragControl1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Name" xml:space="preserve">
+    <value>bunifuElipse1</value>
+  </data>
+  <data name="&gt;&gt;bunifuElipse1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuElipse, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
+</root>
