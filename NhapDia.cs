@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VideoRentalStore
 {
-    public partial class Main_Staff : Form
+    public partial class NhapDia : Form
     {
-        public Main_Staff()
+        public NhapDia()
         {
             InitializeComponent();
         }

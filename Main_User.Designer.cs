@@ -29,6 +29,7 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_User));
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.Button_ContactUs = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -39,6 +40,7 @@ namespace VideoRentalStore
             this.Panel_Logo = new System.Windows.Forms.Panel();
             this.Picture_Logo = new System.Windows.Forms.PictureBox();
             this.Panel_Title = new System.Windows.Forms.Panel();
+            this.DropDown_UserInfo = new Bunifu.Framework.UI.BunifuDropdown();
             this.Picture_Balance = new System.Windows.Forms.PictureBox();
             this.Label_FormName = new System.Windows.Forms.Label();
             this.Label_Currency = new System.Windows.Forms.Label();
@@ -47,6 +49,7 @@ namespace VideoRentalStore
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Picture_UserPFP = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_SwtichForm = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_Menu.SuspendLayout();
             this.Panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).BeginInit();
@@ -273,6 +276,7 @@ namespace VideoRentalStore
             // Panel_Title
             // 
             this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Panel_Title.Controls.Add(this.DropDown_UserInfo);
             this.Panel_Title.Controls.Add(this.Picture_Balance);
             this.Panel_Title.Controls.Add(this.Label_FormName);
             this.Panel_Title.Controls.Add(this.Label_Currency);
@@ -285,6 +289,20 @@ namespace VideoRentalStore
             this.Panel_Title.Name = "Panel_Title";
             this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
             this.Panel_Title.TabIndex = 1;
+            // 
+            // DropDown_UserInfo
+            // 
+            this.DropDown_UserInfo.BackColor = System.Drawing.Color.Transparent;
+            this.DropDown_UserInfo.BorderRadius = 3;
+            this.DropDown_UserInfo.ForeColor = System.Drawing.Color.White;
+            this.DropDown_UserInfo.Items = new string[0];
+            this.DropDown_UserInfo.Location = new System.Drawing.Point(106, 3);
+            this.DropDown_UserInfo.Name = "DropDown_UserInfo";
+            this.DropDown_UserInfo.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DropDown_UserInfo.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.DropDown_UserInfo.selectedIndex = -1;
+            this.DropDown_UserInfo.Size = new System.Drawing.Size(217, 35);
+            this.DropDown_UserInfo.TabIndex = 7;
             // 
             // Picture_Balance
             // 
@@ -383,6 +401,11 @@ namespace VideoRentalStore
             this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
             this.Panel_SwtichForm.TabIndex = 2;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this.DropDown_UserInfo;
+            // 
             // Main_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +449,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel Panel_SwtichForm;
         private System.Windows.Forms.PictureBox Picture_Balance;
         private System.Windows.Forms.PictureBox Picture_Logo;
+        private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

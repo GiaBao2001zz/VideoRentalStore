@@ -35,5 +35,27 @@ namespace VideoRentalStore
         {
 
         }
+
+        private void Button_CancelLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Label_CreateAccount_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            var Signin =new SignIn();
+            Signin.Show();
+            
+
+
+        }
+        // DragControl
+
+
+
+
+
     }
 }
