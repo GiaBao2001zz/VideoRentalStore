@@ -34,8 +34,12 @@ namespace VideoRentalStore
             this.TextBox_UserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Elipse_Login = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_StoreInfo = new System.Windows.Forms.Panel();
+            this.Picture_Store_SM3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Picture_Store_SM2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Picture_Store_SM1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Label_StoreInfo = new System.Windows.Forms.Label();
             this.Label_NameOfStore = new System.Windows.Forms.Label();
+            this.Picture_StoreLogo = new System.Windows.Forms.PictureBox();
             this.TextBox_Password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.CheckBox_RememberMe = new Bunifu.Framework.UI.BunifuCheckbox();
             this.Label_RememberMe = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@ namespace VideoRentalStore
             this.DragControl_Login = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Button_CancelLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_Login = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Picture_Store_SM3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Picture_Store_SM2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Picture_Store_SM1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Picture_StoreLogo = new System.Windows.Forms.PictureBox();
             this.Panel_StoreInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Store_SM3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Store_SM2)).BeginInit();
@@ -97,6 +97,48 @@ namespace VideoRentalStore
             this.Panel_StoreInfo.Size = new System.Drawing.Size(359, 571);
             this.Panel_StoreInfo.TabIndex = 0;
             // 
+            // Picture_Store_SM3
+            // 
+            this.Picture_Store_SM3.BackColor = System.Drawing.Color.Transparent;
+            this.Picture_Store_SM3.Image = global::VideoRentalStore.Properties.Resources.instagram;
+            this.Picture_Store_SM3.ImageActive = null;
+            this.Picture_Store_SM3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Picture_Store_SM3.Location = new System.Drawing.Point(257, 456);
+            this.Picture_Store_SM3.Name = "Picture_Store_SM3";
+            this.Picture_Store_SM3.Size = new System.Drawing.Size(71, 71);
+            this.Picture_Store_SM3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_Store_SM3.TabIndex = 4;
+            this.Picture_Store_SM3.TabStop = false;
+            this.Picture_Store_SM3.Zoom = 10;
+            // 
+            // Picture_Store_SM2
+            // 
+            this.Picture_Store_SM2.BackColor = System.Drawing.Color.SeaGreen;
+            this.Picture_Store_SM2.Image = global::VideoRentalStore.Properties.Resources.twitter;
+            this.Picture_Store_SM2.ImageActive = null;
+            this.Picture_Store_SM2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Picture_Store_SM2.Location = new System.Drawing.Point(143, 456);
+            this.Picture_Store_SM2.Name = "Picture_Store_SM2";
+            this.Picture_Store_SM2.Size = new System.Drawing.Size(71, 71);
+            this.Picture_Store_SM2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_Store_SM2.TabIndex = 3;
+            this.Picture_Store_SM2.TabStop = false;
+            this.Picture_Store_SM2.Zoom = 10;
+            // 
+            // Picture_Store_SM1
+            // 
+            this.Picture_Store_SM1.BackColor = System.Drawing.Color.SeaGreen;
+            this.Picture_Store_SM1.Image = global::VideoRentalStore.Properties.Resources.facebook;
+            this.Picture_Store_SM1.ImageActive = null;
+            this.Picture_Store_SM1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Picture_Store_SM1.Location = new System.Drawing.Point(33, 456);
+            this.Picture_Store_SM1.Name = "Picture_Store_SM1";
+            this.Picture_Store_SM1.Size = new System.Drawing.Size(71, 71);
+            this.Picture_Store_SM1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_Store_SM1.TabIndex = 2;
+            this.Picture_Store_SM1.TabStop = false;
+            this.Picture_Store_SM1.Zoom = 10;
+            // 
             // Label_StoreInfo
             // 
             this.Label_StoreInfo.AutoSize = true;
@@ -121,6 +163,17 @@ namespace VideoRentalStore
             this.Label_NameOfStore.TabIndex = 0;
             this.Label_NameOfStore.Text = "Name of \r\nthe store";
             this.Label_NameOfStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Picture_StoreLogo
+            // 
+            this.Picture_StoreLogo.Image = global::VideoRentalStore.Properties.Resources.Logo;
+            this.Picture_StoreLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Picture_StoreLogo.Location = new System.Drawing.Point(100, 33);
+            this.Picture_StoreLogo.Name = "Picture_StoreLogo";
+            this.Picture_StoreLogo.Size = new System.Drawing.Size(137, 131);
+            this.Picture_StoreLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_StoreLogo.TabIndex = 0;
+            this.Picture_StoreLogo.TabStop = false;
             // 
             // TextBox_Password
             // 
@@ -273,59 +326,6 @@ namespace VideoRentalStore
             this.Button_Login.TabIndex = 0;
             this.Button_Login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Picture_Store_SM3
-            // 
-            this.Picture_Store_SM3.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_Store_SM3.Image = global::VideoRentalStore.Properties.Resources.instagram;
-            this.Picture_Store_SM3.ImageActive = null;
-            this.Picture_Store_SM3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM3.Location = new System.Drawing.Point(257, 456);
-            this.Picture_Store_SM3.Name = "Picture_Store_SM3";
-            this.Picture_Store_SM3.Size = new System.Drawing.Size(71, 71);
-            this.Picture_Store_SM3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_Store_SM3.TabIndex = 4;
-            this.Picture_Store_SM3.TabStop = false;
-            this.Picture_Store_SM3.Zoom = 10;
-            // 
-            // Picture_Store_SM2
-            // 
-            this.Picture_Store_SM2.BackColor = System.Drawing.Color.SeaGreen;
-            this.Picture_Store_SM2.Image = global::VideoRentalStore.Properties.Resources.twitter;
-            this.Picture_Store_SM2.ImageActive = null;
-            this.Picture_Store_SM2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM2.Location = new System.Drawing.Point(143, 456);
-            this.Picture_Store_SM2.Name = "Picture_Store_SM2";
-            this.Picture_Store_SM2.Size = new System.Drawing.Size(71, 71);
-            this.Picture_Store_SM2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_Store_SM2.TabIndex = 3;
-            this.Picture_Store_SM2.TabStop = false;
-            this.Picture_Store_SM2.Zoom = 10;
-            // 
-            // Picture_Store_SM1
-            // 
-            this.Picture_Store_SM1.BackColor = System.Drawing.Color.SeaGreen;
-            this.Picture_Store_SM1.Image = global::VideoRentalStore.Properties.Resources.facebook;
-            this.Picture_Store_SM1.ImageActive = null;
-            this.Picture_Store_SM1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM1.Location = new System.Drawing.Point(33, 456);
-            this.Picture_Store_SM1.Name = "Picture_Store_SM1";
-            this.Picture_Store_SM1.Size = new System.Drawing.Size(71, 71);
-            this.Picture_Store_SM1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_Store_SM1.TabIndex = 2;
-            this.Picture_Store_SM1.TabStop = false;
-            this.Picture_Store_SM1.Zoom = 10;
-            // 
-            // Picture_StoreLogo
-            // 
-            this.Picture_StoreLogo.Image = global::VideoRentalStore.Properties.Resources.Logo;
-            this.Picture_StoreLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_StoreLogo.Location = new System.Drawing.Point(100, 33);
-            this.Picture_StoreLogo.Name = "Picture_StoreLogo";
-            this.Picture_StoreLogo.Size = new System.Drawing.Size(137, 131);
-            this.Picture_StoreLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_StoreLogo.TabIndex = 0;
-            this.Picture_StoreLogo.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,9 +343,9 @@ namespace VideoRentalStore
             this.Controls.Add(this.Panel_StoreInfo);
             this.Controls.Add(this.TextBox_UserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.Panel_StoreInfo.ResumeLayout(false);
             this.Panel_StoreInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Store_SM3)).EndInit();

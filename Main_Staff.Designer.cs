@@ -33,16 +33,15 @@ namespace VideoRentalStore
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.Panel_Logo = new System.Windows.Forms.Panel();
             this.Panel_Title = new System.Windows.Forms.Panel();
-            this.Button_RentDisc = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Picture_StaffPFP = new Bunifu.Framework.UI.BunifuImageButton();
             this.Label_UserName = new System.Windows.Forms.Label();
-            this.Label_FormName = new System.Windows.Forms.Label();
-            this.Picture_Logo = new System.Windows.Forms.PictureBox();
             this.Panel_SwtichForm = new System.Windows.Forms.Panel();
+            this.Picture_StaffPFP = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Button_AccountInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_Report = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_AccountManagement = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_ManageGood = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_Request = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Picture_Logo = new System.Windows.Forms.PictureBox();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Logo.SuspendLayout();
             this.Panel_Title.SuspendLayout();
@@ -53,11 +52,11 @@ namespace VideoRentalStore
             // Panel_Menu
             // 
             this.Panel_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Panel_Menu.Controls.Add(this.bunifuFlatButton4);
-            this.Panel_Menu.Controls.Add(this.bunifuFlatButton3);
-            this.Panel_Menu.Controls.Add(this.bunifuFlatButton2);
-            this.Panel_Menu.Controls.Add(this.bunifuFlatButton1);
-            this.Panel_Menu.Controls.Add(this.Button_RentDisc);
+            this.Panel_Menu.Controls.Add(this.Button_AccountInfo);
+            this.Panel_Menu.Controls.Add(this.Button_Report);
+            this.Panel_Menu.Controls.Add(this.Button_AccountManagement);
+            this.Panel_Menu.Controls.Add(this.Button_ManageGood);
+            this.Panel_Menu.Controls.Add(this.Button_Request);
             this.Panel_Menu.Controls.Add(this.Panel_Logo);
             this.Panel_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_Menu.Location = new System.Drawing.Point(0, 0);
@@ -78,7 +77,6 @@ namespace VideoRentalStore
             // Panel_Title
             // 
             this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Panel_Title.Controls.Add(this.Label_FormName);
             this.Panel_Title.Controls.Add(this.Label_UserName);
             this.Panel_Title.Controls.Add(this.Picture_StaffPFP);
             this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top;
@@ -87,180 +85,25 @@ namespace VideoRentalStore
             this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
             this.Panel_Title.TabIndex = 1;
             // 
-            // Button_RentDisc
+            // Label_UserName
             // 
-            this.Button_RentDisc.Activecolor = System.Drawing.Color.Empty;
-            this.Button_RentDisc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button_RentDisc.BorderRadius = 0;
-            this.Button_RentDisc.ButtonText = "Rent/Buy";
-            this.Button_RentDisc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_RentDisc.DisabledColor = System.Drawing.Color.Gray;
-            this.Button_RentDisc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Button_RentDisc.ForeColor = System.Drawing.Color.White;
-            this.Button_RentDisc.Iconcolor = System.Drawing.Color.Transparent;
-            this.Button_RentDisc.Iconimage = ((System.Drawing.Image)(resources.GetObject("Button_RentDisc.Iconimage")));
-            this.Button_RentDisc.Iconimage_right = null;
-            this.Button_RentDisc.Iconimage_right_Selected = null;
-            this.Button_RentDisc.Iconimage_Selected = null;
-            this.Button_RentDisc.IconMarginLeft = 0;
-            this.Button_RentDisc.IconMarginRight = 0;
-            this.Button_RentDisc.IconRightVisible = true;
-            this.Button_RentDisc.IconRightZoom = 0D;
-            this.Button_RentDisc.IconVisible = true;
-            this.Button_RentDisc.IconZoom = 60D;
-            this.Button_RentDisc.IsTab = false;
-            this.Button_RentDisc.Location = new System.Drawing.Point(0, 100);
-            this.Button_RentDisc.Name = "Button_RentDisc";
-            this.Button_RentDisc.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_RentDisc.OnHovercolor = System.Drawing.Color.Empty;
-            this.Button_RentDisc.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.Button_RentDisc.selected = true;
-            this.Button_RentDisc.Size = new System.Drawing.Size(220, 60);
-            this.Button_RentDisc.TabIndex = 2;
-            this.Button_RentDisc.Text = "Rent/Buy";
-            this.Button_RentDisc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button_RentDisc.Textcolor = System.Drawing.Color.White;
-            this.Button_RentDisc.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Label_UserName.AutoSize = true;
+            this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Label_UserName.ForeColor = System.Drawing.Color.White;
+            this.Label_UserName.Location = new System.Drawing.Point(106, 66);
+            this.Label_UserName.Name = "Label_UserName";
+            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
+            this.Label_UserName.TabIndex = 2;
+            this.Label_UserName.Text = "Nguyen Trong Tinh";
             // 
-            // bunifuFlatButton1
+            // Panel_SwtichForm
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Rent/Buy";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 60D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 160);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton1.selected = true;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(220, 60);
-            this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "Rent/Buy";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 12F);
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Rent/Buy";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton2.ForeColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 60D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 220);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton2.selected = true;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(220, 60);
-            this.bunifuFlatButton2.TabIndex = 4;
-            this.bunifuFlatButton2.Text = "Rent/Buy";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 12F);
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Rent/Buy";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 280);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton3.selected = true;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(220, 60);
-            this.bunifuFlatButton3.TabIndex = 5;
-            this.bunifuFlatButton3.Text = "Rent/Buy";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Segoe UI", 12F);
-            // 
-            // bunifuFlatButton4
-            // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Rent/Buy";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton4.ForeColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 60D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 340);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton4.selected = true;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(220, 60);
-            this.bunifuFlatButton4.TabIndex = 6;
-            this.bunifuFlatButton4.Text = "Rent/Buy";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Panel_SwtichForm.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Panel_SwtichForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_SwtichForm.Location = new System.Drawing.Point(220, 100);
+            this.Panel_SwtichForm.Name = "Panel_SwtichForm";
+            this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
+            this.Panel_SwtichForm.TabIndex = 3;
             // 
             // Picture_StaffPFP
             // 
@@ -276,28 +119,181 @@ namespace VideoRentalStore
             this.Picture_StaffPFP.TabStop = false;
             this.Picture_StaffPFP.Zoom = 10;
             // 
-            // Label_UserName
+            // Button_AccountInfo
             // 
-            this.Label_UserName.AutoSize = true;
-            this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(106, 66);
-            this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
-            this.Label_UserName.TabIndex = 2;
-            this.Label_UserName.Text = "Nguyen Trong Tinh";
+            this.Button_AccountInfo.Activecolor = System.Drawing.Color.Empty;
+            this.Button_AccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_AccountInfo.BorderRadius = 0;
+            this.Button_AccountInfo.ButtonText = "Account Infomation";
+            this.Button_AccountInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_AccountInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_AccountInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_AccountInfo.ForeColor = System.Drawing.Color.White;
+            this.Button_AccountInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_AccountInfo.Iconimage = global::VideoRentalStore.Properties.Resources.profile;
+            this.Button_AccountInfo.Iconimage_right = null;
+            this.Button_AccountInfo.Iconimage_right_Selected = null;
+            this.Button_AccountInfo.Iconimage_Selected = null;
+            this.Button_AccountInfo.IconMarginLeft = 0;
+            this.Button_AccountInfo.IconMarginRight = 0;
+            this.Button_AccountInfo.IconRightVisible = true;
+            this.Button_AccountInfo.IconRightZoom = 0D;
+            this.Button_AccountInfo.IconVisible = true;
+            this.Button_AccountInfo.IconZoom = 60D;
+            this.Button_AccountInfo.IsTab = false;
+            this.Button_AccountInfo.Location = new System.Drawing.Point(0, 340);
+            this.Button_AccountInfo.Name = "Button_AccountInfo";
+            this.Button_AccountInfo.Normalcolor = System.Drawing.Color.Empty;
+            this.Button_AccountInfo.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_AccountInfo.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.Button_AccountInfo.selected = true;
+            this.Button_AccountInfo.Size = new System.Drawing.Size(220, 60);
+            this.Button_AccountInfo.TabIndex = 6;
+            this.Button_AccountInfo.Text = "Account Infomation";
+            this.Button_AccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_AccountInfo.Textcolor = System.Drawing.Color.White;
+            this.Button_AccountInfo.TextFont = new System.Drawing.Font("Segoe UI", 12F);
             // 
-            // Label_FormName
+            // Button_Report
             // 
-            this.Label_FormName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Label_FormName.AutoSize = true;
-            this.Label_FormName.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Label_FormName.ForeColor = System.Drawing.Color.White;
-            this.Label_FormName.Location = new System.Drawing.Point(490, 44);
-            this.Label_FormName.Name = "Label_FormName";
-            this.Label_FormName.Size = new System.Drawing.Size(99, 25);
-            this.Label_FormName.TabIndex = 6;
-            this.Label_FormName.Text = "Tab_Name";
+            this.Button_Report.Activecolor = System.Drawing.Color.Empty;
+            this.Button_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Report.BorderRadius = 0;
+            this.Button_Report.ButtonText = "Report";
+            this.Button_Report.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Report.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_Report.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Report.ForeColor = System.Drawing.Color.White;
+            this.Button_Report.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_Report.Iconimage = global::VideoRentalStore.Properties.Resources.Report;
+            this.Button_Report.Iconimage_right = null;
+            this.Button_Report.Iconimage_right_Selected = null;
+            this.Button_Report.Iconimage_Selected = null;
+            this.Button_Report.IconMarginLeft = 0;
+            this.Button_Report.IconMarginRight = 0;
+            this.Button_Report.IconRightVisible = true;
+            this.Button_Report.IconRightZoom = 0D;
+            this.Button_Report.IconVisible = true;
+            this.Button_Report.IconZoom = 60D;
+            this.Button_Report.IsTab = false;
+            this.Button_Report.Location = new System.Drawing.Point(0, 280);
+            this.Button_Report.Name = "Button_Report";
+            this.Button_Report.Normalcolor = System.Drawing.Color.Empty;
+            this.Button_Report.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_Report.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.Button_Report.selected = true;
+            this.Button_Report.Size = new System.Drawing.Size(220, 60);
+            this.Button_Report.TabIndex = 5;
+            this.Button_Report.Text = "Report";
+            this.Button_Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Report.Textcolor = System.Drawing.Color.White;
+            this.Button_Report.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            // 
+            // Button_AccountManagement
+            // 
+            this.Button_AccountManagement.Activecolor = System.Drawing.Color.Empty;
+            this.Button_AccountManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_AccountManagement.BorderRadius = 0;
+            this.Button_AccountManagement.ButtonText = "Accounts management";
+            this.Button_AccountManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_AccountManagement.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_AccountManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_AccountManagement.ForeColor = System.Drawing.Color.White;
+            this.Button_AccountManagement.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_AccountManagement.Iconimage = global::VideoRentalStore.Properties.Resources.group;
+            this.Button_AccountManagement.Iconimage_right = null;
+            this.Button_AccountManagement.Iconimage_right_Selected = null;
+            this.Button_AccountManagement.Iconimage_Selected = null;
+            this.Button_AccountManagement.IconMarginLeft = 0;
+            this.Button_AccountManagement.IconMarginRight = 0;
+            this.Button_AccountManagement.IconRightVisible = true;
+            this.Button_AccountManagement.IconRightZoom = 0D;
+            this.Button_AccountManagement.IconVisible = true;
+            this.Button_AccountManagement.IconZoom = 60D;
+            this.Button_AccountManagement.IsTab = false;
+            this.Button_AccountManagement.Location = new System.Drawing.Point(0, 220);
+            this.Button_AccountManagement.Name = "Button_AccountManagement";
+            this.Button_AccountManagement.Normalcolor = System.Drawing.Color.Empty;
+            this.Button_AccountManagement.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_AccountManagement.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.Button_AccountManagement.selected = true;
+            this.Button_AccountManagement.Size = new System.Drawing.Size(220, 60);
+            this.Button_AccountManagement.TabIndex = 4;
+            this.Button_AccountManagement.Text = "Accounts management";
+            this.Button_AccountManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_AccountManagement.Textcolor = System.Drawing.Color.White;
+            this.Button_AccountManagement.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            // 
+            // Button_ManageGood
+            // 
+            this.Button_ManageGood.Activecolor = System.Drawing.Color.Empty;
+            this.Button_ManageGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_ManageGood.BorderRadius = 0;
+            this.Button_ManageGood.ButtonText = "Manage Stocks";
+            this.Button_ManageGood.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_ManageGood.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_ManageGood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_ManageGood.ForeColor = System.Drawing.Color.White;
+            this.Button_ManageGood.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_ManageGood.Iconimage = global::VideoRentalStore.Properties.Resources.inventory;
+            this.Button_ManageGood.Iconimage_right = null;
+            this.Button_ManageGood.Iconimage_right_Selected = null;
+            this.Button_ManageGood.Iconimage_Selected = null;
+            this.Button_ManageGood.IconMarginLeft = 0;
+            this.Button_ManageGood.IconMarginRight = 0;
+            this.Button_ManageGood.IconRightVisible = true;
+            this.Button_ManageGood.IconRightZoom = 0D;
+            this.Button_ManageGood.IconVisible = true;
+            this.Button_ManageGood.IconZoom = 70D;
+            this.Button_ManageGood.IsTab = false;
+            this.Button_ManageGood.Location = new System.Drawing.Point(0, 160);
+            this.Button_ManageGood.Name = "Button_ManageGood";
+            this.Button_ManageGood.Normalcolor = System.Drawing.Color.Empty;
+            this.Button_ManageGood.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_ManageGood.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.Button_ManageGood.selected = true;
+            this.Button_ManageGood.Size = new System.Drawing.Size(220, 60);
+            this.Button_ManageGood.TabIndex = 3;
+            this.Button_ManageGood.Text = "Manage Stocks";
+            this.Button_ManageGood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_ManageGood.Textcolor = System.Drawing.Color.White;
+            this.Button_ManageGood.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            // 
+            // Button_Request
+            // 
+            this.Button_Request.Activecolor = System.Drawing.Color.Empty;
+            this.Button_Request.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_Request.BorderRadius = 0;
+            this.Button_Request.ButtonText = "Rent/Buy Request";
+            this.Button_Request.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Request.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_Request.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_Request.ForeColor = System.Drawing.Color.White;
+            this.Button_Request.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_Request.Iconimage = global::VideoRentalStore.Properties.Resources.request;
+            this.Button_Request.Iconimage_right = null;
+            this.Button_Request.Iconimage_right_Selected = null;
+            this.Button_Request.Iconimage_Selected = null;
+            this.Button_Request.IconMarginLeft = 0;
+            this.Button_Request.IconMarginRight = 0;
+            this.Button_Request.IconRightVisible = true;
+            this.Button_Request.IconRightZoom = 0D;
+            this.Button_Request.IconVisible = true;
+            this.Button_Request.IconZoom = 60D;
+            this.Button_Request.IsTab = false;
+            this.Button_Request.Location = new System.Drawing.Point(0, 100);
+            this.Button_Request.Name = "Button_Request";
+            this.Button_Request.Normalcolor = System.Drawing.Color.Empty;
+            this.Button_Request.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_Request.OnHoverTextColor = System.Drawing.Color.Empty;
+            this.Button_Request.selected = true;
+            this.Button_Request.Size = new System.Drawing.Size(220, 60);
+            this.Button_Request.TabIndex = 2;
+            this.Button_Request.Text = "Rent/Buy Request";
+            this.Button_Request.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Request.Textcolor = System.Drawing.Color.White;
+            this.Button_Request.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_Request.Click += new System.EventHandler(this.Button_Request_Click);
             // 
             // Picture_Logo
             // 
@@ -308,15 +304,6 @@ namespace VideoRentalStore
             this.Picture_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_Logo.TabIndex = 1;
             this.Picture_Logo.TabStop = false;
-            // 
-            // Panel_SwtichForm
-            // 
-            this.Panel_SwtichForm.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Panel_SwtichForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_SwtichForm.Location = new System.Drawing.Point(220, 100);
-            this.Panel_SwtichForm.Name = "Panel_SwtichForm";
-            this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
-            this.Panel_SwtichForm.TabIndex = 3;
             // 
             // Main_Staff
             // 
@@ -344,14 +331,13 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel Panel_Menu;
         private System.Windows.Forms.Panel Panel_Logo;
         private System.Windows.Forms.Panel Panel_Title;
-        private Bunifu.Framework.UI.BunifuFlatButton Button_RentDisc;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_Request;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_AccountInfo;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_Report;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_AccountManagement;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_ManageGood;
         private Bunifu.Framework.UI.BunifuImageButton Picture_StaffPFP;
         private System.Windows.Forms.Label Label_UserName;
-        private System.Windows.Forms.Label Label_FormName;
         private System.Windows.Forms.PictureBox Picture_Logo;
         private System.Windows.Forms.Panel Panel_SwtichForm;
     }

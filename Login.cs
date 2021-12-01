@@ -51,6 +51,11 @@ namespace VideoRentalStore
 
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
         // DragControl
 
 
