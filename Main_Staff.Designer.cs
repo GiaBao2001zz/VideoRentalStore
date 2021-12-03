@@ -153,6 +153,7 @@ namespace VideoRentalStore
             this.Button_AccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_AccountInfo.Textcolor = System.Drawing.Color.White;
             this.Button_AccountInfo.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_AccountInfo.Click += new System.EventHandler(this.Button_AccountInfo_Click);
             // 
             // Button_Report
             // 
@@ -223,6 +224,7 @@ namespace VideoRentalStore
             this.Button_AccountManagement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_AccountManagement.Textcolor = System.Drawing.Color.White;
             this.Button_AccountManagement.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_AccountManagement.Click += new System.EventHandler(this.Button_AccountManagement_Click);
             // 
             // Button_ManageGood
             // 
