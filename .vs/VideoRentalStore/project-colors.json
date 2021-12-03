@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "27d70bc3-16a0-4a48-aa19-a3ec6b898733": {
+      "ProjectGuid": "27d70bc3-16a0-4a48-aa19-a3ec6b898733",
+      "DisplayName": "VideoRentalStore",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

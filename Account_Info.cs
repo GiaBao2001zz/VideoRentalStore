@@ -13,7 +13,7 @@ namespace VideoRentalStore
     
     public partial class Account_Info : Form
     {
-        Account_Settings Father;
+        Account_Settings account_Settings = new Account_Settings();
         public Account_Info()
         {
 
@@ -39,14 +39,11 @@ namespace VideoRentalStore
 
         private void Button_Cancel_Click(object sender, EventArgs e)
         {
-             this.Controls.Clear();
-             this.InitializeComponent();
-             Button_ChangeInfo.Visible = false;
-             Button_Cancel.Visible = false;
-            
-            
-            
-
+            //this.Controls.Clear();
+            //this.InitializeComponent();
+            account_Settings.Button_Account_Info_Click(sender, e);
+            Button_ChangeInfo.Visible = false;
+            Button_Cancel.Visible = false;
         }
 
        
