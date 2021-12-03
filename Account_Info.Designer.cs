@@ -40,8 +40,8 @@ namespace VideoRentalStore
             this.TextBox_Email = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_ShowDateCreated = new System.Windows.Forms.Label();
             this.TextBox_PhoneNumber = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.Button_ChangeInfo = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_Cancel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Button_ChangeInfo = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SuspendLayout();
             // 
             // TextBox_UserName
@@ -192,31 +192,6 @@ namespace VideoRentalStore
             this.TextBox_PhoneNumber.Text = "0335544529";
             this.TextBox_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // Button_ChangeInfo
-            // 
-            this.Button_ChangeInfo.ActiveBorderThickness = 1;
-            this.Button_ChangeInfo.ActiveCornerRadius = 20;
-            this.Button_ChangeInfo.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Button_ChangeInfo.ActiveForecolor = System.Drawing.Color.White;
-            this.Button_ChangeInfo.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_ChangeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_ChangeInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ChangeInfo.BackgroundImage")));
-            this.Button_ChangeInfo.ButtonText = "Confirm";
-            this.Button_ChangeInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_ChangeInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_ChangeInfo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Button_ChangeInfo.IdleBorderThickness = 1;
-            this.Button_ChangeInfo.IdleCornerRadius = 20;
-            this.Button_ChangeInfo.IdleFillColor = System.Drawing.Color.White;
-            this.Button_ChangeInfo.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.Button_ChangeInfo.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_ChangeInfo.Location = new System.Drawing.Point(573, 419);
-            this.Button_ChangeInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Button_ChangeInfo.Name = "Button_ChangeInfo";
-            this.Button_ChangeInfo.Size = new System.Drawing.Size(148, 41);
-            this.Button_ChangeInfo.TabIndex = 24;
-            this.Button_ChangeInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Button_Cancel
             // 
             this.Button_Cancel.ActiveBorderThickness = 1;
@@ -242,6 +217,32 @@ namespace VideoRentalStore
             this.Button_Cancel.TabIndex = 25;
             this.Button_Cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_Cancel.Click += new System.EventHandler(this.Button_Cancel_Click);
+            // 
+            // Button_ChangeInfo
+            // 
+            this.Button_ChangeInfo.ActiveBorderThickness = 1;
+            this.Button_ChangeInfo.ActiveCornerRadius = 20;
+            this.Button_ChangeInfo.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.ActiveForecolor = System.Drawing.Color.White;
+            this.Button_ChangeInfo.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_ChangeInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ChangeInfo.BackgroundImage")));
+            this.Button_ChangeInfo.ButtonText = "Confirm";
+            this.Button_ChangeInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_ChangeInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ChangeInfo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.IdleBorderThickness = 1;
+            this.Button_ChangeInfo.IdleCornerRadius = 20;
+            this.Button_ChangeInfo.IdleFillColor = System.Drawing.Color.White;
+            this.Button_ChangeInfo.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.Location = new System.Drawing.Point(573, 419);
+            this.Button_ChangeInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Button_ChangeInfo.Name = "Button_ChangeInfo";
+            this.Button_ChangeInfo.Size = new System.Drawing.Size(148, 41);
+            this.Button_ChangeInfo.TabIndex = 24;
+            this.Button_ChangeInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_ChangeInfo.Click += new System.EventHandler(this.Button_ChangeInfo_Click);
             // 
             // Account_Info
             // 

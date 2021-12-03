@@ -36,3 +36,4 @@ C:\Users\Chikitori\source\repos\OOP\obj\Debug\VideoRentalStore.csproj.AssemblyRe
 C:\Users\Chikitori\source\repos\OOP\obj\Debug\VideoRentalStore.Grid_YeuCauThueMua.resources
 C:\Users\Chikitori\source\repos\OOP\obj\Debug\VideoRentalStore.Account_Settings.resources
 C:\Users\Chikitori\source\repos\OOP\obj\Debug\VideoRentalStore.Account_Info.resources
+C:\Users\Chikitori\source\repos\OOP\obj\Debug\VideoRentalStore.Password_Change.resources

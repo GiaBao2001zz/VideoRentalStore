@@ -28,5 +28,17 @@ namespace VideoRentalStore
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }
+
+        private void Button_ChangePassword_Click(object sender, EventArgs e)
+        {
+            // Check if is there any form already opened in Switch Form Panel
+            if (this.Panel_Switching.Controls.Count > 0)
+                this.Panel_Switching.Controls.RemoveAt(0);
+
+            // Add New Form (Grid_YeuCauThueMua)
+            Password_Change grid = new Password_Change() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_Switching.Controls.Add(grid);
+            grid.Show();
+        }
     }
 }

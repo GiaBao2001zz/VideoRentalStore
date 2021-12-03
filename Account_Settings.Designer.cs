@@ -31,16 +31,22 @@ namespace VideoRentalStore
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Settings));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_ChangePassword = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_AccountInfo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Label_AccountType = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Panel_Switching = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
+            this.panel1.Controls.Add(this.Button_ChangePassword);
+            this.panel1.Controls.Add(this.Button_AccountInfo);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -48,49 +54,108 @@ namespace VideoRentalStore
             this.panel1.Size = new System.Drawing.Size(259, 622);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuFlatButton1
+            // Button_ChangePassword
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 207);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(259, 48);
-            this.bunifuFlatButton1.TabIndex = 1;
-            this.bunifuFlatButton1.Text = "bunifuFlatButton1";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.Button_ChangePassword.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Button_ChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_ChangePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_ChangePassword.BorderRadius = 0;
+            this.Button_ChangePassword.ButtonText = "Change Password";
+            this.Button_ChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_ChangePassword.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_ChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_ChangePassword.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_ChangePassword.Iconimage = global::VideoRentalStore.Properties.Resources.refresh;
+            this.Button_ChangePassword.Iconimage_right = null;
+            this.Button_ChangePassword.Iconimage_right_Selected = null;
+            this.Button_ChangePassword.Iconimage_Selected = null;
+            this.Button_ChangePassword.IconMarginLeft = 0;
+            this.Button_ChangePassword.IconMarginRight = 0;
+            this.Button_ChangePassword.IconRightVisible = true;
+            this.Button_ChangePassword.IconRightZoom = 0D;
+            this.Button_ChangePassword.IconVisible = true;
+            this.Button_ChangePassword.IconZoom = 50D;
+            this.Button_ChangePassword.IsTab = false;
+            this.Button_ChangePassword.Location = new System.Drawing.Point(0, 305);
+            this.Button_ChangePassword.Name = "Button_ChangePassword";
+            this.Button_ChangePassword.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_ChangePassword.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.Button_ChangePassword.OnHoverTextColor = System.Drawing.Color.White;
+            this.Button_ChangePassword.selected = false;
+            this.Button_ChangePassword.Size = new System.Drawing.Size(259, 61);
+            this.Button_ChangePassword.TabIndex = 2;
+            this.Button_ChangePassword.Text = "Change Password";
+            this.Button_ChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_ChangePassword.Textcolor = System.Drawing.Color.White;
+            this.Button_ChangePassword.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ChangePassword.Click += new System.EventHandler(this.Button_ChangePassword_Click);
+            // 
+            // Button_AccountInfo
+            // 
+            this.Button_AccountInfo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Button_AccountInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_AccountInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_AccountInfo.BorderRadius = 0;
+            this.Button_AccountInfo.ButtonText = "Account Infomation";
+            this.Button_AccountInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_AccountInfo.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_AccountInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Button_AccountInfo.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_AccountInfo.Iconimage = global::VideoRentalStore.Properties.Resources.information;
+            this.Button_AccountInfo.Iconimage_right = null;
+            this.Button_AccountInfo.Iconimage_right_Selected = null;
+            this.Button_AccountInfo.Iconimage_Selected = null;
+            this.Button_AccountInfo.IconMarginLeft = 0;
+            this.Button_AccountInfo.IconMarginRight = 0;
+            this.Button_AccountInfo.IconRightVisible = true;
+            this.Button_AccountInfo.IconRightZoom = 0D;
+            this.Button_AccountInfo.IconVisible = true;
+            this.Button_AccountInfo.IconZoom = 50D;
+            this.Button_AccountInfo.IsTab = false;
+            this.Button_AccountInfo.Location = new System.Drawing.Point(0, 244);
+            this.Button_AccountInfo.Name = "Button_AccountInfo";
+            this.Button_AccountInfo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_AccountInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.Button_AccountInfo.OnHoverTextColor = System.Drawing.Color.White;
+            this.Button_AccountInfo.selected = false;
+            this.Button_AccountInfo.Size = new System.Drawing.Size(259, 61);
+            this.Button_AccountInfo.TabIndex = 1;
+            this.Button_AccountInfo.Text = "Account Infomation";
+            this.Button_AccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_AccountInfo.Textcolor = System.Drawing.Color.White;
+            this.Button_AccountInfo.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_AccountInfo.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.Label_AccountType);
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(259, 207);
+            this.panel4.Size = new System.Drawing.Size(259, 244);
             this.panel4.TabIndex = 0;
+            // 
+            // Label_AccountType
+            // 
+            this.Label_AccountType.AutoSize = true;
+            this.Label_AccountType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_AccountType.ForeColor = System.Drawing.Color.White;
+            this.Label_AccountType.Location = new System.Drawing.Point(97, 194);
+            this.Label_AccountType.Name = "Label_AccountType";
+            this.Label_AccountType.Size = new System.Drawing.Size(49, 25);
+            this.Label_AccountType.TabIndex = 1;
+            this.Label_AccountType.Text = "Staff";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(46, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -122,6 +187,9 @@ namespace VideoRentalStore
             this.Name = "Account_Settings";
             this.Text = "Account_Settings";
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,7 +199,10 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel Panel_Switching;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_AccountInfo;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Label_AccountType;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_ChangePassword;
     }
 }

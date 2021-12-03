@@ -92,6 +92,12 @@
     <Compile Include="NhapDia.Designer.cs">
       <DependentUpon>NhapDia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Password_Change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password_Change.Designer.cs">
+      <DependentUpon>Password_Change.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignIn.cs">
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapDia.resx">
       <DependentUpon>NhapDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password_Change.resx">
+      <DependentUpon>Password_Change.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\payment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

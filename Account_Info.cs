@@ -39,5 +39,10 @@ namespace VideoRentalStore
             Button_ChangeInfo.Visible = false;
             Button_Cancel.Visible = false;
         }
+
+        private void Button_ChangeInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
