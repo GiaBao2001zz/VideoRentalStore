@@ -36,6 +36,7 @@ namespace VideoRentalStore
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid_YeuCauThueMua));
             this.Panel_Title = new System.Windows.Forms.Panel();
+            this.Label_RequestCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Panel_ButtonContainer = new System.Windows.Forms.Panel();
             this.Panel_GridContainer = new System.Windows.Forms.Panel();
             this.DataGrid_YCThueMua = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -43,7 +44,6 @@ namespace VideoRentalStore
             this.Button_ChuyenHang = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_History = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_ActiveRequest = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Label_RequestCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Panel_Title.SuspendLayout();
             this.Panel_ButtonContainer.SuspendLayout();
             this.Panel_GridContainer.SuspendLayout();
@@ -61,6 +61,16 @@ namespace VideoRentalStore
             this.Panel_Title.Name = "Panel_Title";
             this.Panel_Title.Size = new System.Drawing.Size(1044, 50);
             this.Panel_Title.TabIndex = 1;
+            // 
+            // Label_RequestCount
+            // 
+            this.Label_RequestCount.AutoSize = true;
+            this.Label_RequestCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_RequestCount.ForeColor = System.Drawing.Color.Snow;
+            this.Label_RequestCount.Location = new System.Drawing.Point(202, 9);
+            this.Label_RequestCount.Name = "Label_RequestCount";
+            this.Label_RequestCount.Size = new System.Drawing.Size(0, 32);
+            this.Label_RequestCount.TabIndex = 5;
             // 
             // Panel_ButtonContainer
             // 
@@ -137,6 +147,8 @@ namespace VideoRentalStore
             this.DataGrid_YCThueMua.ShowRowErrors = false;
             this.DataGrid_YCThueMua.Size = new System.Drawing.Size(1044, 550);
             this.DataGrid_YCThueMua.TabIndex = 3;
+            this.DataGrid_YCThueMua.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellContentClick_2);
+            this.DataGrid_YCThueMua.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellContentDoubleClick);
             // 
             // Button_ViewInfo
             // 
@@ -145,6 +157,7 @@ namespace VideoRentalStore
             this.Button_ViewInfo.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_ViewInfo.ActiveForecolor = System.Drawing.Color.White;
             this.Button_ViewInfo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.Button_ViewInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_ViewInfo.BackColor = System.Drawing.SystemColors.Control;
             this.Button_ViewInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ViewInfo.BackgroundImage")));
             this.Button_ViewInfo.ButtonText = "View Request";
@@ -170,6 +183,7 @@ namespace VideoRentalStore
             this.Button_ChuyenHang.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.Button_ChuyenHang.ActiveForecolor = System.Drawing.Color.White;
             this.Button_ChuyenHang.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChuyenHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_ChuyenHang.BackColor = System.Drawing.SystemColors.Control;
             this.Button_ChuyenHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ChuyenHang.BackgroundImage")));
             this.Button_ChuyenHang.ButtonText = "Comeplete Request";
@@ -259,16 +273,6 @@ namespace VideoRentalStore
             this.Button_ActiveRequest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Button_ActiveRequest.Textcolor = System.Drawing.Color.White;
             this.Button_ActiveRequest.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // Label_RequestCount
-            // 
-            this.Label_RequestCount.AutoSize = true;
-            this.Label_RequestCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_RequestCount.ForeColor = System.Drawing.Color.Snow;
-            this.Label_RequestCount.Location = new System.Drawing.Point(202, 9);
-            this.Label_RequestCount.Name = "Label_RequestCount";
-            this.Label_RequestCount.Size = new System.Drawing.Size(0, 32);
-            this.Label_RequestCount.TabIndex = 5;
             // 
             // Grid_YeuCauThueMua
             // 

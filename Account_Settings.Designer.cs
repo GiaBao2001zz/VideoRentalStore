@@ -124,7 +124,7 @@ namespace VideoRentalStore
             this.Button_AccountInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_AccountInfo.Textcolor = System.Drawing.Color.White;
             this.Button_AccountInfo.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_AccountInfo.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.Button_AccountInfo.Click += new System.EventHandler(this.Button_Account_Info_Click);
             // 
             // panel4
             // 
@@ -198,11 +198,11 @@ namespace VideoRentalStore
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel Panel_Switching;
-        private Bunifu.Framework.UI.BunifuFlatButton Button_AccountInfo;
+        public System.Windows.Forms.Panel Panel_Switching;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Label_AccountType;
         private Bunifu.Framework.UI.BunifuFlatButton Button_ChangePassword;
+        internal Bunifu.Framework.UI.BunifuFlatButton Button_AccountInfo;
     }
 }

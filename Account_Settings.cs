@@ -17,7 +17,7 @@ namespace VideoRentalStore
             InitializeComponent();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        public void Button_Account_Info_Click(object sender, EventArgs e)
         {
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_Switching.Controls.Count > 0)
@@ -28,8 +28,9 @@ namespace VideoRentalStore
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }
-
-        private void Button_ChangePassword_Click(object sender, EventArgs e)
+        
+       
+    private void Button_ChangePassword_Click(object sender, EventArgs e)
         {
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_Switching.Controls.Count > 0)
@@ -40,5 +41,6 @@ namespace VideoRentalStore
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }
+
     }
 }

@@ -80,5 +80,15 @@ namespace VideoRentalStore
         {
 
         }
+
+        private void DataGrid_YCThueMua_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_YCThueMua_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

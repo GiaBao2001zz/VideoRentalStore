@@ -112,6 +112,9 @@ namespace VideoRentalStore
             // 
             // Label_UserName
             // 
+            this.Label_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Label_UserName.ForeColor = System.Drawing.Color.FloralWhite;
@@ -140,6 +143,7 @@ namespace VideoRentalStore
             this.TextBox_DisplayName.TabIndex = 21;
             this.TextBox_DisplayName.Text = "Nguyễn Trọng Tính";
             this.TextBox_DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_DisplayName.OnValueChanged += new System.EventHandler(this.TextBox_DisplayName_OnValueChanged);
             // 
             // TextBox_Email
             // 
@@ -160,6 +164,7 @@ namespace VideoRentalStore
             this.TextBox_Email.TabIndex = 22;
             this.TextBox_Email.Text = "tinh258456@gmail.com";
             this.TextBox_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Email.OnValueChanged += new System.EventHandler(this.TextBox_Email_OnValueChanged);
             // 
             // Label_ShowDateCreated
             // 
@@ -191,6 +196,7 @@ namespace VideoRentalStore
             this.TextBox_PhoneNumber.TabIndex = 23;
             this.TextBox_PhoneNumber.Text = "0335544529";
             this.TextBox_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_PhoneNumber.OnValueChanged += new System.EventHandler(this.TextBox_PhoneNumber_OnValueChanged);
             // 
             // Button_Cancel
             // 
@@ -199,6 +205,7 @@ namespace VideoRentalStore
             this.Button_Cancel.ActiveFillColor = System.Drawing.Color.Red;
             this.Button_Cancel.ActiveForecolor = System.Drawing.Color.White;
             this.Button_Cancel.ActiveLineColor = System.Drawing.Color.Red;
+            this.Button_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Cancel.BackgroundImage")));
             this.Button_Cancel.ButtonText = "Cancel";
@@ -225,6 +232,7 @@ namespace VideoRentalStore
             this.Button_ChangeInfo.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.Button_ChangeInfo.ActiveForecolor = System.Drawing.Color.White;
             this.Button_ChangeInfo.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_ChangeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_ChangeInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ChangeInfo.BackgroundImage")));
             this.Button_ChangeInfo.ButtonText = "Confirm";
@@ -248,6 +256,7 @@ namespace VideoRentalStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(753, 489);
             this.Controls.Add(this.Button_Cancel);

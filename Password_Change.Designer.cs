@@ -32,7 +32,7 @@ namespace VideoRentalStore
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Password_Change));
             this.TextBox_PasswordAgain = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBox_Password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.TextBox_UserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextBox_OldPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_DisplayName = new System.Windows.Forms.Label();
             this.Label_PasswordAgain = new System.Windows.Forms.Label();
             this.Label_OldPassword = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@ namespace VideoRentalStore
             this.TextBox_PasswordAgain.Size = new System.Drawing.Size(308, 53);
             this.TextBox_PasswordAgain.TabIndex = 28;
             this.TextBox_PasswordAgain.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_PasswordAgain.OnValueChanged += new System.EventHandler(this.TextBox_PasswordAgain_OnValueChanged);
             // 
             // TextBox_Password
             // 
@@ -77,25 +78,26 @@ namespace VideoRentalStore
             this.TextBox_Password.Size = new System.Drawing.Size(308, 53);
             this.TextBox_Password.TabIndex = 27;
             this.TextBox_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Password.OnValueChanged += new System.EventHandler(this.TextBox_Password_OnValueChanged);
             // 
-            // TextBox_UserName
+            // TextBox_OldPassword
             // 
-            this.TextBox_UserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBox_UserName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_UserName.ForeColor = System.Drawing.Color.White;
-            this.TextBox_UserName.HintForeColor = System.Drawing.Color.White;
-            this.TextBox_UserName.HintText = "";
-            this.TextBox_UserName.isPassword = false;
-            this.TextBox_UserName.LineFocusedColor = System.Drawing.Color.Green;
-            this.TextBox_UserName.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBox_UserName.LineMouseHoverColor = System.Drawing.Color.Green;
-            this.TextBox_UserName.LineThickness = 5;
-            this.TextBox_UserName.Location = new System.Drawing.Point(83, 65);
-            this.TextBox_UserName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.TextBox_UserName.Name = "TextBox_UserName";
-            this.TextBox_UserName.Size = new System.Drawing.Size(308, 53);
-            this.TextBox_UserName.TabIndex = 26;
-            this.TextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_OldPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_OldPassword.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_OldPassword.ForeColor = System.Drawing.Color.White;
+            this.TextBox_OldPassword.HintForeColor = System.Drawing.Color.White;
+            this.TextBox_OldPassword.HintText = "";
+            this.TextBox_OldPassword.isPassword = false;
+            this.TextBox_OldPassword.LineFocusedColor = System.Drawing.Color.Green;
+            this.TextBox_OldPassword.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_OldPassword.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.TextBox_OldPassword.LineThickness = 5;
+            this.TextBox_OldPassword.Location = new System.Drawing.Point(83, 65);
+            this.TextBox_OldPassword.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_OldPassword.Name = "TextBox_OldPassword";
+            this.TextBox_OldPassword.Size = new System.Drawing.Size(308, 53);
+            this.TextBox_OldPassword.TabIndex = 26;
+            this.TextBox_OldPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Label_DisplayName
             // 
@@ -137,6 +139,7 @@ namespace VideoRentalStore
             this.Button_Cancel.ActiveFillColor = System.Drawing.Color.Red;
             this.Button_Cancel.ActiveForecolor = System.Drawing.Color.White;
             this.Button_Cancel.ActiveLineColor = System.Drawing.Color.Red;
+            this.Button_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Cancel.BackgroundImage")));
             this.Button_Cancel.ButtonText = "Cancel";
@@ -163,6 +166,7 @@ namespace VideoRentalStore
             this.Button_ChangeInfo.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.Button_ChangeInfo.ActiveForecolor = System.Drawing.Color.White;
             this.Button_ChangeInfo.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_ChangeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_ChangeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_ChangeInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_ChangeInfo.BackgroundImage")));
             this.Button_ChangeInfo.ButtonText = "Confirm";
@@ -185,19 +189,21 @@ namespace VideoRentalStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(753, 489);
             this.Controls.Add(this.Button_Cancel);
             this.Controls.Add(this.Button_ChangeInfo);
             this.Controls.Add(this.TextBox_PasswordAgain);
             this.Controls.Add(this.TextBox_Password);
-            this.Controls.Add(this.TextBox_UserName);
+            this.Controls.Add(this.TextBox_OldPassword);
             this.Controls.Add(this.Label_DisplayName);
             this.Controls.Add(this.Label_PasswordAgain);
             this.Controls.Add(this.Label_OldPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Password_Change";
             this.Text = "Password_Change";
+            this.Load += new System.EventHandler(this.Password_Change_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,11 +213,12 @@ namespace VideoRentalStore
 
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_PasswordAgain;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Password;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_UserName;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_OldPassword;
         private System.Windows.Forms.Label Label_DisplayName;
         private System.Windows.Forms.Label Label_PasswordAgain;
         private System.Windows.Forms.Label Label_OldPassword;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Cancel;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_ChangeInfo;
+
     }
 }
