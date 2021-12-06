@@ -45,9 +45,10 @@ namespace VideoRentalStore
         private void Label_CreateAccount_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
+            
             var Signin = new SignIn();
-            Signin.Show();
+            Signin.ShowDialog();
+            this.Close();
 
 
 
@@ -91,15 +92,17 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_Staff x = new Main_Staff();
-                    this.Hide();
-                    x.Show();
+                    
+                    x.ShowDialog();
+                    this.Close();
                 }
                 else if (a == "0")
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
-                    this.Hide();
-                    y.Show();
+                    
+                    y.ShowDialog();
+                    this.Close();
                 }
             }
             else

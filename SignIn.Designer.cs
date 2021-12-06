@@ -290,6 +290,7 @@ namespace VideoRentalStore
             this.Button_SignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_SignIn.TabIndex = 4;
             this.Button_SignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_SignIn.Click += new System.EventHandler(this.Button_SignIn_Click);
             // 
             // SignIn
             // 
