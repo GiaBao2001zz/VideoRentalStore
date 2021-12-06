@@ -61,5 +61,10 @@ namespace VideoRentalStore
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
         }
+
+        private void Main_Staff_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -90,5 +90,10 @@ namespace VideoRentalStore
         {
 
         }
+
+        private void Main_User_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

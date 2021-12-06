@@ -47,8 +47,8 @@ namespace VideoRentalStore
 
             
             var Signin = new SignIn();
-            Signin.ShowDialog();
-            this.Close();
+            Signin.Show();
+            this.Hide();
 
 
 
@@ -93,16 +93,16 @@ namespace VideoRentalStore
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_Staff x = new Main_Staff();
                     
-                    x.ShowDialog();
-                    this.Close();
+                    x.Show();
+                    this.Hide();
                 }
                 else if (a == "0")
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
                     
-                    y.ShowDialog();
-                    this.Close();
+                    y.Show();
+                    this.Hide();
                 }
             }
             else

@@ -77,10 +77,11 @@ namespace VideoRentalStore
                     command.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Login x = new Login();
                     
-                    x.ShowDialog();
-                    this.Close();
+                    Login x = new Login();
+                    this.Hide();
+                    x.Show();
+                    
                 }
             }
             con.Close();

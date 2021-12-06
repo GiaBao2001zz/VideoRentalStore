@@ -419,6 +419,7 @@ namespace VideoRentalStore
             this.Name = "Main_User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_User";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_User_FormClosed);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).EndInit();
