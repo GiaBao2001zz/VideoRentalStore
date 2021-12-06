@@ -16,17 +16,18 @@ namespace VideoRentalStore
         public Grid_YeuCauThueMua()
         {
             InitializeComponent();
-           LoadHistory();
+           LoadRequest();
         }
 
-        void LoadHistory()
+        void LoadRequest()
         {
-            string connectionSTR = @"Data Source =.\sqlexpress; Initial Catalog = VideoRentalStore; Integrated Security = True";
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
-            string query = "SELECT * FROM HISTORY";
+            string query = "SELECT id, nameCustomer, addressCustomer, DateRequest,Type  FROM Request WHERE Status = 'Waiting'";
+                
 
-            connection.Open();
+            connection.Open();                  
 
             SqlCommand command = new SqlCommand(query, connection);
             DataTable data = new DataTable();
@@ -39,11 +40,11 @@ namespace VideoRentalStore
             DataGrid_YCThueMua.ReadOnly = true;
             
                 DataGrid_YCThueMua.Columns[0].FillWeight = 5;
-                DataGrid_YCThueMua.Columns[1].FillWeight = 30;
-                DataGrid_YCThueMua.Columns[2].FillWeight = 30;
+                DataGrid_YCThueMua.Columns[1].FillWeight = 35;
+                DataGrid_YCThueMua.Columns[2].FillWeight = 35;
                 DataGrid_YCThueMua.Columns[3].FillWeight = 15;
-                DataGrid_YCThueMua.Columns[4].FillWeight = 15;
-                DataGrid_YCThueMua.Columns[5].FillWeight = 10;
+                DataGrid_YCThueMua.Columns[4].FillWeight = 10;
+                
 
             //Request count
 
@@ -94,6 +95,39 @@ namespace VideoRentalStore
         private void Button_ActiveRequest_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_History_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void Button_ChuyenHang_Click(object sender, EventArgs e)
+        {
+            
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionSTR);
+            connection.Open();
+
+            string ID = DataGrid_YCThueMua.SelectedRows[0].Cells["id"].Value.ToString();
+            string type = "UPDATE Request SET Status = 'Compeleted' Where id =" + ID;
+            SqlCommand command = new SqlCommand(type, connection);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+            LoadRequest();
+            
+
+
+            
+              
+            
+                   
+                
+
+
+            
         }
     }
 }
