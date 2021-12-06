@@ -276,8 +276,7 @@ namespace VideoRentalStore
             this.DataGrid_YCThueMua.ShowRowErrors = false;
             this.DataGrid_YCThueMua.Size = new System.Drawing.Size(1044, 550);
             this.DataGrid_YCThueMua.TabIndex = 3;
-            this.DataGrid_YCThueMua.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellContentClick_2);
-            this.DataGrid_YCThueMua.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellContentDoubleClick);
+            this.DataGrid_YCThueMua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellClick);
             // 
             // Grid_YeuCauThueMua
             // 

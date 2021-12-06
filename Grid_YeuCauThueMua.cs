@@ -16,11 +16,14 @@ namespace VideoRentalStore
         public Grid_YeuCauThueMua()
         {
             InitializeComponent();
+           
            LoadRequest();
         }
 
         void LoadRequest()
         {
+            Button_ViewInfo.Visible = false;
+            Button_ChuyenHang.Visible = false;
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
@@ -38,7 +41,12 @@ namespace VideoRentalStore
 
             DataGrid_YCThueMua.DataSource = data;
             DataGrid_YCThueMua.ReadOnly = true;
-            
+
+                DataGrid_YCThueMua.Columns[0].HeaderText = "ID";
+                DataGrid_YCThueMua.Columns[1].HeaderText = "Customer Name";
+                DataGrid_YCThueMua.Columns[2].HeaderText = "Address";
+                DataGrid_YCThueMua.Columns[3].HeaderText = "Request Date";
+                DataGrid_YCThueMua.Columns[4].HeaderText = "Type";
                 DataGrid_YCThueMua.Columns[0].FillWeight = 5;
                 DataGrid_YCThueMua.Columns[1].FillWeight = 35;
                 DataGrid_YCThueMua.Columns[2].FillWeight = 35;
@@ -58,6 +66,49 @@ namespace VideoRentalStore
 
         }
 
+        private void LoadHistory()
+        {
+            Button_ViewInfo.Visible = false;
+            Button_ChuyenHang.Visible = false;
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+        SqlConnection connection = new SqlConnection(connectionSTR);
+
+        string query = "SELECT id, nameCustomer, addressCustomer, DateRequest,DateDelivered  FROM Request WHERE Status = 'Compeleted'";
+
+
+        connection.Open();                  
+
+            SqlCommand command = new SqlCommand(query, connection);
+        DataTable data = new DataTable();
+        SqlDataAdapter adapter = new SqlDataAdapter(command);
+        adapter.Fill(data);
+
+            connection.Close();
+
+            DataGrid_YCThueMua.DataSource = data;
+            DataGrid_YCThueMua.ReadOnly = true;
+
+                DataGrid_YCThueMua.Columns[0].HeaderText = "ID";
+                DataGrid_YCThueMua.Columns[1].HeaderText = "Customer Name";
+                DataGrid_YCThueMua.Columns[2].HeaderText = "Address";
+                DataGrid_YCThueMua.Columns[3].HeaderText = "Request Date";
+                DataGrid_YCThueMua.Columns[4].HeaderText = "Delivery Date";
+                DataGrid_YCThueMua.Columns[0].FillWeight = 5;
+                DataGrid_YCThueMua.Columns[1].FillWeight = 35;
+                DataGrid_YCThueMua.Columns[2].FillWeight = 35;
+                DataGrid_YCThueMua.Columns[3].FillWeight = 15;
+                DataGrid_YCThueMua.Columns[4].FillWeight = 15;
+                
+
+            //Request count
+
+            //int countstring = int.Parse(DataGrid_YCThueMua.RowCount);
+            Label_RequestCount.Text = DataGrid_YCThueMua.RowCount.ToString();
+
+            //Update Font,Size,etc
+            UpdateFont(DataGrid_YCThueMua);
+        DataGrid_YCThueMua.RowTemplate.Height = 30;
+        }
         private void UpdateFont(Bunifu.Framework.UI.BunifuCustomDataGrid a)
         {
             //Change cell font
@@ -67,15 +118,6 @@ namespace VideoRentalStore
                 
             }
         }
-        private void DataGrid_YCThueMua_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void DataGrid_YCThueMua_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -84,7 +126,7 @@ namespace VideoRentalStore
 
         private void DataGrid_YCThueMua_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void DataGrid_YCThueMua_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -94,12 +136,12 @@ namespace VideoRentalStore
 
         private void Button_ActiveRequest_Click(object sender, EventArgs e)
         {
-
+            LoadRequest();
         }
 
         private void Button_History_Click(object sender, EventArgs e)
         {
-
+            LoadHistory();
 
         }
 
@@ -128,6 +170,13 @@ namespace VideoRentalStore
 
 
             
+        }
+
+        private void DataGrid_YCThueMua_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Button_ChuyenHang.Visible = true;
+            Button_ViewInfo.Visible = true;
         }
     }
 }
