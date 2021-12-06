@@ -16,7 +16,7 @@ namespace VideoRentalStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Staff());
+            Application.Run(new Login());
         }
     }
 }
