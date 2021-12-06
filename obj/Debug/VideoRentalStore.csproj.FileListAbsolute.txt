@@ -82,3 +82,25 @@ C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\VideoRentalStore.pdb
 C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\dje-NE\VideoRentalStore.resources.dll
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\dje-NE\VideoRentalStore.resources.dll
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Account_Info.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Account_Settings.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Grid_YeuCauThueMua.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Login.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Main_Staff.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Main_User.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.NhapDia.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Password_Change.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Properties.Resources.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.SignIn.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.Login.dje-NE.resources
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.GenerateResource.cache
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CoreCompileInputs.cache
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.exe
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.pdb
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\bin\Debug\VideoRentalStore.exe.config
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\bin\Debug\VideoRentalStore.exe
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\bin\Debug\VideoRentalStore.pdb
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\bin\Debug\dje-NE\VideoRentalStore.resources.dll
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\dje-NE\VideoRentalStore.resources.dll
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
