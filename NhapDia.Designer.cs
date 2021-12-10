@@ -39,10 +39,13 @@ namespace VideoRentalStore
             this.TextBox_SL = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBox_ProviderID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_ORInputWithFile = new System.Windows.Forms.Label();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_ImportDisc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
+            this.TextBox_Category = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.TextBox_ImagePath = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
             // 
             // DragControl_NhapDia
@@ -176,40 +179,40 @@ namespace VideoRentalStore
             this.Label_ORInputWithFile.Text = "Or import your goods with file";
             this.Label_ORInputWithFile.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // bunifuFlatButton1
+            // btn_ImportDisc
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Import";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(481, 334);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(214, 48);
-            this.bunifuFlatButton1.TabIndex = 9;
-            this.bunifuFlatButton1.Text = "Import";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btn_ImportDisc.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ImportDisc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ImportDisc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ImportDisc.BorderRadius = 0;
+            this.btn_ImportDisc.ButtonText = "Import";
+            this.btn_ImportDisc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ImportDisc.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_ImportDisc.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_ImportDisc.Iconimage = null;
+            this.btn_ImportDisc.Iconimage_right = null;
+            this.btn_ImportDisc.Iconimage_right_Selected = null;
+            this.btn_ImportDisc.Iconimage_Selected = null;
+            this.btn_ImportDisc.IconMarginLeft = 0;
+            this.btn_ImportDisc.IconMarginRight = 0;
+            this.btn_ImportDisc.IconRightVisible = true;
+            this.btn_ImportDisc.IconRightZoom = 0D;
+            this.btn_ImportDisc.IconVisible = true;
+            this.btn_ImportDisc.IconZoom = 90D;
+            this.btn_ImportDisc.IsTab = false;
+            this.btn_ImportDisc.Location = new System.Drawing.Point(481, 334);
+            this.btn_ImportDisc.Name = "btn_ImportDisc";
+            this.btn_ImportDisc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ImportDisc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btn_ImportDisc.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_ImportDisc.selected = false;
+            this.btn_ImportDisc.Size = new System.Drawing.Size(214, 48);
+            this.btn_ImportDisc.TabIndex = 9;
+            this.btn_ImportDisc.Text = "Import";
+            this.btn_ImportDisc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_ImportDisc.Textcolor = System.Drawing.Color.White;
+            this.btn_ImportDisc.TextFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.btn_ImportDisc.Click += new System.EventHandler(this.btnImportDisc_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -244,38 +247,74 @@ namespace VideoRentalStore
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // pictureBox1
+            // pictureBox_Disc
             // 
-            this.pictureBox1.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
-            this.pictureBox1.Location = new System.Drawing.Point(526, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
+            this.pictureBox_Disc.Location = new System.Drawing.Point(481, 98);
+            this.pictureBox_Disc.Name = "pictureBox_Disc";
+            this.pictureBox_Disc.Size = new System.Drawing.Size(214, 210);
+            this.pictureBox_Disc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Disc.TabIndex = 1;
+            this.pictureBox_Disc.TabStop = false;
+            this.pictureBox_Disc.Click += new System.EventHandler(this.pictureBoxDisc_Click);
+            // 
+            // TextBox_Category
+            // 
+            this.TextBox_Category.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_Category.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextBox_Category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextBox_Category.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_Category.HintText = "Category";
+            this.TextBox_Category.isPassword = false;
+            this.TextBox_Category.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBox_Category.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Category.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBox_Category.LineThickness = 3;
+            this.TextBox_Category.Location = new System.Drawing.Point(76, 464);
+            this.TextBox_Category.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBox_Category.Name = "TextBox_Category";
+            this.TextBox_Category.Size = new System.Drawing.Size(340, 44);
+            this.TextBox_Category.TabIndex = 11;
+            this.TextBox_Category.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Category.OnValueChanged += new System.EventHandler(this.TextBox_Category_OnValueChanged);
+            // 
+            // TextBox_ImagePath
+            // 
+            this.TextBox_ImagePath.Location = new System.Drawing.Point(541, 476);
+            this.TextBox_ImagePath.Name = "TextBox_ImagePath";
+            this.TextBox_ImagePath.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_ImagePath.TabIndex = 12;
+            this.TextBox_ImagePath.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // NhapDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 521);
+            this.Controls.Add(this.TextBox_ImagePath);
+            this.Controls.Add(this.TextBox_Category);
             this.Controls.Add(this.bunifuFlatButton2);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btn_ImportDisc);
             this.Controls.Add(this.Label_ORInputWithFile);
             this.Controls.Add(this.TextBox_ProviderID);
             this.Controls.Add(this.TextBox_SL);
             this.Controls.Add(this.TextBox_Price);
             this.Controls.Add(this.TextBox_DiscID);
             this.Controls.Add(this.TextBox_TenDia);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox_Disc);
             this.Controls.Add(this.Label_NhapDia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhapDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.NhapDia_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,7 +324,7 @@ namespace VideoRentalStore
 
         private Bunifu.Framework.UI.BunifuDragControl DragControl_NhapDia;
         private Bunifu.Framework.UI.BunifuElipse Elipse_NhapDia;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Disc;
         private System.Windows.Forms.Label Label_NhapDia;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Price;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_DiscID;
@@ -293,7 +332,10 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_ProviderID;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_SL;
         private System.Windows.Forms.Label Label_ORInputWithFile;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_ImportDisc;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Category;
+        private System.Windows.Forms.TextBox TextBox_ImagePath;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
