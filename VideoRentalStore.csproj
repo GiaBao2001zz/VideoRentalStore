@@ -106,6 +106,18 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Video_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video_Info.Designer.cs">
+      <DependentUpon>Video_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video_Shelf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video_Shelf.Designer.cs">
+      <DependentUpon>Video_Shelf.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Account_Info.resx">
       <DependentUpon>Account_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +157,12 @@
     </Compile>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video_Info.resx">
+      <DependentUpon>Video_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video_Shelf.resx">
+      <DependentUpon>Video_Shelf.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
