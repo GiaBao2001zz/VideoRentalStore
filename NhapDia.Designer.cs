@@ -154,7 +154,7 @@ namespace VideoRentalStore
             this.TextBox_ProviderID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.TextBox_ProviderID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TextBox_ProviderID.HintForeColor = System.Drawing.Color.Empty;
-            this.TextBox_ProviderID.HintText = "Provider ID";
+            this.TextBox_ProviderID.HintText = "Provider";
             this.TextBox_ProviderID.isPassword = false;
             this.TextBox_ProviderID.LineFocusedColor = System.Drawing.Color.Blue;
             this.TextBox_ProviderID.LineIdleColor = System.Drawing.Color.Gray;
