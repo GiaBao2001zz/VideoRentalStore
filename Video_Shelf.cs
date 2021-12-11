@@ -69,7 +69,7 @@ namespace VideoRentalStore
                             label[index].ForeColor = Color.White;
                             label[index].TextAlign = ContentAlignment.MiddleCenter;
                             label[index].AutoSize = false;
-                            label[index].Location = new Point(x * 250 + 80, y + 200 );
+                            label[index].Location = new Point(x * 250 + 85, y + 200 );
                             this.Controls.Add(picturebox[index]);
                             this.Controls.Add(label[index]);
                             picturebox[index].BringToFront();
