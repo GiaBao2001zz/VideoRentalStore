@@ -65,9 +65,8 @@ namespace VideoRentalStore
             this.Panel_StoreInfo.Controls.Add(this.Picture_StoreLogo);
             this.Panel_StoreInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_StoreInfo.Location = new System.Drawing.Point(0, 0);
-            this.Panel_StoreInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_StoreInfo.Name = "Panel_StoreInfo";
-            this.Panel_StoreInfo.Size = new System.Drawing.Size(479, 703);
+            this.Panel_StoreInfo.Size = new System.Drawing.Size(359, 571);
             this.Panel_StoreInfo.TabIndex = 5;
             // 
             // Picture_Store_SM3
@@ -76,10 +75,9 @@ namespace VideoRentalStore
             this.Picture_Store_SM3.Image = global::VideoRentalStore.Properties.Resources.instagram;
             this.Picture_Store_SM3.ImageActive = null;
             this.Picture_Store_SM3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM3.Location = new System.Drawing.Point(343, 561);
-            this.Picture_Store_SM3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Picture_Store_SM3.Location = new System.Drawing.Point(257, 456);
             this.Picture_Store_SM3.Name = "Picture_Store_SM3";
-            this.Picture_Store_SM3.Size = new System.Drawing.Size(95, 87);
+            this.Picture_Store_SM3.Size = new System.Drawing.Size(71, 71);
             this.Picture_Store_SM3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_Store_SM3.TabIndex = 4;
             this.Picture_Store_SM3.TabStop = false;
@@ -91,10 +89,9 @@ namespace VideoRentalStore
             this.Picture_Store_SM2.Image = global::VideoRentalStore.Properties.Resources.twitter;
             this.Picture_Store_SM2.ImageActive = null;
             this.Picture_Store_SM2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM2.Location = new System.Drawing.Point(191, 561);
-            this.Picture_Store_SM2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Picture_Store_SM2.Location = new System.Drawing.Point(143, 456);
             this.Picture_Store_SM2.Name = "Picture_Store_SM2";
-            this.Picture_Store_SM2.Size = new System.Drawing.Size(95, 87);
+            this.Picture_Store_SM2.Size = new System.Drawing.Size(71, 71);
             this.Picture_Store_SM2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_Store_SM2.TabIndex = 3;
             this.Picture_Store_SM2.TabStop = false;
@@ -106,10 +103,9 @@ namespace VideoRentalStore
             this.Picture_Store_SM1.Image = global::VideoRentalStore.Properties.Resources.facebook;
             this.Picture_Store_SM1.ImageActive = null;
             this.Picture_Store_SM1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_Store_SM1.Location = new System.Drawing.Point(44, 561);
-            this.Picture_Store_SM1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Picture_Store_SM1.Location = new System.Drawing.Point(33, 456);
             this.Picture_Store_SM1.Name = "Picture_Store_SM1";
-            this.Picture_Store_SM1.Size = new System.Drawing.Size(95, 87);
+            this.Picture_Store_SM1.Size = new System.Drawing.Size(71, 71);
             this.Picture_Store_SM1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_Store_SM1.TabIndex = 2;
             this.Picture_Store_SM1.TabStop = false;
@@ -121,10 +117,9 @@ namespace VideoRentalStore
             this.Label_StoreInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Label_StoreInfo.ForeColor = System.Drawing.Color.White;
             this.Label_StoreInfo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label_StoreInfo.Location = new System.Drawing.Point(80, 474);
-            this.Label_StoreInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label_StoreInfo.Location = new System.Drawing.Point(60, 385);
             this.Label_StoreInfo.Name = "Label_StoreInfo";
-            this.Label_StoreInfo.Size = new System.Drawing.Size(280, 56);
+            this.Label_StoreInfo.Size = new System.Drawing.Size(222, 42);
             this.Label_StoreInfo.TabIndex = 1;
             this.Label_StoreInfo.Text = "Want to know more about us? \r\nCheck out our social media!";
             // 
@@ -134,10 +129,9 @@ namespace VideoRentalStore
             this.Label_NameOfStore.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Underline);
             this.Label_NameOfStore.ForeColor = System.Drawing.Color.White;
             this.Label_NameOfStore.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label_NameOfStore.Location = new System.Drawing.Point(79, 229);
-            this.Label_NameOfStore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label_NameOfStore.Location = new System.Drawing.Point(59, 186);
             this.Label_NameOfStore.Name = "Label_NameOfStore";
-            this.Label_NameOfStore.Size = new System.Drawing.Size(280, 162);
+            this.Label_NameOfStore.Size = new System.Drawing.Size(223, 130);
             this.Label_NameOfStore.TabIndex = 0;
             this.Label_NameOfStore.Text = "Name of \r\nthe store";
             this.Label_NameOfStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,10 +140,9 @@ namespace VideoRentalStore
             // 
             this.Picture_StoreLogo.Image = global::VideoRentalStore.Properties.Resources.Logo;
             this.Picture_StoreLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Picture_StoreLogo.Location = new System.Drawing.Point(133, 41);
-            this.Picture_StoreLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Picture_StoreLogo.Location = new System.Drawing.Point(100, 33);
             this.Picture_StoreLogo.Name = "Picture_StoreLogo";
-            this.Picture_StoreLogo.Size = new System.Drawing.Size(183, 161);
+            this.Picture_StoreLogo.Size = new System.Drawing.Size(137, 131);
             this.Picture_StoreLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Picture_StoreLogo.TabIndex = 0;
             this.Picture_StoreLogo.TabStop = false;
@@ -159,10 +152,9 @@ namespace VideoRentalStore
             this.Label_Or_SignIn_With.AutoSize = true;
             this.Label_Or_SignIn_With.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Label_Or_SignIn_With.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label_Or_SignIn_With.Location = new System.Drawing.Point(592, 176);
-            this.Label_Or_SignIn_With.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label_Or_SignIn_With.Location = new System.Drawing.Point(444, 143);
             this.Label_Or_SignIn_With.Name = "Label_Or_SignIn_With";
-            this.Label_Or_SignIn_With.Size = new System.Drawing.Size(141, 28);
+            this.Label_Or_SignIn_With.Size = new System.Drawing.Size(114, 21);
             this.Label_Or_SignIn_With.TabIndex = 7;
             this.Label_Or_SignIn_With.Text = "Or Sign in with";
             // 
@@ -171,10 +163,9 @@ namespace VideoRentalStore
             this.Label_Title_SignIn.AutoSize = true;
             this.Label_Title_SignIn.Font = new System.Drawing.Font("Segoe UI", 32F);
             this.Label_Title_SignIn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label_Title_SignIn.Location = new System.Drawing.Point(584, 76);
-            this.Label_Title_SignIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label_Title_SignIn.Location = new System.Drawing.Point(438, 62);
             this.Label_Title_SignIn.Name = "Label_Title_SignIn";
-            this.Label_Title_SignIn.Size = new System.Drawing.Size(195, 72);
+            this.Label_Title_SignIn.Size = new System.Drawing.Size(154, 59);
             this.Label_Title_SignIn.TabIndex = 8;
             this.Label_Title_SignIn.Text = "Sign In";
             // 
@@ -190,10 +181,10 @@ namespace VideoRentalStore
             this.TextBox_Password.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Password.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_Password.LineThickness = 5;
-            this.TextBox_Password.Location = new System.Drawing.Point(597, 351);
-            this.TextBox_Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextBox_Password.Location = new System.Drawing.Point(448, 285);
+            this.TextBox_Password.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Password.Name = "TextBox_Password";
-            this.TextBox_Password.Size = new System.Drawing.Size(621, 54);
+            this.TextBox_Password.Size = new System.Drawing.Size(466, 44);
             this.TextBox_Password.TabIndex = 2;
             this.TextBox_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Password.OnValueChanged += new System.EventHandler(this.TextBox_Password_OnValueChanged);
@@ -210,10 +201,10 @@ namespace VideoRentalStore
             this.TextBox_UserName.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_UserName.LineMouseHoverColor = System.Drawing.Color.Red;
             this.TextBox_UserName.LineThickness = 5;
-            this.TextBox_UserName.Location = new System.Drawing.Point(597, 252);
-            this.TextBox_UserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextBox_UserName.Location = new System.Drawing.Point(448, 205);
+            this.TextBox_UserName.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_UserName.Name = "TextBox_UserName";
-            this.TextBox_UserName.Size = new System.Drawing.Size(621, 54);
+            this.TextBox_UserName.Size = new System.Drawing.Size(466, 44);
             this.TextBox_UserName.TabIndex = 1;
             this.TextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -229,10 +220,10 @@ namespace VideoRentalStore
             this.TextBox_PasswordAgain.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_PasswordAgain.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_PasswordAgain.LineThickness = 5;
-            this.TextBox_PasswordAgain.Location = new System.Drawing.Point(597, 449);
-            this.TextBox_PasswordAgain.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TextBox_PasswordAgain.Location = new System.Drawing.Point(448, 365);
+            this.TextBox_PasswordAgain.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_PasswordAgain.Name = "TextBox_PasswordAgain";
-            this.TextBox_PasswordAgain.Size = new System.Drawing.Size(621, 54);
+            this.TextBox_PasswordAgain.Size = new System.Drawing.Size(466, 44);
             this.TextBox_PasswordAgain.TabIndex = 3;
             this.TextBox_PasswordAgain.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_PasswordAgain.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
@@ -267,10 +258,10 @@ namespace VideoRentalStore
             this.Button_CancelSignIn.IdleFillColor = System.Drawing.Color.White;
             this.Button_CancelSignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_CancelSignIn.Location = new System.Drawing.Point(944, 585);
-            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Button_CancelSignIn.Location = new System.Drawing.Point(708, 475);
+            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_CancelSignIn.Name = "Button_CancelSignIn";
-            this.Button_CancelSignIn.Size = new System.Drawing.Size(275, 64);
+            this.Button_CancelSignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_CancelSignIn.TabIndex = 5;
             this.Button_CancelSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_CancelSignIn.Click += new System.EventHandler(this.Button_CancelLogin_Click);
@@ -284,7 +275,7 @@ namespace VideoRentalStore
             this.Button_SignIn.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.BackColor = System.Drawing.SystemColors.Control;
             this.Button_SignIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_SignIn.BackgroundImage")));
-            this.Button_SignIn.ButtonText = "Next";
+            this.Button_SignIn.ButtonText = "Sign In";
             this.Button_SignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Button_SignIn.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.Button_SignIn.ForeColor = System.Drawing.Color.SeaGreen;
@@ -293,19 +284,19 @@ namespace VideoRentalStore
             this.Button_SignIn.IdleFillColor = System.Drawing.Color.White;
             this.Button_SignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_SignIn.Location = new System.Drawing.Point(597, 585);
-            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Button_SignIn.Location = new System.Drawing.Point(448, 475);
+            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_SignIn.Name = "Button_SignIn";
-            this.Button_SignIn.Size = new System.Drawing.Size(275, 64);
+            this.Button_SignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_SignIn.TabIndex = 4;
             this.Button_SignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_SignIn.Click += new System.EventHandler(this.Button_SignIn_Click);
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 703);
+            this.ClientSize = new System.Drawing.Size(995, 571);
             this.Controls.Add(this.TextBox_PasswordAgain);
             this.Controls.Add(this.Panel_StoreInfo);
             this.Controls.Add(this.Button_CancelSignIn);
@@ -315,7 +306,6 @@ namespace VideoRentalStore
             this.Controls.Add(this.TextBox_Password);
             this.Controls.Add(this.TextBox_UserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Panel_StoreInfo.ResumeLayout(false);
