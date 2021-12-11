@@ -18,7 +18,8 @@ namespace VideoRentalStore
         {
             InitializeComponent();
         }
-
+        public static string Thumbnail;
+        public static string DiskName;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -67,10 +68,18 @@ namespace VideoRentalStore
             {
                 MessageBox.Show("Import Successfully");
             }
+            Thumbnail = imgFilePath;
+            DiskName = TextBox_TenDia.Text;
+            NhapDia2 form = new NhapDia2();
+            form.Save_Thumbnail();
+            this.Hide();
+            form.ShowDialog();
 
+            
            
         }
 
+        
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
@@ -100,5 +109,6 @@ namespace VideoRentalStore
         {
             this.Close();
         }
+        
     }
 }

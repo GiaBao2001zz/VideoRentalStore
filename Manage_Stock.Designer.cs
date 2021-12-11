@@ -38,15 +38,15 @@ namespace VideoRentalStore
             this.Button_Delete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_ShowInfo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PictureBox_Thumbnail = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGrid_ManageStock = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.PictureBox_Thumbnail = new System.Windows.Forms.PictureBox();
             this.Panel_ThumbNail.SuspendLayout();
             this.Panel_Buttons.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_ManageStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_ThumbNail
@@ -188,17 +188,6 @@ namespace VideoRentalStore
             this.panel1.Size = new System.Drawing.Size(354, 243);
             this.panel1.TabIndex = 3;
             // 
-            // PictureBox_Thumbnail
-            // 
-            this.PictureBox_Thumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PictureBox_Thumbnail.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
-            this.PictureBox_Thumbnail.Location = new System.Drawing.Point(0, 0);
-            this.PictureBox_Thumbnail.Name = "PictureBox_Thumbnail";
-            this.PictureBox_Thumbnail.Size = new System.Drawing.Size(354, 243);
-            this.PictureBox_Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_Thumbnail.TabIndex = 30;
-            this.PictureBox_Thumbnail.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.DataGrid_ManageStock);
@@ -210,6 +199,8 @@ namespace VideoRentalStore
             // 
             // DataGrid_ManageStock
             // 
+            this.DataGrid_ManageStock.AllowUserToAddRows = false;
+            this.DataGrid_ManageStock.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.DataGrid_ManageStock.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -246,9 +237,24 @@ namespace VideoRentalStore
             this.DataGrid_ManageStock.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGrid_ManageStock.RowHeadersVisible = false;
             this.DataGrid_ManageStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGrid_ManageStock.ShowCellErrors = false;
+            this.DataGrid_ManageStock.ShowCellToolTips = false;
+            this.DataGrid_ManageStock.ShowEditingIcon = false;
+            this.DataGrid_ManageStock.ShowRowErrors = false;
             this.DataGrid_ManageStock.Size = new System.Drawing.Size(690, 661);
             this.DataGrid_ManageStock.TabIndex = 1;
             this.DataGrid_ManageStock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_ManageStock_CellClick);
+            // 
+            // PictureBox_Thumbnail
+            // 
+            this.PictureBox_Thumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PictureBox_Thumbnail.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
+            this.PictureBox_Thumbnail.Location = new System.Drawing.Point(0, 0);
+            this.PictureBox_Thumbnail.Name = "PictureBox_Thumbnail";
+            this.PictureBox_Thumbnail.Size = new System.Drawing.Size(354, 243);
+            this.PictureBox_Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Thumbnail.TabIndex = 30;
+            this.PictureBox_Thumbnail.TabStop = false;
             // 
             // Manage_Stock
             // 
@@ -264,9 +270,9 @@ namespace VideoRentalStore
             this.Panel_ThumbNail.ResumeLayout(false);
             this.Panel_Buttons.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_ManageStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).EndInit();
             this.ResumeLayout(false);
 
         }
