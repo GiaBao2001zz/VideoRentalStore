@@ -62,7 +62,7 @@ namespace VideoRentalStore
 
         }
 
-        private void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
+         void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
 
@@ -85,6 +85,11 @@ namespace VideoRentalStore
 
             PictureBox_Thumbnail.Image = Image.FromFile(link.ToString());
             
+        }
+
+        private void Button_Import_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
