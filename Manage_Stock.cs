@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace VideoRentalStore
+{
+    public partial class Manage_Stock : Form
+    {
+        public Manage_Stock()
+        {
+            InitializeComponent();
+            Load_DataGrid();
+        }
+
+        
+
+        private void Button_Import_Click(object sender, EventArgs e)
+        {
+            NhapDia form = new NhapDia();
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.ShowDialog();
+        }
+
+        private void Load_DataGrid()
+        {
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionSTR);
+
+            string query = "SELECT id, Name, Price, Quantity,Provider  FROM Video ";
+
+
+            connection.Open();
+
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+
+            connection.Close();
+
+            DataGrid_ManageStock.DataSource = data;
+            DataGrid_ManageStock.ReadOnly = true;
+
+            DataGrid_ManageStock.Columns[0].HeaderText = "ID";
+            DataGrid_ManageStock.Columns[1].HeaderText = "Name";
+            DataGrid_ManageStock.Columns[2].HeaderText = "Price";
+            DataGrid_ManageStock.Columns[3].HeaderText = "Quantity";
+            DataGrid_ManageStock.Columns[4].HeaderText = "Provider";
+            DataGrid_ManageStock.Columns[0].FillWeight = 5;
+            DataGrid_ManageStock.Columns[1].FillWeight = 35;
+            DataGrid_ManageStock.Columns[2].FillWeight = 20;
+            DataGrid_ManageStock.Columns[3].FillWeight = 20;
+            DataGrid_ManageStock.Columns[4].FillWeight = 20;
+
+
+        }
+
+        private void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionSTR);
+            connection.Open();
+
+            var value2 = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value.ToString();
+
+
+            string type = "SELECT Thumbnail FROM Video WHERE id =" + value2;
+            SqlCommand command = new SqlCommand(type, connection);
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+            string link = data.Rows[0][0].ToString();
+
+            PictureBox_Thumbnail.Image = Image.FromFile(link.ToString());
+            
+        }
+    }
+}

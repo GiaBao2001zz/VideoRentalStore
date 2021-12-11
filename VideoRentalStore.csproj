@@ -86,6 +86,12 @@
     <Compile Include="Main_User.Designer.cs">
       <DependentUpon>Main_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Stock.Designer.cs">
+      <DependentUpon>Manage_Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapDia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main_User.resx">
       <DependentUpon>Main_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Stock.resx">
+      <DependentUpon>Manage_Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapDia.resx">
       <DependentUpon>NhapDia.cs</DependentUpon>

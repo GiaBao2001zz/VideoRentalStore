@@ -21,7 +21,15 @@ namespace VideoRentalStore
             LeftBorderBtn.Size = new Size(10, 60);
             Panel_Menu.Controls.Add(LeftBorderBtn);
             LeftBorderBtn.BackColor = Color.White;
-            
+
+            // Check if is there any form already opened in Switch Form Panel
+            if (this.Panel_SwtichForm.Controls.Count > 0)
+                this.Panel_SwtichForm.Controls.RemoveAt(0);
+
+            // Add New Form 
+            Video_Shelf grid = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_SwtichForm.Controls.Add(grid);
+            grid.Show();
         }
 
         private void ActivateBtn(object senderBtn)
@@ -62,7 +70,7 @@ namespace VideoRentalStore
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
 
-            // Add New Form (Grid_YeuCauThueMua)
+            // Add New Form 
             Video_Shelf grid = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();

@@ -205,6 +205,7 @@ namespace VideoRentalStore
             this.Button_ManageGood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_ManageGood.Textcolor = System.Drawing.Color.White;
             this.Button_ManageGood.TextFont = new System.Drawing.Font("Segoe UI", 12F);
+            this.Button_ManageGood.Click += new System.EventHandler(this.Button_ManageGood_Click);
             // 
             // Button_Request
             // 
