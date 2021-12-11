@@ -36,7 +36,7 @@ namespace VideoRentalStore
 
         private void Button_SignIn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMJIN;Initial Catalog=VideoRentalStore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True");
 
             con.Open();
             string tk = TextBox_UserName.Text;

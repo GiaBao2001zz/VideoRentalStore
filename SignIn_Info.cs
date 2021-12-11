@@ -48,7 +48,7 @@ namespace VideoRentalStore
             string cmnd = TextBox_CMND.Text;
             string address = Textbox_Address.Text;
 
-            SqlConnection con = new SqlConnection(@"Data Source=ADMJIN;Initial Catalog=VideoRentalStore;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True");
             con.Open();
             if (SaveUsername().Length<1 || displayname.Length < 1 || email.Length < 1 || phonenumber.Length < 1 || cmnd.Length < 1 || address.Length < 1)
             {
