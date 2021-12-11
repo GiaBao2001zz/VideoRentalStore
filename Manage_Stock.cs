@@ -90,6 +90,7 @@ namespace VideoRentalStore
         private void Button_Import_Click_1(object sender, EventArgs e)
         {
             NhapDia form = new NhapDia();
+            
             form.ShowDialog();
         }
     }

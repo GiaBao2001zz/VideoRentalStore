@@ -72,9 +72,10 @@ namespace VideoRentalStore
             DiskName = TextBox_TenDia.Text;
             NhapDia2 form = new NhapDia2();
             form.Save_Thumbnail();
+            this.Hide();
             form.ShowDialog();
 
-            this.Hide();
+            
            
         }
 

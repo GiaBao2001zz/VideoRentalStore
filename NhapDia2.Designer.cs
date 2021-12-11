@@ -29,6 +29,7 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Button_Cancel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_Import = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,8 @@ namespace VideoRentalStore
             this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_Description = new System.Windows.Forms.Label();
             this.TextBox_Description = new System.Windows.Forms.TextBox();
+            this.Elipse_NhapDia2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,6 +215,18 @@ namespace VideoRentalStore
             this.TextBox_Description.Size = new System.Drawing.Size(356, 123);
             this.TextBox_Description.TabIndex = 39;
             // 
+            // Elipse_NhapDia2
+            // 
+            this.Elipse_NhapDia2.ElipseRadius = 10;
+            this.Elipse_NhapDia2.TargetControl = this;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // NhapDia2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +264,7 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Actor;
         private System.Windows.Forms.Label Label_Description;
         private System.Windows.Forms.TextBox TextBox_Description;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_NhapDia2;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
