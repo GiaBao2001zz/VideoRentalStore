@@ -17,6 +17,7 @@ namespace VideoRentalStore
         {
             InitializeComponent();
         }
+        public static string usname;
 
         private void Button_CancelLogin_Click(object sender, EventArgs e)
         {
@@ -35,10 +36,11 @@ namespace VideoRentalStore
 
         private void Button_SignIn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMJIN;Initial Catalog=VideoRentalStore;Integrated Security=True");
 
             con.Open();
             string tk = TextBox_UserName.Text;
+  
             string mk = TextBox_Password.Text;
             string mka = TextBox_PasswordAgain.Text;
 
@@ -76,9 +78,11 @@ namespace VideoRentalStore
 
                     command.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    usname = tk;
                     
-                    Login x = new Login();
+                    SignIn_Info x = new SignIn_Info();
+                    x.SaveUsername();
+
                     this.Hide();
                     x.Show();
                     
