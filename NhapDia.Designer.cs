@@ -41,10 +41,10 @@ namespace VideoRentalStore
             this.Label_ORInputWithFile = new System.Windows.Forms.Label();
             this.btn_ImportDisc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
             this.TextBox_Category = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBox_ImagePath = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,9 +66,9 @@ namespace VideoRentalStore
             this.Label_NhapDia.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.Label_NhapDia.Location = new System.Drawing.Point(73, 31);
             this.Label_NhapDia.Name = "Label_NhapDia";
-            this.Label_NhapDia.Size = new System.Drawing.Size(272, 45);
+            this.Label_NhapDia.Size = new System.Drawing.Size(274, 45);
             this.Label_NhapDia.TabIndex = 0;
-            this.Label_NhapDia.Text = "Put disk into shell";
+            this.Label_NhapDia.Text = "Put disk into shelf";
             this.Label_NhapDia.Click += new System.EventHandler(this.label1_Click);
             // 
             // TextBox_TenDia
@@ -249,17 +249,6 @@ namespace VideoRentalStore
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // pictureBox_Disc
-            // 
-            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
-            this.pictureBox_Disc.Location = new System.Drawing.Point(481, 98);
-            this.pictureBox_Disc.Name = "pictureBox_Disc";
-            this.pictureBox_Disc.Size = new System.Drawing.Size(214, 210);
-            this.pictureBox_Disc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Disc.TabIndex = 1;
-            this.pictureBox_Disc.TabStop = false;
-            this.pictureBox_Disc.Click += new System.EventHandler(this.pictureBoxDisc_Click);
-            // 
             // TextBox_Category
             // 
             this.TextBox_Category.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -292,6 +281,17 @@ namespace VideoRentalStore
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pictureBox_Disc
+            // 
+            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
+            this.pictureBox_Disc.Location = new System.Drawing.Point(481, 98);
+            this.pictureBox_Disc.Name = "pictureBox_Disc";
+            this.pictureBox_Disc.Size = new System.Drawing.Size(214, 210);
+            this.pictureBox_Disc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Disc.TabIndex = 1;
+            this.pictureBox_Disc.TabStop = false;
+            this.pictureBox_Disc.Click += new System.EventHandler(this.pictureBoxDisc_Click);
             // 
             // NhapDia
             // 

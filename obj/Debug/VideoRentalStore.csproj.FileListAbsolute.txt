@@ -156,3 +156,4 @@ D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer3\obj\D
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer3\obj\Debug\VideoRentalStore.csproj.CopyComplete
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer3\obj\Debug\VideoRentalStore.exe
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer3\obj\Debug\VideoRentalStore.pdb
+D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer3\obj\Debug\VideoRentalStore.NhapDia2.resources
