@@ -61,6 +61,7 @@ namespace VideoRentalStore
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Video_Shelf";
             this.Text = "Video_Shelf";
+            this.Load += new System.EventHandler(this.Video_Shelf_Load);
             this.ResumeLayout(false);
 
         }

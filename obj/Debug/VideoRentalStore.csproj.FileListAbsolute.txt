@@ -128,3 +128,5 @@ D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer2\obj\D
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer2\obj\Debug\VideoRentalStore.pdb
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer2\obj\Debug\VideoRentalStore.Video_Info.resources
 D:\Projects\Phương pháp phát triển phần mềm\VideoRentalStoreVer2\obj\Debug\VideoRentalStore.Video_Shelf.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Info.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Shelf.resources
