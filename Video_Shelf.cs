@@ -81,24 +81,6 @@ namespace VideoRentalStore
                     connection.Close();
                 }
             }
-
-            //SqlConnection con = new SqlConnection(@@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("SELECT Name, Thumbnail FROM Video", con);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //PictureBox[] picturebox = new PictureBox[dt.Rows.Count];
-            //Label[] label = new Label[dt.Rows.Count];
-            //for (int index = 0; index < dt.Rows.Count; ++i)
-            //{
-            //    con.Open();
-            //    SqlCommand cmmd = new SqlCommand("SELECT Name, Thumbnail FROM Video", con);
-            //    Byte[] bytes = (Byte[])cmmd.ExecuteScalar();               
-            //    picturebox[index].Image = ;
-            //    pic.SizeMode = PictureBoxSizeMode.AutoSize;
-            //    this.flowLayoutPanel.Controls.Add(pic);
-            //}
         }
 
         private void Video_Shelf_Load(object sender, EventArgs e)

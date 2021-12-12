@@ -98,12 +98,6 @@
     <Compile Include="NhapDia.Designer.cs">
       <DependentUpon>NhapDia.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhapDia2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NhapDia2.Designer.cs">
-      <DependentUpon>NhapDia2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Password_Change.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapDia.resx">
       <DependentUpon>NhapDia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NhapDia2.resx">
-      <DependentUpon>NhapDia2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Password_Change.resx">
       <DependentUpon>Password_Change.cs</DependentUpon>

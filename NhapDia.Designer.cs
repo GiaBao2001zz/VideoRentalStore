@@ -45,7 +45,13 @@ namespace VideoRentalStore
             this.TextBox_ImagePath = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
+            this.TextBox_Director = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Label_Description = new System.Windows.Forms.Label();
+            this.TextBox_Description = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl_NhapDia
@@ -103,7 +109,7 @@ namespace VideoRentalStore
             this.TextBox_DiscID.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_DiscID.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_DiscID.LineThickness = 3;
-            this.TextBox_DiscID.Location = new System.Drawing.Point(76, 194);
+            this.TextBox_DiscID.Location = new System.Drawing.Point(19, 91);
             this.TextBox_DiscID.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_DiscID.Name = "TextBox_DiscID";
             this.TextBox_DiscID.Size = new System.Drawing.Size(340, 44);
@@ -122,12 +128,13 @@ namespace VideoRentalStore
             this.TextBox_Price.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Price.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_Price.LineThickness = 3;
-            this.TextBox_Price.Location = new System.Drawing.Point(76, 264);
+            this.TextBox_Price.Location = new System.Drawing.Point(19, 143);
             this.TextBox_Price.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Price.Name = "TextBox_Price";
             this.TextBox_Price.Size = new System.Drawing.Size(340, 44);
             this.TextBox_Price.TabIndex = 5;
             this.TextBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Price.OnValueChanged += new System.EventHandler(this.TextBox_Price_OnValueChanged);
             // 
             // TextBox_SL
             // 
@@ -141,7 +148,7 @@ namespace VideoRentalStore
             this.TextBox_SL.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_SL.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_SL.LineThickness = 3;
-            this.TextBox_SL.Location = new System.Drawing.Point(76, 334);
+            this.TextBox_SL.Location = new System.Drawing.Point(19, 195);
             this.TextBox_SL.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_SL.Name = "TextBox_SL";
             this.TextBox_SL.Size = new System.Drawing.Size(340, 44);
@@ -160,7 +167,7 @@ namespace VideoRentalStore
             this.TextBox_ProviderID.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_ProviderID.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_ProviderID.LineThickness = 3;
-            this.TextBox_ProviderID.Location = new System.Drawing.Point(76, 404);
+            this.TextBox_ProviderID.Location = new System.Drawing.Point(19, 247);
             this.TextBox_ProviderID.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_ProviderID.Name = "TextBox_ProviderID";
             this.TextBox_ProviderID.Size = new System.Drawing.Size(340, 44);
@@ -261,7 +268,7 @@ namespace VideoRentalStore
             this.TextBox_Category.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Category.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_Category.LineThickness = 3;
-            this.TextBox_Category.Location = new System.Drawing.Point(76, 464);
+            this.TextBox_Category.Location = new System.Drawing.Point(19, 299);
             this.TextBox_Category.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Category.Name = "TextBox_Category";
             this.TextBox_Category.Size = new System.Drawing.Size(340, 44);
@@ -293,28 +300,105 @@ namespace VideoRentalStore
             this.pictureBox_Disc.TabStop = false;
             this.pictureBox_Disc.Click += new System.EventHandler(this.pictureBoxDisc_Click);
             // 
+            // TextBox_Director
+            // 
+            this.TextBox_Director.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_Director.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextBox_Director.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextBox_Director.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_Director.HintText = "Director";
+            this.TextBox_Director.isPassword = false;
+            this.TextBox_Director.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBox_Director.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Director.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBox_Director.LineThickness = 3;
+            this.TextBox_Director.Location = new System.Drawing.Point(19, 351);
+            this.TextBox_Director.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBox_Director.Name = "TextBox_Director";
+            this.TextBox_Director.Size = new System.Drawing.Size(340, 44);
+            this.TextBox_Director.TabIndex = 14;
+            this.TextBox_Director.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Director.OnValueChanged += new System.EventHandler(this.TextBoxDirector_OnValueChanged_1);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.TextBox_Description);
+            this.panel1.Controls.Add(this.Label_Description);
+            this.panel1.Controls.Add(this.TextBox_Actor);
+            this.panel1.Controls.Add(this.TextBox_Director);
+            this.panel1.Controls.Add(this.TextBox_Category);
+            this.panel1.Controls.Add(this.TextBox_Price);
+            this.panel1.Controls.Add(this.TextBox_DiscID);
+            this.panel1.Controls.Add(this.TextBox_SL);
+            this.panel1.Controls.Add(this.TextBox_ProviderID);
+            this.panel1.Location = new System.Drawing.Point(57, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(380, 683);
+            this.panel1.TabIndex = 13;
+            // 
+            // TextBox_Actor
+            // 
+            this.TextBox_Actor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_Actor.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextBox_Actor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextBox_Actor.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_Actor.HintText = "Actor";
+            this.TextBox_Actor.isPassword = false;
+            this.TextBox_Actor.LineFocusedColor = System.Drawing.Color.Blue;
+            this.TextBox_Actor.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Actor.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.TextBox_Actor.LineThickness = 3;
+            this.TextBox_Actor.Location = new System.Drawing.Point(19, 403);
+            this.TextBox_Actor.Margin = new System.Windows.Forms.Padding(4);
+            this.TextBox_Actor.Name = "TextBox_Actor";
+            this.TextBox_Actor.Size = new System.Drawing.Size(340, 44);
+            this.TextBox_Actor.TabIndex = 15;
+            this.TextBox_Actor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Actor.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
+            // 
+            // Label_Description
+            // 
+            this.Label_Description.AutoSize = true;
+            this.Label_Description.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Label_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Label_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label_Description.Location = new System.Drawing.Point(21, 463);
+            this.Label_Description.Name = "Label_Description";
+            this.Label_Description.Size = new System.Drawing.Size(80, 17);
+            this.Label_Description.TabIndex = 39;
+            this.Label_Description.Text = "Description";
+            // 
+            // TextBox_Description
+            // 
+            this.TextBox_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextBox_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextBox_Description.Location = new System.Drawing.Point(19, 483);
+            this.TextBox_Description.Multiline = true;
+            this.TextBox_Description.Name = "TextBox_Description";
+            this.TextBox_Description.Size = new System.Drawing.Size(340, 163);
+            this.TextBox_Description.TabIndex = 40;
+            // 
             // NhapDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(752, 521);
             this.Controls.Add(this.TextBox_ImagePath);
-            this.Controls.Add(this.TextBox_Category);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.btn_ImportDisc);
             this.Controls.Add(this.Label_ORInputWithFile);
-            this.Controls.Add(this.TextBox_ProviderID);
-            this.Controls.Add(this.TextBox_SL);
-            this.Controls.Add(this.TextBox_Price);
-            this.Controls.Add(this.TextBox_DiscID);
             this.Controls.Add(this.TextBox_TenDia);
             this.Controls.Add(this.pictureBox_Disc);
             this.Controls.Add(this.Label_NhapDia);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NhapDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.NhapDia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +421,10 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Category;
         private System.Windows.Forms.TextBox TextBox_ImagePath;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Director;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Actor;
+        private System.Windows.Forms.Label Label_Description;
+        private System.Windows.Forms.TextBox TextBox_Description;
     }
 }

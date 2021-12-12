@@ -18,8 +18,6 @@ namespace VideoRentalStore
         {
             InitializeComponent();
         }
-        public static string Thumbnail;
-        public static string DiskName;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -27,7 +25,7 @@ namespace VideoRentalStore
 
         private void NhapDia_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -43,21 +41,24 @@ namespace VideoRentalStore
         private void btnImportDisc_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
-            string query = "INSERT INTO Video ( Name , id, Price, Quantity, Provider, Category, Thumbnail) VALUES (@name, @id, @price, @quantity, @provider, @category, @thumbnail )";
+            string query = "INSERT INTO Video ( Name , id, Price, Quantity, Provider, Category, Thumbnail, Actor, Director, Decription) VALUES (@name, @id, @price, @quantity, @provider, @category, @thumbnail, @actor, @director, @decription )";
             SqlCommand cmd = new SqlCommand(query, con);
 
-            int idDisc = Int32.Parse(TextBox_DiscID.Text);
+            
             float priceDisc = float.Parse(TextBox_Price.Text);
             int quantityDisc = Int32.Parse(TextBox_SL.Text);
             string imgFilePath = TextBox_ImagePath.Text;
 
             cmd.Parameters.AddWithValue("@name", TextBox_TenDia.Text);
-            cmd.Parameters.AddWithValue("@id", idDisc);
+            cmd.Parameters.AddWithValue("@id", TextBox_DiscID.Text);
             cmd.Parameters.AddWithValue("@price", priceDisc);
             cmd.Parameters.AddWithValue("@quantity", quantityDisc);
             cmd.Parameters.AddWithValue("@provider", TextBox_ProviderID.Text);
             cmd.Parameters.AddWithValue("@category", TextBox_Category.Text);
             cmd.Parameters.AddWithValue("@thumbnail", imgFilePath);
+            cmd.Parameters.AddWithValue("@director", TextBox_Director.Text);
+            cmd.Parameters.AddWithValue("@actor", TextBox_Actor.Text);
+            cmd.Parameters.AddWithValue("@decription", TextBox_Description.Text);
 
             con.Open();
             int i = cmd.ExecuteNonQuery();
@@ -67,16 +68,7 @@ namespace VideoRentalStore
             if (i != 0)
             {
                 MessageBox.Show("Import Successfully");
-            }
-            Thumbnail = imgFilePath;
-            DiskName = TextBox_TenDia.Text;
-            NhapDia2 form = new NhapDia2();
-            form.Save_Thumbnail();
-            this.Hide();
-            form.ShowDialog();
-
-            
-           
+            }          
         }
 
         
@@ -109,6 +101,20 @@ namespace VideoRentalStore
         {
             this.Close();
         }
-        
+
+        private void TextBoxDirector_OnValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_Price_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
