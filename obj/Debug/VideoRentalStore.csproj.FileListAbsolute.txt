@@ -51,3 +51,29 @@ D:\Video rental store system\VideoRentalStore\obj\Debug\dje-NE\VideoRentalStore.
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.exe
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.pdb
+D:\Projects\VideoRentalStore\bin\Debug\VideoRentalStore.exe.config
+D:\Projects\VideoRentalStore\bin\Debug\VideoRentalStore.exe
+D:\Projects\VideoRentalStore\bin\Debug\VideoRentalStore.pdb
+D:\Projects\VideoRentalStore\bin\Debug\dje-NE\VideoRentalStore.resources.dll
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Account_Info.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Account_Settings.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Grid_YeuCauThueMua.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Login.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Main_Staff.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Main_User.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Manage_Stock.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.NhapDia.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Password_Change.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Properties.Resources.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.SignIn_Info.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.SignIn.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Info.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Shelf.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.Login.dje-NE.resources
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.GenerateResource.cache
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CoreCompileInputs.cache
+D:\Projects\VideoRentalStore\obj\Debug\dje-NE\VideoRentalStore.resources.dll
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.exe
+D:\Projects\VideoRentalStore\obj\Debug\VideoRentalStore.pdb

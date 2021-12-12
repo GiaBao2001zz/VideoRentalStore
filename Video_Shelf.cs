@@ -72,7 +72,11 @@ namespace VideoRentalStore
                             label[index].Location = new Point(x * 250 + 85, y + 200 );
                             this.Controls.Add(picturebox[index]);
                             this.Controls.Add(label[index]);
+                            picturebox[index].Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
                             picturebox[index].BringToFront();
+
+                            label[index].Anchor = AnchorStyles.Top | AnchorStyles.Left;
                             label[index].BringToFront();
                             index++;
                             x++;

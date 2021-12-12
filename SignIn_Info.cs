@@ -57,8 +57,8 @@ namespace VideoRentalStore
             else
             {
                 string sql = "update Account " +
-                    "set DisplayName = '"+displayname+"', " + " Email = '" + email + "', "
-                    + " PhoneNumber = '" + phonenumber + "', "+ " CMND = '" + cmnd + "', "+ " Address = '" + address + "' "+
+                    "set DisplayName = N'"+displayname+"', " + " Email = '" + email + "', "
+                    + " PhoneNumber = '" + phonenumber + "', "+ " CMND = '" + cmnd + "', "+ " Address = N'" + address + "' "+
                     "where Username='"+SaveUsername()+"'";
                 SqlCommand command = new SqlCommand(sql, con);
                 command.ExecuteNonQuery();
