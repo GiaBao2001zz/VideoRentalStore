@@ -27,5 +27,25 @@ namespace VideoRentalStore
         {
            
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_VideoProvider_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Actor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Director_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

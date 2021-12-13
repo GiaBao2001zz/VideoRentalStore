@@ -447,7 +447,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Balance;
         private System.Windows.Forms.Label Label_Currency;
         private System.Windows.Forms.Label Label_FormName;
-        private System.Windows.Forms.Panel Panel_SwtichForm;
+        public System.Windows.Forms.Panel Panel_SwtichForm;
         private System.Windows.Forms.PictureBox Picture_Balance;
         private System.Windows.Forms.PictureBox Picture_Logo;
         private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;

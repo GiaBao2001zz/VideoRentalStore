@@ -75,7 +75,6 @@ namespace VideoRentalStore
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
 
-
         }
 
         private void Button_Cart_Click(object sender, EventArgs e)
