@@ -92,17 +92,22 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_Staff x = new Main_Staff();
-                    
-                    x.Show();
+
                     this.Hide();
+                    
+                    x.ShowDialog();
+                    this.Close();
+                    
                 }
                 else if (a == "0")
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
-                    
-                    y.Show();
                     this.Hide();
+
+                    y.ShowDialog();
+                    this.Close();
+
                 }
             }
             else

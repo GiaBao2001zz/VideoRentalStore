@@ -42,5 +42,39 @@ namespace VideoRentalStore
             grid.Show();
         }
 
+        private void Button_LogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out? ", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Login form2 = new Login();
+                
+                
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms[i].Name != "Login")
+                        Application.OpenForms[i].Hide();
+                }
+    
+
+                form2.ShowDialog();
+
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms[i].Name != "Login")
+                        Application.OpenForms[i].Close();
+                }
+                
+
+                
+
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+            
+        }
     }
 }
