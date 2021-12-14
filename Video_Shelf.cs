@@ -58,7 +58,7 @@ namespace VideoRentalStore
                             var value3 = reader.GetValue(indexOfColumn3);                        
                             if ((x % 4 == 0) && (index != 0))
                             {
-                                y = y + 300; // Mỗi hàng 4 hình
+                                y = y + 325; // Mỗi hàng 4 hình
                                 x = 0;
                             }
                             picturebox[index] = new PictureBox();
@@ -66,16 +66,16 @@ namespace VideoRentalStore
                             picturebox[index].Image = Image.FromFile(value2.ToString());
                             picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
                             picturebox[index].Location = new Point(x * 250 +60, y);
-                            picturebox[index].Size = new Size(150, 200);
+                            picturebox[index].Size = new Size(175, 250); //150,200
                             picturebox[index].Tag = value3;                         
                             label[index].Text = (string)value1;
                             label[index].Font = new Font("Roboto", 10);
-                            label[index].Size = new Size(150, 70);
+                            label[index].Size = new Size(175, 70);
                             label[index].ForeColor = Color.White;
                             label[index].AutoSize = false;
                             label[index].TextAlign = ContentAlignment.MiddleCenter;
                             label[index].AutoSize = false;
-                            label[index].Location = new Point(x * 250 + 60, y + 200 );
+                            label[index].Location = new Point(x * 250 + 60, y + 240 );
                             picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
                             picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
                             picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
