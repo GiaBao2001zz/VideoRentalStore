@@ -140,5 +140,12 @@ namespace VideoRentalStore
             Button_ChangeInfo.Visible = true;
             Button_Cancel.Visible = true;
         }
+
+        private void TextBox_Email_Enter(object sender, EventArgs e)
+        {
+
+        }
+        
+        
     }
 }

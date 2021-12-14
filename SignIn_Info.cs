@@ -47,6 +47,7 @@ namespace VideoRentalStore
             string phonenumber = Textbox_PhoneNumber.Text;
             string cmnd = TextBox_CMND.Text;
             string address = Textbox_Address.Text;
+            DateTime now = DateTime.Now;
 
             SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True");
             con.Open();
@@ -58,8 +59,7 @@ namespace VideoRentalStore
             {
                 string sql = "update Account " +
                     "set DisplayName = N'"+displayname+"', " + " Email = '" + email + "', "
-                    + " PhoneNumber = '" + phonenumber + "', "+ " CMND = '" + cmnd + "', "+ " Address = N'" + address + "' "+
-                    "where Username='"+SaveUsername()+"'";
+                    + " PhoneNumber = '" + phonenumber + "', "+ " CMND = '" + cmnd + "', "+ " Address = N'" + address + "' , DateCreate = '"+ now + "'  where Username='"+SaveUsername()+"'";
                 SqlCommand command = new SqlCommand(sql, con);
                 command.ExecuteNonQuery();
                 con.Close();

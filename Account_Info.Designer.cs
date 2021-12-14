@@ -147,7 +147,7 @@ namespace VideoRentalStore
             this.TextBox_Email.TabIndex = 22;
             this.TextBox_Email.Text = "tinh258456@gmail.com";
             this.TextBox_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBox_Email.OnValueChanged += new System.EventHandler(this.TextBox_Email_OnValueChanged);
+            this.TextBox_Email.Enter += new System.EventHandler(this.TextBox_Email_Enter);
             // 
             // Label_ShowDateCreated
             // 

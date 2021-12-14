@@ -104,7 +104,7 @@ namespace VideoRentalStore
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
                     this.Hide();
-
+                    y.UserName = tk;
                     y.ShowDialog();
                     this.Close();
 
