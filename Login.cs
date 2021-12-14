@@ -94,7 +94,7 @@ namespace VideoRentalStore
                     Main_Staff x = new Main_Staff();
 
                     this.Hide();
-                    
+                    x.UserName = tk ;
                     x.ShowDialog();
                     this.Close();
                     

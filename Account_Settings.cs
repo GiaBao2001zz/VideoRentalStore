@@ -12,11 +12,15 @@ namespace VideoRentalStore
 {
     public partial class Account_Settings : Form
     {
-        public Account_Settings()
+        public Account_Settings(string username)
         {
-            InitializeComponent();
-        }
+            
 
+            InitializeComponent();
+
+             this.UserName = username;
+        }
+        private string UserName; 
         public void Button_Account_Info_Click(object sender, EventArgs e)
         {
             // Check if is there any form already opened in Switch Form Panel
@@ -24,7 +28,7 @@ namespace VideoRentalStore
                 this.Panel_Switching.Controls.RemoveAt(0);
 
             // Add New Form (Grid_YeuCauThueMua)
-            Account_Info grid = new Account_Info() { Dock = DockStyle.Fill, TopLevel = false };
+            Account_Info grid = new Account_Info(UserName) { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }

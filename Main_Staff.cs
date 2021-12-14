@@ -37,6 +37,7 @@ namespace VideoRentalStore
            
 
         }
+        public string UserName;
 
         private void Button_AccountManagement_Click(object sender, EventArgs e)
         {
@@ -57,7 +58,7 @@ namespace VideoRentalStore
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
 
             // Add New Form (Grid_YeuCauThueMua)
-            Account_Settings grid = new Account_Settings() { Dock = DockStyle.Fill, TopLevel = false };
+            Account_Settings grid = new Account_Settings(UserName) { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
         }

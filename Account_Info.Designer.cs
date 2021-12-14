@@ -30,7 +30,6 @@ namespace VideoRentalStore
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Info));
-            this.TextBox_UserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_DateCreated = new System.Windows.Forms.Label();
             this.Label_PhoneNumber = new System.Windows.Forms.Label();
             this.Label_DisplayName = new System.Windows.Forms.Label();
@@ -42,28 +41,12 @@ namespace VideoRentalStore
             this.TextBox_PhoneNumber = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Button_Cancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_ChangeInfo = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.TextBox_Address = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Label_Address = new System.Windows.Forms.Label();
+            this.TextBox_Cmnd = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Label_CMND = new System.Windows.Forms.Label();
+            this.Label_ShowUserName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // TextBox_UserName
-            // 
-            this.TextBox_UserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBox_UserName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_UserName.ForeColor = System.Drawing.Color.White;
-            this.TextBox_UserName.HintForeColor = System.Drawing.Color.Empty;
-            this.TextBox_UserName.HintText = "";
-            this.TextBox_UserName.isPassword = false;
-            this.TextBox_UserName.LineFocusedColor = System.Drawing.Color.Green;
-            this.TextBox_UserName.LineIdleColor = System.Drawing.Color.Gray;
-            this.TextBox_UserName.LineMouseHoverColor = System.Drawing.Color.Green;
-            this.TextBox_UserName.LineThickness = 5;
-            this.TextBox_UserName.Location = new System.Drawing.Point(82, 62);
-            this.TextBox_UserName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.TextBox_UserName.Name = "TextBox_UserName";
-            this.TextBox_UserName.Size = new System.Drawing.Size(308, 53);
-            this.TextBox_UserName.TabIndex = 20;
-            this.TextBox_UserName.Text = "Chikitori";
-            this.TextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.TextBox_UserName.OnValueChanged += new System.EventHandler(this.TextBox_UserName_OnValueChanged);
             // 
             // Label_DateCreated
             // 
@@ -81,7 +64,7 @@ namespace VideoRentalStore
             this.Label_PhoneNumber.AutoSize = true;
             this.Label_PhoneNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_PhoneNumber.ForeColor = System.Drawing.Color.White;
-            this.Label_PhoneNumber.Location = new System.Drawing.Point(471, 34);
+            this.Label_PhoneNumber.Location = new System.Drawing.Point(447, 151);
             this.Label_PhoneNumber.Name = "Label_PhoneNumber";
             this.Label_PhoneNumber.Size = new System.Drawing.Size(130, 21);
             this.Label_PhoneNumber.TabIndex = 15;
@@ -92,7 +75,7 @@ namespace VideoRentalStore
             this.Label_DisplayName.AutoSize = true;
             this.Label_DisplayName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_DisplayName.ForeColor = System.Drawing.Color.White;
-            this.Label_DisplayName.Location = new System.Drawing.Point(79, 142);
+            this.Label_DisplayName.Location = new System.Drawing.Point(78, 34);
             this.Label_DisplayName.Name = "Label_DisplayName";
             this.Label_DisplayName.Size = new System.Drawing.Size(117, 21);
             this.Label_DisplayName.TabIndex = 14;
@@ -118,7 +101,7 @@ namespace VideoRentalStore
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.Label_UserName.ForeColor = System.Drawing.Color.FloralWhite;
-            this.Label_UserName.Location = new System.Drawing.Point(78, 34);
+            this.Label_UserName.Location = new System.Drawing.Point(447, 34);
             this.Label_UserName.Name = "Label_UserName";
             this.Label_UserName.Size = new System.Drawing.Size(92, 21);
             this.Label_UserName.TabIndex = 11;
@@ -136,7 +119,7 @@ namespace VideoRentalStore
             this.TextBox_DisplayName.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_DisplayName.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_DisplayName.LineThickness = 5;
-            this.TextBox_DisplayName.Location = new System.Drawing.Point(82, 170);
+            this.TextBox_DisplayName.Location = new System.Drawing.Point(83, 62);
             this.TextBox_DisplayName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.TextBox_DisplayName.Name = "TextBox_DisplayName";
             this.TextBox_DisplayName.Size = new System.Drawing.Size(308, 53);
@@ -189,10 +172,10 @@ namespace VideoRentalStore
             this.TextBox_PhoneNumber.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_PhoneNumber.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_PhoneNumber.LineThickness = 5;
-            this.TextBox_PhoneNumber.Location = new System.Drawing.Point(475, 62);
+            this.TextBox_PhoneNumber.Location = new System.Drawing.Point(451, 179);
             this.TextBox_PhoneNumber.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.TextBox_PhoneNumber.Name = "TextBox_PhoneNumber";
-            this.TextBox_PhoneNumber.Size = new System.Drawing.Size(246, 53);
+            this.TextBox_PhoneNumber.Size = new System.Drawing.Size(270, 53);
             this.TextBox_PhoneNumber.TabIndex = 23;
             this.TextBox_PhoneNumber.Text = "0335544529";
             this.TextBox_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -252,6 +235,81 @@ namespace VideoRentalStore
             this.Button_ChangeInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_ChangeInfo.Click += new System.EventHandler(this.Button_ChangeInfo_Click);
             // 
+            // TextBox_Address
+            // 
+            this.TextBox_Address.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_Address.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Address.ForeColor = System.Drawing.Color.White;
+            this.TextBox_Address.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_Address.HintText = "";
+            this.TextBox_Address.isPassword = false;
+            this.TextBox_Address.LineFocusedColor = System.Drawing.Color.Green;
+            this.TextBox_Address.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Address.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.TextBox_Address.LineThickness = 5;
+            this.TextBox_Address.Location = new System.Drawing.Point(82, 179);
+            this.TextBox_Address.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_Address.Name = "TextBox_Address";
+            this.TextBox_Address.Size = new System.Drawing.Size(308, 53);
+            this.TextBox_Address.TabIndex = 27;
+            this.TextBox_Address.Text = "Nguyễn Trọng Tính";
+            this.TextBox_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Address.OnValueChanged += new System.EventHandler(this.TextBox_Address_OnValueChanged);
+            // 
+            // Label_Address
+            // 
+            this.Label_Address.AutoSize = true;
+            this.Label_Address.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Address.ForeColor = System.Drawing.Color.White;
+            this.Label_Address.Location = new System.Drawing.Point(77, 151);
+            this.Label_Address.Name = "Label_Address";
+            this.Label_Address.Size = new System.Drawing.Size(78, 21);
+            this.Label_Address.TabIndex = 26;
+            this.Label_Address.Text = "ADDRESS";
+            // 
+            // TextBox_Cmnd
+            // 
+            this.TextBox_Cmnd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_Cmnd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Cmnd.ForeColor = System.Drawing.Color.White;
+            this.TextBox_Cmnd.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_Cmnd.HintText = "";
+            this.TextBox_Cmnd.isPassword = false;
+            this.TextBox_Cmnd.LineFocusedColor = System.Drawing.Color.Green;
+            this.TextBox_Cmnd.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Cmnd.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.TextBox_Cmnd.LineThickness = 5;
+            this.TextBox_Cmnd.Location = new System.Drawing.Point(450, 294);
+            this.TextBox_Cmnd.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_Cmnd.Name = "TextBox_Cmnd";
+            this.TextBox_Cmnd.Size = new System.Drawing.Size(270, 53);
+            this.TextBox_Cmnd.TabIndex = 29;
+            this.TextBox_Cmnd.Text = "281240609";
+            this.TextBox_Cmnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_Cmnd.OnValueChanged += new System.EventHandler(this.TextBox_Cmnd_OnValueChanged);
+            // 
+            // Label_CMND
+            // 
+            this.Label_CMND.AutoSize = true;
+            this.Label_CMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_CMND.ForeColor = System.Drawing.Color.White;
+            this.Label_CMND.Location = new System.Drawing.Point(446, 266);
+            this.Label_CMND.Name = "Label_CMND";
+            this.Label_CMND.Size = new System.Drawing.Size(57, 21);
+            this.Label_CMND.TabIndex = 28;
+            this.Label_CMND.Text = "CMND";
+            // 
+            // Label_ShowUserName
+            // 
+            this.Label_ShowUserName.AutoSize = true;
+            this.Label_ShowUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ShowUserName.ForeColor = System.Drawing.Color.White;
+            this.Label_ShowUserName.Location = new System.Drawing.Point(446, 85);
+            this.Label_ShowUserName.Name = "Label_ShowUserName";
+            this.Label_ShowUserName.Size = new System.Drawing.Size(59, 30);
+            this.Label_ShowUserName.TabIndex = 30;
+            this.Label_ShowUserName.Text = "Chiki";
+            // 
             // Account_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,12 +317,16 @@ namespace VideoRentalStore
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(753, 489);
+            this.Controls.Add(this.Label_ShowUserName);
+            this.Controls.Add(this.TextBox_Cmnd);
+            this.Controls.Add(this.Label_CMND);
+            this.Controls.Add(this.TextBox_Address);
+            this.Controls.Add(this.Label_Address);
             this.Controls.Add(this.Button_Cancel);
             this.Controls.Add(this.Button_ChangeInfo);
             this.Controls.Add(this.TextBox_PhoneNumber);
             this.Controls.Add(this.TextBox_Email);
             this.Controls.Add(this.TextBox_DisplayName);
-            this.Controls.Add(this.TextBox_UserName);
             this.Controls.Add(this.Label_ShowDateCreated);
             this.Controls.Add(this.Label_DateCreated);
             this.Controls.Add(this.Label_PhoneNumber);
@@ -280,8 +342,6 @@ namespace VideoRentalStore
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_UserName;
         private System.Windows.Forms.Label Label_DateCreated;
         private System.Windows.Forms.Label Label_PhoneNumber;
         private System.Windows.Forms.Label Label_DisplayName;
@@ -293,5 +353,10 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_PhoneNumber;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_ChangeInfo;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Cancel;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Address;
+        private System.Windows.Forms.Label Label_Address;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Cmnd;
+        private System.Windows.Forms.Label Label_CMND;
+        private System.Windows.Forms.Label Label_ShowUserName;
     }
 }

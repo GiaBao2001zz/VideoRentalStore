@@ -31,7 +31,7 @@ namespace VideoRentalStore
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
         }
-
+        public string UserName;
         private void ActivateBtn(object senderBtn)
         {
             if (senderBtn != null)
