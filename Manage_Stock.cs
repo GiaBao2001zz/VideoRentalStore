@@ -70,11 +70,12 @@ namespace VideoRentalStore
             SqlConnection connection = new SqlConnection(connectionSTR);
             connection.Open();
 
-            var value2 = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value.ToString();
+            var value2 = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
 
 
-            string type = "SELECT Thumbnail FROM Video WHERE id =" + value2;
+            string type = "SELECT Thumbnail FROM Video WHERE id = @value2" /*+ value2*/;
             SqlCommand command = new SqlCommand(type, connection);
+            command.Parameters.AddWithValue("@value2", value2);
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(data);

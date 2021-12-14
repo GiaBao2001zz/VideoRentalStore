@@ -35,6 +35,7 @@ namespace VideoRentalStore
             // 
             // Panel_ControlButton
             // 
+            this.Panel_ControlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Panel_ControlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_ControlButton.Location = new System.Drawing.Point(0, 562);
             this.Panel_ControlButton.Name = "Panel_ControlButton";
@@ -43,6 +44,7 @@ namespace VideoRentalStore
             // 
             // Panel_ShowVideo
             // 
+            this.Panel_ShowVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Panel_ShowVideo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_ShowVideo.Location = new System.Drawing.Point(0, 0);
             this.Panel_ShowVideo.Name = "Panel_ShowVideo";
