@@ -63,7 +63,7 @@ namespace VideoRentalStore
                             }
                             picturebox[index] = new PictureBox();
                             label[index] = new Label();
-                            picturebox[index].Image = Image.FromFile(value2.ToString());                  
+                            picturebox[index].Image = Image.FromFile(value2.ToString());
                             picturebox[index].SizeMode = PictureBoxSizeMode.Zoom;
                             picturebox[index].Location = new Point(x * 250 +60, y);
                             picturebox[index].Size = new Size(200, 200);
@@ -72,9 +72,16 @@ namespace VideoRentalStore
                             label[index].Font = new Font("Circular", 10);
                             label[index].Size = new Size(150, 70);
                             label[index].ForeColor = Color.White;
+                            label[index].AutoSize = false;
                             label[index].TextAlign = ContentAlignment.MiddleCenter;
                             label[index].AutoSize = false;
                             label[index].Location = new Point(x * 250 + 85, y + 200 );
+
+                            var imageSize = picturebox[index].Image.Size;
+                            var fitSize = picturebox[index].ClientSize;
+                            //picturebox[index].SizeMode = imageSize.Width > fitSize.Width || imageSize.Height > fitSize.Height ?
+                            //    PictureBoxSizeMode.Zoom : PictureBoxSizeMode.CenterImage;
+
                             picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
                             picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
                             picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
@@ -94,8 +101,10 @@ namespace VideoRentalStore
         internal void Active(object sender, MouseEventArgs e)
         {
             //Show form Video_Info
-            this.Hide();
+            
             Main_User main_User = (Main_User)ParentForm;
+            if (main_User.Panel_SwtichForm.Controls.Count > 0)
+                main_User.Panel_SwtichForm.Controls.RemoveAt(0);
             Video_Info video_Info = new Video_Info() { Dock = DockStyle.Fill, TopLevel = false };
             main_User.Panel_SwtichForm.Controls.Add(video_Info);
             video_Info.Show();
