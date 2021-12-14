@@ -41,7 +41,7 @@ namespace VideoRentalStore
                 this.Panel_Switching.Controls.RemoveAt(0);
 
             // Add New Form (Grid_YeuCauThueMua)
-            Password_Change grid = new Password_Change() { Dock = DockStyle.Fill, TopLevel = false };
+            Password_Change grid = new Password_Change(UserName) { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }
