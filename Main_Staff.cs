@@ -14,23 +14,33 @@ namespace VideoRentalStore
     public partial class Main_Staff : Form
     {
         public bool SwitchForm = false;
+        private Panel LeftBorderBtn;
+        private Bunifu.Framework.UI.BunifuFlatButton CurrentButton;
         public Main_Staff()
         {
             
             InitializeComponent();
-            
+            LeftBorderBtn = new Panel();
+            LeftBorderBtn.Size = new Size(10, 60);
+            Panel_Menu.Controls.Add(LeftBorderBtn);
+            LeftBorderBtn.BackColor = Color.White;
+
         }
 
         private void Button_Request_Click(object sender, EventArgs e)
         {
+            ActivateBtn(sender);
+
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
-            
             // Add New Form (Grid_YeuCauThueMua)
             Grid_YeuCauThueMua grid = new Grid_YeuCauThueMua() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
+            
+            
+            
 
            
             
@@ -38,9 +48,40 @@ namespace VideoRentalStore
 
         }
         public string UserName;
+        private void ActivateBtn(object senderBtn)
+        {
+            if (senderBtn != null)
+            {
+                DeactivateButton();
+                this.CurrentButton = (Bunifu.Framework.UI.BunifuFlatButton)senderBtn;
+                this.CurrentButton.IconMarginLeft += 30;
+                this.CurrentButton.BackColor = Color.White;
 
+
+
+                //Left border button
+                LeftBorderBtn.Location = new Point(0, this.CurrentButton.Location.Y);
+                LeftBorderBtn.Visible = true;
+                LeftBorderBtn.BringToFront();
+
+
+            }
+        }
+        private void DeactivateButton()
+        {
+            if (CurrentButton != null)
+            {
+
+                CurrentButton.BackColor = Color.FromArgb(43, 43, 43);
+                CurrentButton.IconMarginLeft -= 30;
+
+
+
+            }
+        }
         private void Button_AccountManagement_Click(object sender, EventArgs e)
         {
+            ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
@@ -53,6 +94,7 @@ namespace VideoRentalStore
 
         private void Button_AccountInfo_Click(object sender, EventArgs e)
         {
+            ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
@@ -70,6 +112,7 @@ namespace VideoRentalStore
 
         private void Button_ManageGood_Click(object sender, EventArgs e)
         {
+            ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
@@ -78,6 +121,11 @@ namespace VideoRentalStore
             Manage_Stock grid = new Manage_Stock() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
+        }
+
+        private void Button_Report_Click(object sender, EventArgs e)
+        {
+            ActivateBtn(sender);
         }
     }
 }
