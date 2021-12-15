@@ -117,8 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox_Description.Text" xml:space="preserve">
-    <value>The Promised Neverland (Japanese: 約束のネバーランド, Hepburn: Yakusoku no Nebārando) is a Japanese manga series written by Kaiu Shirai and illustrated by Posuka Demizu. It was serialized in Shueisha's Weekly Shōnen Jump from August 2016 to June 2020, with its chapters collected in twenty tankōbon volumes. In North America, Viz Media licensed the manga for English release and serialized it on their digital Weekly Shonen Jump magazine. The series follows a group of orphaned children in their plan to escape from their orphanage, after learning the dark truth behind their existence and the purpose of the1111111111111111111111111</value>
+  <data name="Label_Discription.Text" xml:space="preserve">
+    <value>The Promised Neverland (Japanese: 約束のネバーランド, Hepburn: Yakusoku no Nebārando) is a Japanese manga series written by Kaiu Shirai and illustrated by Posuka Demizu. It was serialized in Shueisha's Weekly Shōnen Jump from August 2016 to June 2020, with its chapters collected in twenty tankōbon volumes. In North America, Viz Media licensed the manga for English release and serialized it on their digital Weekly Shonen Jump magazine. The series follows a group of orphaned children in their plan to escape from their orphanage, after learning the dark truth behind their existence and the purpose of the1111111111111111111111111
+aaaaaaaaaaaaaaaaa</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button_Rent.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

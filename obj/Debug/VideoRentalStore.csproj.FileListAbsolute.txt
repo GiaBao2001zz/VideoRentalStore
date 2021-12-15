@@ -103,3 +103,5 @@ D:\Projects\VideoRentalStore#2\obj\Debug\dje-NE\VideoRentalStore.resources.dll
 D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.csproj.CopyComplete
 D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.exe
 D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.pdb
+D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.ShoppingCart.resources
+D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.Video_Info_ReadOnly.resources

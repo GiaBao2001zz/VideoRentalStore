@@ -16,20 +16,19 @@ namespace VideoRentalStore
         {
             InitializeComponent();
             LoadInfo();
+            
         }
         private void LoadInfo()
         {
-            if (TextBox_Description.TextLength > 600)
-            {
-                TextBox_Description.ScrollBars = ScrollBars.Vertical;
-            }
+            
+
             if (Int32.Parse(Label_ShowQuantity.Text) <= 0)
             {
                 Label_ShowQuantity.ForeColor = Color.Red;
             }    
             else
             {
-                Label_ShowQuantity.ForeColor = Color.LimeGreen
+                Label_ShowQuantity.ForeColor = Color.LimeGreen;
             }    
         }
     }
