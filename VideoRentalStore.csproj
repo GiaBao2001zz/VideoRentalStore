@@ -112,6 +112,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.Designer.cs">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignIn_Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="Video_Info.Designer.cs">
       <DependentUpon>Video_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Video_Info_ReadOnly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video_Info_ReadOnly.Designer.cs">
+      <DependentUpon>Video_Info_ReadOnly.cs</DependentUpon>
     </Compile>
     <Compile Include="Video_Shelf.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ShoppingCart.resx">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SignIn_Info.resx">
       <DependentUpon>SignIn_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Video_Info.resx">
       <DependentUpon>Video_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Video_Info_ReadOnly.resx">
+      <DependentUpon>Video_Info_ReadOnly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Video_Shelf.resx">
       <DependentUpon>Video_Shelf.cs</DependentUpon>
@@ -269,6 +287,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
