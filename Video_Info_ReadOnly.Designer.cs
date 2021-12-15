@@ -38,14 +38,14 @@ namespace VideoRentalStore
             this.panel1 = new System.Windows.Forms.Panel();
             this.TextBox_VideoName = new System.Windows.Forms.TextBox();
             this.TextBox_Description = new System.Windows.Forms.TextBox();
-            this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
-            this.Button_Buy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Label_ShowPrice = new System.Windows.Forms.Label();
             this.Label_ShowQuantity = new System.Windows.Forms.Label();
             this.Label_ShowCategory = new System.Windows.Forms.Label();
             this.Label_ShowDirector = new System.Windows.Forms.Label();
             this.Label_ShowActor = new System.Windows.Forms.Label();
             this.Button_Rent = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Button_Buy = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@ namespace VideoRentalStore
             this.Label_Actor.AutoSize = true;
             this.Label_Actor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Actor.ForeColor = System.Drawing.Color.White;
-            this.Label_Actor.Location = new System.Drawing.Point(60, 420);
+            this.Label_Actor.Location = new System.Drawing.Point(60, 400);
             this.Label_Actor.Name = "Label_Actor";
             this.Label_Actor.Size = new System.Drawing.Size(86, 32);
             this.Label_Actor.TabIndex = 31;
@@ -66,7 +66,7 @@ namespace VideoRentalStore
             this.Label_Director.AutoSize = true;
             this.Label_Director.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Director.ForeColor = System.Drawing.Color.White;
-            this.Label_Director.Location = new System.Drawing.Point(60, 360);
+            this.Label_Director.Location = new System.Drawing.Point(59, 300);
             this.Label_Director.Name = "Label_Director";
             this.Label_Director.Size = new System.Drawing.Size(105, 32);
             this.Label_Director.TabIndex = 30;
@@ -150,41 +150,6 @@ namespace VideoRentalStore
             this.TextBox_Description.TabIndex = 45;
             this.TextBox_Description.Text = resources.GetString("TextBox_Description.Text");
             // 
-            // pictureBox_Disc
-            // 
-            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
-            this.pictureBox_Disc.Location = new System.Drawing.Point(662, 12);
-            this.pictureBox_Disc.Name = "pictureBox_Disc";
-            this.pictureBox_Disc.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox_Disc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Disc.TabIndex = 44;
-            this.pictureBox_Disc.TabStop = false;
-            // 
-            // Button_Buy
-            // 
-            this.Button_Buy.ActiveBorderThickness = 1;
-            this.Button_Buy.ActiveCornerRadius = 20;
-            this.Button_Buy.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Button_Buy.ActiveForecolor = System.Drawing.Color.White;
-            this.Button_Buy.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_Buy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Buy.BackgroundImage")));
-            this.Button_Buy.ButtonText = "Buy";
-            this.Button_Buy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Buy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_Buy.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Button_Buy.IdleBorderThickness = 1;
-            this.Button_Buy.IdleCornerRadius = 20;
-            this.Button_Buy.IdleFillColor = System.Drawing.Color.White;
-            this.Button_Buy.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.Button_Buy.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Buy.Location = new System.Drawing.Point(823, 580);
-            this.Button_Buy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Button_Buy.Name = "Button_Buy";
-            this.Button_Buy.Size = new System.Drawing.Size(173, 52);
-            this.Button_Buy.TabIndex = 47;
-            this.Button_Buy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Label_ShowPrice
             // 
             this.Label_ShowPrice.AutoSize = true;
@@ -223,7 +188,7 @@ namespace VideoRentalStore
             this.Label_ShowDirector.AutoSize = true;
             this.Label_ShowDirector.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShowDirector.ForeColor = System.Drawing.Color.White;
-            this.Label_ShowDirector.Location = new System.Drawing.Point(60, 300);
+            this.Label_ShowDirector.Location = new System.Drawing.Point(60, 340);
             this.Label_ShowDirector.Name = "Label_ShowDirector";
             this.Label_ShowDirector.Size = new System.Drawing.Size(104, 32);
             this.Label_ShowDirector.TabIndex = 46;
@@ -234,7 +199,7 @@ namespace VideoRentalStore
             this.Label_ShowActor.AutoSize = true;
             this.Label_ShowActor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShowActor.ForeColor = System.Drawing.Color.White;
-            this.Label_ShowActor.Location = new System.Drawing.Point(60, 460);
+            this.Label_ShowActor.Location = new System.Drawing.Point(60, 440);
             this.Label_ShowActor.Name = "Label_ShowActor";
             this.Label_ShowActor.Size = new System.Drawing.Size(159, 32);
             this.Label_ShowActor.TabIndex = 47;
@@ -264,6 +229,41 @@ namespace VideoRentalStore
             this.Button_Rent.Size = new System.Drawing.Size(173, 52);
             this.Button_Rent.TabIndex = 48;
             this.Button_Rent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Button_Buy
+            // 
+            this.Button_Buy.ActiveBorderThickness = 1;
+            this.Button_Buy.ActiveCornerRadius = 20;
+            this.Button_Buy.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Button_Buy.ActiveForecolor = System.Drawing.Color.White;
+            this.Button_Buy.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_Buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_Buy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Buy.BackgroundImage")));
+            this.Button_Buy.ButtonText = "Buy";
+            this.Button_Buy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Buy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_Buy.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Button_Buy.IdleBorderThickness = 1;
+            this.Button_Buy.IdleCornerRadius = 20;
+            this.Button_Buy.IdleFillColor = System.Drawing.Color.White;
+            this.Button_Buy.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Button_Buy.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_Buy.Location = new System.Drawing.Point(823, 580);
+            this.Button_Buy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Button_Buy.Name = "Button_Buy";
+            this.Button_Buy.Size = new System.Drawing.Size(173, 52);
+            this.Button_Buy.TabIndex = 47;
+            this.Button_Buy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_Disc
+            // 
+            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
+            this.pictureBox_Disc.Location = new System.Drawing.Point(662, 12);
+            this.pictureBox_Disc.Name = "pictureBox_Disc";
+            this.pictureBox_Disc.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox_Disc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Disc.TabIndex = 44;
+            this.pictureBox_Disc.TabStop = false;
             // 
             // Video_Info_ReadOnly
             // 
