@@ -190,7 +190,7 @@ namespace VideoRentalStore
             this.Button_CancelSignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.Location = new System.Drawing.Point(708, 475);
-            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_CancelSignIn.Name = "Button_CancelSignIn";
             this.Button_CancelSignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_CancelSignIn.TabIndex = 5;
@@ -216,7 +216,7 @@ namespace VideoRentalStore
             this.Button_SignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.Location = new System.Drawing.Point(448, 475);
-            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_SignIn.Name = "Button_SignIn";
             this.Button_SignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_SignIn.TabIndex = 4;
@@ -236,10 +236,10 @@ namespace VideoRentalStore
             this.TextBox_CMND.LineMouseHoverColor = System.Drawing.Color.Red;
             this.TextBox_CMND.LineThickness = 5;
             this.TextBox_CMND.Location = new System.Drawing.Point(678, 151);
-            this.TextBox_CMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_CMND.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_CMND.Name = "TextBox_CMND";
             this.TextBox_CMND.Size = new System.Drawing.Size(263, 44);
-            this.TextBox_CMND.TabIndex = 9;
+            this.TextBox_CMND.TabIndex = 2;
             this.TextBox_CMND.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Textbox_Email
@@ -255,10 +255,10 @@ namespace VideoRentalStore
             this.Textbox_Email.LineMouseHoverColor = System.Drawing.Color.Red;
             this.Textbox_Email.LineThickness = 5;
             this.Textbox_Email.Location = new System.Drawing.Point(391, 334);
-            this.Textbox_Email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Textbox_Email.Margin = new System.Windows.Forms.Padding(4);
             this.Textbox_Email.Name = "Textbox_Email";
             this.Textbox_Email.Size = new System.Drawing.Size(263, 44);
-            this.Textbox_Email.TabIndex = 10;
+            this.Textbox_Email.TabIndex = 5;
             this.Textbox_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Textbox_PhoneNumber
@@ -274,10 +274,10 @@ namespace VideoRentalStore
             this.Textbox_PhoneNumber.LineMouseHoverColor = System.Drawing.Color.Red;
             this.Textbox_PhoneNumber.LineThickness = 5;
             this.Textbox_PhoneNumber.Location = new System.Drawing.Point(391, 237);
-            this.Textbox_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Textbox_PhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.Textbox_PhoneNumber.Name = "Textbox_PhoneNumber";
             this.Textbox_PhoneNumber.Size = new System.Drawing.Size(263, 44);
-            this.Textbox_PhoneNumber.TabIndex = 11;
+            this.Textbox_PhoneNumber.TabIndex = 3;
             this.Textbox_PhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Textbox_Address
@@ -293,10 +293,10 @@ namespace VideoRentalStore
             this.Textbox_Address.LineMouseHoverColor = System.Drawing.Color.Red;
             this.Textbox_Address.LineThickness = 5;
             this.Textbox_Address.Location = new System.Drawing.Point(678, 237);
-            this.Textbox_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Textbox_Address.Margin = new System.Windows.Forms.Padding(4);
             this.Textbox_Address.Name = "Textbox_Address";
             this.Textbox_Address.Size = new System.Drawing.Size(263, 44);
-            this.Textbox_Address.TabIndex = 12;
+            this.Textbox_Address.TabIndex = 4;
             this.Textbox_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // TextBox_Displayname
@@ -315,7 +315,7 @@ namespace VideoRentalStore
             this.TextBox_Displayname.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_Displayname.Name = "TextBox_Displayname";
             this.TextBox_Displayname.Size = new System.Drawing.Size(263, 44);
-            this.TextBox_Displayname.TabIndex = 13;
+            this.TextBox_Displayname.TabIndex = 1;
             this.TextBox_Displayname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // SignIn_Info

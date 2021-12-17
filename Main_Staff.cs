@@ -33,7 +33,7 @@ namespace VideoRentalStore
 
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
             // Add New Form (Grid_YeuCauThueMua)
             Grid_YeuCauThueMua grid = new Grid_YeuCauThueMua() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
@@ -84,12 +84,12 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
 
-            // Add New Form (Grid_YeuCauThueMua)
-            //Account_Settings grid = new Account_Settings() { Dock = DockStyle.Fill, TopLevel = false };
-           // this.Panel_SwtichForm.Controls.Add(grid);
-            //grid.Show();
+            
+            Account_Management grid = new Account_Management() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_SwtichForm.Controls.Add(grid);
+            grid.Show();
         }
 
         private void Button_AccountInfo_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
 
             // Add New Form (Grid_YeuCauThueMua)
             Account_Settings grid = new Account_Settings(UserName) { Dock = DockStyle.Fill, TopLevel = false };
@@ -116,7 +116,7 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
 
             // Add New Form (Grid_YeuCauThueMua)
             Manage_Stock grid = new Manage_Stock() { Dock = DockStyle.Fill, TopLevel = false };

@@ -71,14 +71,17 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                 this.Panel_SwtichForm.Controls[0].Dispose();
+               
 
 
             // Add New Form 
             Video_Shelf grid = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
-            this.Closed += (s, args) => grid.Close();
+           // this.Closed += (s, args) => grid.Close();
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
+            
+            
 
         }
 
@@ -87,7 +90,7 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
 
             // Add New Form 
             ShoppingCart grid = new ShoppingCart() { Dock = DockStyle.Fill, TopLevel = false };
@@ -98,6 +101,7 @@ namespace VideoRentalStore
         private void Button_History_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            MessageBox.Show(Application.OpenForms.Count.ToString());
         }
 
         private void Button_AccoutInfo_Click(object sender, EventArgs e)
@@ -105,11 +109,15 @@ namespace VideoRentalStore
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
+
+
+
 
             // Add New Form (Grid_YeuCauThueMua)
             Account_Settings grid = new Account_Settings(UserName) { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
+            
             grid.Show();
 
         }
@@ -117,11 +125,16 @@ namespace VideoRentalStore
         private void Button_ContactUs_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            if (this.Panel_SwtichForm.Controls.Count > 0)
+                this.Panel_SwtichForm.Controls[0].Dispose();
         }
 
         private void Button_ContactUs_Click_1(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            int count = Application.OpenForms.Count;
+            MessageBox.Show(count.ToString());
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -139,7 +152,7 @@ namespace VideoRentalStore
 
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+                this.Panel_SwtichForm.Controls[0].Dispose();
 
             // Add New Form (Grid_YeuCauThueMua)
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };

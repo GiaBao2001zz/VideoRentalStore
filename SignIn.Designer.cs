@@ -182,7 +182,7 @@ namespace VideoRentalStore
             this.TextBox_PasswordAgain.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.TextBox_PasswordAgain.LineThickness = 5;
             this.TextBox_PasswordAgain.Location = new System.Drawing.Point(448, 365);
-            this.TextBox_PasswordAgain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox_PasswordAgain.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_PasswordAgain.Name = "TextBox_PasswordAgain";
             this.TextBox_PasswordAgain.Size = new System.Drawing.Size(466, 44);
             this.TextBox_PasswordAgain.TabIndex = 3;
@@ -220,7 +220,7 @@ namespace VideoRentalStore
             this.Button_CancelSignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.Location = new System.Drawing.Point(708, 475);
-            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_CancelSignIn.Name = "Button_CancelSignIn";
             this.Button_CancelSignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_CancelSignIn.TabIndex = 5;
@@ -246,7 +246,7 @@ namespace VideoRentalStore
             this.Button_SignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.Location = new System.Drawing.Point(448, 475);
-            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_SignIn.Name = "Button_SignIn";
             this.Button_SignIn.Size = new System.Drawing.Size(206, 52);
             this.Button_SignIn.TabIndex = 4;
@@ -289,7 +289,7 @@ namespace VideoRentalStore
             this.TextBox_UserName.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox_UserName.Name = "TextBox_UserName";
             this.TextBox_UserName.Size = new System.Drawing.Size(466, 44);
-            this.TextBox_UserName.TabIndex = 9;
+            this.TextBox_UserName.TabIndex = 1;
             this.TextBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // SignIn
