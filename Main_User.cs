@@ -80,6 +80,14 @@ namespace VideoRentalStore
         private void Button_Cart_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            // Check if is there any form already opened in Switch Form Panel
+            if (this.Panel_SwtichForm.Controls.Count > 0)
+                this.Panel_SwtichForm.Controls.RemoveAt(0);
+
+            // Add New Form 
+            ShoppingCart grid = new ShoppingCart() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_SwtichForm.Controls.Add(grid);
+            grid.Show();
         }
 
         private void Button_History_Click(object sender, EventArgs e)
@@ -119,6 +127,11 @@ namespace VideoRentalStore
         private void Main_User_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Main_User_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

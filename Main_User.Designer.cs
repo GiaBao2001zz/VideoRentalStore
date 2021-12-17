@@ -372,7 +372,7 @@ namespace VideoRentalStore
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(106, 67);
+            this.Label_UserName.Location = new System.Drawing.Point(106, 47);
             this.Label_UserName.Name = "Label_UserName";
             this.Label_UserName.Size = new System.Drawing.Size(173, 25);
             this.Label_UserName.TabIndex = 1;
@@ -420,6 +420,7 @@ namespace VideoRentalStore
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_User";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_User_FormClosed);
+            this.Load += new System.EventHandler(this.Main_User_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).EndInit();
@@ -441,8 +442,6 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_History;
         private Bunifu.Framework.UI.BunifuFlatButton Button_ContactUs;
         private System.Windows.Forms.Panel Panel_Title;
-        private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
-        private System.Windows.Forms.Label Label_UserName;
         private System.Windows.Forms.Label Label_YourBalance;
         private System.Windows.Forms.Label Label_Balance;
         private System.Windows.Forms.Label Label_Currency;
@@ -452,5 +451,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.PictureBox Picture_Logo;
         private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public System.Windows.Forms.Label Label_UserName;
+        private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
     }
 }

@@ -127,5 +127,10 @@ namespace VideoRentalStore
         {
             ActivateBtn(sender);
         }
+
+        private void Main_Staff_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

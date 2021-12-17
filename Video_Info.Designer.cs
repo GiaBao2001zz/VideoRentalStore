@@ -46,6 +46,7 @@ namespace VideoRentalStore
             this.TextBox_VideoCategory = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Label_Category = new System.Windows.Forms.Label();
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
+            this.btn_Buy = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
@@ -113,7 +114,7 @@ namespace VideoRentalStore
             // TextBox_Description
             // 
             this.TextBox_Description.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Description.Location = new System.Drawing.Point(43, 354);
+            this.TextBox_Description.Location = new System.Drawing.Point(44, 316);
             this.TextBox_Description.Multiline = true;
             this.TextBox_Description.Name = "TextBox_Description";
             this.TextBox_Description.ReadOnly = true;
@@ -143,7 +144,7 @@ namespace VideoRentalStore
             this.Label_Price.ForeColor = System.Drawing.Color.White;
             this.Label_Price.Location = new System.Drawing.Point(498, 33);
             this.Label_Price.Name = "Label_Price";
-            this.Label_Price.Size = new System.Drawing.Size(149, 32);
+            this.Label_Price.Size = new System.Drawing.Size(148, 32);
             this.Label_Price.TabIndex = 28;
             this.Label_Price.Text = "Price  (VNĐ):";
             // 
@@ -154,7 +155,7 @@ namespace VideoRentalStore
             this.Label_Quantity.ForeColor = System.Drawing.Color.White;
             this.Label_Quantity.Location = new System.Drawing.Point(498, 152);
             this.Label_Quantity.Name = "Label_Quantity";
-            this.Label_Quantity.Size = new System.Drawing.Size(112, 32);
+            this.Label_Quantity.Size = new System.Drawing.Size(111, 32);
             this.Label_Quantity.TabIndex = 29;
             this.Label_Quantity.Text = "In stocks:";
             // 
@@ -165,7 +166,7 @@ namespace VideoRentalStore
             this.Label_Director.ForeColor = System.Drawing.Color.White;
             this.Label_Director.Location = new System.Drawing.Point(58, 384);
             this.Label_Director.Name = "Label_Director";
-            this.Label_Director.Size = new System.Drawing.Size(105, 32);
+            this.Label_Director.Size = new System.Drawing.Size(104, 32);
             this.Label_Director.TabIndex = 30;
             this.Label_Director.Text = "Director:";
             this.Label_Director.Click += new System.EventHandler(this.Label_Director_Click);
@@ -177,7 +178,7 @@ namespace VideoRentalStore
             this.Label_Actor.ForeColor = System.Drawing.Color.White;
             this.Label_Actor.Location = new System.Drawing.Point(58, 498);
             this.Label_Actor.Name = "Label_Actor";
-            this.Label_Actor.Size = new System.Drawing.Size(86, 32);
+            this.Label_Actor.Size = new System.Drawing.Size(85, 32);
             this.Label_Actor.TabIndex = 31;
             this.Label_Actor.Text = "Actors:";
             this.Label_Actor.Click += new System.EventHandler(this.Label_Actor_Click);
@@ -209,7 +210,7 @@ namespace VideoRentalStore
             this.Label_Provider.ForeColor = System.Drawing.Color.White;
             this.Label_Provider.Location = new System.Drawing.Point(58, 617);
             this.Label_Provider.Name = "Label_Provider";
-            this.Label_Provider.Size = new System.Drawing.Size(108, 32);
+            this.Label_Provider.Size = new System.Drawing.Size(107, 32);
             this.Label_Provider.TabIndex = 33;
             this.Label_Provider.Text = "Provider:";
             this.Label_Provider.Click += new System.EventHandler(this.label1_Click);
@@ -277,7 +278,7 @@ namespace VideoRentalStore
             this.Label_Category.ForeColor = System.Drawing.Color.White;
             this.Label_Category.Location = new System.Drawing.Point(58, 256);
             this.Label_Category.Name = "Label_Category";
-            this.Label_Category.Size = new System.Drawing.Size(116, 32);
+            this.Label_Category.Size = new System.Drawing.Size(115, 32);
             this.Label_Category.TabIndex = 35;
             this.Label_Category.Text = "Category:";
             // 
@@ -291,17 +292,53 @@ namespace VideoRentalStore
             this.pictureBox_Disc.TabIndex = 25;
             this.pictureBox_Disc.TabStop = false;
             // 
+            // btn_Buy
+            // 
+            this.btn_Buy.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Buy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Buy.BorderRadius = 0;
+            this.btn_Buy.ButtonText = "Buy";
+            this.btn_Buy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Buy.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Buy.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Buy.Iconimage = global::VideoRentalStore.Properties.Resources.checkout;
+            this.btn_Buy.Iconimage_right = null;
+            this.btn_Buy.Iconimage_right_Selected = null;
+            this.btn_Buy.Iconimage_Selected = null;
+            this.btn_Buy.IconMarginLeft = 0;
+            this.btn_Buy.IconMarginRight = 0;
+            this.btn_Buy.IconRightVisible = true;
+            this.btn_Buy.IconRightZoom = 0D;
+            this.btn_Buy.IconVisible = true;
+            this.btn_Buy.IconZoom = 70D;
+            this.btn_Buy.IsTab = false;
+            this.btn_Buy.Location = new System.Drawing.Point(60, 518);
+            this.btn_Buy.Name = "btn_Buy";
+            this.btn_Buy.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Buy.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Buy.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Buy.selected = false;
+            this.btn_Buy.Size = new System.Drawing.Size(299, 55);
+            this.btn_Buy.TabIndex = 36;
+            this.btn_Buy.Text = "Buy";
+            this.btn_Buy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Buy.Textcolor = System.Drawing.Color.White;
+            this.btn_Buy.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Buy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // Video_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1097, 583);
+            this.ClientSize = new System.Drawing.Size(1131, 583);
+            this.Controls.Add(this.TextBox_Description);
+            this.Controls.Add(this.btn_Buy);
             this.Controls.Add(this.Label_Quantity);
             this.Controls.Add(this.Label_Price);
             this.Controls.Add(this.TextBox_VideoName);
-            this.Controls.Add(this.TextBox_Description);
             this.Controls.Add(this.pictureBox_Disc);
             this.Controls.Add(this.Textbox_VideoQuantity);
             this.Controls.Add(this.TextBox_VideoPrice);
@@ -334,5 +371,6 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label Label_Category;
         public Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_VideoCategory;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Buy;
     }
 }

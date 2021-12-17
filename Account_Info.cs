@@ -19,7 +19,6 @@ namespace VideoRentalStore
 
             InitializeComponent();
             this.UserName = username;
-
             
             LoadInfo();
             
@@ -31,7 +30,6 @@ namespace VideoRentalStore
         {
             SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
             
-
             string query = "Select DisplayName , PhoneNumber , Email , DateCreate , CMND , Address from Account Where Username = '" + UserName + "'";
 
             connection.Open();
@@ -50,6 +48,8 @@ namespace VideoRentalStore
             TextBox_Cmnd.Text = data.Rows[0][4].ToString();
             TextBox_Address.Text = data.Rows[0][5].ToString();
             Label_ShowUserName.Text = UserName;
+
+           
 
             this.ActiveControl = null;  //this = form
             Button_ChangeInfo.Visible = false;
@@ -145,7 +145,10 @@ namespace VideoRentalStore
         {
 
         }
-        
-        
+
+        private void Label_ShowUserName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
