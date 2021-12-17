@@ -31,18 +31,18 @@ namespace VideoRentalStore
         {
             this.components = new System.ComponentModel.Container();
             this.Panel_BestOfTheDay = new System.Windows.Forms.Panel();
-            this.Panel_BestOfTheDayText = new VideoRentalStore.GradiantPanel();
-            this.Label_NameOfBanner = new System.Windows.Forms.Label();
             this.Label_TiltleBestOfTheDay = new System.Windows.Forms.Label();
             this.PictureBox_BestOfTheDay = new System.Windows.Forms.PictureBox();
             this.Panel_Fade = new System.Windows.Forms.Panel();
             this.Panel_Recommend = new System.Windows.Forms.Panel();
             this.Label_Recommend = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Panel_BestOfTheDayText = new VideoRentalStore.GradiantPanel();
+            this.Label_NameOfBanner = new System.Windows.Forms.Label();
             this.Panel_BestOfTheDay.SuspendLayout();
-            this.Panel_BestOfTheDayText.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BestOfTheDay)).BeginInit();
             this.Panel_Recommend.SuspendLayout();
+            this.Panel_BestOfTheDayText.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_BestOfTheDay
@@ -55,33 +55,8 @@ namespace VideoRentalStore
             this.Panel_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.Panel_BestOfTheDay.Name = "Panel_BestOfTheDay";
-            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1163, 587);
+            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1809, 587);
             this.Panel_BestOfTheDay.TabIndex = 0;
-            // 
-            // Panel_BestOfTheDayText
-            // 
-            this.Panel_BestOfTheDayText.Angle = 0F;
-            this.Panel_BestOfTheDayText.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_BestOfTheDayText.BottomColor = System.Drawing.Color.Empty;
-            this.Panel_BestOfTheDayText.Controls.Add(this.Label_NameOfBanner);
-            this.Panel_BestOfTheDayText.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel_BestOfTheDayText.Location = new System.Drawing.Point(0, 464);
-            this.Panel_BestOfTheDayText.Name = "Panel_BestOfTheDayText";
-            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1163, 123);
-            this.Panel_BestOfTheDayText.TabIndex = 5;
-            this.Panel_BestOfTheDayText.TopColor = System.Drawing.Color.Empty;
-            // 
-            // Label_NameOfBanner
-            // 
-            this.Label_NameOfBanner.AutoSize = true;
-            this.Label_NameOfBanner.BackColor = System.Drawing.Color.Transparent;
-            this.Label_NameOfBanner.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_NameOfBanner.ForeColor = System.Drawing.Color.White;
-            this.Label_NameOfBanner.Location = new System.Drawing.Point(27, 0);
-            this.Label_NameOfBanner.Name = "Label_NameOfBanner";
-            this.Label_NameOfBanner.Size = new System.Drawing.Size(441, 47);
-            this.Label_NameOfBanner.TabIndex = 0;
-            this.Label_NameOfBanner.Text = "Super hero movies of 2021";
             // 
             // Label_TiltleBestOfTheDay
             // 
@@ -100,7 +75,7 @@ namespace VideoRentalStore
             this.PictureBox_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBox_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.PictureBox_BestOfTheDay.Name = "PictureBox_BestOfTheDay";
-            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1163, 587);
+            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1809, 587);
             this.PictureBox_BestOfTheDay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox_BestOfTheDay.TabIndex = 4;
             this.PictureBox_BestOfTheDay.TabStop = false;
@@ -118,7 +93,7 @@ namespace VideoRentalStore
             this.Panel_Recommend.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Recommend.Location = new System.Drawing.Point(0, 587);
             this.Panel_Recommend.Name = "Panel_Recommend";
-            this.Panel_Recommend.Size = new System.Drawing.Size(1163, 800);
+            this.Panel_Recommend.Size = new System.Drawing.Size(1809, 800);
             this.Panel_Recommend.TabIndex = 1;
             this.Panel_Recommend.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -139,13 +114,38 @@ namespace VideoRentalStore
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Panel_BestOfTheDayText
+            // 
+            this.Panel_BestOfTheDayText.Angle = 0F;
+            this.Panel_BestOfTheDayText.BackColor = System.Drawing.Color.Transparent;
+            this.Panel_BestOfTheDayText.BottomColor = System.Drawing.Color.Empty;
+            this.Panel_BestOfTheDayText.Controls.Add(this.Label_NameOfBanner);
+            this.Panel_BestOfTheDayText.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_BestOfTheDayText.Location = new System.Drawing.Point(0, 464);
+            this.Panel_BestOfTheDayText.Name = "Panel_BestOfTheDayText";
+            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1809, 123);
+            this.Panel_BestOfTheDayText.TabIndex = 5;
+            this.Panel_BestOfTheDayText.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Label_NameOfBanner
+            // 
+            this.Label_NameOfBanner.AutoSize = true;
+            this.Label_NameOfBanner.BackColor = System.Drawing.Color.Transparent;
+            this.Label_NameOfBanner.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_NameOfBanner.ForeColor = System.Drawing.Color.White;
+            this.Label_NameOfBanner.Location = new System.Drawing.Point(27, 0);
+            this.Label_NameOfBanner.Name = "Label_NameOfBanner";
+            this.Label_NameOfBanner.Size = new System.Drawing.Size(441, 47);
+            this.Label_NameOfBanner.TabIndex = 0;
+            this.Label_NameOfBanner.Text = "Super hero movies of 2021";
+            // 
             // User_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1180, 661);
+            this.ClientSize = new System.Drawing.Size(1826, 661);
             this.Controls.Add(this.Panel_Recommend);
             this.Controls.Add(this.Panel_BestOfTheDay);
             this.DoubleBuffered = true;
@@ -154,11 +154,11 @@ namespace VideoRentalStore
             this.Text = "User_Home";
             this.Panel_BestOfTheDay.ResumeLayout(false);
             this.Panel_BestOfTheDay.PerformLayout();
-            this.Panel_BestOfTheDayText.ResumeLayout(false);
-            this.Panel_BestOfTheDayText.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BestOfTheDay)).EndInit();
             this.Panel_Recommend.ResumeLayout(false);
             this.Panel_Recommend.PerformLayout();
+            this.Panel_BestOfTheDayText.ResumeLayout(false);
+            this.Panel_BestOfTheDayText.PerformLayout();
             this.ResumeLayout(false);
 
         }

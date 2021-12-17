@@ -38,7 +38,7 @@ namespace VideoRentalStore
             Grid_YeuCauThueMua grid = new Grid_YeuCauThueMua() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
-            
+
             
             
 
@@ -109,8 +109,9 @@ namespace VideoRentalStore
         {
             Application.Exit();
         }
+       
 
-        private void Button_ManageGood_Click(object sender, EventArgs e)
+            private void Button_ManageGood_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel

@@ -16,6 +16,7 @@ namespace VideoRentalStore
         public Login()
         {
             InitializeComponent();
+          
 
 
         }
@@ -95,9 +96,10 @@ namespace VideoRentalStore
                     x.Label_UserName.Text = tk;
                     this.Hide();
                     x.UserName = tk ;
-                    x.ShowDialog();
                     
-                    this.Close();
+                    x.Show();
+                    
+                    this.Hide();
                     
                 }
                 else if (a == "0")
@@ -107,9 +109,10 @@ namespace VideoRentalStore
                     y.Label_UserName.Text = tk;
                     this.Hide();
                     y.UserName = tk;
-                    y.ShowDialog();
                     
-                    this.Close();
+                    y.Show();
+                    
+                    this.Hide();
 
                 }
             }

@@ -21,8 +21,9 @@ namespace VideoRentalStore
         private void Button_CancelLogin_Click(object sender, EventArgs e)
         {
             SignIn a = new SignIn();
-            this.Hide();
+            
             a.Show();
+            this.Dispose();
         }
 
         private void TextBox_Password_OnValueChanged(object sender, EventArgs e)
@@ -65,6 +66,10 @@ namespace VideoRentalStore
                 con.Close();
 
                 MessageBox.Show("Đăng ký tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                this.Hide();
+                Application.OpenForms[0].Show();
             }
         }
 

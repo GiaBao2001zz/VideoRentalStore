@@ -21,7 +21,10 @@ namespace VideoRentalStore
 
         private void Button_CancelLogin_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Application.OpenForms[0].Show();
+            this.Dispose();
+            
         }
 
         private void TextBox_Password_OnValueChanged(object sender, EventArgs e)

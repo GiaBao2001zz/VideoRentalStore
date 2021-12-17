@@ -73,8 +73,10 @@ namespace VideoRentalStore
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
 
+
             // Add New Form 
             Video_Shelf grid = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Closed += (s, args) => grid.Close();
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
 

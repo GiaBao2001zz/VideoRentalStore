@@ -321,7 +321,6 @@ namespace VideoRentalStore
             this.Name = "Main_Staff";
             this.Text = "Main_Staff";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Staff_FormClosed);
-            this.Load += new System.EventHandler(this.Main_Staff_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).EndInit();
