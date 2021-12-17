@@ -132,10 +132,9 @@ namespace VideoRentalStore
             Application.Exit();
         }
 
-<<<<<<< HEAD
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            
+
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls.RemoveAt(0);
@@ -144,11 +143,12 @@ namespace VideoRentalStore
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
-=======
+        }
+
         private void Main_User_Load(object sender, EventArgs e)
         {
             
->>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
+
         }
     }
 }

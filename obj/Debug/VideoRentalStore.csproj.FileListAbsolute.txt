@@ -168,3 +168,4 @@ D:\OOAD\VideoRentalStore\obj\Debug\VideoRentalStore.csproj.CopyComplete
 D:\OOAD\VideoRentalStore\obj\Debug\VideoRentalStore.exe
 D:\OOAD\VideoRentalStore\obj\Debug\VideoRentalStore.pdb
 >>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
+D:\Projects\VideoRentalStore#2\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache

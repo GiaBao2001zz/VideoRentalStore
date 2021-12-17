@@ -37,17 +37,17 @@ namespace VideoRentalStore
             this.Button_Cart = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_RentDisc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Logo = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_Title = new System.Windows.Forms.Panel();
             this.Label_FormName = new System.Windows.Forms.Label();
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Picture_UserPFP = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_SwtichForm = new System.Windows.Forms.Panel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.Panel_Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_UserPFP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Menu
@@ -255,6 +255,20 @@ namespace VideoRentalStore
             this.Panel_Logo.Size = new System.Drawing.Size(220, 100);
             this.Panel_Logo.TabIndex = 0;
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::VideoRentalStore.Properties.Resources.Logo;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(12, 12);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 1;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
             // Panel_Title
             // 
             this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
@@ -284,11 +298,7 @@ namespace VideoRentalStore
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.Label_UserName.Location = new System.Drawing.Point(765, 58);
-=======
-            this.Label_UserName.Location = new System.Drawing.Point(106, 47);
->>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
+            this.Label_UserName.Location = new System.Drawing.Point(765, 72);
             this.Label_UserName.Name = "Label_UserName";
             this.Label_UserName.Size = new System.Drawing.Size(173, 25);
             this.Label_UserName.TabIndex = 1;
@@ -317,20 +327,6 @@ namespace VideoRentalStore
             this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
             this.Panel_SwtichForm.TabIndex = 2;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::VideoRentalStore.Properties.Resources.Logo;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(12, 12);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 71);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 1;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
             // Main_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,10 +345,10 @@ namespace VideoRentalStore
             this.Load += new System.EventHandler(this.Main_User_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.Panel_Title.ResumeLayout(false);
             this.Panel_Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_UserPFP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,24 +363,23 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_History;
         private Bunifu.Framework.UI.BunifuFlatButton Button_ContactUs;
         private System.Windows.Forms.Panel Panel_Title;
-<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
-        private System.Windows.Forms.Label Label_UserName;
         private System.Windows.Forms.Label Label_FormName;
         public System.Windows.Forms.Panel Panel_SwtichForm;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-=======
-        private System.Windows.Forms.Label Label_YourBalance;
-        private System.Windows.Forms.Label Label_Balance;
-        private System.Windows.Forms.Label Label_Currency;
-        private System.Windows.Forms.Label Label_FormName;
-        public System.Windows.Forms.Panel Panel_SwtichForm;
-        private System.Windows.Forms.PictureBox Picture_Balance;
-        private System.Windows.Forms.PictureBox Picture_Logo;
-        private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public System.Windows.Forms.Label Label_UserName;
-        private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
->>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
+        /*
+private System.Windows.Forms.Label Label_YourBalance;
+private System.Windows.Forms.Label Label_Balance;
+private System.Windows.Forms.Label Label_Currency;
+private System.Windows.Forms.Label Label_FormName;
+public System.Windows.Forms.Panel Panel_SwtichForm;
+private System.Windows.Forms.PictureBox Picture_Balance;
+private System.Windows.Forms.PictureBox Picture_Logo;
+private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;
+private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+public System.Windows.Forms.Label Label_UserName;
+private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
+*/
     }
 }
