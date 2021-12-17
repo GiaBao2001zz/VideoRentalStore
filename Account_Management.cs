@@ -18,8 +18,8 @@ namespace VideoRentalStore
             InitializeComponent();
             Load_DataGrid();
         }
-        string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore; Integrated Security = True";
-        //string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+        //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore; Integrated Security = True";
+        string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
         private void Load_DataGrid()
         {
             SqlConnection Sqlcon = new SqlConnection(connectionSTR);

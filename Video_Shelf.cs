@@ -16,6 +16,7 @@ namespace VideoRentalStore
         public Video_Shelf()
         {
             InitializeComponent();
+           
         }
 
         public void ShowImage()

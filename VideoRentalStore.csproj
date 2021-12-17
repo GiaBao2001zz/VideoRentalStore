@@ -68,6 +68,9 @@
     <Compile Include="Account_Settings.Designer.cs">
       <DependentUpon>Account_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Grid_YeuCauThueMua.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +138,12 @@
     </Compile>
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Home.Designer.cs">
+      <DependentUpon>User_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Video_Info.cs">
       <SubType>Form</SubType>
@@ -205,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Home.resx">
+      <DependentUpon>User_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Video_Info.resx">
       <DependentUpon>Video_Info.cs</DependentUpon>
@@ -299,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Fantasy\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

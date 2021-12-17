@@ -59,6 +59,7 @@ namespace VideoRentalStore
             this.ClientSize = new System.Drawing.Size(1028, 622);
             this.Controls.Add(this.Panel_ShowVideo);
             this.Controls.Add(this.Panel_ControlButton);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Video_Shelf";
