@@ -29,20 +29,20 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Management));
             this.DataGrid_AccountManagement = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.txtType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDisplayName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TextBox_DisplayName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBox_Password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -59,27 +59,33 @@ namespace VideoRentalStore
             this.Button_Add = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_Edit = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_Delete = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Textbox_Type = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Textbox_Username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Label_DateCreate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_AccountManagement)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DataGrid_AccountManagement
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.DataGrid_AccountManagement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.DataGrid_AccountManagement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DataGrid_AccountManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGrid_AccountManagement.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DataGrid_AccountManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGrid_AccountManagement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGrid_AccountManagement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGrid_AccountManagement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGrid_AccountManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGrid_AccountManagement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtUsername,
@@ -91,14 +97,14 @@ namespace VideoRentalStore
             this.txtCMND,
             this.txtAddress,
             this.txtType});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGrid_AccountManagement.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGrid_AccountManagement.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataGrid_AccountManagement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGrid_AccountManagement.DoubleBuffered = true;
             this.DataGrid_AccountManagement.EnableHeadersVisualStyles = false;
@@ -119,53 +125,21 @@ namespace VideoRentalStore
             this.DataGrid_AccountManagement.Size = new System.Drawing.Size(1071, 814);
             this.DataGrid_AccountManagement.TabIndex = 1;
             this.DataGrid_AccountManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_ManageStock_CellClick);
-            this.DataGrid_AccountManagement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_AccountManagement_CellContentClick);
             this.DataGrid_AccountManagement.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_AccountManagement_CellValueChanged);
             // 
-            // txtType
+            // txtUsername
             // 
-            this.txtType.DataPropertyName = "Type";
-            this.txtType.FillWeight = 40F;
-            this.txtType.HeaderText = "Type";
-            this.txtType.MinimumWidth = 6;
-            this.txtType.Name = "txtType";
+            this.txtUsername.DataPropertyName = "Username";
+            this.txtUsername.HeaderText = "Username";
+            this.txtUsername.MinimumWidth = 6;
+            this.txtUsername.Name = "txtUsername";
             // 
-            // txtAddress
+            // txtDisplayName
             // 
-            this.txtAddress.DataPropertyName = "Address";
-            this.txtAddress.FillWeight = 70F;
-            this.txtAddress.HeaderText = "Address";
-            this.txtAddress.MinimumWidth = 6;
-            this.txtAddress.Name = "txtAddress";
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.DataPropertyName = "CMND";
-            this.txtCMND.HeaderText = "CMND";
-            this.txtCMND.MinimumWidth = 6;
-            this.txtCMND.Name = "txtCMND";
-            // 
-            // txtDateCreate
-            // 
-            this.txtDateCreate.DataPropertyName = "DateCreate";
-            this.txtDateCreate.FillWeight = 90F;
-            this.txtDateCreate.HeaderText = "DateCreate";
-            this.txtDateCreate.MinimumWidth = 6;
-            this.txtDateCreate.Name = "txtDateCreate";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.DataPropertyName = "Email";
-            this.txtEmail.HeaderText = "Email";
-            this.txtEmail.MinimumWidth = 6;
-            this.txtEmail.Name = "txtEmail";
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.DataPropertyName = "PhoneNumber";
-            this.txtPhoneNumber.HeaderText = "PhoneNumber";
-            this.txtPhoneNumber.MinimumWidth = 6;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtDisplayName.DataPropertyName = "DisplayName";
+            this.txtDisplayName.HeaderText = "DisplayName";
+            this.txtDisplayName.MinimumWidth = 6;
+            this.txtDisplayName.Name = "txtDisplayName";
             // 
             // txtPassword
             // 
@@ -175,19 +149,50 @@ namespace VideoRentalStore
             this.txtPassword.MinimumWidth = 6;
             this.txtPassword.Name = "txtPassword";
             // 
-            // txtDisplayName
+            // txtPhoneNumber
             // 
-            this.txtDisplayName.DataPropertyName = "DisplayName";
-            this.txtDisplayName.HeaderText = "DisplayName";
-            this.txtDisplayName.MinimumWidth = 6;
-            this.txtDisplayName.Name = "txtDisplayName";
+            this.txtPhoneNumber.DataPropertyName = "PhoneNumber";
+            this.txtPhoneNumber.HeaderText = "PhoneNumber";
+            this.txtPhoneNumber.MinimumWidth = 6;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.DataPropertyName = "Username";
-            this.txtUsername.HeaderText = "Username";
-            this.txtUsername.MinimumWidth = 6;
-            this.txtUsername.Name = "txtUsername";
+            this.txtEmail.DataPropertyName = "Email";
+            this.txtEmail.HeaderText = "Email";
+            this.txtEmail.MinimumWidth = 6;
+            this.txtEmail.Name = "txtEmail";
+            // 
+            // txtDateCreate
+            // 
+            this.txtDateCreate.DataPropertyName = "DateCreate";
+            this.txtDateCreate.FillWeight = 90F;
+            this.txtDateCreate.HeaderText = "DateCreate";
+            this.txtDateCreate.MinimumWidth = 6;
+            this.txtDateCreate.Name = "txtDateCreate";
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.DataPropertyName = "CMND";
+            this.txtCMND.HeaderText = "CMND";
+            this.txtCMND.MinimumWidth = 6;
+            this.txtCMND.Name = "txtCMND";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.DataPropertyName = "Address";
+            this.txtAddress.FillWeight = 70F;
+            this.txtAddress.HeaderText = "Address";
+            this.txtAddress.MinimumWidth = 6;
+            this.txtAddress.Name = "txtAddress";
+            // 
+            // txtType
+            // 
+            this.txtType.DataPropertyName = "Type";
+            this.txtType.FillWeight = 40F;
+            this.txtType.HeaderText = "Type";
+            this.txtType.MinimumWidth = 6;
+            this.txtType.Name = "txtType";
             // 
             // panel2
             // 
@@ -210,7 +215,7 @@ namespace VideoRentalStore
             this.TextBox_DisplayName.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_DisplayName.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_DisplayName.LineThickness = 5;
-            this.TextBox_DisplayName.Location = new System.Drawing.Point(1200, 9);
+            this.TextBox_DisplayName.Location = new System.Drawing.Point(1200, 415);
             this.TextBox_DisplayName.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_DisplayName.Name = "TextBox_DisplayName";
             this.TextBox_DisplayName.Size = new System.Drawing.Size(186, 40);
@@ -251,6 +256,7 @@ namespace VideoRentalStore
             this.TextBox_PhoneNum.Location = new System.Drawing.Point(1200, 125);
             this.TextBox_PhoneNum.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_PhoneNum.Name = "TextBox_PhoneNum";
+            this.TextBox_PhoneNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TextBox_PhoneNum.Size = new System.Drawing.Size(186, 40);
             this.TextBox_PhoneNum.TabIndex = 25;
             this.TextBox_PhoneNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -316,67 +322,67 @@ namespace VideoRentalStore
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(1078, 10);
+            this.label1.Location = new System.Drawing.Point(1078, 417);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 38);
             this.label1.TabIndex = 29;
             this.label1.Text = "DisName";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(1074, 69);
+            this.label2.Location = new System.Drawing.Point(1078, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 38);
             this.label2.TabIndex = 30;
             this.label2.Text = "Password";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(1074, 127);
+            this.label3.Location = new System.Drawing.Point(1078, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 38);
             this.label3.TabIndex = 31;
             this.label3.Text = "PhoneNum";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(1074, 185);
+            this.label4.Location = new System.Drawing.Point(1078, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 38);
             this.label4.TabIndex = 32;
             this.label4.Text = "Email";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(1074, 243);
+            this.label5.Location = new System.Drawing.Point(1078, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 38);
             this.label5.TabIndex = 33;
             this.label5.Text = "CMND";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(1074, 301);
+            this.label6.Location = new System.Drawing.Point(1078, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 38);
             this.label6.TabIndex = 34;
             this.label6.Text = "Address";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Button_Add
             // 
@@ -396,12 +402,13 @@ namespace VideoRentalStore
             this.Button_Add.IdleFillColor = System.Drawing.Color.White;
             this.Button_Add.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Add.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Add.Location = new System.Drawing.Point(1114, 372);
+            this.Button_Add.Location = new System.Drawing.Point(1114, 529);
             this.Button_Add.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Add.Name = "Button_Add";
             this.Button_Add.Size = new System.Drawing.Size(245, 50);
             this.Button_Add.TabIndex = 35;
             this.Button_Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Add.Click += new System.EventHandler(this.Button_Add_Click);
             // 
             // Button_Edit
             // 
@@ -421,12 +428,13 @@ namespace VideoRentalStore
             this.Button_Edit.IdleFillColor = System.Drawing.Color.White;
             this.Button_Edit.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Edit.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Edit.Location = new System.Drawing.Point(1114, 434);
+            this.Button_Edit.Location = new System.Drawing.Point(1114, 591);
             this.Button_Edit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Edit.Name = "Button_Edit";
             this.Button_Edit.Size = new System.Drawing.Size(245, 50);
             this.Button_Edit.TabIndex = 36;
             this.Button_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Edit.Click += new System.EventHandler(this.Button_Edit_Click);
             // 
             // Button_Delete
             // 
@@ -446,12 +454,94 @@ namespace VideoRentalStore
             this.Button_Delete.IdleFillColor = System.Drawing.Color.White;
             this.Button_Delete.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Delete.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.Location = new System.Drawing.Point(1114, 496);
+            this.Button_Delete.Location = new System.Drawing.Point(1114, 653);
             this.Button_Delete.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Delete.Name = "Button_Delete";
             this.Button_Delete.Size = new System.Drawing.Size(245, 50);
             this.Button_Delete.TabIndex = 37;
             this.Button_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
+            // 
+            // Textbox_Type
+            // 
+            this.Textbox_Type.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Textbox_Type.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Textbox_Type.ForeColor = System.Drawing.Color.White;
+            this.Textbox_Type.HintForeColor = System.Drawing.Color.Empty;
+            this.Textbox_Type.HintText = "";
+            this.Textbox_Type.isPassword = false;
+            this.Textbox_Type.LineFocusedColor = System.Drawing.Color.Green;
+            this.Textbox_Type.LineIdleColor = System.Drawing.Color.Gray;
+            this.Textbox_Type.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.Textbox_Type.LineThickness = 5;
+            this.Textbox_Type.Location = new System.Drawing.Point(1200, 357);
+            this.Textbox_Type.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.Textbox_Type.Name = "Textbox_Type";
+            this.Textbox_Type.Size = new System.Drawing.Size(186, 40);
+            this.Textbox_Type.TabIndex = 38;
+            this.Textbox_Type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(1078, 359);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 38);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Type";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // Textbox_Username
+            // 
+            this.Textbox_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Textbox_Username.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Textbox_Username.ForeColor = System.Drawing.Color.White;
+            this.Textbox_Username.HintForeColor = System.Drawing.Color.Empty;
+            this.Textbox_Username.HintText = "";
+            this.Textbox_Username.isPassword = false;
+            this.Textbox_Username.LineFocusedColor = System.Drawing.Color.Green;
+            this.Textbox_Username.LineIdleColor = System.Drawing.Color.Gray;
+            this.Textbox_Username.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.Textbox_Username.LineThickness = 5;
+            this.Textbox_Username.Location = new System.Drawing.Point(1200, 9);
+            this.Textbox_Username.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.Textbox_Username.Name = "Textbox_Username";
+            this.Textbox_Username.Size = new System.Drawing.Size(186, 40);
+            this.Textbox_Username.TabIndex = 40;
+            this.Textbox_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(1078, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 38);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "UserName";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(1078, 476);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 38);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "DateCreate";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // Label_DateCreate
+            // 
+            this.Label_DateCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_DateCreate.ForeColor = System.Drawing.SystemColors.Control;
+            this.Label_DateCreate.Location = new System.Drawing.Point(1196, 476);
+            this.Label_DateCreate.Name = "Label_DateCreate";
+            this.Label_DateCreate.Size = new System.Drawing.Size(190, 38);
+            this.Label_DateCreate.TabIndex = 43;
+            this.Label_DateCreate.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // Account_Management
             // 
@@ -459,6 +549,12 @@ namespace VideoRentalStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1392, 814);
+            this.Controls.Add(this.Label_DateCreate);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Textbox_Username);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Textbox_Type);
             this.Controls.Add(this.Button_Delete);
             this.Controls.Add(this.Button_Edit);
             this.Controls.Add(this.Button_Add);
@@ -514,5 +610,11 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Add;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Edit;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Delete;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox Textbox_Type;
+        private System.Windows.Forms.Label label7;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox Textbox_Username;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Label_DateCreate;
     }
 }
