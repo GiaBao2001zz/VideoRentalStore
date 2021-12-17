@@ -35,13 +35,13 @@ namespace VideoRentalStore
             this.Button_Report = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_AccountManagement = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_ManageGood = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_Request = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Logo = new System.Windows.Forms.Panel();
             this.Picture_Logo = new System.Windows.Forms.PictureBox();
             this.Panel_Title = new System.Windows.Forms.Panel();
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Picture_StaffPFP = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_SwtichForm = new System.Windows.Forms.Panel();
-            this.Button_Request = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).BeginInit();
@@ -208,71 +208,6 @@ namespace VideoRentalStore
             this.Button_ManageGood.TextFont = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_ManageGood.Click += new System.EventHandler(this.Button_ManageGood_Click);
             // 
-            // Panel_Logo
-            // 
-            this.Panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Panel_Logo.Controls.Add(this.Picture_Logo);
-            this.Panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Logo.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Logo.Name = "Panel_Logo";
-            this.Panel_Logo.Size = new System.Drawing.Size(220, 100);
-            this.Panel_Logo.TabIndex = 0;
-            // 
-            // Picture_Logo
-            // 
-            this.Picture_Logo.Image = global::VideoRentalStore.Properties.Resources.Logo;
-            this.Picture_Logo.Location = new System.Drawing.Point(12, 12);
-            this.Picture_Logo.Name = "Picture_Logo";
-            this.Picture_Logo.Size = new System.Drawing.Size(84, 71);
-            this.Picture_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_Logo.TabIndex = 1;
-            this.Picture_Logo.TabStop = false;
-            // 
-            // Panel_Title
-            // 
-            this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Panel_Title.Controls.Add(this.Label_UserName);
-            this.Panel_Title.Controls.Add(this.Picture_StaffPFP);
-            this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Title.Location = new System.Drawing.Point(220, 0);
-            this.Panel_Title.Name = "Panel_Title";
-            this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
-            this.Panel_Title.TabIndex = 1;
-            // 
-            // Label_UserName
-            // 
-            this.Label_UserName.AutoSize = true;
-            this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(106, 66);
-            this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
-            this.Label_UserName.TabIndex = 2;
-            this.Label_UserName.Text = "Nguyen Trong Tinh";
-            // 
-            // Picture_StaffPFP
-            // 
-            this.Picture_StaffPFP.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Picture_StaffPFP.Image = ((System.Drawing.Image)(resources.GetObject("Picture_StaffPFP.Image")));
-            this.Picture_StaffPFP.ImageActive = null;
-            this.Picture_StaffPFP.Location = new System.Drawing.Point(0, 0);
-            this.Picture_StaffPFP.Name = "Picture_StaffPFP";
-            this.Picture_StaffPFP.Size = new System.Drawing.Size(100, 100);
-            this.Picture_StaffPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Picture_StaffPFP.TabIndex = 1;
-            this.Picture_StaffPFP.TabStop = false;
-            this.Picture_StaffPFP.Zoom = 10;
-            // 
-            // Panel_SwtichForm
-            // 
-            this.Panel_SwtichForm.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Panel_SwtichForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_SwtichForm.Location = new System.Drawing.Point(220, 100);
-            this.Panel_SwtichForm.Name = "Panel_SwtichForm";
-            this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
-            this.Panel_SwtichForm.TabIndex = 3;
-            // 
             // Button_Request
             // 
             this.Button_Request.Activecolor = System.Drawing.Color.Empty;
@@ -309,6 +244,71 @@ namespace VideoRentalStore
             this.Button_Request.TextFont = new System.Drawing.Font("Segoe UI", 12F);
             this.Button_Request.Click += new System.EventHandler(this.Button_Request_Click);
             // 
+            // Panel_Logo
+            // 
+            this.Panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Panel_Logo.Controls.Add(this.Picture_Logo);
+            this.Panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Logo.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Logo.Name = "Panel_Logo";
+            this.Panel_Logo.Size = new System.Drawing.Size(220, 100);
+            this.Panel_Logo.TabIndex = 0;
+            // 
+            // Picture_Logo
+            // 
+            this.Picture_Logo.Image = global::VideoRentalStore.Properties.Resources.Logo;
+            this.Picture_Logo.Location = new System.Drawing.Point(12, 12);
+            this.Picture_Logo.Name = "Picture_Logo";
+            this.Picture_Logo.Size = new System.Drawing.Size(84, 71);
+            this.Picture_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_Logo.TabIndex = 1;
+            this.Picture_Logo.TabStop = false;
+            // 
+            // Panel_Title
+            // 
+            this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.Panel_Title.Controls.Add(this.Label_UserName);
+            this.Panel_Title.Controls.Add(this.Picture_StaffPFP);
+            this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_Title.Location = new System.Drawing.Point(220, 0);
+            this.Panel_Title.Name = "Panel_Title";
+            this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
+            this.Panel_Title.TabIndex = 1;
+            // 
+            // Label_UserName
+            // 
+            this.Label_UserName.AutoSize = true;
+            this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.Label_UserName.ForeColor = System.Drawing.Color.White;
+            this.Label_UserName.Location = new System.Drawing.Point(106, 40);
+            this.Label_UserName.Name = "Label_UserName";
+            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
+            this.Label_UserName.TabIndex = 2;
+            this.Label_UserName.Text = "Nguyen Trong Tinh";
+            // 
+            // Picture_StaffPFP
+            // 
+            this.Picture_StaffPFP.BackColor = System.Drawing.Color.Transparent;
+            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Picture_StaffPFP.Image = ((System.Drawing.Image)(resources.GetObject("Picture_StaffPFP.Image")));
+            this.Picture_StaffPFP.ImageActive = null;
+            this.Picture_StaffPFP.Location = new System.Drawing.Point(0, 0);
+            this.Picture_StaffPFP.Name = "Picture_StaffPFP";
+            this.Picture_StaffPFP.Size = new System.Drawing.Size(100, 100);
+            this.Picture_StaffPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_StaffPFP.TabIndex = 1;
+            this.Picture_StaffPFP.TabStop = false;
+            this.Picture_StaffPFP.Zoom = 10;
+            // 
+            // Panel_SwtichForm
+            // 
+            this.Panel_SwtichForm.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Panel_SwtichForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_SwtichForm.Location = new System.Drawing.Point(220, 100);
+            this.Panel_SwtichForm.Name = "Panel_SwtichForm";
+            this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
+            this.Panel_SwtichForm.TabIndex = 3;
+            // 
             // Main_Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +321,7 @@ namespace VideoRentalStore
             this.Name = "Main_Staff";
             this.Text = "Main_Staff";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Staff_FormClosed);
+            this.Load += new System.EventHandler(this.Main_Staff_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).EndInit();
@@ -341,9 +342,9 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_AccountManagement;
         private Bunifu.Framework.UI.BunifuFlatButton Button_ManageGood;
         private Bunifu.Framework.UI.BunifuImageButton Picture_StaffPFP;
-        private System.Windows.Forms.Label Label_UserName;
         private System.Windows.Forms.PictureBox Picture_Logo;
         private System.Windows.Forms.Panel Panel_SwtichForm;
         private Bunifu.Framework.UI.BunifuFlatButton Button_Request;
+        public System.Windows.Forms.Label Label_UserName;
     }
 }

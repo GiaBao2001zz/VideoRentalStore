@@ -284,7 +284,11 @@ namespace VideoRentalStore
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.Label_UserName.Location = new System.Drawing.Point(765, 58);
+=======
+            this.Label_UserName.Location = new System.Drawing.Point(106, 47);
+>>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
             this.Label_UserName.Name = "Label_UserName";
             this.Label_UserName.Size = new System.Drawing.Size(173, 25);
             this.Label_UserName.TabIndex = 1;
@@ -342,6 +346,7 @@ namespace VideoRentalStore
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_User";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_User_FormClosed);
+            this.Load += new System.EventHandler(this.Main_User_Load);
             this.Panel_Menu.ResumeLayout(false);
             this.Panel_Logo.ResumeLayout(false);
             this.Panel_Title.ResumeLayout(false);
@@ -362,10 +367,24 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_History;
         private Bunifu.Framework.UI.BunifuFlatButton Button_ContactUs;
         private System.Windows.Forms.Panel Panel_Title;
+<<<<<<< HEAD
         private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
         private System.Windows.Forms.Label Label_UserName;
         private System.Windows.Forms.Label Label_FormName;
         public System.Windows.Forms.Panel Panel_SwtichForm;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+=======
+        private System.Windows.Forms.Label Label_YourBalance;
+        private System.Windows.Forms.Label Label_Balance;
+        private System.Windows.Forms.Label Label_Currency;
+        private System.Windows.Forms.Label Label_FormName;
+        public System.Windows.Forms.Panel Panel_SwtichForm;
+        private System.Windows.Forms.PictureBox Picture_Balance;
+        private System.Windows.Forms.PictureBox Picture_Logo;
+        private Bunifu.Framework.UI.BunifuDropdown DropDown_UserInfo;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public System.Windows.Forms.Label Label_UserName;
+        private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
+>>>>>>> d9ec0c39955c7bf4acc90836eaae916f772dc1f0
     }
 }

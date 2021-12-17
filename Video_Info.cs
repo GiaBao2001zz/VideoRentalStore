@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,17 +16,19 @@ namespace VideoRentalStore
         public Video_Info()
         {
             InitializeComponent();
-            
+
             //Check if Description need to have scrollbars or not
             if (TextBox_Description.TextLength > 600)
             {
                 TextBox_Description.ScrollBars = ScrollBars.Vertical;
-            }    
-        }
+            }
 
+
+        }
+        public string UserName;
         private void TextBox_Description_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -46,6 +49,11 @@ namespace VideoRentalStore
         private void Label_Director_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
