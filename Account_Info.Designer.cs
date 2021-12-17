@@ -309,6 +309,7 @@ namespace VideoRentalStore
             this.Label_ShowUserName.Size = new System.Drawing.Size(59, 30);
             this.Label_ShowUserName.TabIndex = 30;
             this.Label_ShowUserName.Text = "Chiki";
+            this.Label_ShowUserName.Click += new System.EventHandler(this.Label_ShowUserName_Click);
             // 
             // Account_Info
             // 
@@ -357,6 +358,6 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Address;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Cmnd;
         private System.Windows.Forms.Label Label_CMND;
-        private System.Windows.Forms.Label Label_ShowUserName;
+        public System.Windows.Forms.Label Label_ShowUserName;
     }
 }

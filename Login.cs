@@ -92,10 +92,11 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_Staff x = new Main_Staff();
-
+                    x.Label_UserName.Text = tk;
                     this.Hide();
                     x.UserName = tk ;
                     x.ShowDialog();
+                    
                     this.Close();
                     
                 }
@@ -103,9 +104,11 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
+                    y.Label_UserName.Text = tk;
                     this.Hide();
                     y.UserName = tk;
                     y.ShowDialog();
+                    
                     this.Close();
 
                 }

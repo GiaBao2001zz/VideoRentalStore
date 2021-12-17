@@ -70,13 +70,13 @@ namespace VideoRentalStore
                             picturebox[index].Size = new Size(175, 250); //150,200
                             picturebox[index].Tag = value3;                         
                             label[index].Text = (string)value1;
-                            label[index].Font = new Font("Roboto", 10);
+                            label[index].Font = new Font("Segoe UI", 13);
                             label[index].Size = new Size(175, 70);
                             label[index].ForeColor = Color.White;
                             label[index].AutoSize = false;
                             label[index].TextAlign = ContentAlignment.MiddleCenter;
                             label[index].AutoSize = false;
-                            label[index].Location = new Point(x * 250 + 60, y + 240 );
+                            label[index].Location = new Point(x * 250 + 60, y + 245 );
                             picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
                             picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
                             picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
@@ -111,7 +111,7 @@ namespace VideoRentalStore
             Main_User main_User = (Main_User)ParentForm;
             if (main_User.Panel_SwtichForm.Controls.Count > 0)
                 main_User.Panel_SwtichForm.Controls.RemoveAt(0);
-            Video_Info video_Info = new Video_Info() { Dock = DockStyle.Fill, TopLevel = false };
+            Video_Info_ReadOnly video_Info = new Video_Info_ReadOnly() { Dock = DockStyle.Fill, TopLevel = false };
             main_User.Panel_SwtichForm.Controls.Add(video_Info);
             video_Info.Show();
 
@@ -122,7 +122,7 @@ namespace VideoRentalStore
                 using (var command = connection.CreateCommand())
                 {
                     command.Parameters.AddWithValue("@id", picture.Tag.ToString());
-                    command.CommandText = "SELECT Name, Price, Quantity, Director, Actor, Decription, Thumbnail, Provider, Category FROM Video WHERE id=@id";                    
+                    command.CommandText = "SELECT Name, Price, Quantity, Director, Actor, Decription, Thumbnail, Provider, Category, id FROM Video WHERE id=@id";                    
                     connection.Open();
                     using (var reader = command.ExecuteReader())
                     {
@@ -135,6 +135,7 @@ namespace VideoRentalStore
                         var thumbnailVideo = reader.GetOrdinal("Thumbnail");
                         var providerVideo = reader.GetOrdinal("Provider");
                         var categoryVideo = reader.GetOrdinal("Category");
+                        var idVideo = reader.GetOrdinal("id");
                         while (reader.Read())
                         {
                             var nameVideo_data = reader.GetValue(nameVideo);
@@ -146,21 +147,18 @@ namespace VideoRentalStore
                             var thumbnailVideo_data = reader.GetValue(thumbnailVideo);
                             var providerVideo_data = reader.GetValue(providerVideo);
                             var categoryVideo_data = reader.GetValue(categoryVideo);
+                            var idVideo_data = reader.GetValue(idVideo);
 
                             video_Info.pictureBox_Disc.Image = Image.FromFile(thumbnailVideo_data.ToString());
                             video_Info.TextBox_VideoName.Text = nameVideo_data.ToString();
-                            video_Info.TextBox_VideoPrice.Text = priceVideo_data.ToString();
-                            video_Info.Textbox_VideoQuantity.Text = quantityVideo_data.ToString();
-                            video_Info.TextBox_VideoDirector.Text = directorVideo_data.ToString();
-                            video_Info.TextBox_VideoActors.Text = actorVideo_data.ToString();
-                            video_Info.TextBox_Description.Text = descriptionVideo_data.ToString();
-                            video_Info.TextBox_VideoProvider.Text = providerVideo_data.ToString();
-                            video_Info.TextBox_VideoCategory.Text = categoryVideo_data.ToString();
-
-                            //Set read-only = true                           
-                            video_Info.TextBox_VideoName.ReadOnly = true;
-                            
-
+                            video_Info.Label_ShowPrice.Text = priceVideo_data.ToString();
+                            video_Info.Label_ShowQuantity.Text = quantityVideo_data.ToString();
+                            video_Info.Label_ShowDirector.Text = directorVideo_data.ToString();
+                            video_Info.Label_ShowActor.Text = actorVideo_data.ToString();
+                            video_Info.Label_Discription.Text = descriptionVideo_data.ToString();
+                            video_Info.Label_Category.Text = categoryVideo_data.ToString();
+                            video_Info.TextBox_idVideo.Text = idVideo_data.ToString();
+                           
                         }
                     }
                 }

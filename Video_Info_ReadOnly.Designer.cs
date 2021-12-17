@@ -36,6 +36,8 @@ namespace VideoRentalStore
             this.Label_Price = new System.Windows.Forms.Label();
             this.Label_Quantity = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Panel_Discription = new System.Windows.Forms.Panel();
+            this.Label_Discription = new System.Windows.Forms.Label();
             this.Label_ShowActor = new System.Windows.Forms.Label();
             this.Label_ShowDirector = new System.Windows.Forms.Label();
             this.Label_ShowCategory = new System.Windows.Forms.Label();
@@ -45,11 +47,10 @@ namespace VideoRentalStore
             this.Button_Rent = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Button_Buy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
-            this.Panel_Discription = new System.Windows.Forms.Panel();
-            this.Label_Discription = new System.Windows.Forms.Label();
+            this.TextBox_idVideo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.Panel_Discription.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.SuspendLayout();
             // 
             // Label_Actor
@@ -59,7 +60,7 @@ namespace VideoRentalStore
             this.Label_Actor.ForeColor = System.Drawing.Color.White;
             this.Label_Actor.Location = new System.Drawing.Point(60, 260);
             this.Label_Actor.Name = "Label_Actor";
-            this.Label_Actor.Size = new System.Drawing.Size(86, 32);
+            this.Label_Actor.Size = new System.Drawing.Size(85, 32);
             this.Label_Actor.TabIndex = 31;
             this.Label_Actor.Text = "Actors:";
             // 
@@ -70,7 +71,7 @@ namespace VideoRentalStore
             this.Label_Director.ForeColor = System.Drawing.Color.White;
             this.Label_Director.Location = new System.Drawing.Point(60, 200);
             this.Label_Director.Name = "Label_Director";
-            this.Label_Director.Size = new System.Drawing.Size(105, 32);
+            this.Label_Director.Size = new System.Drawing.Size(104, 32);
             this.Label_Director.TabIndex = 30;
             this.Label_Director.Text = "Director:";
             // 
@@ -81,7 +82,7 @@ namespace VideoRentalStore
             this.Label_Category.ForeColor = System.Drawing.Color.White;
             this.Label_Category.Location = new System.Drawing.Point(60, 140);
             this.Label_Category.Name = "Label_Category";
-            this.Label_Category.Size = new System.Drawing.Size(116, 32);
+            this.Label_Category.Size = new System.Drawing.Size(115, 32);
             this.Label_Category.TabIndex = 35;
             this.Label_Category.Text = "Category:";
             // 
@@ -92,7 +93,7 @@ namespace VideoRentalStore
             this.Label_Price.ForeColor = System.Drawing.Color.White;
             this.Label_Price.Location = new System.Drawing.Point(60, 20);
             this.Label_Price.Name = "Label_Price";
-            this.Label_Price.Size = new System.Drawing.Size(149, 32);
+            this.Label_Price.Size = new System.Drawing.Size(148, 32);
             this.Label_Price.TabIndex = 41;
             this.Label_Price.Text = "Price  (VNĐ):";
             // 
@@ -103,12 +104,13 @@ namespace VideoRentalStore
             this.Label_Quantity.ForeColor = System.Drawing.Color.White;
             this.Label_Quantity.Location = new System.Drawing.Point(60, 80);
             this.Label_Quantity.Name = "Label_Quantity";
-            this.Label_Quantity.Size = new System.Drawing.Size(112, 32);
+            this.Label_Quantity.Size = new System.Drawing.Size(111, 32);
             this.Label_Quantity.TabIndex = 42;
             this.Label_Quantity.Text = "In stocks:";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.TextBox_idVideo);
             this.panel1.Controls.Add(this.Panel_Discription);
             this.panel1.Controls.Add(this.Label_ShowActor);
             this.panel1.Controls.Add(this.Label_ShowDirector);
@@ -125,6 +127,27 @@ namespace VideoRentalStore
             this.panel1.Size = new System.Drawing.Size(570, 726);
             this.panel1.TabIndex = 43;
             // 
+            // Panel_Discription
+            // 
+            this.Panel_Discription.AutoScroll = true;
+            this.Panel_Discription.Controls.Add(this.Label_Discription);
+            this.Panel_Discription.Location = new System.Drawing.Point(66, 325);
+            this.Panel_Discription.Name = "Panel_Discription";
+            this.Panel_Discription.Size = new System.Drawing.Size(465, 211);
+            this.Panel_Discription.TabIndex = 48;
+            // 
+            // Label_Discription
+            // 
+            this.Label_Discription.AutoSize = true;
+            this.Label_Discription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Discription.ForeColor = System.Drawing.Color.White;
+            this.Label_Discription.Location = new System.Drawing.Point(3, 0);
+            this.Label_Discription.MaximumSize = new System.Drawing.Size(420, 0);
+            this.Label_Discription.Name = "Label_Discription";
+            this.Label_Discription.Size = new System.Drawing.Size(420, 273);
+            this.Label_Discription.TabIndex = 49;
+            this.Label_Discription.Text = resources.GetString("Label_Discription.Text");
+            // 
             // Label_ShowActor
             // 
             this.Label_ShowActor.AutoSize = true;
@@ -132,7 +155,7 @@ namespace VideoRentalStore
             this.Label_ShowActor.ForeColor = System.Drawing.Color.White;
             this.Label_ShowActor.Location = new System.Drawing.Point(232, 260);
             this.Label_ShowActor.Name = "Label_ShowActor";
-            this.Label_ShowActor.Size = new System.Drawing.Size(159, 32);
+            this.Label_ShowActor.Size = new System.Drawing.Size(158, 32);
             this.Label_ShowActor.TabIndex = 47;
             this.Label_ShowActor.Text = "Elson , Chime";
             // 
@@ -143,7 +166,7 @@ namespace VideoRentalStore
             this.Label_ShowDirector.ForeColor = System.Drawing.Color.White;
             this.Label_ShowDirector.Location = new System.Drawing.Point(232, 200);
             this.Label_ShowDirector.Name = "Label_ShowDirector";
-            this.Label_ShowDirector.Size = new System.Drawing.Size(104, 32);
+            this.Label_ShowDirector.Size = new System.Drawing.Size(103, 32);
             this.Label_ShowDirector.TabIndex = 46;
             this.Label_ShowDirector.Text = "Chikitori";
             // 
@@ -154,9 +177,10 @@ namespace VideoRentalStore
             this.Label_ShowCategory.ForeColor = System.Drawing.Color.White;
             this.Label_ShowCategory.Location = new System.Drawing.Point(232, 140);
             this.Label_ShowCategory.Name = "Label_ShowCategory";
-            this.Label_ShowCategory.Size = new System.Drawing.Size(84, 32);
+            this.Label_ShowCategory.Size = new System.Drawing.Size(83, 32);
             this.Label_ShowCategory.TabIndex = 45;
             this.Label_ShowCategory.Text = "Horror";
+            this.Label_ShowCategory.Click += new System.EventHandler(this.Label_ShowCategory_Click);
             // 
             // Label_ShowQuantity
             // 
@@ -165,7 +189,7 @@ namespace VideoRentalStore
             this.Label_ShowQuantity.ForeColor = System.Drawing.Color.LimeGreen;
             this.Label_ShowQuantity.Location = new System.Drawing.Point(232, 80);
             this.Label_ShowQuantity.Name = "Label_ShowQuantity";
-            this.Label_ShowQuantity.Size = new System.Drawing.Size(54, 32);
+            this.Label_ShowQuantity.Size = new System.Drawing.Size(53, 32);
             this.Label_ShowQuantity.TabIndex = 44;
             this.Label_ShowQuantity.Text = "123";
             // 
@@ -176,7 +200,7 @@ namespace VideoRentalStore
             this.Label_ShowPrice.ForeColor = System.Drawing.Color.Yellow;
             this.Label_ShowPrice.Location = new System.Drawing.Point(232, 20);
             this.Label_ShowPrice.Name = "Label_ShowPrice";
-            this.Label_ShowPrice.Size = new System.Drawing.Size(87, 32);
+            this.Label_ShowPrice.Size = new System.Drawing.Size(86, 32);
             this.Label_ShowPrice.TabIndex = 43;
             this.Label_ShowPrice.Text = "50 000";
             // 
@@ -219,6 +243,7 @@ namespace VideoRentalStore
             this.Button_Rent.Size = new System.Drawing.Size(173, 52);
             this.Button_Rent.TabIndex = 48;
             this.Button_Rent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Rent.Click += new System.EventHandler(this.Button_Rent_Click);
             // 
             // Button_Buy
             // 
@@ -244,6 +269,7 @@ namespace VideoRentalStore
             this.Button_Buy.Size = new System.Drawing.Size(173, 52);
             this.Button_Buy.TabIndex = 47;
             this.Button_Buy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Buy.Click += new System.EventHandler(this.Button_Buy_Click);
             // 
             // pictureBox_Disc
             // 
@@ -255,26 +281,26 @@ namespace VideoRentalStore
             this.pictureBox_Disc.TabIndex = 44;
             this.pictureBox_Disc.TabStop = false;
             // 
-            // Panel_Discription
+            // TextBox_idVideo
             // 
-            this.Panel_Discription.AutoScroll = true;
-            this.Panel_Discription.Controls.Add(this.Label_Discription);
-            this.Panel_Discription.Location = new System.Drawing.Point(66, 325);
-            this.Panel_Discription.Name = "Panel_Discription";
-            this.Panel_Discription.Size = new System.Drawing.Size(465, 211);
-            this.Panel_Discription.TabIndex = 48;
-            // 
-            // Label_Discription
-            // 
-            this.Label_Discription.AutoSize = true;
-            this.Label_Discription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Discription.ForeColor = System.Drawing.Color.White;
-            this.Label_Discription.Location = new System.Drawing.Point(3, 0);
-            this.Label_Discription.MaximumSize = new System.Drawing.Size(420, 0);
-            this.Label_Discription.Name = "Label_Discription";
-            this.Label_Discription.Size = new System.Drawing.Size(420, 273);
-            this.Label_Discription.TabIndex = 49;
-            this.Label_Discription.Text = resources.GetString("Label_Discription.Text");
+            this.TextBox_idVideo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TextBox_idVideo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_idVideo.ForeColor = System.Drawing.Color.White;
+            this.TextBox_idVideo.HintForeColor = System.Drawing.Color.Empty;
+            this.TextBox_idVideo.HintText = "";
+            this.TextBox_idVideo.isPassword = false;
+            this.TextBox_idVideo.LineFocusedColor = System.Drawing.Color.Green;
+            this.TextBox_idVideo.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_idVideo.LineMouseHoverColor = System.Drawing.Color.Green;
+            this.TextBox_idVideo.LineThickness = 5;
+            this.TextBox_idVideo.Location = new System.Drawing.Point(97, 545);
+            this.TextBox_idVideo.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_idVideo.Name = "TextBox_idVideo";
+            this.TextBox_idVideo.Size = new System.Drawing.Size(308, 53);
+            this.TextBox_idVideo.TabIndex = 49;
+            this.TextBox_idVideo.Text = "Chikitori";
+            this.TextBox_idVideo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_idVideo.Visible = false;
             // 
             // Video_Info_ReadOnly
             // 
@@ -292,9 +318,9 @@ namespace VideoRentalStore
             this.Text = "Video_Info_ReadOnly";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).EndInit();
             this.Panel_Discription.ResumeLayout(false);
             this.Panel_Discription.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,16 +334,17 @@ namespace VideoRentalStore
         public System.Windows.Forms.Label Label_Price;
         public System.Windows.Forms.Label Label_Quantity;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label Label_ShowActor;
-        private System.Windows.Forms.Label Label_ShowDirector;
-        private System.Windows.Forms.Label Label_ShowCategory;
-        private System.Windows.Forms.Label Label_ShowQuantity;
-        private System.Windows.Forms.Label Label_ShowPrice;
         public System.Windows.Forms.TextBox TextBox_VideoName;
         public System.Windows.Forms.PictureBox pictureBox_Disc;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Buy;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_Rent;
         private System.Windows.Forms.Panel Panel_Discription;
-        private System.Windows.Forms.Label Label_Discription;
+        public System.Windows.Forms.Label Label_ShowQuantity;
+        public System.Windows.Forms.Label Label_ShowPrice;
+        public System.Windows.Forms.Label Label_ShowActor;
+        public System.Windows.Forms.Label Label_ShowDirector;
+        public System.Windows.Forms.Label Label_ShowCategory;
+        public System.Windows.Forms.Label Label_Discription;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_idVideo;
     }
 }
