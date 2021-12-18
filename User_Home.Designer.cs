@@ -59,7 +59,7 @@ namespace VideoRentalStore
             this.Panel_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.Panel_BestOfTheDay.Name = "Panel_BestOfTheDay";
-            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1044, 587);
+            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1027, 587);
             this.Panel_BestOfTheDay.TabIndex = 0;
             // 
             // Panel_BestOfTheDayText
@@ -71,7 +71,7 @@ namespace VideoRentalStore
             this.Panel_BestOfTheDayText.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_BestOfTheDayText.Location = new System.Drawing.Point(0, 464);
             this.Panel_BestOfTheDayText.Name = "Panel_BestOfTheDayText";
-            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1044, 123);
+            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1027, 123);
             this.Panel_BestOfTheDayText.TabIndex = 5;
             this.Panel_BestOfTheDayText.TopColor = System.Drawing.Color.Empty;
             // 
@@ -104,7 +104,7 @@ namespace VideoRentalStore
             this.PictureBox_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBox_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.PictureBox_BestOfTheDay.Name = "PictureBox_BestOfTheDay";
-            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1044, 587);
+            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1027, 587);
             this.PictureBox_BestOfTheDay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox_BestOfTheDay.TabIndex = 4;
             this.PictureBox_BestOfTheDay.TabStop = false;
@@ -123,7 +123,7 @@ namespace VideoRentalStore
             this.Panel_Recommend.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Recommend.Location = new System.Drawing.Point(0, 587);
             this.Panel_Recommend.Name = "Panel_Recommend";
-            this.Panel_Recommend.Size = new System.Drawing.Size(1044, 458);
+            this.Panel_Recommend.Size = new System.Drawing.Size(1027, 458);
             this.Panel_Recommend.TabIndex = 1;
             // 
             // Panel_RecommendItems
@@ -131,7 +131,7 @@ namespace VideoRentalStore
             this.Panel_RecommendItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_RecommendItems.Location = new System.Drawing.Point(0, 84);
             this.Panel_RecommendItems.Name = "Panel_RecommendItems";
-            this.Panel_RecommendItems.Size = new System.Drawing.Size(1044, 374);
+            this.Panel_RecommendItems.Size = new System.Drawing.Size(1027, 374);
             this.Panel_RecommendItems.TabIndex = 5;
             // 
             // Panel_TiltleRecommend
@@ -140,7 +140,7 @@ namespace VideoRentalStore
             this.Panel_TiltleRecommend.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_TiltleRecommend.Location = new System.Drawing.Point(0, 0);
             this.Panel_TiltleRecommend.Name = "Panel_TiltleRecommend";
-            this.Panel_TiltleRecommend.Size = new System.Drawing.Size(1044, 84);
+            this.Panel_TiltleRecommend.Size = new System.Drawing.Size(1027, 84);
             this.Panel_TiltleRecommend.TabIndex = 3;
             // 
             // Label_Recommend
@@ -165,7 +165,7 @@ namespace VideoRentalStore
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 1045);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 178);
+            this.panel1.Size = new System.Drawing.Size(1027, 178);
             this.panel1.TabIndex = 2;
             // 
             // User_Home
@@ -174,7 +174,7 @@ namespace VideoRentalStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1061, 661);
+            this.ClientSize = new System.Drawing.Size(1044, 661);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panel_Recommend);
             this.Controls.Add(this.Panel_BestOfTheDay);
