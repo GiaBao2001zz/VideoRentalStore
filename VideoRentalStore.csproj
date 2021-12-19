@@ -324,5 +324,44 @@
   <ItemGroup>
     <None Include="Resources\search.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comedy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantasy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Historical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horror.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sci-fi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sport.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thriller.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Western.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fantasy2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

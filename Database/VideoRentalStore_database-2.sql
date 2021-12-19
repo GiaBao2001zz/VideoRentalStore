@@ -94,3 +94,8 @@ GO
 SELECT * FROM AddToCart
 DELETE  FROM AddToCart
 sp_help 'Video'
+
+Select * from Video
+
+Select* from Video  where (Category like 'Action') AND ( Name like '%%')
+

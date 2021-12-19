@@ -13,9 +13,14 @@ namespace VideoRentalStore
 {
     public partial class Video_Shelf : Form
     {
-        public Video_Shelf()
+        private string MovieName;
+        private string Category;
+
+        public Video_Shelf(string Movie_Name = null, string _Category = null)
         {
             InitializeComponent();
+            MovieName = Movie_Name;
+            Category = _Category;
             LoadInfo();
         }
         private void LoadInfo()
@@ -26,6 +31,109 @@ namespace VideoRentalStore
             // DropDown_Category.Size = new Size(217, 50);
             ComboBox_Category.SelectedItem = "All";
             Panel_Search.Parent = this;
+            int trigger = 0;
+            if (MovieName != null)
+            {
+                TextBox_Search.Text = MovieName;
+                trigger = 1;
+            }
+            if (Category != null)
+            {
+                ComboBox_Category.SelectedItem = Category;
+                trigger = 1;
+            }
+            
+
+            if (trigger == 1)
+            {
+                using (var connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+                {
+                    connection.Open();
+                    var command = connection.CreateCommand();
+                    if (ComboBox_Category.SelectedItem != "All")
+                    {
+                        command.CommandText = "Select* from Video  where (Category like '" + ComboBox_Category.SelectedItem + "') AND ( Name like '%" + TextBox_Search.Text + "%')";
+                    }
+                    if (ComboBox_Category.SelectedItem == "All")
+                    {
+                        command.CommandText = "Select* from Video  where  Name like '%" + TextBox_Search.Text + "%'";
+                    }
+                    int count = 0;
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        var indexOfColumn1 = reader.GetOrdinal("Name");
+                        var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
+                        var indexOfColumn3 = reader.GetOrdinal("id");
+                        while (reader.Read())
+                        {
+                            var value1 = reader.GetValue(indexOfColumn1);
+                            var value2 = reader.GetValue(indexOfColumn2);
+                            var value3 = reader.GetValue(indexOfColumn3);
+                            count++;
+                        }
+                    }
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        var indexOfColumn1 = reader.GetOrdinal("Name");
+                        var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
+                        var indexOfColumn3 = reader.GetOrdinal("id");
+                        int x = 0;
+                        int y = 20;
+                        PictureBox[] picturebox = new PictureBox[count];
+                        Label[] label = new Label[count];
+                        int index = 0;
+                        while (reader.Read())
+                        {
+                            var value1 = reader.GetValue(indexOfColumn1);
+                            var value2 = reader.GetValue(indexOfColumn2);
+                            var value3 = reader.GetValue(indexOfColumn3);
+                            if ((x % 4 == 0) && (index != 0))
+                            {
+                                y = y + 325; // Mỗi hàng 4 hình
+                                x = 0;
+                            }
+                            picturebox[index] = new PictureBox();
+                            label[index] = new Label();
+                            picturebox[index].Image = Image.FromFile(value2.ToString());
+                            picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
+                            picturebox[index].Location = new Point(x * 250 + 60, y);
+                            picturebox[index].Size = new Size(175, 250); //150,200
+                            picturebox[index].Tag = value3;
+                            label[index].Text = (string)value1;
+                            label[index].Font = new Font("Segoe UI", 13);
+                            label[index].Size = new Size(175, 70);
+                            label[index].ForeColor = Color.White;
+                            label[index].AutoSize = false;
+                            label[index].TextAlign = ContentAlignment.MiddleCenter;
+                            label[index].AutoSize = false;
+                            label[index].Location = new Point(x * 250 + 60, y + 245);
+                            picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
+                            picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
+                            picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
+
+                            //Make rounded corner picturebox
+                            Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
+                            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+                            int d = 10;
+                            gp.AddArc(r.X, r.Y, d, d, 180, 90);
+                            gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+                            gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+                            gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+                            picturebox[index].Region = new Region(gp);
+
+                            this.Panel_ShowVideo.Controls.Add(picturebox[index]);
+                            this.Panel_ShowVideo.Controls.Add(label[index]);
+                            label[index].BringToFront();
+                            picturebox[index].BringToFront();
+                            index++;
+                            x++;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
         }
         public void ShowImage()
         {
@@ -190,6 +298,11 @@ namespace VideoRentalStore
             //this.AutoScroll = true;
             ShowImage();
 
+            if (Category != null || MovieName != null)
+            {
+                this.Panel_ShowVideo.Controls.Clear();
+                LoadInfo();
+            }
         }
 
       
