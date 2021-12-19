@@ -355,6 +355,96 @@ namespace VideoRentalStore
             if (this.Parent.Controls.Count > 0)
                 this.Parent.Controls[0].Dispose();
         }
+
+        private void Button_Comedy_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Comedy") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Drama_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Drama") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Fantasy_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Fantasy") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Historical_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Historical") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Horror_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Horror") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Musicals_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Muscicals") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Romance_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Romance") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_SciFi_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Sci-Fi") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
+
+        private void Button_Sports_Click(object sender, EventArgs e)
+        {
+            Video_Shelf grid = new Video_Shelf("", "Sports") { Dock = DockStyle.Fill, TopLevel = false };
+            // this.Closed += (s, args) => grid.Close();
+            this.Parent.Controls.Add(grid);
+            grid.Show();
+            if (this.Parent.Controls.Count > 0)
+                this.Parent.Controls[0].Dispose();
+        }
     }
 }
     

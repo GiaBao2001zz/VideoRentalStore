@@ -132,6 +132,7 @@ namespace VideoRentalStore
                         }
                     }
                     connection.Close();
+                    if (count == 0) NothingFound();
                 }
             }
         }
@@ -214,10 +215,13 @@ namespace VideoRentalStore
                             index++;
                             x++;
                         }
+
                     }
+                    if (count == 0) NothingFound();
                     connection.Close();
                 }
             }
+            
         }
 
         internal void Active(object sender, MouseEventArgs e)
@@ -281,6 +285,17 @@ namespace VideoRentalStore
             }
         }
 
+        private void NothingFound()
+        {
+            
+            PictureBox picture = new PictureBox();
+            picture.Location = new Point(0, 0);
+            picture.Image = Properties.Resources.Sorry;
+            picture.Size = new Size(900, 500);
+            picture.SizeMode = PictureBoxSizeMode.Zoom;
+            this.Panel_ShowVideo.Controls.Add(picture);
+            
+        }
         internal void HoverMouseEnter(object sender, EventArgs e)
         {
             PictureBox picture = sender as PictureBox;
@@ -403,6 +418,7 @@ namespace VideoRentalStore
                     }
                 }
                 connection.Close();
+                if (count == 0) NothingFound();
             }
         
         
