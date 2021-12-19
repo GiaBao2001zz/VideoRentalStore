@@ -121,7 +121,7 @@ namespace VideoRentalStore
             this.Panel_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.Panel_BestOfTheDay.Name = "Panel_BestOfTheDay";
-            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1146, 587);
+            this.Panel_BestOfTheDay.Size = new System.Drawing.Size(1163, 587);
             this.Panel_BestOfTheDay.TabIndex = 0;
             // 
             // Panel_BestOfTheDayText
@@ -133,7 +133,7 @@ namespace VideoRentalStore
             this.Panel_BestOfTheDayText.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_BestOfTheDayText.Location = new System.Drawing.Point(0, 464);
             this.Panel_BestOfTheDayText.Name = "Panel_BestOfTheDayText";
-            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1146, 123);
+            this.Panel_BestOfTheDayText.Size = new System.Drawing.Size(1163, 123);
             this.Panel_BestOfTheDayText.TabIndex = 5;
             this.Panel_BestOfTheDayText.TopColor = System.Drawing.Color.Empty;
             // 
@@ -166,7 +166,7 @@ namespace VideoRentalStore
             this.PictureBox_BestOfTheDay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PictureBox_BestOfTheDay.Location = new System.Drawing.Point(0, 0);
             this.PictureBox_BestOfTheDay.Name = "PictureBox_BestOfTheDay";
-            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1146, 587);
+            this.PictureBox_BestOfTheDay.Size = new System.Drawing.Size(1163, 587);
             this.PictureBox_BestOfTheDay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox_BestOfTheDay.TabIndex = 4;
             this.PictureBox_BestOfTheDay.TabStop = false;
@@ -185,7 +185,7 @@ namespace VideoRentalStore
             this.Panel_Recommend.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Recommend.Location = new System.Drawing.Point(0, 587);
             this.Panel_Recommend.Name = "Panel_Recommend";
-            this.Panel_Recommend.Size = new System.Drawing.Size(1146, 402);
+            this.Panel_Recommend.Size = new System.Drawing.Size(1163, 402);
             this.Panel_Recommend.TabIndex = 1;
             // 
             // Panel_RecommendItems
@@ -193,7 +193,7 @@ namespace VideoRentalStore
             this.Panel_RecommendItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_RecommendItems.Location = new System.Drawing.Point(0, 84);
             this.Panel_RecommendItems.Name = "Panel_RecommendItems";
-            this.Panel_RecommendItems.Size = new System.Drawing.Size(1146, 318);
+            this.Panel_RecommendItems.Size = new System.Drawing.Size(1163, 318);
             this.Panel_RecommendItems.TabIndex = 5;
             // 
             // Panel_TiltleRecommend
@@ -202,7 +202,7 @@ namespace VideoRentalStore
             this.Panel_TiltleRecommend.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_TiltleRecommend.Location = new System.Drawing.Point(0, 0);
             this.Panel_TiltleRecommend.Name = "Panel_TiltleRecommend";
-            this.Panel_TiltleRecommend.Size = new System.Drawing.Size(1146, 84);
+            this.Panel_TiltleRecommend.Size = new System.Drawing.Size(1163, 84);
             this.Panel_TiltleRecommend.TabIndex = 3;
             // 
             // Label_Recommend
@@ -229,7 +229,7 @@ namespace VideoRentalStore
             this.Panel_RecommendGenre.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_RecommendGenre.Location = new System.Drawing.Point(0, 989);
             this.Panel_RecommendGenre.Name = "Panel_RecommendGenre";
-            this.Panel_RecommendGenre.Size = new System.Drawing.Size(1146, 400);
+            this.Panel_RecommendGenre.Size = new System.Drawing.Size(1163, 400);
             this.Panel_RecommendGenre.TabIndex = 2;
             // 
             // Panel_ShowRecommendCategory
@@ -237,7 +237,7 @@ namespace VideoRentalStore
             this.Panel_ShowRecommendCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_ShowRecommendCategory.Location = new System.Drawing.Point(0, 84);
             this.Panel_ShowRecommendCategory.Name = "Panel_ShowRecommendCategory";
-            this.Panel_ShowRecommendCategory.Size = new System.Drawing.Size(1146, 316);
+            this.Panel_ShowRecommendCategory.Size = new System.Drawing.Size(1163, 316);
             this.Panel_ShowRecommendCategory.TabIndex = 6;
             // 
             // Panel_RecommendCategory
@@ -246,7 +246,7 @@ namespace VideoRentalStore
             this.Panel_RecommendCategory.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_RecommendCategory.Location = new System.Drawing.Point(0, 0);
             this.Panel_RecommendCategory.Name = "Panel_RecommendCategory";
-            this.Panel_RecommendCategory.Size = new System.Drawing.Size(1146, 84);
+            this.Panel_RecommendCategory.Size = new System.Drawing.Size(1163, 84);
             this.Panel_RecommendCategory.TabIndex = 4;
             // 
             // Label_RecommendGenre
@@ -267,7 +267,7 @@ namespace VideoRentalStore
             this.Panel_Category.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_Category.Location = new System.Drawing.Point(0, 1389);
             this.Panel_Category.Name = "Panel_Category";
-            this.Panel_Category.Size = new System.Drawing.Size(1146, 500);
+            this.Panel_Category.Size = new System.Drawing.Size(1163, 500);
             this.Panel_Category.TabIndex = 3;
             // 
             // Panel_ShowCategory
@@ -286,7 +286,7 @@ namespace VideoRentalStore
             this.Panel_ShowCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_ShowCategory.Location = new System.Drawing.Point(0, 84);
             this.Panel_ShowCategory.Name = "Panel_ShowCategory";
-            this.Panel_ShowCategory.Size = new System.Drawing.Size(1146, 416);
+            this.Panel_ShowCategory.Size = new System.Drawing.Size(1163, 416);
             this.Panel_ShowCategory.TabIndex = 10;
             // 
             // GradientPanel_Sports
@@ -676,7 +676,7 @@ namespace VideoRentalStore
             this.Panel_CategoryTilte.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_CategoryTilte.Location = new System.Drawing.Point(0, 0);
             this.Panel_CategoryTilte.Name = "Panel_CategoryTilte";
-            this.Panel_CategoryTilte.Size = new System.Drawing.Size(1146, 84);
+            this.Panel_CategoryTilte.Size = new System.Drawing.Size(1163, 84);
             this.Panel_CategoryTilte.TabIndex = 5;
             // 
             // Label_Category
@@ -695,7 +695,7 @@ namespace VideoRentalStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1163, 661);
+            this.ClientSize = new System.Drawing.Size(1180, 661);
             this.Controls.Add(this.Panel_Category);
             this.Controls.Add(this.Panel_RecommendGenre);
             this.Controls.Add(this.Panel_Recommend);
@@ -766,33 +766,33 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel Panel_ShowCategory;
         private GradiantPanel GradiantPanel_Comedy;
         private System.Windows.Forms.Panel MaskPanel_Comedy;
-        private System.Windows.Forms.Button Button_Comedy;
+        public System.Windows.Forms.Button Button_Comedy;
         private GradiantPanel GradiantPanel_Action;
         private System.Windows.Forms.Panel MaskPanel_Action;
-        private System.Windows.Forms.Button Button_Action;
+        public System.Windows.Forms.Button Button_Action;
         private GradiantPanel GradiantPanel_Drama;
         private System.Windows.Forms.Panel MaskPanel_Drama;
-        private System.Windows.Forms.Button Button_Drama;
+        public System.Windows.Forms.Button Button_Drama;
         private GradiantPanel GradientPanel_Fantasy;
         private System.Windows.Forms.Panel MaskPanel_Fantasy;
-        private System.Windows.Forms.Button Button_Fantasy;
+        public System.Windows.Forms.Button Button_Fantasy;
         private GradiantPanel GradiantPanel_Horror;
         private System.Windows.Forms.Panel MaskPanel_Horror;
-        private System.Windows.Forms.Button Button_Horror;
+        public System.Windows.Forms.Button Button_Horror;
         private GradiantPanel GradiantPanel_Historical;
         private System.Windows.Forms.Panel MaskPanel_Historical;
-        private System.Windows.Forms.Button Button_Historical;
+        public System.Windows.Forms.Button Button_Historical;
         private GradiantPanel GradientPanel_Sports;
         private System.Windows.Forms.Panel MaskPanel_Sports;
-        private System.Windows.Forms.Button Button_Sports;
+        public System.Windows.Forms.Button Button_Sports;
         private GradiantPanel GradientPanel_SciFi;
         private System.Windows.Forms.Panel MaskPanel_SciFi;
-        private System.Windows.Forms.Button Button_SciFi;
+        public System.Windows.Forms.Button Button_SciFi;
         private GradiantPanel GradientPanel_Romance;
         private System.Windows.Forms.Panel MaskPanel_Romance;
-        private System.Windows.Forms.Button Button_Romance;
+        public System.Windows.Forms.Button Button_Romance;
         private GradiantPanel GradientPanel_Musicals;
         private System.Windows.Forms.Panel MaskPanel_Musicals;
-        private System.Windows.Forms.Button Button_Musicals;
+        public System.Windows.Forms.Button Button_Musicals;
     }
 }

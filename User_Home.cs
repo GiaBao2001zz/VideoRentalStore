@@ -23,6 +23,11 @@ namespace VideoRentalStore
             
 
         }
+
+        public void ActivateBuy()
+        {
+
+        }
         private void Load_Home()
         {
             Label_NameOfBanner.Parent = Panel_BestOfTheDayText;
@@ -339,7 +344,7 @@ namespace VideoRentalStore
             this.PictureBox_BestOfTheDay.Image = image;
         }
 
-        private void Button_Action_Click(object sender, EventArgs e)
+        public void Button_Action_Click(object sender, EventArgs e)
         {
            
 
@@ -354,6 +359,8 @@ namespace VideoRentalStore
             grid.Show();
             if (this.Parent.Controls.Count > 0)
                 this.Parent.Controls[0].Dispose();
+            
+          
         }
 
         private void Button_Comedy_Click(object sender, EventArgs e)

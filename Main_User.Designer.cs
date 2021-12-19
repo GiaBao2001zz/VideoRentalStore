@@ -90,7 +90,7 @@ namespace VideoRentalStore
             this.Button_ContactUs.Location = new System.Drawing.Point(0, 340);
             this.Button_ContactUs.Name = "Button_ContactUs";
             this.Button_ContactUs.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_ContactUs.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_ContactUs.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_ContactUs.OnHoverTextColor = System.Drawing.Color.Empty;
             this.Button_ContactUs.selected = false;
             this.Button_ContactUs.Size = new System.Drawing.Size(220, 60);
@@ -126,7 +126,7 @@ namespace VideoRentalStore
             this.Button_AccoutInfo.Location = new System.Drawing.Point(0, 280);
             this.Button_AccoutInfo.Name = "Button_AccoutInfo";
             this.Button_AccoutInfo.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_AccoutInfo.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_AccoutInfo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_AccoutInfo.OnHoverTextColor = System.Drawing.Color.Empty;
             this.Button_AccoutInfo.selected = true;
             this.Button_AccoutInfo.Size = new System.Drawing.Size(220, 60);
@@ -162,7 +162,7 @@ namespace VideoRentalStore
             this.Button_History.Location = new System.Drawing.Point(0, 220);
             this.Button_History.Name = "Button_History";
             this.Button_History.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_History.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_History.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_History.OnHoverTextColor = System.Drawing.Color.Empty;
             this.Button_History.selected = true;
             this.Button_History.Size = new System.Drawing.Size(220, 60);
@@ -198,7 +198,7 @@ namespace VideoRentalStore
             this.Button_Cart.Location = new System.Drawing.Point(0, 160);
             this.Button_Cart.Name = "Button_Cart";
             this.Button_Cart.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_Cart.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_Cart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_Cart.OnHoverTextColor = System.Drawing.Color.Empty;
             this.Button_Cart.selected = true;
             this.Button_Cart.Size = new System.Drawing.Size(220, 60);
@@ -234,7 +234,7 @@ namespace VideoRentalStore
             this.Button_RentDisc.Location = new System.Drawing.Point(0, 100);
             this.Button_RentDisc.Name = "Button_RentDisc";
             this.Button_RentDisc.Normalcolor = System.Drawing.Color.Empty;
-            this.Button_RentDisc.OnHovercolor = System.Drawing.Color.Empty;
+            this.Button_RentDisc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.Button_RentDisc.OnHoverTextColor = System.Drawing.Color.Empty;
             this.Button_RentDisc.selected = true;
             this.Button_RentDisc.Size = new System.Drawing.Size(220, 60);

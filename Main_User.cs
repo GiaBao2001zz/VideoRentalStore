@@ -12,16 +12,13 @@ namespace VideoRentalStore
 {
     public partial class Main_User : Form
     {
-        private Panel LeftBorderBtn;
+        
         private Bunifu.Framework.UI.BunifuFlatButton CurrentButton;
         public Main_User()
         {
             InitializeComponent();
             
-            LeftBorderBtn = new Panel();
-            LeftBorderBtn.Size = new Size(10, 60);
-            Panel_Menu.Controls.Add(LeftBorderBtn);
-            LeftBorderBtn.BackColor = Color.White;
+          
 
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
@@ -30,6 +27,17 @@ namespace VideoRentalStore
             // Add New Form 
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
+
+            grid.Button_Action.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Comedy.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Drama.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Fantasy.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Historical.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Horror.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Musicals.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Romance.Click += (s, args) => this.ActivateBuy();
+            grid.Button_SciFi.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Sports.Click += (s, args) => this.ActivateBuy();
             grid.Show();
             DoubleBuffered = true;
 
@@ -40,7 +48,9 @@ namespace VideoRentalStore
             if (senderBtn != null)
             {
                 DeactivateButton();
+                
                 this.CurrentButton = (Bunifu.Framework.UI.BunifuFlatButton)senderBtn;
+                /*
                 this.CurrentButton.IconMarginLeft += 30;
                 this.CurrentButton.BackColor = Color.White;
            
@@ -50,17 +60,26 @@ namespace VideoRentalStore
                 LeftBorderBtn.Location = new Point(0, this.CurrentButton.Location.Y);
                 LeftBorderBtn.Visible = true;
                 LeftBorderBtn.BringToFront();
+                */
+                this.CurrentButton.Activecolor = Color.Green;
+                this.CurrentButton.Normalcolor = Color.Green;
+                this.CurrentButton.OnHovercolor = Color.Green;
 
 
             }    
         }
+        public void ActivateBuy()
+        {
+            CurrentButton = Button_RentDisc;
+            ActivateBtn(CurrentButton);
+        }    
         private void DeactivateButton()
         {
             if (CurrentButton != null)
             {
 
-                CurrentButton.BackColor = Color.FromArgb(43, 43, 43);
-                CurrentButton.IconMarginLeft -= 30;
+                CurrentButton.Normalcolor = Color.FromArgb(45, 45, 45);
+                CurrentButton.OnHovercolor = Color.FromArgb(90, 90, 90);
 
 
 
@@ -149,15 +168,26 @@ namespace VideoRentalStore
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-
+            DeactivateButton();
             // Check if is there any form already opened in Switch Form Panel
             if (this.Panel_SwtichForm.Controls.Count > 0)
                 this.Panel_SwtichForm.Controls[0].Dispose();
+
 
             // Add New Form (Grid_YeuCauThueMua)
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_SwtichForm.Controls.Add(grid);
             grid.Show();
+            grid.Button_Action.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Comedy.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Drama.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Fantasy.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Historical.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Horror.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Musicals.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Romance.Click += (s, args) => this.ActivateBuy();
+            grid.Button_SciFi.Click += (s, args) => this.ActivateBuy();
+            grid.Button_Sports.Click += (s, args) => this.ActivateBuy();
         }
 
         private void Main_User_Load(object sender, EventArgs e)
