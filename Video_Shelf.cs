@@ -276,7 +276,7 @@ namespace VideoRentalStore
                             video_Info.Label_ShowDirector.Text = directorVideo_data.ToString();
                             video_Info.Label_ShowActor.Text = actorVideo_data.ToString();
                             video_Info.Label_Discription.Text = descriptionVideo_data.ToString();
-                            video_Info.Label_Category.Text = categoryVideo_data.ToString();
+                            video_Info.Label_ShowCategory.Text = categoryVideo_data.ToString();
                             video_Info.TextBox_idVideo.Text = idVideo_data.ToString();
                            
                         }

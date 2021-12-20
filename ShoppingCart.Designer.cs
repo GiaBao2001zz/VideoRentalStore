@@ -41,11 +41,11 @@ namespace VideoRentalStore
             this.Panel_SummaryTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Label_Price = new System.Windows.Forms.Label();
             this.Label_Payment = new System.Windows.Forms.Label();
             this.label_Product = new System.Windows.Forms.Label();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_CheckOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Summary.SuspendLayout();
             this.Panel_TotalProduct.SuspendLayout();
             this.Panel_Total.SuspendLayout();
@@ -185,6 +185,14 @@ namespace VideoRentalStore
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(696, 34);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // Label_Price
             // 
             this.Label_Price.AutoSize = true;
@@ -222,47 +230,40 @@ namespace VideoRentalStore
             this.label_Product.Text = "Product";
             this.label_Product.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuFlatButton1
+            // btn_CheckOut
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Checkout";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::VideoRentalStore.Properties.Resources.checkout;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 70D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(720, 473);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(299, 55);
-            this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "Checkout";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 54);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(696, 34);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.btn_CheckOut.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_CheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_CheckOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CheckOut.BorderRadius = 0;
+            this.btn_CheckOut.ButtonText = "Checkout";
+            this.btn_CheckOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_CheckOut.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_CheckOut.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_CheckOut.Iconimage = global::VideoRentalStore.Properties.Resources.checkout;
+            this.btn_CheckOut.Iconimage_right = null;
+            this.btn_CheckOut.Iconimage_right_Selected = null;
+            this.btn_CheckOut.Iconimage_Selected = null;
+            this.btn_CheckOut.IconMarginLeft = 0;
+            this.btn_CheckOut.IconMarginRight = 0;
+            this.btn_CheckOut.IconRightVisible = true;
+            this.btn_CheckOut.IconRightZoom = 0D;
+            this.btn_CheckOut.IconVisible = true;
+            this.btn_CheckOut.IconZoom = 70D;
+            this.btn_CheckOut.IsTab = false;
+            this.btn_CheckOut.Location = new System.Drawing.Point(720, 473);
+            this.btn_CheckOut.Name = "btn_CheckOut";
+            this.btn_CheckOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_CheckOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_CheckOut.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_CheckOut.selected = false;
+            this.btn_CheckOut.Size = new System.Drawing.Size(299, 55);
+            this.btn_CheckOut.TabIndex = 3;
+            this.btn_CheckOut.Text = "Checkout";
+            this.btn_CheckOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_CheckOut.Textcolor = System.Drawing.Color.White;
+            this.btn_CheckOut.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // ShoppingCart
             // 
@@ -271,7 +272,7 @@ namespace VideoRentalStore
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1044, 661);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btn_CheckOut);
             this.Controls.Add(this.Panel_Summary);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,7 +298,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel Panel_Summary;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_CheckOut;
         private System.Windows.Forms.Panel Panel_Total;
         private System.Windows.Forms.Panel Panel_SummaryTitle;
         private System.Windows.Forms.Panel Panel_TotalProduct;

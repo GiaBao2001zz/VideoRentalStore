@@ -38,15 +38,15 @@ GO
 CREATE TABLE Request
 (
 	id INT IDENTITY PRIMARY KEY,
-	nameCustomer NVARCHAR(100) NOT NULL DEFAULT N'Unknow',
-	addressCustomer NVARCHAR(100) NOT NULL DEFAULT N'Unknow',
+	userName NVARCHAR(100) NOT NULL DEFAULT N'Unknow',
 	idVideo NVARCHAR(100) NOT NULL,
 	DateRequest DATE NOT NULL DEFAULT GETDATE(),
 	DateDelivered DATE,
 	Type NVARCHAR(1000) NOT NULL DEFAULT N'Rent',  -- Rent / Buy / Return
 	Status NVARCHAR(1000) NOT NULL  DEFAULT N'Waiting', --Waiting/Delivering/Completed
 
-	FOREIGN KEY(idVideo) REFERENCES dbo.Video(id)
+	FOREIGN KEY(idVideo) REFERENCES dbo.Video(id),
+	FOREIGN KEY(userName) REFERENCES dbo.Account(Username)
 )
 GO
 
@@ -91,11 +91,6 @@ CREATE TABLE AddToCart
 )
 GO
 
-SELECT * FROM AddToCart
-DELETE  FROM AddToCart
+SELECT * FROM Request
+DELETE FROM Request
 sp_help 'Video'
-
-Select * from Video
-
-Select* from Video  where (Category like 'Action') AND ( Name like '%%')
-

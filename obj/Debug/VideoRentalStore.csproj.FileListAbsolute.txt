@@ -198,3 +198,4 @@ D:\Projects\VideoRentalStore#4\obj\Debug\VideoRentalStore.exe
 D:\Projects\VideoRentalStore#4\obj\Debug\VideoRentalStore.pdb
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources
 D:\Projects\VideoRentalStore#4\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+D:\OOAD\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources

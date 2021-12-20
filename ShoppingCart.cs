@@ -23,7 +23,7 @@ namespace VideoRentalStore
         {
             panel2.AutoScroll = true;
             ShowImage();
-           
+
         }
 
         const int SB_HORZ = 0;
@@ -52,7 +52,7 @@ namespace VideoRentalStore
             {
                 using (var command = connection.CreateCommand())
                 {
-                    Main_User main_User = (Main_User)ParentForm;                    
+                    Main_User main_User = (Main_User)ParentForm;
                     command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
                     command.CommandText = "SELECT Name, Thumbnail, Payment, AddToCart.Price  FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username WHERE Account.Username = @userName";
                     int count = 0;
@@ -84,7 +84,7 @@ namespace VideoRentalStore
                         PictureBox[] picturebox = new PictureBox[count];
                         Label[] nameVideo = new Label[count];
                         Label[] payment = new Label[count];
-                        Label[] price = new Label[count];               
+                        Label[] price = new Label[count];
                         int index = 0;
                         while (reader.Read())
                         {
@@ -100,7 +100,7 @@ namespace VideoRentalStore
                             picturebox[index] = new PictureBox();
                             nameVideo[index] = new Label();
                             payment[index] = new Label();
-                            price[index] = new Label();                          
+                            price[index] = new Label();
 
                             picturebox[index].Image = Image.FromFile(value2.ToString());
                             picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
@@ -111,7 +111,7 @@ namespace VideoRentalStore
                             nameVideo[index].Text = (string)value1;
                             nameVideo[index].Font = new Font("Segoe UI", 13);
                             nameVideo[index].Size = new Size(175, 50);
-                            nameVideo[index].ForeColor = Color.White;                           
+                            nameVideo[index].ForeColor = Color.White;
                             nameVideo[index].TextAlign = ContentAlignment.TopLeft;
                             nameVideo[index].AutoSize = false;
                             nameVideo[index].Location = new Point(x * 250 + 180, y + 10);
@@ -121,7 +121,7 @@ namespace VideoRentalStore
                             payment[index].Size = new Size(175, 50);
                             payment[index].ForeColor = Color.White;
                             payment[index].AutoSize = false;
-                            payment[index].TextAlign = ContentAlignment.TopLeft;                           
+                            payment[index].TextAlign = ContentAlignment.TopLeft;
                             payment[index].Location = new Point(x * 250 + 390, y + 10);
 
                             price[index].Text = (string)value4.ToString();
@@ -177,7 +177,7 @@ namespace VideoRentalStore
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -192,5 +192,87 @@ namespace VideoRentalStore
                 g.Dispose();
             }
         }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            Main_User main_User = (Main_User)ParentForm;
+            using (var connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            {
+                using (var command = connection.CreateCommand())
+                {
+                    command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
+                    command.CommandText = "SELECT Video.id, Payment  FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username WHERE Account.Username = @userName";
+                    connection.Open();
+                    int i = 0;
+                    using (var reader = command.ExecuteReader())
+                    {
+                        var indexOfColumn1 = reader.GetOrdinal("id");
+                        var indexOfColumn2 = reader.GetOrdinal("Payment");
+                        while (reader.Read())
+                        {
+                            var value1 = reader.GetValue(indexOfColumn1);
+                            var value2 = reader.GetValue(indexOfColumn2);
+                            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+                            string query = "INSERT INTO Request ( userName , idVideo, DateRequest, DateDelivered, Type, Status) " +
+                                "VALUES (@userName, @idVideo, @dateRequest, @dateDelivered, @type, @status)";
+                            SqlCommand cmd = new SqlCommand(query, con);
+
+
+                            string userName = main_User.Label_UserName.Text;
+                            string idVideo = (string)value1;
+                            DateTime dateRequest = DateTime.Now;
+                            DateTime dateDelivered = dateRequest.AddDays(7);
+                            string type = "";
+                            if (value2.ToString() == "Buy")
+                            {
+                                type = "Buy";
+                            }
+                            else
+                            {
+                                type = "Rent";
+                            }
+                            string status = "Waiting";
+
+                            cmd.Parameters.AddWithValue("@userName", userName);
+                            cmd.Parameters.AddWithValue("@idVideo", idVideo);
+                            cmd.Parameters.AddWithValue("@dateRequest", dateRequest);
+                            cmd.Parameters.AddWithValue("@dateDelivered", dateDelivered);
+                            cmd.Parameters.AddWithValue("@type", type);
+                            cmd.Parameters.AddWithValue("@status", status);
+
+
+                            con.Open();
+                            i = cmd.ExecuteNonQuery();
+
+                            con.Close();
+                        }
+                        if (i != 0)
+                        {
+                            MessageBox.Show("Send Request Successfully");
+                            //Delete item cart after checkout
+                            try
+                            {
+                                string query = "DELETE FROM AddToCart";
+                                using (SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+                                {
+                                    con.Open();
+                                    using (SqlCommand cmd = new SqlCommand(query, con))
+                                    {
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                    con.Close();
+                                }
+                            }
+                            catch (SystemException ex)
+                            {
+                                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                            }
+                        }
+                    }
+                    }
+
+                }
+            }
+        }
     }
-}
+
