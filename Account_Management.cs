@@ -17,8 +17,9 @@ namespace VideoRentalStore
         {
             InitializeComponent();
             Load_DataGrid();
+            
         }
-       //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore; Integrated Security = True";
+        //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore; Integrated Security = True";
         string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
         
         private void Load_DataGrid()
@@ -37,11 +38,35 @@ namespace VideoRentalStore
             
             if(DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
+                //Hiện mật khẩu dưới dạng không che
+                SqlConnection Sqlcon = new SqlConnection(connectionSTR);
+                Sqlcon.Open();
+                string user = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtUsername"].FormattedValue.ToString();
+                string a = "Select Password from Account where Username = '" + user + "'";
+                SqlCommand cmd = new SqlCommand(a, Sqlcon);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    TextBox_Password.Text = da.GetValue(0).ToString();
+                }
+                
+                //CheckBox
+                if (CheckBox_HidePass.Checked)
+                {
+                    TextBox_Password.isPassword = true;
+
+                }
+                else
+                {
+                    TextBox_Password.isPassword = false;
+
+                }
+                
                 //Hiện thông tin khi click vào Cell
                 DataGrid_AccountManagement.CurrentRow.Selected = true;
                 Textbox_Username.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtUsername"].FormattedValue.ToString();
                 TextBox_DisplayName.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtDisplayName"].FormattedValue.ToString();
-                TextBox_Password.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtPassword"].FormattedValue.ToString();
+                //TextBox_Password.Text = ;
                 TextBox_PhoneNum.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtPhoneNumber"].FormattedValue.ToString();
                 TextBox_Email.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtEmail"].FormattedValue.ToString();
                 Label_DateCreate.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["txtDateCreate"].FormattedValue.ToString();
@@ -54,16 +79,6 @@ namespace VideoRentalStore
             {
                 Load_DataGrid();
             }
-        }
-
-        private void DataGrid_AccountManagement_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Account_Management_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void Button_Add_Click(object sender, EventArgs e)
@@ -217,6 +232,14 @@ namespace VideoRentalStore
                 TextBox_CMND.Text = "";
                 TextBox_Address.Text = "";
                 Textbox_Type.Text = "";
+            }
+        }
+
+        private void DataGrid_AccountManagement_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if(e.ColumnIndex == 2 && e.Value != null)
+            {
+                e.Value = new string('*', 4);
             }
         }
     }
