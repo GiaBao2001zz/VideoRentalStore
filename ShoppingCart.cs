@@ -259,13 +259,10 @@ namespace VideoRentalStore
                                     using (SqlCommand cmd = new SqlCommand(query, con))
                                     {
                                         cmd.ExecuteNonQuery();
-                                        if (main_User.Panel_SwtichForm.Controls.Count > 0)
-                                            main_User.Panel_SwtichForm.Controls[0].Dispose();
 
-                                        // Add New Form 
-                                        ShoppingCart grid = new ShoppingCart() { Dock = DockStyle.Fill, TopLevel = false };
-                                        main_User.Panel_SwtichForm.Controls.Add(grid);
-                                        grid.Show();
+
+                                        this.panel2.Controls.Clear();
+                                        ShoppingCart_Load(sender, e);
                                     }
                                     con.Close();
                                 }
