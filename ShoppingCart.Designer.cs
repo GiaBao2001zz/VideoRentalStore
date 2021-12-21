@@ -176,9 +176,9 @@ namespace VideoRentalStore
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 181);
+            this.panel2.Location = new System.Drawing.Point(0, 168);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(714, 481);
+            this.panel2.Size = new System.Drawing.Size(714, 494);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -186,7 +186,7 @@ namespace VideoRentalStore
             // 
             this.panel1.Location = new System.Drawing.Point(0, 152);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(714, 23);
+            this.panel1.Size = new System.Drawing.Size(714, 10);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -195,7 +195,7 @@ namespace VideoRentalStore
             this.Label_Price.AutoSize = true;
             this.Label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Price.ForeColor = System.Drawing.Color.White;
-            this.Label_Price.Location = new System.Drawing.Point(563, 15);
+            this.Label_Price.Location = new System.Drawing.Point(563, 16);
             this.Label_Price.Name = "Label_Price";
             this.Label_Price.Size = new System.Drawing.Size(59, 30);
             this.Label_Price.TabIndex = 3;
@@ -206,7 +206,7 @@ namespace VideoRentalStore
             this.Label_Payment.AutoSize = true;
             this.Label_Payment.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Payment.ForeColor = System.Drawing.Color.White;
-            this.Label_Payment.Location = new System.Drawing.Point(390, 14);
+            this.Label_Payment.Location = new System.Drawing.Point(390, 16);
             this.Label_Payment.Name = "Label_Payment";
             this.Label_Payment.Size = new System.Drawing.Size(96, 30);
             this.Label_Payment.TabIndex = 2;
@@ -218,7 +218,7 @@ namespace VideoRentalStore
             this.label_Product.AutoSize = true;
             this.label_Product.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Product.ForeColor = System.Drawing.Color.White;
-            this.label_Product.Location = new System.Drawing.Point(15, 14);
+            this.label_Product.Location = new System.Drawing.Point(15, 16);
             this.label_Product.Name = "label_Product";
             this.label_Product.Size = new System.Drawing.Size(89, 30);
             this.label_Product.TabIndex = 1;

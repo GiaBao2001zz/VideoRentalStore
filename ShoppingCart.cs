@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -125,6 +126,7 @@ namespace VideoRentalStore
                             payment[index].Location = new Point(x * 250 + 390, y + 10);
 
                             price[index].Text = (string)value4.ToString();
+                            price[index].Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(price[index].Text));
                             price[index].Font = new Font("Segoe UI", 13);
                             price[index].Size = new Size(175, 50);
                             price[index].ForeColor = Color.White;

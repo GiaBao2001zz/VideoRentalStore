@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -272,6 +273,7 @@ namespace VideoRentalStore
                             video_Info.pictureBox_Disc.Image = Image.FromFile(thumbnailVideo_data.ToString());
                             video_Info.TextBox_VideoName.Text = nameVideo_data.ToString();
                             video_Info.Label_ShowPrice.Text = priceVideo_data.ToString();
+                            video_Info.Label_ShowPrice.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(video_Info.Label_ShowPrice.Text));
                             video_Info.Label_ShowQuantity.Text = quantityVideo_data.ToString();
                             video_Info.Label_ShowDirector.Text = directorVideo_data.ToString();
                             video_Info.Label_ShowActor.Text = actorVideo_data.ToString();
