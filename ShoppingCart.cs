@@ -80,7 +80,7 @@ namespace VideoRentalStore
                         var indexOfColumn3 = reader.GetOrdinal("Payment");
                         var indexOfColumn4 = reader.GetOrdinal("Price");
                         int x = 0;
-                        int y = 80; //70
+                        int y = 0; //80
                         PictureBox[] picturebox = new PictureBox[count];
                         Label[] nameVideo = new Label[count];
                         Label[] payment = new Label[count];
@@ -260,9 +260,10 @@ namespace VideoRentalStore
                                     {
                                         cmd.ExecuteNonQuery();
 
-
+                                        //this.panel2.Controls.Clear();
+                                        //ShoppingCart_Load(sender, e);
                                         this.panel2.Controls.Clear();
-                                        ShoppingCart_Load(sender, e);
+                                        ShowImage();
                                     }
                                     con.Close();
                                 }
@@ -277,6 +278,11 @@ namespace VideoRentalStore
 
                 }
             }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
+    }
     }
 

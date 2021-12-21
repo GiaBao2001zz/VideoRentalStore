@@ -46,11 +46,12 @@ namespace VideoRentalStore
             this.Label_Payment = new System.Windows.Forms.Label();
             this.label_Product = new System.Windows.Forms.Label();
             this.btn_CheckOut = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Panel_Summary.SuspendLayout();
             this.Panel_TotalProduct.SuspendLayout();
             this.Panel_Total.SuspendLayout();
             this.Panel_SummaryTitle.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -175,21 +176,17 @@ namespace VideoRentalStore
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.Label_Price);
-            this.panel2.Controls.Add(this.Label_Payment);
-            this.panel2.Controls.Add(this.label_Product);
-            this.panel2.Location = new System.Drawing.Point(0, 74);
+            this.panel2.Location = new System.Drawing.Point(0, 181);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(714, 588);
+            this.panel2.Size = new System.Drawing.Size(714, 481);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(3, 54);
+            this.panel1.Location = new System.Drawing.Point(0, 152);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(696, 34);
+            this.panel1.Size = new System.Drawing.Size(714, 23);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -198,24 +195,22 @@ namespace VideoRentalStore
             this.Label_Price.AutoSize = true;
             this.Label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Price.ForeColor = System.Drawing.Color.White;
-            this.Label_Price.Location = new System.Drawing.Point(563, 20);
+            this.Label_Price.Location = new System.Drawing.Point(563, 15);
             this.Label_Price.Name = "Label_Price";
             this.Label_Price.Size = new System.Drawing.Size(59, 30);
             this.Label_Price.TabIndex = 3;
             this.Label_Price.Text = "Price";
-            this.Label_Price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label_Payment
             // 
             this.Label_Payment.AutoSize = true;
             this.Label_Payment.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Payment.ForeColor = System.Drawing.Color.White;
-            this.Label_Payment.Location = new System.Drawing.Point(390, 20);
+            this.Label_Payment.Location = new System.Drawing.Point(390, 14);
             this.Label_Payment.Name = "Label_Payment";
             this.Label_Payment.Size = new System.Drawing.Size(96, 30);
             this.Label_Payment.TabIndex = 2;
             this.Label_Payment.Text = "Payment";
-            this.Label_Payment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Label_Payment.Click += new System.EventHandler(this.label3_Click);
             // 
             // label_Product
@@ -223,12 +218,11 @@ namespace VideoRentalStore
             this.label_Product.AutoSize = true;
             this.label_Product.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Product.ForeColor = System.Drawing.Color.White;
-            this.label_Product.Location = new System.Drawing.Point(15, 20);
+            this.label_Product.Location = new System.Drawing.Point(15, 14);
             this.label_Product.Name = "label_Product";
             this.label_Product.Size = new System.Drawing.Size(89, 30);
             this.label_Product.TabIndex = 1;
             this.label_Product.Text = "Product";
-            this.label_Product.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_CheckOut
             // 
@@ -265,13 +259,26 @@ namespace VideoRentalStore
             this.btn_CheckOut.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label_Product);
+            this.panel3.Controls.Add(this.Label_Payment);
+            this.panel3.Controls.Add(this.Label_Price);
+            this.panel3.Location = new System.Drawing.Point(0, 98);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(714, 48);
+            this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // ShoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1044, 661);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btn_CheckOut);
             this.Controls.Add(this.Panel_Summary);
             this.Controls.Add(this.label1);
@@ -286,8 +293,8 @@ namespace VideoRentalStore
             this.Panel_Total.PerformLayout();
             this.Panel_SummaryTitle.ResumeLayout(false);
             this.Panel_SummaryTitle.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +319,6 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Payment;
         private System.Windows.Forms.Label Label_Price;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
