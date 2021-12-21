@@ -134,6 +134,15 @@ namespace VideoRentalStore
                             price[index].TextAlign = ContentAlignment.TopLeft;
                             price[index].Location = new Point(x * 250 + 563, y + 10);
 
+                            //Thêm khoảng cách khi scrollbar kéo đến cuối cùng
+                            if(index == count - 1)
+                            {
+                                Label label_empty = new Label();
+                                label_empty.Location = new Point(x * 250 + 15, y + 175);
+                                label_empty.Size = new Size(175, 70);
+                                panel2.Controls.Add(label_empty);
+                            }
+
                             //picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
                             //picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
                             //picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
