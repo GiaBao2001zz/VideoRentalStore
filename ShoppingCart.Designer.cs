@@ -37,6 +37,7 @@ namespace VideoRentalStore
             this.Label_ShippingCost = new System.Windows.Forms.Label();
             this.Label_TotalProduct = new System.Windows.Forms.Label();
             this.Panel_Total = new System.Windows.Forms.Panel();
+            this.Label_ShowTotal = new System.Windows.Forms.Label();
             this.Label_TotalCost = new System.Windows.Forms.Label();
             this.Panel_SummaryTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace VideoRentalStore
             this.label_Product = new System.Windows.Forms.Label();
             this.btn_CheckOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.Panel_Summary.SuspendLayout();
             this.Panel_TotalProduct.SuspendLayout();
             this.Panel_Total.SuspendLayout();
@@ -70,9 +72,9 @@ namespace VideoRentalStore
             this.Panel_Summary.Controls.Add(this.Panel_TotalProduct);
             this.Panel_Summary.Controls.Add(this.Panel_Total);
             this.Panel_Summary.Controls.Add(this.Panel_SummaryTitle);
-            this.Panel_Summary.Location = new System.Drawing.Point(720, 112);
+            this.Panel_Summary.Location = new System.Drawing.Point(720, 128);
             this.Panel_Summary.Name = "Panel_Summary";
-            this.Panel_Summary.Size = new System.Drawing.Size(299, 355);
+            this.Panel_Summary.Size = new System.Drawing.Size(299, 235);
             this.Panel_Summary.TabIndex = 1;
             // 
             // Panel_TotalProduct
@@ -83,9 +85,9 @@ namespace VideoRentalStore
             this.Panel_TotalProduct.Controls.Add(this.Label_ShippingCost);
             this.Panel_TotalProduct.Controls.Add(this.Label_TotalProduct);
             this.Panel_TotalProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_TotalProduct.Location = new System.Drawing.Point(0, 63);
+            this.Panel_TotalProduct.Location = new System.Drawing.Point(0, 69);
             this.Panel_TotalProduct.Name = "Panel_TotalProduct";
-            this.Panel_TotalProduct.Size = new System.Drawing.Size(299, 227);
+            this.Panel_TotalProduct.Size = new System.Drawing.Size(299, 103);
             this.Panel_TotalProduct.TabIndex = 2;
             // 
             // Label_ShowShippingCost
@@ -93,7 +95,7 @@ namespace VideoRentalStore
             this.Label_ShowShippingCost.AutoSize = true;
             this.Label_ShowShippingCost.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShowShippingCost.ForeColor = System.Drawing.Color.White;
-            this.Label_ShowShippingCost.Location = new System.Drawing.Point(19, 136);
+            this.Label_ShowShippingCost.Location = new System.Drawing.Point(161, 71);
             this.Label_ShowShippingCost.Name = "Label_ShowShippingCost";
             this.Label_ShowShippingCost.Size = new System.Drawing.Size(40, 21);
             this.Label_ShowShippingCost.TabIndex = 4;
@@ -104,18 +106,19 @@ namespace VideoRentalStore
             this.Label_ShowTotalProduct.AutoSize = true;
             this.Label_ShowTotalProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShowTotalProduct.ForeColor = System.Drawing.Color.White;
-            this.Label_ShowTotalProduct.Location = new System.Drawing.Point(19, 57);
+            this.Label_ShowTotalProduct.Location = new System.Drawing.Point(161, 17);
             this.Label_ShowTotalProduct.Name = "Label_ShowTotalProduct";
             this.Label_ShowTotalProduct.Size = new System.Drawing.Size(105, 21);
             this.Label_ShowTotalProduct.TabIndex = 3;
             this.Label_ShowTotalProduct.Text = "500 000 VND";
+            this.Label_ShowTotalProduct.Click += new System.EventHandler(this.Label_ShowTotalProduct_Click);
             // 
             // Label_ShippingCost
             // 
             this.Label_ShippingCost.AutoSize = true;
             this.Label_ShippingCost.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShippingCost.ForeColor = System.Drawing.Color.White;
-            this.Label_ShippingCost.Location = new System.Drawing.Point(19, 95);
+            this.Label_ShippingCost.Location = new System.Drawing.Point(19, 71);
             this.Label_ShippingCost.Name = "Label_ShippingCost";
             this.Label_ShippingCost.Size = new System.Drawing.Size(116, 21);
             this.Label_ShippingCost.TabIndex = 2;
@@ -135,12 +138,25 @@ namespace VideoRentalStore
             // Panel_Total
             // 
             this.Panel_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.Panel_Total.Controls.Add(this.panel4);
+            this.Panel_Total.Controls.Add(this.Label_ShowTotal);
             this.Panel_Total.Controls.Add(this.Label_TotalCost);
             this.Panel_Total.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel_Total.Location = new System.Drawing.Point(0, 290);
+            this.Panel_Total.Location = new System.Drawing.Point(0, 172);
             this.Panel_Total.Name = "Panel_Total";
-            this.Panel_Total.Size = new System.Drawing.Size(299, 65);
+            this.Panel_Total.Size = new System.Drawing.Size(299, 63);
             this.Panel_Total.TabIndex = 1;
+            // 
+            // Label_ShowTotal
+            // 
+            this.Label_ShowTotal.AutoSize = true;
+            this.Label_ShowTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ShowTotal.ForeColor = System.Drawing.Color.White;
+            this.Label_ShowTotal.Location = new System.Drawing.Point(161, 24);
+            this.Label_ShowTotal.Name = "Label_ShowTotal";
+            this.Label_ShowTotal.Size = new System.Drawing.Size(105, 21);
+            this.Label_ShowTotal.TabIndex = 5;
+            this.Label_ShowTotal.Text = "500 000 VND";
             // 
             // Label_TotalCost
             // 
@@ -160,7 +176,7 @@ namespace VideoRentalStore
             this.Panel_SummaryTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_SummaryTitle.Location = new System.Drawing.Point(0, 0);
             this.Panel_SummaryTitle.Name = "Panel_SummaryTitle";
-            this.Panel_SummaryTitle.Size = new System.Drawing.Size(299, 63);
+            this.Panel_SummaryTitle.Size = new System.Drawing.Size(299, 69);
             this.Panel_SummaryTitle.TabIndex = 0;
             // 
             // label2
@@ -245,7 +261,7 @@ namespace VideoRentalStore
             this.btn_CheckOut.IconVisible = true;
             this.btn_CheckOut.IconZoom = 70D;
             this.btn_CheckOut.IsTab = false;
-            this.btn_CheckOut.Location = new System.Drawing.Point(720, 473);
+            this.btn_CheckOut.Location = new System.Drawing.Point(720, 369);
             this.btn_CheckOut.Name = "btn_CheckOut";
             this.btn_CheckOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_CheckOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -269,6 +285,14 @@ namespace VideoRentalStore
             this.panel3.Size = new System.Drawing.Size(714, 48);
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(0, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(299, 10);
+            this.panel4.TabIndex = 6;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // ShoppingCart
             // 
@@ -320,5 +344,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Price;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Label_ShowTotal;
+        private System.Windows.Forms.Panel panel4;
     }
 }

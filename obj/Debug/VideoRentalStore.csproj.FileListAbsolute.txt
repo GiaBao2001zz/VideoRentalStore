@@ -199,3 +199,7 @@ D:\Projects\VideoRentalStore#4\obj\Debug\VideoRentalStore.pdb
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources
 D:\Projects\VideoRentalStore#4\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
 D:\OOAD\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Account_Management.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.ShoppingCart.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Info_ReadOnly.resources

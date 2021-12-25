@@ -42,7 +42,6 @@ CREATE TABLE Request
 	idVideo NVARCHAR(100) NOT NULL,
 	DateRequest DATE NOT NULL DEFAULT GETDATE(),
 	DateDelivered DATE,
-	Price FLOAT NOT NULL DEFAULT 0,
 	Type NVARCHAR(1000) NOT NULL DEFAULT N'Rent',  -- Rent / Buy / Return
 	Status NVARCHAR(1000) NOT NULL  DEFAULT N'Waiting', --Waiting/Delivering/Completed
 
@@ -72,7 +71,6 @@ CREATE TABLE BillInfo
 	idBill INT NOT NULL,
 	idVideo NVARCHAR(100) NOT NULL,
 	count INT NOT NULL DEFAULT 0,
-
 	FOREIGN KEY(idVideo) REFERENCES dbo.Video(id),
 	FOREIGN KEY(idBill) REFERENCES dbo.Bill(id)
 
@@ -93,7 +91,7 @@ CREATE TABLE AddToCart
 )
 GO
 
-SELECT * FROM Request
-DROP TABLE Request
-DELETE FROM Request
+
+SELECT * FROM Account
+DELETE FROM Video
 sp_help 'Video'

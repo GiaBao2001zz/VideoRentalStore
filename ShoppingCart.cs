@@ -57,6 +57,7 @@ namespace VideoRentalStore
                     command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
                     command.CommandText = "SELECT Name, Thumbnail, Payment, AddToCart.Price  FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username WHERE Account.Username = @userName";
                     int count = 0;
+                    float priceProduct = 0;
                     connection.Open();
                     using (var reader = command.ExecuteReader())
                     {
@@ -71,9 +72,11 @@ namespace VideoRentalStore
                             var value3 = reader.GetValue(indexOfColumn3);
                             var value4 = reader.GetValue(indexOfColumn4);
                             count++;
+                            priceProduct = priceProduct + (float)Convert.ToDouble(value4);
                         }
                     }
-
+                    Label_ShowTotalProduct.Text = priceProduct.ToString() + " VND";
+                    Label_ShowTotal.Text = priceProduct.ToString() + " VND";
                     using (var reader = command.ExecuteReader())
                     {
                         var indexOfColumn1 = reader.GetOrdinal("Name");
@@ -86,6 +89,7 @@ namespace VideoRentalStore
                         Label[] nameVideo = new Label[count];
                         Label[] payment = new Label[count];
                         Label[] price = new Label[count];
+                        Panel[] divider = new Panel[count];
                         int index = 0;
                         while (reader.Read())
                         {
@@ -134,6 +138,15 @@ namespace VideoRentalStore
                             price[index].TextAlign = ContentAlignment.TopLeft;
                             price[index].Location = new Point(x * 250 + 563, y + 10);
 
+                            if(index < count - 1)
+                            {
+                                divider[index] = new Panel();
+                                divider[index].Location = new Point(x * 250 , y + 220);
+                                divider[index].Size = new Size(714, 10);
+                                divider[index].Paint += new System.Windows.Forms.PaintEventHandler(this.divider_Paint);
+                                divider[index].BringToFront();
+                            }
+
                             //Thêm khoảng cách khi scrollbar kéo đến cuối cùng
                             if(index == count - 1)
                             {
@@ -161,6 +174,7 @@ namespace VideoRentalStore
                             panel2.Controls.Add(nameVideo[index]);
                             panel2.Controls.Add(payment[index]);
                             panel2.Controls.Add(price[index]);
+                            panel2.Controls.Add(divider[index]);
 
                             nameVideo[index].BringToFront();
                             picturebox[index].BringToFront();
@@ -189,6 +203,19 @@ namespace VideoRentalStore
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void divider_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (Graphics g = e.Graphics)
+            {
+                var p = new Pen(Color.White, 1);
+                var point1 = new Point(10, 5);
+                var point2 = new Point(650, 5);
+                g.DrawLine(p, point1, point2);
+                g.Dispose();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -293,6 +320,24 @@ namespace VideoRentalStore
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Label_ShowTotalProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (Graphics g = e.Graphics)
+            {
+                var p = new Pen(Color.White, 1);
+                var point1 = new Point(0, 5);
+                var point2 = new Point(299, 5);
+                g.DrawLine(p, point1, point2);
+                g.Dispose();
+            }
         }
     }
     }
