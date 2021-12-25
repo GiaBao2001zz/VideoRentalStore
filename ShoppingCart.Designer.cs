@@ -37,6 +37,7 @@ namespace VideoRentalStore
             this.Label_ShippingCost = new System.Windows.Forms.Label();
             this.Label_TotalProduct = new System.Windows.Forms.Label();
             this.Panel_Total = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.Label_ShowTotal = new System.Windows.Forms.Label();
             this.Label_TotalCost = new System.Windows.Forms.Label();
             this.Panel_SummaryTitle = new System.Windows.Forms.Panel();
@@ -48,7 +49,7 @@ namespace VideoRentalStore
             this.label_Product = new System.Windows.Forms.Label();
             this.btn_CheckOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.Label_Quantity = new System.Windows.Forms.Label();
             this.Panel_Summary.SuspendLayout();
             this.Panel_TotalProduct.SuspendLayout();
             this.Panel_Total.SuspendLayout();
@@ -147,6 +148,14 @@ namespace VideoRentalStore
             this.Panel_Total.Size = new System.Drawing.Size(299, 63);
             this.Panel_Total.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(0, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(299, 10);
+            this.panel4.TabIndex = 6;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
             // Label_ShowTotal
             // 
             this.Label_ShowTotal.AutoSize = true;
@@ -211,7 +220,7 @@ namespace VideoRentalStore
             this.Label_Price.AutoSize = true;
             this.Label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Price.ForeColor = System.Drawing.Color.White;
-            this.Label_Price.Location = new System.Drawing.Point(563, 16);
+            this.Label_Price.Location = new System.Drawing.Point(600, 16);
             this.Label_Price.Name = "Label_Price";
             this.Label_Price.Size = new System.Drawing.Size(59, 30);
             this.Label_Price.TabIndex = 3;
@@ -222,7 +231,7 @@ namespace VideoRentalStore
             this.Label_Payment.AutoSize = true;
             this.Label_Payment.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Payment.ForeColor = System.Drawing.Color.White;
-            this.Label_Payment.Location = new System.Drawing.Point(390, 16);
+            this.Label_Payment.Location = new System.Drawing.Point(475, 16);
             this.Label_Payment.Name = "Label_Payment";
             this.Label_Payment.Size = new System.Drawing.Size(96, 30);
             this.Label_Payment.TabIndex = 2;
@@ -277,6 +286,7 @@ namespace VideoRentalStore
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.Label_Quantity);
             this.panel3.Controls.Add(this.label_Product);
             this.panel3.Controls.Add(this.Label_Payment);
             this.panel3.Controls.Add(this.Label_Price);
@@ -286,13 +296,16 @@ namespace VideoRentalStore
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // panel4
+            // Label_Quantity
             // 
-            this.panel4.Location = new System.Drawing.Point(0, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(299, 10);
-            this.panel4.TabIndex = 6;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.Label_Quantity.AutoSize = true;
+            this.Label_Quantity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Quantity.ForeColor = System.Drawing.Color.White;
+            this.Label_Quantity.Location = new System.Drawing.Point(340, 16);
+            this.Label_Quantity.Name = "Label_Quantity";
+            this.Label_Quantity.Size = new System.Drawing.Size(96, 30);
+            this.Label_Quantity.TabIndex = 4;
+            this.Label_Quantity.Text = "Quantity";
             // 
             // ShoppingCart
             // 
@@ -346,5 +359,6 @@ namespace VideoRentalStore
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label Label_ShowTotal;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label Label_Quantity;
     }
 }

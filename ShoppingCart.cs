@@ -55,7 +55,7 @@ namespace VideoRentalStore
                 {
                     Main_User main_User = (Main_User)ParentForm;
                     command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
-                    command.CommandText = "SELECT Name, Thumbnail, Payment, AddToCart.Price  FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username WHERE Account.Username = @userName";
+                    command.CommandText = "SELECT Name, Thumbnail, Payment, AddToCart.Price, Quantity  FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username WHERE Account.Username = @userName";
                     int count = 0;
                     float priceProduct = 0;
                     connection.Open();
@@ -65,12 +65,15 @@ namespace VideoRentalStore
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("Payment");
                         var indexOfColumn4 = reader.GetOrdinal("Price");
+                        var indexOfColumn5 = reader.GetOrdinal("Quantity");
                         while (reader.Read())
                         {
                             var value1 = reader.GetValue(indexOfColumn1);
                             var value2 = reader.GetValue(indexOfColumn2);
                             var value3 = reader.GetValue(indexOfColumn3);
                             var value4 = reader.GetValue(indexOfColumn4);
+                            var value5 = reader.GetValue(indexOfColumn5);
+
                             count++;
                             priceProduct = priceProduct + (float)Convert.ToDouble(value4);
                         }
@@ -83,6 +86,7 @@ namespace VideoRentalStore
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("Payment");
                         var indexOfColumn4 = reader.GetOrdinal("Price");
+                        var indexOfColumn5 = reader.GetOrdinal("Quantity");
                         int x = 0;
                         int y = 0; //80
                         PictureBox[] picturebox = new PictureBox[count];
@@ -90,6 +94,10 @@ namespace VideoRentalStore
                         Label[] payment = new Label[count];
                         Label[] price = new Label[count];
                         Panel[] divider = new Panel[count];
+                        Label[] quantity = new Label[count];
+                        Label[] increaseQuantity = new Label[count];
+                        Label[] decreaseQuantity = new Label[count];
+
                         int index = 0;
                         while (reader.Read())
                         {
@@ -97,6 +105,7 @@ namespace VideoRentalStore
                             var value2 = reader.GetValue(indexOfColumn2);
                             var value3 = reader.GetValue(indexOfColumn3);
                             var value4 = reader.GetValue(indexOfColumn4);
+                            var value5 = reader.GetValue(indexOfColumn5);
                             if ((x % 1 == 0) && (index != 0))
                             {
                                 y = y + 250; // Mỗi hàng 4 hình
@@ -106,6 +115,9 @@ namespace VideoRentalStore
                             nameVideo[index] = new Label();
                             payment[index] = new Label();
                             price[index] = new Label();
+                            decreaseQuantity[index] = new Label();
+                            increaseQuantity[index] = new Label();
+                            quantity[index] = new Label();
 
                             picturebox[index].Image = Image.FromFile(value2.ToString());
                             picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
@@ -127,7 +139,7 @@ namespace VideoRentalStore
                             payment[index].ForeColor = Color.White;
                             payment[index].AutoSize = false;
                             payment[index].TextAlign = ContentAlignment.TopLeft;
-                            payment[index].Location = new Point(x * 250 + 390, y + 10);
+                            payment[index].Location = new Point(x * 250 + 475, y + 10);
 
                             price[index].Text = (string)value4.ToString();
                             price[index].Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(price[index].Text));
@@ -136,9 +148,33 @@ namespace VideoRentalStore
                             price[index].ForeColor = Color.White;
                             price[index].AutoSize = false;
                             price[index].TextAlign = ContentAlignment.TopLeft;
-                            price[index].Location = new Point(x * 250 + 563, y + 10);
+                            price[index].Location = new Point(x * 250 + 600, y + 10);
 
-                            if(index < count - 1)
+                            decreaseQuantity[index].Text = "-";
+                            decreaseQuantity[index].Font = new Font("Segoe UI", 13);
+                            decreaseQuantity[index].Size = new Size(20, 25);
+                            decreaseQuantity[index].ForeColor = Color.White;
+                            decreaseQuantity[index].AutoSize = false;
+                            decreaseQuantity[index].TextAlign = ContentAlignment.TopLeft;
+                            decreaseQuantity[index].Location = new Point(x * 250 + 340, y + 10);
+
+                            increaseQuantity[index].Text = "+";
+                            increaseQuantity[index].Font = new Font("Segoe UI", 13);
+                            increaseQuantity[index].Size = new Size(20, 25);
+                            increaseQuantity[index].ForeColor = Color.White;
+                            increaseQuantity[index].AutoSize = false;
+                            increaseQuantity[index].TextAlign = ContentAlignment.TopLeft;
+                            increaseQuantity[index].Location = new Point(x * 250 + 390, y + 10);
+
+                            quantity[index].Text = (string)value5.ToString();
+                            quantity[index].Font = new Font("Segoe UI", 13);
+                            quantity[index].Size = new Size(175, 50);
+                            quantity[index].ForeColor = Color.White;
+                            quantity[index].AutoSize = false;
+                            quantity[index].TextAlign = ContentAlignment.TopLeft;
+                            quantity[index].Location = new Point(x * 250 + 360, y + 10);
+
+                            if (index < count - 1)
                             {
                                 divider[index] = new Panel();
                                 divider[index].Location = new Point(x * 250 , y + 220);
@@ -175,11 +211,17 @@ namespace VideoRentalStore
                             panel2.Controls.Add(payment[index]);
                             panel2.Controls.Add(price[index]);
                             panel2.Controls.Add(divider[index]);
+                            panel2.Controls.Add(quantity[index]);
+                            panel2.Controls.Add(increaseQuantity[index]);
+                            panel2.Controls.Add(decreaseQuantity[index]);
 
                             nameVideo[index].BringToFront();
-                            picturebox[index].BringToFront();
+                            picturebox[index].BringToFront();                           
+                            price[index].BringToFront();                          
+                            decreaseQuantity[index].BringToFront();
+                            quantity[index].BringToFront();
+                            increaseQuantity[index].BringToFront();
                             payment[index].BringToFront();
-                            price[index].BringToFront();
 
                             index++;
                             x++;

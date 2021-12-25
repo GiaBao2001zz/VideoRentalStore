@@ -92,6 +92,6 @@ CREATE TABLE AddToCart
 GO
 
 
-SELECT * FROM Account
-DELETE FROM Video
-sp_help 'Video'
+SELECT * FROM Video
+SELECT * FROM AddToCart
+sp_help 'Request'
