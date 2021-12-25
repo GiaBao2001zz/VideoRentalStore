@@ -203,3 +203,4 @@ D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Account
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.ShoppingCart.resources
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.User_Home.resources
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Video_Info_ReadOnly.resources
+C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.History_Payment.resources

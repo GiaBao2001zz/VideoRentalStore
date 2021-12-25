@@ -32,7 +32,6 @@ namespace VideoRentalStore
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History_Payment));
             this.DataGrid_AccountManagement = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,13 +44,13 @@ namespace VideoRentalStore
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Button_Delete = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label8 = new System.Windows.Forms.Label();
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Label_Type = new System.Windows.Forms.Label();
             this.Label_Price = new System.Windows.Forms.Label();
             this.Label_IDVideo = new System.Windows.Forms.Label();
             this.Label_DateRequest = new System.Windows.Forms.Label();
+            this.Button_Delete = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_AccountManagement)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -214,32 +213,6 @@ namespace VideoRentalStore
             this.label5.Text = "Type";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // Button_Delete
-            // 
-            this.Button_Delete.ActiveBorderThickness = 1;
-            this.Button_Delete.ActiveCornerRadius = 20;
-            this.Button_Delete.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.ActiveForecolor = System.Drawing.Color.White;
-            this.Button_Delete.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_Delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_Delete.BackgroundImage")));
-            this.Button_Delete.ButtonText = "Delete";
-            this.Button_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Delete.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.Button_Delete.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.IdleBorderThickness = 1;
-            this.Button_Delete.IdleCornerRadius = 20;
-            this.Button_Delete.IdleFillColor = System.Drawing.Color.White;
-            this.Button_Delete.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.Location = new System.Drawing.Point(1100, 364);
-            this.Button_Delete.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.Button_Delete.Name = "Button_Delete";
-            this.Button_Delete.Size = new System.Drawing.Size(245, 50);
-            this.Button_Delete.TabIndex = 37;
-            this.Button_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,6 +278,32 @@ namespace VideoRentalStore
             this.Label_DateRequest.TabIndex = 48;
             this.Label_DateRequest.Text = "DateRequest";
             this.Label_DateRequest.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // Button_Delete
+            // 
+            this.Button_Delete.ActiveBorderThickness = 1;
+            this.Button_Delete.ActiveCornerRadius = 20;
+            this.Button_Delete.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Button_Delete.ActiveForecolor = System.Drawing.Color.White;
+            this.Button_Delete.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_Delete.BackgroundImage = global::VideoRentalStore.Properties.Resources.Sorry;
+            this.Button_Delete.ButtonText = "Delete";
+            this.Button_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Delete.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.Button_Delete.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Button_Delete.IdleBorderThickness = 1;
+            this.Button_Delete.IdleCornerRadius = 20;
+            this.Button_Delete.IdleFillColor = System.Drawing.Color.White;
+            this.Button_Delete.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.Button_Delete.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_Delete.Location = new System.Drawing.Point(1100, 364);
+            this.Button_Delete.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Button_Delete.Name = "Button_Delete";
+            this.Button_Delete.Size = new System.Drawing.Size(245, 50);
+            this.Button_Delete.TabIndex = 37;
+            this.Button_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
             // 
             // History_Payment
             // 

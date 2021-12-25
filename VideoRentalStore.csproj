@@ -178,6 +178,9 @@
     <EmbeddedResource Include="Grid_YeuCauThueMua.resx">
       <DependentUpon>Grid_YeuCauThueMua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="History_Payment.resx">
+      <DependentUpon>History_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.dje-NE.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
