@@ -50,8 +50,8 @@ namespace VideoRentalStore
 
             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
             string query =
-            "INSERT INTO AddToCart (Username ,Price, idVideo, Payment)" +
-            " VALUES (@userName, @price, @idVideo, @payment)";
+            "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
+            " VALUES (@userName, @price, @price, @idVideo, @payment)";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.Add(new SqlParameter("@userName", userName));
             cmd.Parameters.Add(new SqlParameter("@price", price));
@@ -81,8 +81,8 @@ namespace VideoRentalStore
 
             SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
             string query =
-            "INSERT INTO AddToCart (Username ,Price, idVideo, Payment)" +
-            " VALUES (@userName, @price, @idVideo, @payment)";
+            "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
+            " VALUES (@userName, @price, @price, @idVideo, @payment)";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.Add(new SqlParameter("@userName", userName));
             cmd.Parameters.Add(new SqlParameter("@price", price));
