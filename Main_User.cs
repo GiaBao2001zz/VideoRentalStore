@@ -119,7 +119,15 @@ namespace VideoRentalStore
 
         private void Button_History_Click(object sender, EventArgs e)
         {
-           
+            ActivateBtn(sender);
+            // Check if is there any form already opened in Switch Form Panel
+            if (this.Panel_SwtichForm.Controls.Count > 0)
+                this.Panel_SwtichForm.Controls[0].Dispose();
+
+            // Add New Form 
+            History_Payment grid = new History_Payment() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_SwtichForm.Controls.Add(grid);
+            grid.Show();
         }
 
         private void Button_AccoutInfo_Click(object sender, EventArgs e)

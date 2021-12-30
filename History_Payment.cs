@@ -17,11 +17,11 @@ namespace VideoRentalStore
         {
             InitializeComponent();
             Load_DataGrid();
-            
+
         }
-        string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore1; Integrated Security = True";
-        //string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
-        
+        //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore1; Integrated Security = True";
+        string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+
         private void Load_DataGrid()
         {
             SqlConnection Sqlcon = new SqlConnection(connectionSTR);
@@ -33,12 +33,12 @@ namespace VideoRentalStore
             DataGrid_AccountManagement.DataSource = dtbl;
         }
 
-         void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            if(DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+
+            if (DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-               
+
                 //Hiện thông tin khi click vào Cell
                 DataGrid_AccountManagement.CurrentRow.Selected = true;
 
@@ -47,7 +47,7 @@ namespace VideoRentalStore
                 Label_DateRequest.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["DateRequest"].FormattedValue.ToString();
                 Label_Price.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["Price"].FormattedValue.ToString();
                 Label_Type.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["Type"].FormattedValue.ToString();
-             
+
             }
             else
             {
@@ -63,7 +63,7 @@ namespace VideoRentalStore
                 int index = DataGrid_AccountManagement.SelectedRows[0].Index;
                 string username = DataGrid_AccountManagement.Rows[DataGrid_AccountManagement.SelectedRows[0].Index].
                     Cells["id"].Value.ToString();
-              
+
 
                 SqlConnection Sqlcon = new SqlConnection(connectionSTR);
                 Sqlcon.Open();

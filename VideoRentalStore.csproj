@@ -77,6 +77,12 @@
     <Compile Include="Grid_YeuCauThueMua.Designer.cs">
       <DependentUpon>Grid_YeuCauThueMua.cs</DependentUpon>
     </Compile>
+    <Compile Include="History_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History_Payment.Designer.cs">
+      <DependentUpon>History_Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Grid_YeuCauThueMua.resx">
       <DependentUpon>Grid_YeuCauThueMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History_Payment.resx">
+      <DependentUpon>History_Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.dje-NE.resx">
       <DependentUpon>Login.cs</DependentUpon>
