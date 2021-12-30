@@ -99,6 +99,7 @@ GO
 SELECT * FROM Video
 SELECT * FROM Account
 SELECT * FROM AddToCart
+SELECT * FROM Request
 
 DELETE FROM AddToCart
 DROP TABLE AddToCart
