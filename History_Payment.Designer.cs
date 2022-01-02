@@ -34,12 +34,6 @@ namespace VideoRentalStore
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History_Payment));
             this.DataGrid_AccountManagement = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idVideo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,6 +46,15 @@ namespace VideoRentalStore
             this.Label_Price = new System.Windows.Forms.Label();
             this.Label_IDVideo = new System.Windows.Forms.Label();
             this.Label_DateRequest = new System.Windows.Forms.Label();
+            this.Label_Quantity = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idVideo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_AccountManagement)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +83,7 @@ namespace VideoRentalStore
             this.idVideo,
             this.DateRequest,
             this.Price,
+            this.Quantity,
             this.Type});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -110,56 +114,6 @@ namespace VideoRentalStore
             this.DataGrid_AccountManagement.Size = new System.Drawing.Size(1071, 814);
             this.DataGrid_AccountManagement.TabIndex = 1;
             this.DataGrid_AccountManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_ManageStock_CellClick);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.FillWeight = 20F;
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // userName
-            // 
-            this.userName.DataPropertyName = "userName";
-            this.userName.HeaderText = "userName";
-            this.userName.MinimumWidth = 6;
-            this.userName.Name = "userName";
-            this.userName.ReadOnly = true;
-            // 
-            // idVideo
-            // 
-            this.idVideo.DataPropertyName = "idVideo";
-            this.idVideo.HeaderText = "idVideo";
-            this.idVideo.MinimumWidth = 6;
-            this.idVideo.Name = "idVideo";
-            this.idVideo.ReadOnly = true;
-            // 
-            // DateRequest
-            // 
-            this.DateRequest.DataPropertyName = "DateRequest";
-            this.DateRequest.HeaderText = "DateRequest";
-            this.DateRequest.MinimumWidth = 6;
-            this.DateRequest.Name = "DateRequest";
-            this.DateRequest.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.DataPropertyName = "Price";
-            this.Price.HeaderText = "Price";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            // 
-            // Type
-            // 
-            this.Type.DataPropertyName = "Type";
-            this.Type.FillWeight = 30F;
-            this.Type.HeaderText = "Type";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
             // 
             // panel2
             // 
@@ -306,12 +260,94 @@ namespace VideoRentalStore
             this.Label_DateRequest.Text = "DateRequest";
             this.Label_DateRequest.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // Label_Quantity
+            // 
+            this.Label_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Quantity.ForeColor = System.Drawing.SystemColors.Control;
+            this.Label_Quantity.Location = new System.Drawing.Point(1220, 270);
+            this.Label_Quantity.Name = "Label_Quantity";
+            this.Label_Quantity.Size = new System.Drawing.Size(165, 38);
+            this.Label_Quantity.TabIndex = 45;
+            this.Label_Quantity.Text = "Quantity";
+            this.Label_Quantity.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(1077, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 38);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Quantity";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.FillWeight = 20F;
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // userName
+            // 
+            this.userName.DataPropertyName = "userName";
+            this.userName.HeaderText = "userName";
+            this.userName.MinimumWidth = 6;
+            this.userName.Name = "userName";
+            this.userName.ReadOnly = true;
+            // 
+            // idVideo
+            // 
+            this.idVideo.DataPropertyName = "idVideo";
+            this.idVideo.HeaderText = "idVideo";
+            this.idVideo.MinimumWidth = 6;
+            this.idVideo.Name = "idVideo";
+            this.idVideo.ReadOnly = true;
+            // 
+            // DateRequest
+            // 
+            this.DateRequest.DataPropertyName = "DateRequest";
+            this.DateRequest.HeaderText = "DateRequest";
+            this.DateRequest.MinimumWidth = 6;
+            this.DateRequest.Name = "DateRequest";
+            this.DateRequest.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "Type";
+            this.Type.FillWeight = 30F;
+            this.Type.HeaderText = "Type";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            // 
             // History_Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1392, 814);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Label_Quantity);
             this.Controls.Add(this.Label_DateRequest);
             this.Controls.Add(this.Label_IDVideo);
             this.Controls.Add(this.Label_Price);
@@ -354,6 +390,9 @@ namespace VideoRentalStore
         private System.Windows.Forms.DataGridViewTextBoxColumn idVideo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.Label Label_Quantity;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -26,7 +26,7 @@ namespace VideoRentalStore
         {
             SqlConnection Sqlcon = new SqlConnection(connectionSTR);
             Sqlcon.Open();
-            string str = "select id,userName,idVideo,DateRequest,Type from Request";
+            string str = "select id,userName,idVideo,DateRequest,Price,Quantity,Type from Request";
             SqlDataAdapter sqlDa = new SqlDataAdapter(str, Sqlcon);
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
@@ -47,6 +47,7 @@ namespace VideoRentalStore
                 Label_DateRequest.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["DateRequest"].FormattedValue.ToString();
                 Label_Price.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["Price"].FormattedValue.ToString();
                 Label_Type.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["Type"].FormattedValue.ToString();
+                Label_Quantity.Text = DataGrid_AccountManagement.Rows[e.RowIndex].Cells["Quantity"].FormattedValue.ToString();
 
             }
             else
