@@ -41,68 +41,79 @@ namespace VideoRentalStore
 
         private void Button_Buy_Click(object sender, EventArgs e)
         {
-            Main_User main_User = (Main_User)ParentForm;
-
-            string userName = main_User.Label_UserName.Text;
-            float price = float.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat);
-            MessageBox.Show(price.ToString());
-            string idVideo = TextBox_idVideo.Text;
             string payment = "Buy";
-
-
-            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
-            string query =
-            "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
-            " VALUES (@userName, @price, @price, @idVideo, @payment)";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.Add(new SqlParameter("@userName", userName));
-            cmd.Parameters.Add(new SqlParameter("@price", price));
-            cmd.Parameters.Add(new SqlParameter("@idVideo", idVideo));
-            cmd.Parameters.Add(new SqlParameter("@payment", payment));
-
-
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-
-            con.Close();
-
-            if (i != 0)
+            string idVideo = TextBox_idVideo.Text;
+            if (CheckDiscAlreadyInCart(payment) == false)
             {
-                MessageBox.Show("Add To Cart Successfully");
+                Main_User main_User = (Main_User)ParentForm;
+
+                string userName = main_User.Label_UserName.Text;
+                float price = float.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat);                                          
+
+                SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+                string query =
+                "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
+                " VALUES (@userName, @price, @price, @idVideo, @payment)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@userName", userName));
+                cmd.Parameters.Add(new SqlParameter("@price", price));
+                cmd.Parameters.Add(new SqlParameter("@idVideo", idVideo));
+                cmd.Parameters.Add(new SqlParameter("@payment", payment));
+
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                if (i != 0)
+                {
+                    MessageBox.Show("Add To Cart Successfully");
+                }
             }
-            //CheckDiscAlreadyInCart(payment);
+            else
+            {
+                UpdateQuantity(idVideo, payment);
+                MessageBox.Show("This disc already in cart. We will increase the number of disc in your cart");
+            }
         }
 
         private void Button_Rent_Click(object sender, EventArgs e)
         {
-            Main_User main_User = (Main_User)ParentForm;
-
-            string userName = main_User.Label_UserName.Text;
-            double price = (double.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat)) * 0.1;
-            string idVideo = TextBox_idVideo.Text;
             string payment = "Rent";
-
-            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
-            string query =
-            "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
-            " VALUES (@userName, @price, @price, @idVideo, @payment)";
-            SqlCommand cmd = new SqlCommand(query, con);
-            cmd.Parameters.Add(new SqlParameter("@userName", userName));
-            cmd.Parameters.Add(new SqlParameter("@price", price));
-            cmd.Parameters.Add(new SqlParameter("@idVideo", idVideo));
-            cmd.Parameters.Add(new SqlParameter("@payment", payment));
-
-
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-
-            con.Close();
-
-            if (i != 0)
+            string idVideo = TextBox_idVideo.Text;
+            if (CheckDiscAlreadyInCart(payment) == false)
             {
-                MessageBox.Show("Add To Cart Successfully");
+                Main_User main_User = (Main_User)ParentForm;
+
+                string userName = main_User.Label_UserName.Text;
+                double price = (double.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat)) * 0.1;                            
+
+                SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+                string query =
+                "INSERT INTO AddToCart (Username ,Price, CurrentPrice, idVideo, Payment)" +
+                " VALUES (@userName, @price, @price, @idVideo, @payment)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.Add(new SqlParameter("@userName", userName));
+                cmd.Parameters.Add(new SqlParameter("@price", price));
+                cmd.Parameters.Add(new SqlParameter("@idVideo", idVideo));
+                cmd.Parameters.Add(new SqlParameter("@payment", payment));
+
+
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                if (i != 0)
+                {
+                    MessageBox.Show("Add To Cart Successfully");
+                }
             }
-            //CheckDiscAlreadyInCart(payment);
+            else
+            {
+                UpdateQuantity(idVideo, payment);
+                MessageBox.Show("This disc already in cart. We will increase the number of disc in your cart");
+            }
         }
 
         private bool CheckDiscAlreadyInCart(string payment)
@@ -125,14 +136,47 @@ namespace VideoRentalStore
                            
                             if(TextBox_idVideo.Text == value1.ToString() && payment == value2.ToString())
                             {
-                                MessageBox.Show("This disc already in your cart");
                                 return true;
                             }
-                        }
-                        MessageBox.Show("Thêm vào giỏ thành công");
+                        }                       
                         return false;
                     }
                 }
+            }
+        }
+
+        private void UpdateQuantity(string idVideo, string payment)
+        {           
+            using (SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "UPDATE AddToCart SET Quantity = ISNULL(Quantity, 0) + 1 Where idVideo = @idVideo and Payment = @payment";
+
+                command.Parameters.AddWithValue("@idVideo", idVideo);
+                command.Parameters.AddWithValue("@payment", payment);
+                
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "UPDATE AddToCart SET CurrentPrice = Quantity * Price Where idVideo = @idVideo and Payment = @payment";
+
+                command.Parameters.AddWithValue("@idVideo", idVideo);
+                command.Parameters.AddWithValue("@payment", payment);
+
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
             }
         }
     }

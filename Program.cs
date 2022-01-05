@@ -16,6 +16,7 @@ namespace VideoRentalStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             var Main_form = new Login();
             Main_form.Show();
             Application.Run();
