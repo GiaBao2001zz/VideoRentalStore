@@ -387,5 +387,14 @@
   <ItemGroup>
     <None Include="Resources\stock-exchange-app.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two-users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-gradient-pink-purple-stripes-on-purple-background-vector.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
