@@ -237,3 +237,4 @@ D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.History_Payment.resour
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.History_Payment.resources
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.Report.resources
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Report.resources
