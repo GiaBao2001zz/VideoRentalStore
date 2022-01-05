@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +44,8 @@ namespace VideoRentalStore
             Main_User main_User = (Main_User)ParentForm;
 
             string userName = main_User.Label_UserName.Text;
-            float price = float.Parse(Label_ShowPrice.Text);
+            float price = float.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat);
+            MessageBox.Show(price.ToString());
             string idVideo = TextBox_idVideo.Text;
             string payment = "Buy";
 
@@ -68,6 +70,7 @@ namespace VideoRentalStore
             {
                 MessageBox.Show("Add To Cart Successfully");
             }
+            //CheckDiscAlreadyInCart(payment);
         }
 
         private void Button_Rent_Click(object sender, EventArgs e)
@@ -75,7 +78,7 @@ namespace VideoRentalStore
             Main_User main_User = (Main_User)ParentForm;
 
             string userName = main_User.Label_UserName.Text;
-            double price = (double.Parse(Label_ShowPrice.Text)) * 0.1;
+            double price = (double.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat)) * 0.1;
             string idVideo = TextBox_idVideo.Text;
             string payment = "Rent";
 
@@ -98,6 +101,38 @@ namespace VideoRentalStore
             if (i != 0)
             {
                 MessageBox.Show("Add To Cart Successfully");
+            }
+            //CheckDiscAlreadyInCart(payment);
+        }
+
+        private bool CheckDiscAlreadyInCart(string payment)
+        {
+            using (var connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            {
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT idVideo, Payment FROM AddToCart";
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        var indexOfColumn1 = reader.GetOrdinal("idVideo");
+                        var indexOfColumn2 = reader.GetOrdinal("Payment");
+                       
+                        while (reader.Read())
+                        {
+                            var value1 = reader.GetValue(indexOfColumn1);
+                            var value2 = reader.GetValue(indexOfColumn2);
+                           
+                            if(TextBox_idVideo.Text == value1.ToString() && payment == value2.ToString())
+                            {
+                                MessageBox.Show("This disc already in your cart");
+                                return true;
+                            }
+                        }
+                        MessageBox.Show("Thêm vào giỏ thành công");
+                        return false;
+                    }
+                }
             }
         }
     }
