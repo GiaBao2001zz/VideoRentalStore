@@ -16,10 +16,8 @@ namespace VideoRentalStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //var Report = new Report();
-            //Report.Show();
-            var login = new Login();
-            login.Show();
+            var Main_form = new Login();
+            Main_form.Show();
             Application.Run();
 
         }
