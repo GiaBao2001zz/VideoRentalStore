@@ -415,7 +415,7 @@ namespace VideoRentalStore
 
         private void Button_Musicals_Click(object sender, EventArgs e)
         {
-            Video_Shelf grid = new Video_Shelf("", "Muscicals") { Dock = DockStyle.Fill, TopLevel = false };
+            Video_Shelf grid = new Video_Shelf("", "Musicals") { Dock = DockStyle.Fill, TopLevel = false };
             // this.Closed += (s, args) => grid.Close();
             this.Parent.Controls.Add(grid);
             grid.Show();

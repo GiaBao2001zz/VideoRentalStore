@@ -109,9 +109,9 @@ namespace VideoRentalStore
             this.Label_ShowTotalProduct.ForeColor = System.Drawing.Color.White;
             this.Label_ShowTotalProduct.Location = new System.Drawing.Point(161, 17);
             this.Label_ShowTotalProduct.Name = "Label_ShowTotalProduct";
-            this.Label_ShowTotalProduct.Size = new System.Drawing.Size(105, 21);
+            this.Label_ShowTotalProduct.Size = new System.Drawing.Size(56, 21);
             this.Label_ShowTotalProduct.TabIndex = 3;
-            this.Label_ShowTotalProduct.Text = "500 000 VND";
+            this.Label_ShowTotalProduct.Text = "0 VND";
             this.Label_ShowTotalProduct.Click += new System.EventHandler(this.Label_ShowTotalProduct_Click);
             // 
             // Label_ShippingCost
@@ -163,9 +163,9 @@ namespace VideoRentalStore
             this.Label_ShowTotal.ForeColor = System.Drawing.Color.White;
             this.Label_ShowTotal.Location = new System.Drawing.Point(161, 24);
             this.Label_ShowTotal.Name = "Label_ShowTotal";
-            this.Label_ShowTotal.Size = new System.Drawing.Size(105, 21);
+            this.Label_ShowTotal.Size = new System.Drawing.Size(56, 21);
             this.Label_ShowTotal.TabIndex = 5;
-            this.Label_ShowTotal.Text = "500 000 VND";
+            this.Label_ShowTotal.Text = "0 VND";
             // 
             // Label_TotalCost
             // 

@@ -27,7 +27,7 @@ namespace VideoRentalStore
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
-            string query = "SELECT id, nameCustomer, addressCustomer, DateRequest,Type  FROM Request WHERE Status = 'Waiting'";
+            string query = "SELECT Request.id, Request.userName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Waiting'; ";
                 
 
             connection.Open();                  
@@ -44,16 +44,20 @@ namespace VideoRentalStore
 
                 DataGrid_YCThueMua.Columns[0].HeaderText = "ID";
                 DataGrid_YCThueMua.Columns[1].HeaderText = "Customer Name";
-                DataGrid_YCThueMua.Columns[2].HeaderText = "Address";
-                DataGrid_YCThueMua.Columns[3].HeaderText = "Request Date";
-                DataGrid_YCThueMua.Columns[4].HeaderText = "Type";
+                DataGrid_YCThueMua.Columns[2].HeaderText = "Adress";
+                DataGrid_YCThueMua.Columns[3].HeaderText = "Video ID";
+                DataGrid_YCThueMua.Columns[4].HeaderText = "Date Request";
+                DataGrid_YCThueMua.Columns[5].HeaderText = "Price";
+                DataGrid_YCThueMua.Columns[6].HeaderText = "Quantity";
+                DataGrid_YCThueMua.Columns[7].HeaderText = "Type";
                 DataGrid_YCThueMua.Columns[0].FillWeight = 5;
-                DataGrid_YCThueMua.Columns[1].FillWeight = 35;
-                DataGrid_YCThueMua.Columns[2].FillWeight = 35;
-                DataGrid_YCThueMua.Columns[3].FillWeight = 15;
+                DataGrid_YCThueMua.Columns[1].FillWeight = 20;
+                DataGrid_YCThueMua.Columns[2].FillWeight = 20;
+                DataGrid_YCThueMua.Columns[3].FillWeight = 10;
                 DataGrid_YCThueMua.Columns[4].FillWeight = 10;
-                
-
+                DataGrid_YCThueMua.Columns[5].FillWeight = 15;
+                DataGrid_YCThueMua.Columns[6].FillWeight = 10;
+                DataGrid_YCThueMua.Columns[7].FillWeight = 10;
             //Request count
 
             //int countstring = int.Parse(DataGrid_YCThueMua.RowCount);
@@ -73,7 +77,7 @@ namespace VideoRentalStore
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
         SqlConnection connection = new SqlConnection(connectionSTR);
 
-        string query = "SELECT id, nameCustomer, addressCustomer, DateRequest,DateDelivered  FROM Request WHERE Status = 'Compeleted'";
+        string query = "SELECT Request.id, Request.userName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Completed';";
 
 
         connection.Open();                  
@@ -88,17 +92,23 @@ namespace VideoRentalStore
             DataGrid_YCThueMua.DataSource = data;
             DataGrid_YCThueMua.ReadOnly = true;
 
-                DataGrid_YCThueMua.Columns[0].HeaderText = "ID";
-                DataGrid_YCThueMua.Columns[1].HeaderText = "Customer Name";
-                DataGrid_YCThueMua.Columns[2].HeaderText = "Address";
-                DataGrid_YCThueMua.Columns[3].HeaderText = "Request Date";
-                DataGrid_YCThueMua.Columns[4].HeaderText = "Delivery Date";
-                DataGrid_YCThueMua.Columns[0].FillWeight = 5;
-                DataGrid_YCThueMua.Columns[1].FillWeight = 35;
-                DataGrid_YCThueMua.Columns[2].FillWeight = 35;
-                DataGrid_YCThueMua.Columns[3].FillWeight = 15;
-                DataGrid_YCThueMua.Columns[4].FillWeight = 15;
-                
+            DataGrid_YCThueMua.Columns[0].HeaderText = "ID";
+            DataGrid_YCThueMua.Columns[1].HeaderText = "Customer Name";
+            DataGrid_YCThueMua.Columns[2].HeaderText = "Adress";
+            DataGrid_YCThueMua.Columns[3].HeaderText = "Video ID";
+            DataGrid_YCThueMua.Columns[4].HeaderText = "Date Request";
+            DataGrid_YCThueMua.Columns[5].HeaderText = "Price";
+            DataGrid_YCThueMua.Columns[6].HeaderText = "Quantity";
+            DataGrid_YCThueMua.Columns[7].HeaderText = "Type";
+            DataGrid_YCThueMua.Columns[0].FillWeight = 5;
+            DataGrid_YCThueMua.Columns[1].FillWeight = 20;
+            DataGrid_YCThueMua.Columns[2].FillWeight = 20;
+            DataGrid_YCThueMua.Columns[3].FillWeight = 10;
+            DataGrid_YCThueMua.Columns[4].FillWeight = 10;
+            DataGrid_YCThueMua.Columns[5].FillWeight = 15;
+            DataGrid_YCThueMua.Columns[6].FillWeight = 10;
+            DataGrid_YCThueMua.Columns[7].FillWeight = 10;
+
 
             //Request count
 
@@ -153,7 +163,9 @@ namespace VideoRentalStore
             connection.Open();
 
             string ID = DataGrid_YCThueMua.SelectedRows[0].Cells["id"].Value.ToString();
-            string type = "UPDATE Request SET Status = 'Compeleted' Where id =" + ID;
+            string VideoID = DataGrid_YCThueMua.SelectedRows[0].Cells["idVideo"].Value.ToString();
+            string Quantity = DataGrid_YCThueMua.SelectedRows[0].Cells["Quantity"].Value.ToString();
+            string type = "UPDATE Request SET Status = 'Completed' Where id ='" + ID + "' UPDATE Video SET Quantity = Video.Quantity - "+ Quantity+" Where id = '" + VideoID +"'";
             SqlCommand command = new SqlCommand(type, connection);
 
             command.ExecuteNonQuery();

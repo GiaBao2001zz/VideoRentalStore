@@ -60,12 +60,14 @@ namespace VideoRentalStore
             this.label2 = new System.Windows.Forms.Label();
             this.Label_StoreStatus = new System.Windows.Forms.Label();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Label_TopProductSales = new System.Windows.Forms.Label();
             this.Panel_Title.SuspendLayout();
             this.Panel_TotalProfit.SuspendLayout();
             this.Panel_TotalSale.SuspendLayout();
             this.Panel_DashBoard.SuspendLayout();
             this.Panel_StaffList.SuspendLayout();
             this.Panel_TotalUsers.SuspendLayout();
+            this.Panel_ProductSales.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,6 +252,7 @@ namespace VideoRentalStore
             // Panel_ProductSales
             // 
             this.Panel_ProductSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_ProductSales.Controls.Add(this.Label_TopProductSales);
             this.Panel_ProductSales.Location = new System.Drawing.Point(290, 278);
             this.Panel_ProductSales.Name = "Panel_ProductSales";
             this.Panel_ProductSales.Size = new System.Drawing.Size(712, 271);
@@ -390,6 +393,17 @@ namespace VideoRentalStore
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // Label_TopProductSales
+            // 
+            this.Label_TopProductSales.AutoSize = true;
+            this.Label_TopProductSales.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_TopProductSales.ForeColor = System.Drawing.Color.White;
+            this.Label_TopProductSales.Location = new System.Drawing.Point(39, 13);
+            this.Label_TopProductSales.Name = "Label_TopProductSales";
+            this.Label_TopProductSales.Size = new System.Drawing.Size(162, 25);
+            this.Label_TopProductSales.TabIndex = 1;
+            this.Label_TopProductSales.Text = "Top Product Sales";
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,6 +426,8 @@ namespace VideoRentalStore
             this.Panel_StaffList.PerformLayout();
             this.Panel_TotalUsers.ResumeLayout(false);
             this.Panel_TotalUsers.PerformLayout();
+            this.Panel_ProductSales.ResumeLayout(false);
+            this.Panel_ProductSales.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
             this.ResumeLayout(false);
@@ -449,5 +465,6 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Label_StoreStatus;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label Label_TopProductSales;
     }
 }
