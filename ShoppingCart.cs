@@ -29,7 +29,7 @@ namespace VideoRentalStore
         Label[] increaseQuantity;
         Label[] decreaseQuantity;
         Label[] price;
-
+        Label[] remove;
 
         private void ShoppingCart_Load(object sender, EventArgs e)
         {
@@ -66,11 +66,11 @@ namespace VideoRentalStore
                 {
                     Main_User main_User = (Main_User)ParentForm;
                     command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
-                    command.CommandText = 
+                    command.CommandText =
                     "SELECT Video.id, Name, Thumbnail, Payment, AddToCart.Price, Video.Quantity AS VideoQuantity, AddToCart.Quantity AS AddToCartQuantity " +
                     "FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username " +
                     "WHERE Account.Username = @userName";
-                    int count = 0;                   
+                    int count = 0;
                     connection.Open();
                     using (var reader = command.ExecuteReader())
                     {
@@ -91,11 +91,11 @@ namespace VideoRentalStore
                             var value6 = reader.GetValue(indexOfColumn6);
                             var value7 = reader.GetValue(indexOfColumn7);
 
-                            count++;                           
+                            count++;
                             maxQuantity = (int)Convert.ToDouble(value5);
                         }
                     }
-                                       
+
                     using (var reader = command.ExecuteReader())
                     {
                         var indexOfColumn1 = reader.GetOrdinal("Name");
@@ -106,9 +106,9 @@ namespace VideoRentalStore
                         var indexOfColumn6 = reader.GetOrdinal("AddToCartQuantity");
                         var indexOfColumn7 = reader.GetOrdinal("id");
                         int x = 0;
-                        int y = 0; 
+                        int y = 0;
                         PictureBox[] picturebox = new PictureBox[count];
-                        Label[] nameVideo = new Label[count];                       
+                        Label[] nameVideo = new Label[count];
                         price = new Label[count];
                         currentPrice = new float[count];
                         Panel[] divider = new Panel[count];
@@ -118,6 +118,7 @@ namespace VideoRentalStore
                         currentQuantity = new int[count];
                         payment = new Label[count];
                         idVideo = new string[count];
+                        remove = new Label[count];
                         int index = 0;
                         while (reader.Read())
                         {
@@ -130,7 +131,7 @@ namespace VideoRentalStore
                             var value7 = reader.GetValue(indexOfColumn7);
                             if ((x % 1 == 0) && (index != 0))
                             {
-                                y = y + 250; 
+                                y = y + 250;
                                 x = 0;
                             }
                             picturebox[index] = new PictureBox();
@@ -140,6 +141,7 @@ namespace VideoRentalStore
                             decreaseQuantity[index] = new Label();
                             increaseQuantity[index] = new Label();
                             quantity[index] = new Label();
+                            remove[index] = new Label();
                             currentQuantity[index] = Int32.Parse(value6.ToString());
                             idVideo[index] = value7.ToString();
                             currentPrice[index] = Int32.Parse(value4.ToString());
@@ -149,6 +151,16 @@ namespace VideoRentalStore
                             picturebox[index].Location = new Point(x * 250 + 15, y);
                             picturebox[index].Size = new Size(150, 200); //150,200
                             picturebox[index].Tag = value3;
+
+                            remove[index].Text = "Remove";
+                            remove[index].Font = new Font("Segoe UI", 13);
+                            remove[index].Size = new Size(175, 50);
+                            remove[index].ForeColor = Color.White;
+                            remove[index].AutoSize = false;
+                            remove[index].TextAlign = ContentAlignment.TopLeft;
+                            remove[index].Location = new Point(x * 250 + 600, y + 178);
+                            remove[index].Tag = index;
+                            remove[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.RemoveItem);
 
                             nameVideo[index].Text = (string)value1;
                             nameVideo[index].Font = new Font("Segoe UI", 13);
@@ -174,14 +186,14 @@ namespace VideoRentalStore
                             price[index].AutoSize = false;
                             price[index].TextAlign = ContentAlignment.TopLeft;
                             price[index].Location = new Point(x * 250 + 600, y + 10);
-                                                     
+
                             decreaseQuantity[index].Text = "-";
                             decreaseQuantity[index].Font = new Font("Segoe UI", 13);
                             decreaseQuantity[index].Size = new Size(20, 25);
                             decreaseQuantity[index].ForeColor = Color.White;
                             decreaseQuantity[index].AutoSize = false;
                             decreaseQuantity[index].TextAlign = ContentAlignment.TopLeft;
-                            decreaseQuantity[index].Location = new Point(x * 250 + 340, y + 10); 
+                            decreaseQuantity[index].Location = new Point(x * 250 + 340, y + 10);
                             decreaseQuantity[index].Tag = index;
                             decreaseQuantity[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.DecreaseQuantity);
 
@@ -191,7 +203,7 @@ namespace VideoRentalStore
                             increaseQuantity[index].ForeColor = Color.White;
                             increaseQuantity[index].AutoSize = false;
                             increaseQuantity[index].TextAlign = ContentAlignment.TopLeft;
-                            increaseQuantity[index].Location = new Point(x * 250 + 390, y + 10); 
+                            increaseQuantity[index].Location = new Point(x * 250 + 390, y + 10);
                             increaseQuantity[index].Tag = index;
                             increaseQuantity[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.IncreaseQuantity);
 
@@ -201,21 +213,21 @@ namespace VideoRentalStore
                             quantity[index].ForeColor = Color.White;
                             quantity[index].AutoSize = true;
                             quantity[index].TextAlign = ContentAlignment.TopCenter;
-                            quantity[index].Location = new Point(x * 250 + 360, y + 10); 
+                            quantity[index].Location = new Point(x * 250 + 360, y + 10);
 
-
+                            remove[index].BringToFront();
 
                             if (index < count - 1)
                             {
                                 divider[index] = new Panel();
-                                divider[index].Location = new Point(x * 250 , y + 220);
+                                divider[index].Location = new Point(x * 250, y + 220);
                                 divider[index].Size = new Size(714, 10);
                                 divider[index].Paint += new System.Windows.Forms.PaintEventHandler(this.divider_Paint);
                                 divider[index].BringToFront();
                             }
 
                             //Thêm khoảng cách khi scrollbar kéo đến cuối cùng
-                            if(index == count - 1)
+                            if (index == count - 1)
                             {
                                 Label label_empty = new Label();
                                 label_empty.Location = new Point(x * 250 + 15, y + 175);
@@ -238,16 +250,16 @@ namespace VideoRentalStore
                             {
                                 decreaseQuantity[index].Enabled = false;
                             }
-                            if (currentQuantity[index] == Int32.Parse(value5.ToString()))
+                            if (currentQuantity[index] == Int32.Parse(value5.ToString()) || currentQuantity[index] > Int32.Parse(value5.ToString()))
                             {
                                 increaseQuantity[index].Enabled = false;
                             }
-                            if(currentQuantity[index] > 1 && currentQuantity[index] < Int32.Parse(value5.ToString()))
+                            if (currentQuantity[index] > 1 && currentQuantity[index] < Int32.Parse(value5.ToString()))
                             {
                                 decreaseQuantity[index].Enabled = true;
                                 increaseQuantity[index].Enabled = true;
                             }
-                           
+
                             //Make rounded corner picturebox
                             Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
                             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -266,9 +278,10 @@ namespace VideoRentalStore
                             panel2.Controls.Add(decreaseQuantity[index]);
                             panel2.Controls.Add(increaseQuantity[index]);
                             panel2.Controls.Add(quantity[index]);
+                            panel2.Controls.Add(remove[index]);
 
                             nameVideo[index].BringToFront();
-                            picturebox[index].BringToFront();                            
+                            picturebox[index].BringToFront();
                             decreaseQuantity[index].BringToFront();
                             quantity[index].BringToFront();
                             increaseQuantity[index].BringToFront();
@@ -276,7 +289,7 @@ namespace VideoRentalStore
                             price[index].BringToFront();
 
                             index++;
-                            x++;                           
+                            x++;
                         }
                     }
                     connection.Close();
@@ -293,11 +306,11 @@ namespace VideoRentalStore
 
             Main_User main_User = (Main_User)ParentForm;
             string userName = main_User.Label_UserName.Text;
-            string idVideo2= idVideo[index];
+            string idVideo2 = idVideo[index];
             string payment2 = payment[index].Text;
             int quantity2 = currentQuantity[index];
             float price2 = currentPrice[index] * currentQuantity[index];
-                
+
             using (SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
             using (SqlCommand command = connection.CreateCommand())
             {
@@ -319,7 +332,7 @@ namespace VideoRentalStore
             if (currentQuantity[index] == 1)
             {
                 decreaseQuantity[index].Enabled = false;
-            } 
+            }
             else
             {
                 increaseQuantity[index].Enabled = true;
@@ -334,8 +347,8 @@ namespace VideoRentalStore
                 totalProduct = totalProduct + (currentPrice[i] * currentQuantity[i]);
             }
             Label_ShowTotalProduct.Text = totalProduct.ToString();
-            Label_ShowTotal.Text = totalProduct.ToString() ;
-            Label_ShowTotalProduct.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotalProduct.Text)) + " VND"; 
+            Label_ShowTotal.Text = totalProduct.ToString();
+            Label_ShowTotalProduct.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotalProduct.Text)) + " VND";
             Label_ShowTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotal.Text)) + " VND";
         }
 
@@ -370,7 +383,7 @@ namespace VideoRentalStore
                 connection.Close();
             }
 
-            if (currentQuantity[index] == maxQuantity)
+            if (currentQuantity[index] == maxQuantity || currentQuantity[index] > maxQuantity)
             {
                 increaseQuantity[index].Enabled = false;
             }
@@ -383,7 +396,7 @@ namespace VideoRentalStore
             price[index].Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(price[index].Text));
 
             float totalProduct = 0;
-            for(int i = 0; i < currentPrice.Length; i++)
+            for (int i = 0; i < currentPrice.Length; i++)
             {
                 totalProduct = totalProduct + (currentPrice[i] * currentQuantity[i]);
             }
@@ -392,6 +405,66 @@ namespace VideoRentalStore
             Label_ShowTotalProduct.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotalProduct.Text)) + " VND";
             Label_ShowTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotal.Text)) + " VND";
         }
+
+        private void RemoveItem(object sender, MouseEventArgs e)
+        {
+            Label labelRemove = sender as Label;
+            int index = Int32.Parse(labelRemove.Tag.ToString());
+            string idVideo2 = idVideo[index];
+            string payment2 = payment[index].Text;
+
+            using (SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            using (SqlCommand command = connection.CreateCommand())
+            {
+                command.CommandText = "DELETE FROM AddToCart Where idVideo = @idVideo and Payment = @payment";
+
+                command.Parameters.AddWithValue("@idVideo", idVideo2);
+                command.Parameters.AddWithValue("@payment", payment2);
+
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            panel2.Controls.Clear();
+            ShowImage();
+            UpdateTotalPriceProduct();
+        }
+
+        private void UpdateTotalPriceProduct()
+        {
+            float totalProduct = 0;
+
+            using (var connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
+            {
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT CurrentPrice FROM AddToCart";
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        var indexOfColumn1 = reader.GetOrdinal("CurrentPrice");
+
+                        while (reader.Read())
+                        {
+                            var value1 = reader.GetValue(indexOfColumn1);
+
+                            if (value1 != null)
+                            {
+                                totalProduct = totalProduct + Int32.Parse(value1.ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            Label_ShowTotalProduct.Text = totalProduct.ToString();
+            Label_ShowTotal.Text = totalProduct.ToString();
+            Label_ShowTotalProduct.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotalProduct.Text)) + " VND";
+            Label_ShowTotal.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Int32.Parse(Label_ShowTotal.Text)) + " VND";
+        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -415,12 +488,12 @@ namespace VideoRentalStore
             {
                 var p = new Pen(Color.White, 1);
                 var point1 = new Point(10, 5);
-                var point2 = new Point(650, 5);
+                var point2 = new Point(670, 5);
                 g.DrawLine(p, point1, point2);
                 g.Dispose();
             }
         }
-        
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -428,7 +501,7 @@ namespace VideoRentalStore
             {
                 var p = new Pen(Color.White, 1);
                 var point1 = new Point(10, 5);
-                var point2 = new Point(650, 5);
+                var point2 = new Point(670, 5);
                 g.DrawLine(p, point1, point2);
                 g.Dispose();
             }
@@ -442,7 +515,7 @@ namespace VideoRentalStore
                 using (var command = connection.CreateCommand())
                 {
                     command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
-                    command.CommandText = 
+                    command.CommandText =
                     "SELECT Video.id, Payment, AddToCart.CurrentPrice AS Price, AddToCart.Quantity AS Quantity  FROM " +
                     "(Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username " +
                     "WHERE Account.Username = @userName";
@@ -515,6 +588,7 @@ namespace VideoRentalStore
                                         //ShoppingCart_Load(sender, e);
                                         this.panel2.Controls.Clear();
                                         ShowImage();
+                                        UpdateTotalPriceProduct();
                                     }
                                     con.Close();
                                 }
@@ -525,10 +599,10 @@ namespace VideoRentalStore
                             }
                         }
                     }
-                    }
-
                 }
+
             }
+        }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -553,5 +627,4 @@ namespace VideoRentalStore
             }
         }
     }
-    }
-
+}
