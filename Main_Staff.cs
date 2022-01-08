@@ -127,6 +127,13 @@ namespace VideoRentalStore
         private void Button_Report_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
+            if (this.Panel_SwtichForm.Controls.Count > 0)
+                this.Panel_SwtichForm.Controls[0].Dispose();
+
+            // Add New Form (Grid_YeuCauThueMua)
+            Report grid = new Report() { Dock = DockStyle.Fill, TopLevel = false };
+            this.Panel_SwtichForm.Controls.Add(grid);
+            grid.Show();
         }
 
         private void Main_Staff_Load(object sender, EventArgs e)
