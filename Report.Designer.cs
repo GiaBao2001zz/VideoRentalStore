@@ -32,6 +32,7 @@ namespace VideoRentalStore
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.Panel_Title = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Label_DashBoard = new System.Windows.Forms.Label();
             this.Elipse_TotalProfit = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_TotalProfit = new System.Windows.Forms.Panel();
@@ -39,36 +40,44 @@ namespace VideoRentalStore
             this.Label_Totalprofit_Number = new System.Windows.Forms.Label();
             this.Label_TotalProfit = new System.Windows.Forms.Label();
             this.Panel_TotalSale = new System.Windows.Forms.Panel();
-            this.Panel_DashBoard = new System.Windows.Forms.Panel();
-            this.Panel_StaffList = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Label_TotalSales_Currency = new System.Windows.Forms.Label();
             this.Label_TotalSales_Number = new System.Windows.Forms.Label();
             this.Label_TotalSale = new System.Windows.Forms.Label();
-            this.Elipse_TotalSale = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Panel_DashBoard = new System.Windows.Forms.Panel();
+            this.Panel_Earning = new System.Windows.Forms.Panel();
+            this.Panel_ProductSales = new System.Windows.Forms.Panel();
+            this.Label_TopProductSales = new System.Windows.Forms.Label();
             this.Panel_TotalUsers = new System.Windows.Forms.Panel();
             this.Label_TotalUsers_Number = new System.Windows.Forms.Label();
             this.Label_TotalUsers = new System.Windows.Forms.Label();
-            this.Panel_ProductSales = new System.Windows.Forms.Panel();
-            this.Label_TotalSales_Currency = new System.Windows.Forms.Label();
-            this.Panel_Earning = new System.Windows.Forms.Panel();
-            this.Elipse_TotalUsers = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Elipse_StoreStatus = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
+            this.Panel_StaffList = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.Panel_StoreStatus = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.Label_StoreStatus = new System.Windows.Forms.Label();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Label_TopProductSales = new System.Windows.Forms.Label();
+            this.Elipse_TotalSale = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Elipse_TotalUsers = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Elipse_StoreStatus = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_Product = new System.Windows.Forms.Label();
+            this.label_Ranking = new System.Windows.Forms.Label();
+            this.Label_Quantity = new System.Windows.Forms.Label();
+            this.label_Sold = new System.Windows.Forms.Label();
+            this.label_Price = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
+            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
+            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
             this.Panel_Title.SuspendLayout();
             this.Panel_TotalProfit.SuspendLayout();
             this.Panel_TotalSale.SuspendLayout();
             this.Panel_DashBoard.SuspendLayout();
-            this.Panel_StaffList.SuspendLayout();
-            this.Panel_TotalUsers.SuspendLayout();
             this.Panel_ProductSales.SuspendLayout();
+            this.Panel_TotalUsers.SuspendLayout();
+            this.Panel_StaffList.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -80,6 +89,40 @@ namespace VideoRentalStore
             this.Panel_Title.Name = "Panel_Title";
             this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
             this.Panel_Title.TabIndex = 0;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Print Report";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = global::VideoRentalStore.Properties.Resources.Report;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 70D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(761, 29);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 45);
+            this.bunifuFlatButton1.TabIndex = 1;
+            this.bunifuFlatButton1.Text = "Print Report";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Label_DashBoard
             // 
@@ -154,40 +197,16 @@ namespace VideoRentalStore
             this.Panel_TotalSale.Size = new System.Drawing.Size(200, 100);
             this.Panel_TotalSale.TabIndex = 3;
             // 
-            // Panel_DashBoard
+            // Label_TotalSales_Currency
             // 
-            this.Panel_DashBoard.Controls.Add(this.Panel_Earning);
-            this.Panel_DashBoard.Controls.Add(this.Panel_ProductSales);
-            this.Panel_DashBoard.Controls.Add(this.Panel_TotalUsers);
-            this.Panel_DashBoard.Controls.Add(this.Panel_StaffList);
-            this.Panel_DashBoard.Controls.Add(this.Panel_TotalSale);
-            this.Panel_DashBoard.Controls.Add(this.Panel_TotalProfit);
-            this.Panel_DashBoard.Controls.Add(this.Panel_StoreStatus);
-            this.Panel_DashBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_DashBoard.Location = new System.Drawing.Point(0, 100);
-            this.Panel_DashBoard.Name = "Panel_DashBoard";
-            this.Panel_DashBoard.Size = new System.Drawing.Size(1044, 561);
-            this.Panel_DashBoard.TabIndex = 1;
-            // 
-            // Panel_StaffList
-            // 
-            this.Panel_StaffList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.Panel_StaffList.Controls.Add(this.label3);
-            this.Panel_StaffList.Location = new System.Drawing.Point(20, 278);
-            this.Panel_StaffList.Name = "Panel_StaffList";
-            this.Panel_StaffList.Size = new System.Drawing.Size(241, 271);
-            this.Panel_StaffList.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(26, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Staff List";
+            this.Label_TotalSales_Currency.AutoSize = true;
+            this.Label_TotalSales_Currency.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_TotalSales_Currency.ForeColor = System.Drawing.Color.Yellow;
+            this.Label_TotalSales_Currency.Location = new System.Drawing.Point(70, 71);
+            this.Label_TotalSales_Currency.Name = "Label_TotalSales_Currency";
+            this.Label_TotalSales_Currency.Size = new System.Drawing.Size(46, 21);
+            this.Label_TotalSales_Currency.TabIndex = 5;
+            this.Label_TotalSales_Currency.Text = "VND";
             // 
             // Label_TotalSales_Number
             // 
@@ -211,10 +230,51 @@ namespace VideoRentalStore
             this.Label_TotalSale.TabIndex = 3;
             this.Label_TotalSale.Text = "Total Sales";
             // 
-            // Elipse_TotalSale
+            // Panel_DashBoard
             // 
-            this.Elipse_TotalSale.ElipseRadius = 10;
-            this.Elipse_TotalSale.TargetControl = this.Panel_TotalSale;
+            this.Panel_DashBoard.Controls.Add(this.Panel_Earning);
+            this.Panel_DashBoard.Controls.Add(this.Panel_ProductSales);
+            this.Panel_DashBoard.Controls.Add(this.Panel_TotalUsers);
+            this.Panel_DashBoard.Controls.Add(this.Panel_StaffList);
+            this.Panel_DashBoard.Controls.Add(this.Panel_TotalSale);
+            this.Panel_DashBoard.Controls.Add(this.Panel_TotalProfit);
+            this.Panel_DashBoard.Controls.Add(this.Panel_StoreStatus);
+            this.Panel_DashBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_DashBoard.Location = new System.Drawing.Point(0, 100);
+            this.Panel_DashBoard.Name = "Panel_DashBoard";
+            this.Panel_DashBoard.Size = new System.Drawing.Size(1044, 561);
+            this.Panel_DashBoard.TabIndex = 1;
+            // 
+            // Panel_Earning
+            // 
+            this.Panel_Earning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_Earning.Location = new System.Drawing.Point(502, 10);
+            this.Panel_Earning.Name = "Panel_Earning";
+            this.Panel_Earning.Size = new System.Drawing.Size(500, 230);
+            this.Panel_Earning.TabIndex = 8;
+            // 
+            // Panel_ProductSales
+            // 
+            this.Panel_ProductSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_ProductSales.Controls.Add(this.panel3);
+            this.Panel_ProductSales.Controls.Add(this.panel2);
+            this.Panel_ProductSales.Controls.Add(this.panel1);
+            this.Panel_ProductSales.Controls.Add(this.Label_TopProductSales);
+            this.Panel_ProductSales.Location = new System.Drawing.Point(290, 278);
+            this.Panel_ProductSales.Name = "Panel_ProductSales";
+            this.Panel_ProductSales.Size = new System.Drawing.Size(712, 271);
+            this.Panel_ProductSales.TabIndex = 7;
+            // 
+            // Label_TopProductSales
+            // 
+            this.Label_TopProductSales.AutoSize = true;
+            this.Label_TopProductSales.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_TopProductSales.ForeColor = System.Drawing.Color.White;
+            this.Label_TopProductSales.Location = new System.Drawing.Point(39, 13);
+            this.Label_TopProductSales.Name = "Label_TopProductSales";
+            this.Label_TopProductSales.Size = new System.Drawing.Size(162, 25);
+            this.Label_TopProductSales.TabIndex = 1;
+            this.Label_TopProductSales.Text = "Top Product Sales";
             // 
             // Panel_TotalUsers
             // 
@@ -249,79 +309,25 @@ namespace VideoRentalStore
             this.Label_TotalUsers.TabIndex = 3;
             this.Label_TotalUsers.Text = "Total Users";
             // 
-            // Panel_ProductSales
+            // Panel_StaffList
             // 
-            this.Panel_ProductSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.Panel_ProductSales.Controls.Add(this.Label_TopProductSales);
-            this.Panel_ProductSales.Location = new System.Drawing.Point(290, 278);
-            this.Panel_ProductSales.Name = "Panel_ProductSales";
-            this.Panel_ProductSales.Size = new System.Drawing.Size(712, 271);
-            this.Panel_ProductSales.TabIndex = 7;
+            this.Panel_StaffList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_StaffList.Controls.Add(this.label3);
+            this.Panel_StaffList.Location = new System.Drawing.Point(20, 278);
+            this.Panel_StaffList.Name = "Panel_StaffList";
+            this.Panel_StaffList.Size = new System.Drawing.Size(241, 271);
+            this.Panel_StaffList.TabIndex = 5;
             // 
-            // Label_TotalSales_Currency
+            // label3
             // 
-            this.Label_TotalSales_Currency.AutoSize = true;
-            this.Label_TotalSales_Currency.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_TotalSales_Currency.ForeColor = System.Drawing.Color.Yellow;
-            this.Label_TotalSales_Currency.Location = new System.Drawing.Point(70, 71);
-            this.Label_TotalSales_Currency.Name = "Label_TotalSales_Currency";
-            this.Label_TotalSales_Currency.Size = new System.Drawing.Size(46, 21);
-            this.Label_TotalSales_Currency.TabIndex = 5;
-            this.Label_TotalSales_Currency.Text = "VND";
-            // 
-            // Panel_Earning
-            // 
-            this.Panel_Earning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.Panel_Earning.Location = new System.Drawing.Point(502, 10);
-            this.Panel_Earning.Name = "Panel_Earning";
-            this.Panel_Earning.Size = new System.Drawing.Size(500, 230);
-            this.Panel_Earning.TabIndex = 8;
-            // 
-            // Elipse_TotalUsers
-            // 
-            this.Elipse_TotalUsers.ElipseRadius = 10;
-            this.Elipse_TotalUsers.TargetControl = this.Panel_TotalUsers;
-            // 
-            // Elipse_StoreStatus
-            // 
-            this.Elipse_StoreStatus.ElipseRadius = 10;
-            this.Elipse_StoreStatus.TargetControl = this.Panel_StoreStatus;
-            // 
-            // Icon_TotalUsers
-            // 
-            this.Icon_TotalUsers.Angle = 0F;
-            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
-            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
-            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalUsers.TabIndex = 0;
-            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
-            // 
-            // Icon_TotalSale
-            // 
-            this.Icon_TotalSale.Angle = 0F;
-            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
-            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalSale.Name = "Icon_TotalSale";
-            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalSale.TabIndex = 0;
-            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
-            // 
-            // Icon_TotalProfit
-            // 
-            this.Icon_TotalProfit.Angle = 0F;
-            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
-            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
-            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
-            this.Icon_TotalProfit.TabIndex = 0;
-            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(26, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Staff List";
             // 
             // Panel_StoreStatus
             // 
@@ -359,50 +365,144 @@ namespace VideoRentalStore
             this.Label_StoreStatus.TabIndex = 8;
             this.Label_StoreStatus.Text = "Store Status";
             // 
-            // bunifuFlatButton1
+            // Elipse_TotalSale
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Print Report";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::VideoRentalStore.Properties.Resources.Report;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 70D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(761, 29);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 45);
-            this.bunifuFlatButton1.TabIndex = 1;
-            this.bunifuFlatButton1.Text = "Print Report";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Elipse_TotalSale.ElipseRadius = 10;
+            this.Elipse_TotalSale.TargetControl = this.Panel_TotalSale;
             // 
-            // Label_TopProductSales
+            // Elipse_TotalUsers
             // 
-            this.Label_TopProductSales.AutoSize = true;
-            this.Label_TopProductSales.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_TopProductSales.ForeColor = System.Drawing.Color.White;
-            this.Label_TopProductSales.Location = new System.Drawing.Point(39, 13);
-            this.Label_TopProductSales.Name = "Label_TopProductSales";
-            this.Label_TopProductSales.Size = new System.Drawing.Size(162, 25);
-            this.Label_TopProductSales.TabIndex = 1;
-            this.Label_TopProductSales.Text = "Top Product Sales";
+            this.Elipse_TotalUsers.ElipseRadius = 10;
+            this.Elipse_TotalUsers.TargetControl = this.Panel_TotalUsers;
+            // 
+            // Elipse_StoreStatus
+            // 
+            this.Elipse_StoreStatus.ElipseRadius = 10;
+            this.Elipse_StoreStatus.TargetControl = this.Panel_StoreStatus;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label_Price);
+            this.panel1.Controls.Add(this.label_Sold);
+            this.panel1.Controls.Add(this.Label_Quantity);
+            this.panel1.Controls.Add(this.label_Ranking);
+            this.panel1.Controls.Add(this.label_Product);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(712, 47);
+            this.panel1.TabIndex = 2;
+            // 
+            // label_Product
+            // 
+            this.label_Product.AutoSize = true;
+            this.label_Product.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Product.ForeColor = System.Drawing.Color.White;
+            this.label_Product.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label_Product.Location = new System.Drawing.Point(101, 17);
+            this.label_Product.Name = "label_Product";
+            this.label_Product.Size = new System.Drawing.Size(89, 30);
+            this.label_Product.TabIndex = 3;
+            this.label_Product.Text = "Product";
+            // 
+            // label_Ranking
+            // 
+            this.label_Ranking.AutoSize = true;
+            this.label_Ranking.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ranking.ForeColor = System.Drawing.Color.White;
+            this.label_Ranking.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label_Ranking.Location = new System.Drawing.Point(3, 17);
+            this.label_Ranking.Name = "label_Ranking";
+            this.label_Ranking.Size = new System.Drawing.Size(42, 30);
+            this.label_Ranking.TabIndex = 4;
+            this.label_Ranking.Text = "No";
+            this.label_Ranking.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Label_Quantity
+            // 
+            this.Label_Quantity.AutoSize = true;
+            this.Label_Quantity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Quantity.ForeColor = System.Drawing.Color.White;
+            this.Label_Quantity.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Label_Quantity.Location = new System.Drawing.Point(301, 17);
+            this.Label_Quantity.Name = "Label_Quantity";
+            this.Label_Quantity.Size = new System.Drawing.Size(96, 30);
+            this.Label_Quantity.TabIndex = 5;
+            this.Label_Quantity.Text = "Quantity";
+            // 
+            // label_Sold
+            // 
+            this.label_Sold.AutoSize = true;
+            this.label_Sold.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sold.ForeColor = System.Drawing.Color.White;
+            this.label_Sold.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label_Sold.Location = new System.Drawing.Point(476, 17);
+            this.label_Sold.Name = "label_Sold";
+            this.label_Sold.Size = new System.Drawing.Size(55, 30);
+            this.label_Sold.TabIndex = 6;
+            this.label_Sold.Text = "Sold";
+            // 
+            // label_Price
+            // 
+            this.label_Price.AutoSize = true;
+            this.label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Price.ForeColor = System.Drawing.Color.White;
+            this.label_Price.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label_Price.Location = new System.Drawing.Point(592, 17);
+            this.label_Price.Name = "label_Price";
+            this.label_Price.Size = new System.Drawing.Size(59, 30);
+            this.label_Price.TabIndex = 7;
+            this.label_Price.Text = "Price";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(712, 14);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(1, 114);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(711, 157);
+            this.panel3.TabIndex = 4;
+            // 
+            // Icon_TotalUsers
+            // 
+            this.Icon_TotalUsers.Angle = 0F;
+            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
+            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
+            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalUsers.TabIndex = 0;
+            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Icon_TotalSale
+            // 
+            this.Icon_TotalSale.Angle = 0F;
+            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
+            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalSale.Name = "Icon_TotalSale";
+            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalSale.TabIndex = 0;
+            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
+            // 
+            // Icon_TotalProfit
+            // 
+            this.Icon_TotalProfit.Angle = 0F;
+            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
+            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
+            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
+            this.Icon_TotalProfit.TabIndex = 0;
+            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
             // 
             // Report
             // 
@@ -415,6 +515,7 @@ namespace VideoRentalStore
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Report";
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             this.Panel_Title.ResumeLayout(false);
             this.Panel_Title.PerformLayout();
             this.Panel_TotalProfit.ResumeLayout(false);
@@ -422,14 +523,16 @@ namespace VideoRentalStore
             this.Panel_TotalSale.ResumeLayout(false);
             this.Panel_TotalSale.PerformLayout();
             this.Panel_DashBoard.ResumeLayout(false);
-            this.Panel_StaffList.ResumeLayout(false);
-            this.Panel_StaffList.PerformLayout();
-            this.Panel_TotalUsers.ResumeLayout(false);
-            this.Panel_TotalUsers.PerformLayout();
             this.Panel_ProductSales.ResumeLayout(false);
             this.Panel_ProductSales.PerformLayout();
+            this.Panel_TotalUsers.ResumeLayout(false);
+            this.Panel_TotalUsers.PerformLayout();
+            this.Panel_StaffList.ResumeLayout(false);
+            this.Panel_StaffList.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -466,5 +569,13 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_StoreStatus;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label Label_TopProductSales;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label_Ranking;
+        private System.Windows.Forms.Label label_Product;
+        private System.Windows.Forms.Label label_Price;
+        private System.Windows.Forms.Label label_Sold;
+        private System.Windows.Forms.Label Label_Quantity;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

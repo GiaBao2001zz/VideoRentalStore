@@ -95,12 +95,23 @@ CREATE TABLE AddToCart
 )
 GO
 
+CREATE TABLE TopProductSold
+(
+	id INT IDENTITY PRIMARY KEY,
+	idVideo NVARCHAR(100),
+	count INT,
+)
+GO
+
 
 SELECT * FROM Video
 SELECT * FROM Account
 SELECT * FROM AddToCart
 SELECT * FROM Request
+SELECT * FROM TopProductSold
+SELECT  idVideo, COUNT(*) as count FROM Request WHERE Status = 'Completed' GROUP BY idvideo ORDER BY count DESC
+SELECT  TOP 5 idVideo, SUM(Quantity) as count FROM Request WHERE Status = 'Completed' GROUP BY idvideo ORDER BY count DESC
 
 DELETE FROM AddToCart
-DROP TABLE AddToCart
+DROP TABLE TopProductSold
 sp_help 'Request'

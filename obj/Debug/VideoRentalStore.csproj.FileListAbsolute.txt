@@ -247,3 +247,12 @@ D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.DataSet.xml
 D:\Projects\VideoRentalStore#5\bin\Debug\Z.Dapper.Plus.dll
 D:\Projects\VideoRentalStore#5\bin\Debug\Z.Dapper.Plus.xml
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\Z.Dapper.Plus.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.pdb
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.xml
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Video rental store system\VideoRentalStore\bin\Debug\Z.Dapper.Plus.xml
+D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Import_Disk_WithFile.resources
