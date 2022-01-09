@@ -235,6 +235,15 @@ D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.exe
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.pdb
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.History_Payment.resources
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.History_Payment.resources
-D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.Report.resources
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Report.resources
+D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.Import_Disk_WithFile.resources
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.pdb
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.xml
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Projects\VideoRentalStore#5\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Projects\VideoRentalStore#5\bin\Debug\Z.Dapper.Plus.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\Z.Dapper.Plus.xml
+D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache

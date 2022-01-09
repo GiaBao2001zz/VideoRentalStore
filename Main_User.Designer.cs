@@ -39,7 +39,6 @@ namespace VideoRentalStore
             this.Panel_Logo = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_Title = new System.Windows.Forms.Panel();
-            this.Label_FormName = new System.Windows.Forms.Label();
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Picture_UserPFP = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_SwtichForm = new System.Windows.Forms.Panel();
@@ -272,7 +271,6 @@ namespace VideoRentalStore
             // Panel_Title
             // 
             this.Panel_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.Panel_Title.Controls.Add(this.Label_FormName);
             this.Panel_Title.Controls.Add(this.Label_UserName);
             this.Panel_Title.Controls.Add(this.Picture_UserPFP);
             this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top;
@@ -280,18 +278,6 @@ namespace VideoRentalStore
             this.Panel_Title.Name = "Panel_Title";
             this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
             this.Panel_Title.TabIndex = 1;
-            // 
-            // Label_FormName
-            // 
-            this.Label_FormName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Label_FormName.AutoSize = true;
-            this.Label_FormName.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.Label_FormName.ForeColor = System.Drawing.Color.White;
-            this.Label_FormName.Location = new System.Drawing.Point(489, 58);
-            this.Label_FormName.Name = "Label_FormName";
-            this.Label_FormName.Size = new System.Drawing.Size(99, 25);
-            this.Label_FormName.TabIndex = 5;
-            this.Label_FormName.Text = "Tab_Name";
             // 
             // Label_UserName
             // 
@@ -364,7 +350,6 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_ContactUs;
         private System.Windows.Forms.Panel Panel_Title;
         private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
-        private System.Windows.Forms.Label Label_FormName;
         public System.Windows.Forms.Panel Panel_SwtichForm;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         public System.Windows.Forms.Label Label_UserName;

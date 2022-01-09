@@ -57,7 +57,7 @@ namespace VideoRentalStore
             string[] Recommend = new string[3];
             Recommend[0] = "Harry Potter";
             Recommend[1] = "Toy Story";
-            Recommend[2] = "Fast & Furious";
+            Recommend[2] = "Fast and Furious";
             Load_Thumbnails(Recommend);
             //Recommend Genre
             string[] RecommendGenre = new string[3];
