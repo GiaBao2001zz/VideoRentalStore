@@ -47,9 +47,9 @@ namespace VideoRentalStore
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
             this.TextBox_Director = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.Label_Description = new System.Windows.Forms.Label();
             this.TextBox_Description = new System.Windows.Forms.TextBox();
+            this.Label_Description = new System.Windows.Forms.Label();
+            this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -177,11 +177,12 @@ namespace VideoRentalStore
             // Label_ORInputWithFile
             // 
             this.Label_ORInputWithFile.AutoSize = true;
-            this.Label_ORInputWithFile.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Label_ORInputWithFile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Label_ORInputWithFile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ORInputWithFile.ForeColor = System.Drawing.Color.Blue;
-            this.Label_ORInputWithFile.Location = new System.Drawing.Point(351, 52);
+            this.Label_ORInputWithFile.Location = new System.Drawing.Point(353, 47);
             this.Label_ORInputWithFile.Name = "Label_ORInputWithFile";
-            this.Label_ORInputWithFile.Size = new System.Drawing.Size(195, 19);
+            this.Label_ORInputWithFile.Size = new System.Drawing.Size(221, 21);
             this.Label_ORInputWithFile.TabIndex = 8;
             this.Label_ORInputWithFile.Text = "Or import your goods with file";
             this.Label_ORInputWithFile.Click += new System.EventHandler(this.label1_Click_1);
@@ -336,6 +337,28 @@ namespace VideoRentalStore
             this.panel1.Size = new System.Drawing.Size(380, 683);
             this.panel1.TabIndex = 13;
             // 
+            // TextBox_Description
+            // 
+            this.TextBox_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.TextBox_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TextBox_Description.Location = new System.Drawing.Point(19, 483);
+            this.TextBox_Description.Multiline = true;
+            this.TextBox_Description.Name = "TextBox_Description";
+            this.TextBox_Description.Size = new System.Drawing.Size(340, 163);
+            this.TextBox_Description.TabIndex = 40;
+            // 
+            // Label_Description
+            // 
+            this.Label_Description.AutoSize = true;
+            this.Label_Description.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Label_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Label_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label_Description.Location = new System.Drawing.Point(21, 463);
+            this.Label_Description.Name = "Label_Description";
+            this.Label_Description.Size = new System.Drawing.Size(80, 17);
+            this.Label_Description.TabIndex = 39;
+            this.Label_Description.Text = "Description";
+            // 
             // TextBox_Actor
             // 
             this.TextBox_Actor.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -355,28 +378,6 @@ namespace VideoRentalStore
             this.TextBox_Actor.TabIndex = 15;
             this.TextBox_Actor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Actor.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
-            // 
-            // Label_Description
-            // 
-            this.Label_Description.AutoSize = true;
-            this.Label_Description.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Label_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.Label_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Label_Description.Location = new System.Drawing.Point(21, 463);
-            this.Label_Description.Name = "Label_Description";
-            this.Label_Description.Size = new System.Drawing.Size(80, 17);
-            this.Label_Description.TabIndex = 39;
-            this.Label_Description.Text = "Description";
-            // 
-            // TextBox_Description
-            // 
-            this.TextBox_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.TextBox_Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TextBox_Description.Location = new System.Drawing.Point(19, 483);
-            this.TextBox_Description.Multiline = true;
-            this.TextBox_Description.Name = "TextBox_Description";
-            this.TextBox_Description.Size = new System.Drawing.Size(340, 163);
-            this.TextBox_Description.TabIndex = 40;
             // 
             // NhapDia
             // 

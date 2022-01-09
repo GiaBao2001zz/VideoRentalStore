@@ -30,7 +30,9 @@ namespace VideoRentalStore
 
         private void label1_Click_1(object sender, EventArgs e)
         {
+            Import_Disk_WithFile form = new Import_Disk_WithFile();
 
+            form.ShowDialog();
         }
 
         private void TextBox_TenDia_OnValueChanged(object sender, EventArgs e)

@@ -91,19 +91,25 @@ namespace VideoRentalStore
 
         private void Button_Import_Click(object sender, EventArgs e)
         {
-           
-            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
-            DapperPlusManager.Entity<Video>().Table("Video");
+            try
+            {
+                string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+                DapperPlusManager.Entity<Video>().Table("Video");
                 List<Video> videos = videoBindingSource.DataSource as List<Video>;
-                if (videos !=null ) 
+                if (videos != null)
                 {
                     using (IDbConnection db = new SqlConnection(connectionSTR))
                     {
                         db.BulkInsert(videos);
                     }
                     MessageBox.Show("Import Successfully");
+                    this.Close();
                 }
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DataGridView_Import_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -116,6 +122,11 @@ namespace VideoRentalStore
             // TODO: This line of code loads data into the 'videoRentalStoreDataSet.Video' table. You can move, or remove it, as needed.
             this.videoTableAdapter.Fill(this.videoRentalStoreDataSet.Video);
             DataGridView_Import.Visible = false;
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

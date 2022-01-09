@@ -17,7 +17,7 @@ namespace VideoRentalStore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var Main_form = new Import_Disk_WithFile();
+            var Main_form = new Login();
             
             Application.Run(Main_form);
 
