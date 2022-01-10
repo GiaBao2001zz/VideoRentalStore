@@ -172,7 +172,7 @@ namespace VideoRentalStore
 
                             payment[index].Text = (string)value3;
                             payment[index].Font = new Font("Segoe UI", 13);
-                            payment[index].Size = new Size(175, 50);
+                            payment[index].Size = new Size(175, 50); //175, 50
                             payment[index].ForeColor = Color.White;
                             payment[index].AutoSize = false;
                             payment[index].TextAlign = ContentAlignment.TopLeft;
@@ -181,7 +181,7 @@ namespace VideoRentalStore
                             price[index].Text = (currentPrice[index] * currentQuantity[index]).ToString();
                             price[index].Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(price[index].Text));
                             price[index].Font = new Font("Segoe UI", 13);
-                            price[index].Size = new Size(175, 50);
+                            price[index].Size = new Size(175, 50); //175, 50
                             price[index].ForeColor = Color.White;
                             price[index].AutoSize = false;
                             price[index].TextAlign = ContentAlignment.TopLeft;
@@ -209,10 +209,10 @@ namespace VideoRentalStore
 
                             quantity[index].Text = currentQuantity[index].ToString();
                             quantity[index].Font = new Font("Segoe UI", 13);
-                            quantity[index].Size = new Size(20, 50); //175,50
+                            quantity[index].Size = new Size(20, 50); //20, 50
                             quantity[index].ForeColor = Color.White;
                             quantity[index].AutoSize = true;
-                            quantity[index].TextAlign = ContentAlignment.TopCenter;
+                            quantity[index].TextAlign = ContentAlignment.MiddleCenter;
                             quantity[index].Location = new Point(x * 250 + 360, y + 10);
 
                             remove[index].BringToFront();

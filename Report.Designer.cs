@@ -46,6 +46,14 @@ namespace VideoRentalStore
             this.Panel_DashBoard = new System.Windows.Forms.Panel();
             this.Panel_Earning = new System.Windows.Forms.Panel();
             this.Panel_ProductSales = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_Price = new System.Windows.Forms.Label();
+            this.label_Sold = new System.Windows.Forms.Label();
+            this.Label_Quantity = new System.Windows.Forms.Label();
+            this.label_Ranking = new System.Windows.Forms.Label();
+            this.label_Product = new System.Windows.Forms.Label();
             this.Label_TopProductSales = new System.Windows.Forms.Label();
             this.Panel_TotalUsers = new System.Windows.Forms.Panel();
             this.Label_TotalUsers_Number = new System.Windows.Forms.Label();
@@ -58,14 +66,6 @@ namespace VideoRentalStore
             this.Elipse_TotalSale = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_TotalUsers = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_StoreStatus = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label_Product = new System.Windows.Forms.Label();
-            this.label_Ranking = new System.Windows.Forms.Label();
-            this.Label_Quantity = new System.Windows.Forms.Label();
-            this.label_Sold = new System.Windows.Forms.Label();
-            this.label_Price = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
             this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
             this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
@@ -74,10 +74,10 @@ namespace VideoRentalStore
             this.Panel_TotalSale.SuspendLayout();
             this.Panel_DashBoard.SuspendLayout();
             this.Panel_ProductSales.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.Panel_TotalUsers.SuspendLayout();
             this.Panel_StaffList.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -265,6 +265,90 @@ namespace VideoRentalStore
             this.Panel_ProductSales.Size = new System.Drawing.Size(712, 271);
             this.Panel_ProductSales.TabIndex = 7;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(1, 114);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(711, 157);
+            this.panel3.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 94);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(712, 14);
+            this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label_Price);
+            this.panel1.Controls.Add(this.label_Sold);
+            this.panel1.Controls.Add(this.Label_Quantity);
+            this.panel1.Controls.Add(this.label_Ranking);
+            this.panel1.Controls.Add(this.label_Product);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(712, 47);
+            this.panel1.TabIndex = 2;
+            // 
+            // label_Price
+            // 
+            this.label_Price.AutoSize = true;
+            this.label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Price.ForeColor = System.Drawing.Color.White;
+            this.label_Price.Location = new System.Drawing.Point(592, 17);
+            this.label_Price.Name = "label_Price";
+            this.label_Price.Size = new System.Drawing.Size(59, 30);
+            this.label_Price.TabIndex = 7;
+            this.label_Price.Text = "Price";
+            // 
+            // label_Sold
+            // 
+            this.label_Sold.AutoSize = true;
+            this.label_Sold.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Sold.ForeColor = System.Drawing.Color.White;
+            this.label_Sold.Location = new System.Drawing.Point(476, 17);
+            this.label_Sold.Name = "label_Sold";
+            this.label_Sold.Size = new System.Drawing.Size(55, 30);
+            this.label_Sold.TabIndex = 6;
+            this.label_Sold.Text = "Sold";
+            // 
+            // Label_Quantity
+            // 
+            this.Label_Quantity.AutoSize = true;
+            this.Label_Quantity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Quantity.ForeColor = System.Drawing.Color.White;
+            this.Label_Quantity.Location = new System.Drawing.Point(301, 17);
+            this.Label_Quantity.Name = "Label_Quantity";
+            this.Label_Quantity.Size = new System.Drawing.Size(96, 30);
+            this.Label_Quantity.TabIndex = 5;
+            this.Label_Quantity.Text = "Quantity";
+            // 
+            // label_Ranking
+            // 
+            this.label_Ranking.AutoSize = true;
+            this.label_Ranking.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Ranking.ForeColor = System.Drawing.Color.White;
+            this.label_Ranking.Location = new System.Drawing.Point(3, 17);
+            this.label_Ranking.Name = "label_Ranking";
+            this.label_Ranking.Size = new System.Drawing.Size(42, 30);
+            this.label_Ranking.TabIndex = 4;
+            this.label_Ranking.Text = "No";
+            this.label_Ranking.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label_Product
+            // 
+            this.label_Product.AutoSize = true;
+            this.label_Product.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Product.ForeColor = System.Drawing.Color.White;
+            this.label_Product.Location = new System.Drawing.Point(101, 17);
+            this.label_Product.Name = "label_Product";
+            this.label_Product.Size = new System.Drawing.Size(89, 30);
+            this.label_Product.TabIndex = 3;
+            this.label_Product.Text = "Product";
+            this.label_Product.UseMnemonic = false;
+            // 
             // Label_TopProductSales
             // 
             this.Label_TopProductSales.AutoSize = true;
@@ -380,94 +464,6 @@ namespace VideoRentalStore
             this.Elipse_StoreStatus.ElipseRadius = 10;
             this.Elipse_StoreStatus.TargetControl = this.Panel_StoreStatus;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label_Price);
-            this.panel1.Controls.Add(this.label_Sold);
-            this.panel1.Controls.Add(this.Label_Quantity);
-            this.panel1.Controls.Add(this.label_Ranking);
-            this.panel1.Controls.Add(this.label_Product);
-            this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 47);
-            this.panel1.TabIndex = 2;
-            // 
-            // label_Product
-            // 
-            this.label_Product.AutoSize = true;
-            this.label_Product.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Product.ForeColor = System.Drawing.Color.White;
-            this.label_Product.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label_Product.Location = new System.Drawing.Point(101, 17);
-            this.label_Product.Name = "label_Product";
-            this.label_Product.Size = new System.Drawing.Size(89, 30);
-            this.label_Product.TabIndex = 3;
-            this.label_Product.Text = "Product";
-            // 
-            // label_Ranking
-            // 
-            this.label_Ranking.AutoSize = true;
-            this.label_Ranking.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Ranking.ForeColor = System.Drawing.Color.White;
-            this.label_Ranking.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label_Ranking.Location = new System.Drawing.Point(3, 17);
-            this.label_Ranking.Name = "label_Ranking";
-            this.label_Ranking.Size = new System.Drawing.Size(42, 30);
-            this.label_Ranking.TabIndex = 4;
-            this.label_Ranking.Text = "No";
-            this.label_Ranking.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Label_Quantity
-            // 
-            this.Label_Quantity.AutoSize = true;
-            this.Label_Quantity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Quantity.ForeColor = System.Drawing.Color.White;
-            this.Label_Quantity.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Label_Quantity.Location = new System.Drawing.Point(301, 17);
-            this.Label_Quantity.Name = "Label_Quantity";
-            this.Label_Quantity.Size = new System.Drawing.Size(96, 30);
-            this.Label_Quantity.TabIndex = 5;
-            this.Label_Quantity.Text = "Quantity";
-            // 
-            // label_Sold
-            // 
-            this.label_Sold.AutoSize = true;
-            this.label_Sold.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Sold.ForeColor = System.Drawing.Color.White;
-            this.label_Sold.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label_Sold.Location = new System.Drawing.Point(476, 17);
-            this.label_Sold.Name = "label_Sold";
-            this.label_Sold.Size = new System.Drawing.Size(55, 30);
-            this.label_Sold.TabIndex = 6;
-            this.label_Sold.Text = "Sold";
-            // 
-            // label_Price
-            // 
-            this.label_Price.AutoSize = true;
-            this.label_Price.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Price.ForeColor = System.Drawing.Color.White;
-            this.label_Price.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label_Price.Location = new System.Drawing.Point(592, 17);
-            this.label_Price.Name = "label_Price";
-            this.label_Price.Size = new System.Drawing.Size(59, 30);
-            this.label_Price.TabIndex = 7;
-            this.label_Price.Text = "Price";
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 94);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(712, 14);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(1, 114);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(711, 157);
-            this.panel3.TabIndex = 4;
-            // 
             // Icon_TotalUsers
             // 
             this.Icon_TotalUsers.Angle = 0F;
@@ -525,14 +521,14 @@ namespace VideoRentalStore
             this.Panel_DashBoard.ResumeLayout(false);
             this.Panel_ProductSales.ResumeLayout(false);
             this.Panel_ProductSales.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.Panel_TotalUsers.ResumeLayout(false);
             this.Panel_TotalUsers.PerformLayout();
             this.Panel_StaffList.ResumeLayout(false);
             this.Panel_StaffList.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

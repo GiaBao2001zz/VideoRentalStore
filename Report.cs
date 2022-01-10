@@ -36,7 +36,7 @@ namespace VideoRentalStore
             using (Graphics g = e.Graphics)
             {
                 var p = new Pen(Color.White, 1);
-                var point1 = new Point(10, 5);
+                var point1 = new Point(5, 5);
                 var point2 = new Point(670, 5);
                 g.DrawLine(p, point1, point2);
                 g.Dispose();
@@ -161,6 +161,7 @@ namespace VideoRentalStore
                         Label[] quantity = new Label[count];
                         Label[] sold = new Label[count];
                         Label[] price = new Label[count];
+                        Panel[] divider = new Panel[count];
 
                         int index = 0;
 
@@ -202,7 +203,7 @@ namespace VideoRentalStore
 
                             quantity[index].Text = value3.ToString();
                             quantity[index].Font = new Font("Segoe UI", 13);
-                            quantity[index].Size = new Size(175, 70);
+                            quantity[index].Size = new Size(175, 70); //175, 70
                             quantity[index].ForeColor = Color.White;
                             quantity[index].AutoSize = false;
                             quantity[index].TextAlign = ContentAlignment.TopLeft;
@@ -221,30 +222,53 @@ namespace VideoRentalStore
 
                             sold[index].Text = value4.ToString();
                             sold[index].Font = new Font("Segoe UI", 13);
-                            sold[index].Size = new Size(175, 70);
+                            sold[index].Size = new Size(175, 70); //175, 70
                             sold[index].ForeColor = Color.White;
                             sold[index].AutoSize = false;
                             sold[index].TextAlign = ContentAlignment.TopLeft;
                             sold[index].AutoSize = false;
                             sold[index].Location = new Point(x * 250 + 476, y + 10);
-
+                           
                             panel3.Controls.Add(ranking[index]);
                             panel3.Controls.Add(videoName[index]);
                             panel3.Controls.Add(quantity[index]);
                             panel3.Controls.Add(sold[index]);
                             panel3.Controls.Add(price[index]);
-
-                            ranking[index].BringToFront();                          
+                            
+                            ranking[index].BringToFront();
                             quantity[index].BringToFront();
                             sold[index].BringToFront();
                             price[index].BringToFront();
                             videoName[index].BringToFront();
+
+                            if (index < count - 1)
+                            {
+                                divider[index] = new Panel();
+                                divider[index].Location = new Point(x * 250, y + 53);
+                                divider[index].Size = new Size(712, 14);
+                                divider[index].Paint += new System.Windows.Forms.PaintEventHandler(this.divider_Paint);
+                                panel3.Controls.Add(divider[index]);
+                                divider[index].BringToFront();
+                            }
 
                             index++;
                             x++;
                         }
                     }
                 }
+            }
+        }
+
+        private void divider_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (Graphics g = e.Graphics)
+            {
+                var p = new Pen(Color.White, 1);
+                var point1 = new Point(5, 5);
+                var point2 = new Point(670, 5);
+                g.DrawLine(p, point1, point2);
+                g.Dispose();
             }
         }
     }
