@@ -297,7 +297,7 @@ namespace VideoRentalStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1131, 583);
+            this.ClientSize = new System.Drawing.Size(922, 583);
             this.Controls.Add(this.TextBox_Description);
             this.Controls.Add(this.Label_Quantity);
             this.Controls.Add(this.Label_Price);

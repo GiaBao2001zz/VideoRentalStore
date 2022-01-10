@@ -319,6 +319,7 @@ namespace VideoRentalStore
             this.Controls.Add(this.Panel_Menu);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Main_Staff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Staff";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Staff_FormClosed);
             this.Panel_Menu.ResumeLayout(false);
