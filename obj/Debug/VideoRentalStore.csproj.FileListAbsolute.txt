@@ -256,3 +256,13 @@ D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.
 D:\Video rental store system\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.xml
 D:\Video rental store system\VideoRentalStore\bin\Debug\Z.Dapper.Plus.xml
 D:\Video rental store system\VideoRentalStore\obj\Debug\VideoRentalStore.Import_Disk_WithFile.resources
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.dll
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\Z.Dapper.Plus.dll
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.pdb
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.xml
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\Z.Dapper.Plus.xml
+C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.Import_Disk_WithFile.resources
+C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.Report.resources

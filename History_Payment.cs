@@ -19,7 +19,7 @@ namespace VideoRentalStore
             Load_DataGrid();
 
         }
-        //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore1; Integrated Security = True";
+        //string connectionSTR = @"Data Source = ADMJIN; Initial Catalog = VideoRentalStore; Integrated Security = True";
         string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
 
         private void Load_DataGrid()
@@ -35,8 +35,11 @@ namespace VideoRentalStore
 
         void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (e.RowIndex.Equals(-1))
+            {
+                MessageBox.Show("Không được click vào header!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
 
                 //Hiện thông tin khi click vào Cell

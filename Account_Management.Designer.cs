@@ -113,6 +113,7 @@ namespace VideoRentalStore
             this.DataGrid_AccountManagement.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.DataGrid_AccountManagement.HeaderForeColor = System.Drawing.Color.White;
             this.DataGrid_AccountManagement.Location = new System.Drawing.Point(0, 0);
+            this.DataGrid_AccountManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGrid_AccountManagement.MultiSelect = false;
             this.DataGrid_AccountManagement.Name = "DataGrid_AccountManagement";
             this.DataGrid_AccountManagement.ReadOnly = true;
@@ -124,7 +125,7 @@ namespace VideoRentalStore
             this.DataGrid_AccountManagement.ShowCellToolTips = false;
             this.DataGrid_AccountManagement.ShowEditingIcon = false;
             this.DataGrid_AccountManagement.ShowRowErrors = false;
-            this.DataGrid_AccountManagement.Size = new System.Drawing.Size(803, 661);
+            this.DataGrid_AccountManagement.Size = new System.Drawing.Size(1071, 814);
             this.DataGrid_AccountManagement.TabIndex = 1;
             this.DataGrid_AccountManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_ManageStock_CellClick);
             this.DataGrid_AccountManagement.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DataGrid_AccountManagement_CellFormatting);
@@ -209,8 +210,9 @@ namespace VideoRentalStore
             // 
             this.panel2.Controls.Add(this.DataGrid_AccountManagement);
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(803, 661);
+            this.panel2.Size = new System.Drawing.Size(1071, 814);
             this.panel2.TabIndex = 2;
             // 
             // TextBox_DisplayName
@@ -225,10 +227,10 @@ namespace VideoRentalStore
             this.TextBox_DisplayName.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_DisplayName.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_DisplayName.LineThickness = 5;
-            this.TextBox_DisplayName.Location = new System.Drawing.Point(900, 360);
-            this.TextBox_DisplayName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_DisplayName.Location = new System.Drawing.Point(1200, 443);
+            this.TextBox_DisplayName.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_DisplayName.Name = "TextBox_DisplayName";
-            this.TextBox_DisplayName.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_DisplayName.Size = new System.Drawing.Size(187, 49);
             this.TextBox_DisplayName.TabIndex = 23;
             this.TextBox_DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -244,10 +246,10 @@ namespace VideoRentalStore
             this.TextBox_Password.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Password.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_Password.LineThickness = 5;
-            this.TextBox_Password.Location = new System.Drawing.Point(900, 54);
-            this.TextBox_Password.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_Password.Location = new System.Drawing.Point(1200, 66);
+            this.TextBox_Password.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_Password.Name = "TextBox_Password";
-            this.TextBox_Password.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_Password.Size = new System.Drawing.Size(187, 49);
             this.TextBox_Password.TabIndex = 24;
             this.TextBox_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -263,11 +265,11 @@ namespace VideoRentalStore
             this.TextBox_PhoneNum.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_PhoneNum.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_PhoneNum.LineThickness = 5;
-            this.TextBox_PhoneNum.Location = new System.Drawing.Point(900, 132);
-            this.TextBox_PhoneNum.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_PhoneNum.Location = new System.Drawing.Point(1200, 162);
+            this.TextBox_PhoneNum.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_PhoneNum.Name = "TextBox_PhoneNum";
             this.TextBox_PhoneNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextBox_PhoneNum.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_PhoneNum.Size = new System.Drawing.Size(187, 49);
             this.TextBox_PhoneNum.TabIndex = 25;
             this.TextBox_PhoneNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -283,10 +285,10 @@ namespace VideoRentalStore
             this.TextBox_Email.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Email.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_Email.LineThickness = 5;
-            this.TextBox_Email.Location = new System.Drawing.Point(900, 178);
-            this.TextBox_Email.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_Email.Location = new System.Drawing.Point(1200, 219);
+            this.TextBox_Email.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_Email.Name = "TextBox_Email";
-            this.TextBox_Email.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_Email.Size = new System.Drawing.Size(187, 49);
             this.TextBox_Email.TabIndex = 26;
             this.TextBox_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -302,10 +304,10 @@ namespace VideoRentalStore
             this.TextBox_CMND.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_CMND.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_CMND.LineThickness = 5;
-            this.TextBox_CMND.Location = new System.Drawing.Point(900, 223);
-            this.TextBox_CMND.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_CMND.Location = new System.Drawing.Point(1200, 274);
+            this.TextBox_CMND.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_CMND.Name = "TextBox_CMND";
-            this.TextBox_CMND.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_CMND.Size = new System.Drawing.Size(187, 49);
             this.TextBox_CMND.TabIndex = 27;
             this.TextBox_CMND.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -321,10 +323,10 @@ namespace VideoRentalStore
             this.TextBox_Address.LineIdleColor = System.Drawing.Color.Gray;
             this.TextBox_Address.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_Address.LineThickness = 5;
-            this.TextBox_Address.Location = new System.Drawing.Point(900, 269);
-            this.TextBox_Address.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.TextBox_Address.Location = new System.Drawing.Point(1200, 331);
+            this.TextBox_Address.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TextBox_Address.Name = "TextBox_Address";
-            this.TextBox_Address.Size = new System.Drawing.Size(140, 40);
+            this.TextBox_Address.Size = new System.Drawing.Size(187, 49);
             this.TextBox_Address.TabIndex = 28;
             this.TextBox_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -332,10 +334,9 @@ namespace VideoRentalStore
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(808, 369);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1077, 454);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 31);
+            this.label1.Size = new System.Drawing.Size(120, 38);
             this.label1.TabIndex = 29;
             this.label1.Text = "DisName";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -344,10 +345,9 @@ namespace VideoRentalStore
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(808, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(1077, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 31);
+            this.label2.Size = new System.Drawing.Size(124, 38);
             this.label2.TabIndex = 30;
             this.label2.Text = "Password";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -356,10 +356,9 @@ namespace VideoRentalStore
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(808, 141);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(1077, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 31);
+            this.label3.Size = new System.Drawing.Size(124, 38);
             this.label3.TabIndex = 31;
             this.label3.Text = "PhoneNum";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -368,10 +367,9 @@ namespace VideoRentalStore
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(808, 187);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1077, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 31);
+            this.label4.Size = new System.Drawing.Size(124, 38);
             this.label4.TabIndex = 32;
             this.label4.Text = "Email";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -380,10 +378,9 @@ namespace VideoRentalStore
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(808, 232);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(1077, 286);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 31);
+            this.label5.Size = new System.Drawing.Size(124, 38);
             this.label5.TabIndex = 33;
             this.label5.Text = "CMND";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -392,10 +389,9 @@ namespace VideoRentalStore
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(808, 278);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(1077, 342);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 31);
+            this.label6.Size = new System.Drawing.Size(124, 38);
             this.label6.TabIndex = 34;
             this.label6.Text = "Address";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -418,10 +414,10 @@ namespace VideoRentalStore
             this.Button_Add.IdleFillColor = System.Drawing.Color.White;
             this.Button_Add.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Add.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Add.Location = new System.Drawing.Point(836, 450);
-            this.Button_Add.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_Add.Location = new System.Drawing.Point(1115, 554);
+            this.Button_Add.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Add.Name = "Button_Add";
-            this.Button_Add.Size = new System.Drawing.Size(184, 41);
+            this.Button_Add.Size = new System.Drawing.Size(245, 50);
             this.Button_Add.TabIndex = 35;
             this.Button_Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_Add.Click += new System.EventHandler(this.Button_Add_Click);
@@ -444,10 +440,10 @@ namespace VideoRentalStore
             this.Button_Edit.IdleFillColor = System.Drawing.Color.White;
             this.Button_Edit.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Edit.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Edit.Location = new System.Drawing.Point(836, 500);
-            this.Button_Edit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_Edit.Location = new System.Drawing.Point(1115, 615);
+            this.Button_Edit.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Edit.Name = "Button_Edit";
-            this.Button_Edit.Size = new System.Drawing.Size(184, 41);
+            this.Button_Edit.Size = new System.Drawing.Size(245, 50);
             this.Button_Edit.TabIndex = 36;
             this.Button_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_Edit.Click += new System.EventHandler(this.Button_Edit_Click);
@@ -470,10 +466,10 @@ namespace VideoRentalStore
             this.Button_Delete.IdleFillColor = System.Drawing.Color.White;
             this.Button_Delete.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Delete.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Delete.Location = new System.Drawing.Point(836, 551);
-            this.Button_Delete.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_Delete.Location = new System.Drawing.Point(1115, 678);
+            this.Button_Delete.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Button_Delete.Name = "Button_Delete";
-            this.Button_Delete.Size = new System.Drawing.Size(184, 41);
+            this.Button_Delete.Size = new System.Drawing.Size(245, 50);
             this.Button_Delete.TabIndex = 37;
             this.Button_Delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_Delete.Click += new System.EventHandler(this.Button_Delete_Click);
@@ -490,10 +486,10 @@ namespace VideoRentalStore
             this.Textbox_Type.LineIdleColor = System.Drawing.Color.Gray;
             this.Textbox_Type.LineMouseHoverColor = System.Drawing.Color.Green;
             this.Textbox_Type.LineThickness = 5;
-            this.Textbox_Type.Location = new System.Drawing.Point(900, 314);
-            this.Textbox_Type.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.Textbox_Type.Location = new System.Drawing.Point(1200, 386);
+            this.Textbox_Type.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Textbox_Type.Name = "Textbox_Type";
-            this.Textbox_Type.Size = new System.Drawing.Size(140, 40);
+            this.Textbox_Type.Size = new System.Drawing.Size(187, 49);
             this.Textbox_Type.TabIndex = 38;
             this.Textbox_Type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -501,10 +497,9 @@ namespace VideoRentalStore
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(808, 323);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(1077, 398);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 31);
+            this.label7.Size = new System.Drawing.Size(124, 38);
             this.label7.TabIndex = 39;
             this.label7.Text = "Type";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -521,10 +516,10 @@ namespace VideoRentalStore
             this.Textbox_Username.LineIdleColor = System.Drawing.Color.Gray;
             this.Textbox_Username.LineMouseHoverColor = System.Drawing.Color.Green;
             this.Textbox_Username.LineThickness = 5;
-            this.Textbox_Username.Location = new System.Drawing.Point(900, 7);
-            this.Textbox_Username.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.Textbox_Username.Location = new System.Drawing.Point(1200, 9);
+            this.Textbox_Username.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.Textbox_Username.Name = "Textbox_Username";
-            this.Textbox_Username.Size = new System.Drawing.Size(140, 40);
+            this.Textbox_Username.Size = new System.Drawing.Size(187, 49);
             this.Textbox_Username.TabIndex = 40;
             this.Textbox_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -532,10 +527,9 @@ namespace VideoRentalStore
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(808, 16);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(1077, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 31);
+            this.label8.Size = new System.Drawing.Size(120, 38);
             this.label8.TabIndex = 41;
             this.label8.Text = "UserName";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -544,10 +538,9 @@ namespace VideoRentalStore
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(808, 414);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(1077, 510);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 31);
+            this.label9.Size = new System.Drawing.Size(120, 38);
             this.label9.TabIndex = 42;
             this.label9.Text = "DateCreate";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -556,10 +549,9 @@ namespace VideoRentalStore
             // 
             this.Label_DateCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_DateCreate.ForeColor = System.Drawing.SystemColors.Control;
-            this.Label_DateCreate.Location = new System.Drawing.Point(897, 414);
-            this.Label_DateCreate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label_DateCreate.Location = new System.Drawing.Point(1196, 510);
             this.Label_DateCreate.Name = "Label_DateCreate";
-            this.Label_DateCreate.Size = new System.Drawing.Size(142, 31);
+            this.Label_DateCreate.Size = new System.Drawing.Size(189, 38);
             this.Label_DateCreate.TabIndex = 43;
             this.Label_DateCreate.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
@@ -570,8 +562,8 @@ namespace VideoRentalStore
             this.CheckBox_HidePass.Checked = true;
             this.CheckBox_HidePass.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.CheckBox_HidePass.ForeColor = System.Drawing.Color.White;
-            this.CheckBox_HidePass.Location = new System.Drawing.Point(969, 102);
-            this.CheckBox_HidePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheckBox_HidePass.Location = new System.Drawing.Point(1292, 126);
+            this.CheckBox_HidePass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.CheckBox_HidePass.Name = "CheckBox_HidePass";
             this.CheckBox_HidePass.Size = new System.Drawing.Size(20, 20);
             this.CheckBox_HidePass.TabIndex = 44;
@@ -580,20 +572,19 @@ namespace VideoRentalStore
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label10.Location = new System.Drawing.Point(988, 102);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(1317, 126);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 15);
+            this.label10.Size = new System.Drawing.Size(67, 18);
             this.label10.TabIndex = 45;
             this.label10.Text = "Hide";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Account_Management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1044, 661);
+            this.ClientSize = new System.Drawing.Size(1392, 814);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.CheckBox_HidePass);
             this.Controls.Add(this.Label_DateCreate);
@@ -619,6 +610,7 @@ namespace VideoRentalStore
             this.Controls.Add(this.TextBox_DisplayName);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Account_Management";
             this.Text = "Manage_Stock";
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_AccountManagement)).EndInit();

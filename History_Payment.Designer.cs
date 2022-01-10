@@ -294,7 +294,7 @@ namespace VideoRentalStore
             // userName
             // 
             this.userName.DataPropertyName = "userName";
-            this.userName.HeaderText = "userName";
+            this.userName.HeaderText = "UserName";
             this.userName.MinimumWidth = 6;
             this.userName.Name = "userName";
             this.userName.ReadOnly = true;
@@ -302,7 +302,7 @@ namespace VideoRentalStore
             // idVideo
             // 
             this.idVideo.DataPropertyName = "idVideo";
-            this.idVideo.HeaderText = "idVideo";
+            this.idVideo.HeaderText = "IdVideo";
             this.idVideo.MinimumWidth = 6;
             this.idVideo.Name = "idVideo";
             this.idVideo.ReadOnly = true;
@@ -385,6 +385,8 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Price;
         private System.Windows.Forms.Label Label_IDVideo;
         private System.Windows.Forms.Label Label_DateRequest;
+        private System.Windows.Forms.Label Label_Quantity;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn userName;
         private System.Windows.Forms.DataGridViewTextBoxColumn idVideo;
@@ -392,7 +394,5 @@ namespace VideoRentalStore
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.Label Label_Quantity;
-        private System.Windows.Forms.Label label6;
     }
 }
