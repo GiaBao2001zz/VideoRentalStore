@@ -50,6 +50,7 @@ namespace VideoRentalStore
             this.TextBox_Description = new System.Windows.Forms.TextBox();
             this.Label_Description = new System.Windows.Forms.Label();
             this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +136,7 @@ namespace VideoRentalStore
             this.TextBox_Price.TabIndex = 5;
             this.TextBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Price.OnValueChanged += new System.EventHandler(this.TextBox_Price_OnValueChanged);
+            this.TextBox_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Price_KeyPress);
             // 
             // TextBox_SL
             // 
@@ -154,6 +156,7 @@ namespace VideoRentalStore
             this.TextBox_SL.Size = new System.Drawing.Size(340, 44);
             this.TextBox_SL.TabIndex = 6;
             this.TextBox_SL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.TextBox_SL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_SL_KeyPress);
             // 
             // TextBox_ProviderID
             // 
@@ -323,6 +326,7 @@ namespace VideoRentalStore
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TextBox_Description);
             this.panel1.Controls.Add(this.Label_Description);
             this.panel1.Controls.Add(this.TextBox_Actor);
@@ -379,6 +383,15 @@ namespace VideoRentalStore
             this.TextBox_Actor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Actor.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(149, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "label1";
+            // 
             // NhapDia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,5 +440,6 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Actor;
         private System.Windows.Forms.Label Label_Description;
         private System.Windows.Forms.TextBox TextBox_Description;
+        private System.Windows.Forms.Label label1;
     }
 }

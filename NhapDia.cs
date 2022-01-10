@@ -41,39 +41,47 @@ namespace VideoRentalStore
         }
 
         private void btnImportDisc_Click(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
-            string query = "INSERT INTO Video ( Name , id, Price, Quantity, Provider, Category, Thumbnail, Actor, Director, Decription) VALUES (@name, @id, @price, @quantity, @provider, @category, @thumbnail, @actor, @director, @decription )";
-            SqlCommand cmd = new SqlCommand(query, con);
-
-            
-            float priceDisc = float.Parse(TextBox_Price.Text);
-            int quantityDisc = Int32.Parse(TextBox_SL.Text);
-            string imgFilePath = TextBox_ImagePath.Text;
-
-            cmd.Parameters.AddWithValue("@name", TextBox_TenDia.Text);
-            cmd.Parameters.AddWithValue("@id", TextBox_DiscID.Text);
-            cmd.Parameters.AddWithValue("@price", priceDisc);
-            cmd.Parameters.AddWithValue("@quantity", quantityDisc);
-            cmd.Parameters.AddWithValue("@provider", TextBox_ProviderID.Text);
-            cmd.Parameters.AddWithValue("@category", TextBox_Category.Text);
-            cmd.Parameters.AddWithValue("@thumbnail", imgFilePath);
-            cmd.Parameters.AddWithValue("@director", TextBox_Director.Text);
-            cmd.Parameters.AddWithValue("@actor", TextBox_Actor.Text);
-            cmd.Parameters.AddWithValue("@decription", TextBox_Description.Text);
-
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-
-            con.Close();
-
-            if (i != 0)
+        {   
+            try
             {
-                MessageBox.Show("Import Successfully");
-            }          
+                SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+                string query = "INSERT INTO Video ( Name , id, Price, Quantity, Provider, Category, Thumbnail, Actor, Director, Decription) VALUES (@name, @id, @price, @quantity, @provider, @category, @thumbnail, @actor, @director, @decription )";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                float priceDisc = float.Parse(TextBox_Price.Text);
+                int quantityDisc = Int32.Parse(TextBox_SL.Text);
+                string imgFilePath = TextBox_ImagePath.Text;
+
+                cmd.Parameters.AddWithValue("@name", TextBox_TenDia.Text);
+                cmd.Parameters.AddWithValue("@id", TextBox_DiscID.Text);
+                cmd.Parameters.AddWithValue("@price", priceDisc);
+                cmd.Parameters.AddWithValue("@quantity", quantityDisc);
+                cmd.Parameters.AddWithValue("@provider", TextBox_ProviderID.Text);
+                cmd.Parameters.AddWithValue("@category", TextBox_Category.Text);
+                cmd.Parameters.AddWithValue("@thumbnail", imgFilePath);
+                cmd.Parameters.AddWithValue("@director", TextBox_Director.Text);
+                cmd.Parameters.AddWithValue("@actor", TextBox_Actor.Text);
+                cmd.Parameters.AddWithValue("@decription", TextBox_Description.Text);
+
+                con.Open();
+                int i = cmd.ExecuteNonQuery();
+
+                con.Close();
+
+                if (i != 0)
+                {
+                    MessageBox.Show("Import Successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+                  
         }
 
         
+
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
@@ -117,6 +125,34 @@ namespace VideoRentalStore
         private void TextBox_Price_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox_Price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox_SL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
