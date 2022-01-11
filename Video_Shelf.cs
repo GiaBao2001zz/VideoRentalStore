@@ -43,7 +43,7 @@ namespace VideoRentalStore
                 ComboBox_Category.SelectedItem = Category;
                 trigger = 1;
             }
-            
+
 
             if (trigger == 1)
             {
@@ -51,13 +51,13 @@ namespace VideoRentalStore
                 {
                     connection.Open();
                     var command = connection.CreateCommand();
-                    if (ComboBox_Category.SelectedItem != "All")
+                    if (ComboBox_Category.SelectedItem.ToString() != "All")
                     {
-                        command.CommandText = "Select* from Video  where (Category like '" + ComboBox_Category.SelectedItem + "') AND ( Name like '%" + TextBox_Search.Text + "%')";
+                        command.CommandText = "Select* from Video  where (Category like '" + ComboBox_Category.SelectedItem + "') AND ( Name like '%" + TextBox_Search.Text + "%') AND Quantity > 0";
                     }
-                    if (ComboBox_Category.SelectedItem == "All")
+                    if (ComboBox_Category.SelectedItem.ToString() == "All")
                     {
-                        command.CommandText = "Select* from Video  where  Name like '%" + TextBox_Search.Text + "%'";
+                        command.CommandText = "Select* from Video  where  Name like '%" + TextBox_Search.Text + "%' AND Quantity > 0";
                     }
                     int count = 0;
 
@@ -66,6 +66,7 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
+                        var indexOfColumn4 = reader.GetOrdinal("Quantity");
                         while (reader.Read())
                         {
                             var value1 = reader.GetValue(indexOfColumn1);
@@ -80,6 +81,7 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
+
                         int x = 0;
                         int y = 20;
                         PictureBox[] picturebox = new PictureBox[count];
@@ -90,6 +92,7 @@ namespace VideoRentalStore
                             var value1 = reader.GetValue(indexOfColumn1);
                             var value2 = reader.GetValue(indexOfColumn2);
                             var value3 = reader.GetValue(indexOfColumn3);
+
                             if ((x % 4 == 0) && (index != 0))
                             {
                                 y = y + 325; // Mỗi hàng 4 hình
@@ -143,7 +146,7 @@ namespace VideoRentalStore
             {
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT Name, Thumbnail, id, Quantity FROM Video";
+                    command.CommandText = "SELECT Name, Thumbnail, id FROM Video WHERE Quantity > 0";
                     int count = 0;
                     connection.Open();
                     using (var reader = command.ExecuteReader())
@@ -151,12 +154,12 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
-                        var indexOfColumn4 = reader.GetOrdinal("Quantity");
+
                         while (reader.Read())
                         {
                             var value1 = reader.GetValue(indexOfColumn1);
                             var value2 = reader.GetValue(indexOfColumn2);
-                            var value3 = reader.GetValue(indexOfColumn3); 
+                            var value3 = reader.GetValue(indexOfColumn3);
                             count++;
                         }
                     }
@@ -166,7 +169,7 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
-                        var indexOfColumn4 = reader.GetOrdinal("Quantity");
+
                         int x = 0;
                         int y = 20;
                         PictureBox[] picturebox = new PictureBox[count];
@@ -177,63 +180,61 @@ namespace VideoRentalStore
                             var value1 = reader.GetValue(indexOfColumn1);
                             var value2 = reader.GetValue(indexOfColumn2);
                             var value3 = reader.GetValue(indexOfColumn3);
-                            var value4 = reader.GetValue(indexOfColumn4);
-                            if (Int32.Parse(value4.ToString()) != 0)
+
+                            if ((x % 4 == 0) && (index != 0))
                             {
-                                if ((x % 4 == 0) && (index != 0))
-                                {
-                                    y = y + 325; // Mỗi hàng 4 hình
-                                    x = 0;
-                                }
-                                picturebox[index] = new PictureBox();
-                                label[index] = new Label();
-                                picturebox[index].Image = Image.FromFile(value2.ToString());
-                                picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
-                                picturebox[index].Location = new Point(x * 250 + 60, y);
-                                picturebox[index].Size = new Size(175, 250); //150,200
-                                picturebox[index].Tag = value3;
-                                label[index].Text = (string)value1;
-                                label[index].Font = new Font("Segoe UI", 13);
-                                label[index].Size = new Size(175, 70);
-                                label[index].ForeColor = Color.White;
-                                label[index].AutoSize = false;
-                                label[index].TextAlign = ContentAlignment.MiddleCenter;
-                                label[index].AutoSize = false;
-                                label[index].Location = new Point(x * 250 + 60, y + 245);
-                                picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
-                                picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
-                                picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
-
-                                //Make rounded corner picturebox
-                                Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
-                                System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-                                int d = 10;
-                                gp.AddArc(r.X, r.Y, d, d, 180, 90);
-                                gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
-                                gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
-                                gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
-                                picturebox[index].Region = new Region(gp);
-
-                                this.Panel_ShowVideo.Controls.Add(picturebox[index]);
-                                this.Panel_ShowVideo.Controls.Add(label[index]);
-                                label[index].BringToFront();
-                                picturebox[index].BringToFront();
-                                index++;
-                                x++;
+                                y = y + 325; // Mỗi hàng 4 hình
+                                x = 0;
                             }
+                            picturebox[index] = new PictureBox();
+                            label[index] = new Label();
+                            picturebox[index].Image = Image.FromFile(value2.ToString());
+                            picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
+                            picturebox[index].Location = new Point(x * 250 + 60, y);
+                            picturebox[index].Size = new Size(175, 250); //150,200
+                            picturebox[index].Tag = value3;
+                            label[index].Text = (string)value1;
+                            label[index].Font = new Font("Segoe UI", 13);
+                            label[index].Size = new Size(175, 70);
+                            label[index].ForeColor = Color.White;
+                            label[index].AutoSize = false;
+                            label[index].TextAlign = ContentAlignment.MiddleCenter;
+                            label[index].AutoSize = false;
+                            label[index].Location = new Point(x * 250 + 60, y + 245);
+                            picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
+                            picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
+                            picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
+
+                            //Make rounded corner picturebox
+                            Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
+                            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+                            int d = 10;
+                            gp.AddArc(r.X, r.Y, d, d, 180, 90);
+                            gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+                            gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+                            gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+                            picturebox[index].Region = new Region(gp);
+
+                            this.Panel_ShowVideo.Controls.Add(picturebox[index]);
+                            this.Panel_ShowVideo.Controls.Add(label[index]);
+                            label[index].BringToFront();
+                            picturebox[index].BringToFront();
+                            index++;
+                            x++;
+
                         }
                     }
                     if (count == 0) NothingFound();
                     connection.Close();
                 }
             }
-            
+
         }
 
         internal void Active(object sender, MouseEventArgs e)
         {
             //Show form Video_Info
-            
+
             Main_User main_User = (Main_User)ParentForm;
             if (main_User.Panel_SwitchForm.Controls.Count > 0)
                 main_User.Panel_SwitchForm.Controls[0].Dispose();
@@ -241,8 +242,8 @@ namespace VideoRentalStore
             Video_Info_ReadOnly video_Info = new Video_Info_ReadOnly() { Dock = DockStyle.Fill, TopLevel = false };
             main_User.Panel_SwitchForm.Controls.Add(video_Info);
             video_Info.Show();
-            
-            
+
+
 
             //Show infomation of disc
             PictureBox picture = sender as PictureBox;
@@ -251,7 +252,7 @@ namespace VideoRentalStore
                 using (var command = connection.CreateCommand())
                 {
                     command.Parameters.AddWithValue("@id", picture.Tag.ToString());
-                    command.CommandText = "SELECT Name, Price, Quantity, Director, Actor, Decription, Thumbnail, Provider, Category, id FROM Video WHERE id=@id";                    
+                    command.CommandText = "SELECT Name, Price, Quantity, Director, Actor, Decription, Thumbnail, Provider, Category, id FROM Video WHERE id=@id";
                     connection.Open();
                     using (var reader = command.ExecuteReader())
                     {
@@ -288,7 +289,7 @@ namespace VideoRentalStore
                             video_Info.Label_Discription.Text = descriptionVideo_data.ToString();
                             video_Info.Label_ShowCategory.Text = categoryVideo_data.ToString();
                             video_Info.TextBox_idVideo.Text = idVideo_data.ToString();
-                           
+
                         }
                     }
                 }
@@ -297,14 +298,14 @@ namespace VideoRentalStore
 
         private void NothingFound()
         {
-            
+
             PictureBox picture = new PictureBox();
             picture.Location = new Point(0, 0);
             picture.Image = Properties.Resources.Sorry;
             picture.Size = new Size(900, 500);
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             this.Panel_ShowVideo.Controls.Add(picture);
-            
+
         }
         internal void HoverMouseEnter(object sender, EventArgs e)
         {
@@ -330,7 +331,7 @@ namespace VideoRentalStore
             }
         }
 
-      
+
 
         private void Panel_ShowVideo_Paint(object sender, PaintEventArgs e)
         {
@@ -340,22 +341,22 @@ namespace VideoRentalStore
         private void Button_Search_Click_1(object sender, EventArgs e)
         {
             this.Panel_ShowVideo.Controls.Clear();
-            
-            
+
+
             using (var connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True"))
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                if (ComboBox_Category.SelectedItem != "All")
+                if (ComboBox_Category.SelectedItem.ToString() != "All")
                 {
-                    command.CommandText = "Select* from Video  where (Category like '" + ComboBox_Category.SelectedItem + "') AND ( Name like '%" + TextBox_Search.Text + "%')";
+                    command.CommandText = "Select* from Video  where (Category like '" + ComboBox_Category.SelectedItem + "') AND ( Name like '%" + TextBox_Search.Text + "%') AND Quantity > 0";
                 }
-                if (ComboBox_Category.SelectedItem == "All")
+                if (ComboBox_Category.SelectedItem.ToString() == "All")
                 {
-                    command.CommandText = "Select* from Video  where  Name like '%" + TextBox_Search.Text + "%'";
+                    command.CommandText = "Select* from Video  where  Name like '%" + TextBox_Search.Text + "%' AND Quantity > 0";
                 }
                 int count = 0;
-                
+
                 using (var reader = command.ExecuteReader())
                 {
                     var indexOfColumn1 = reader.GetOrdinal("Name");
@@ -430,8 +431,8 @@ namespace VideoRentalStore
                 connection.Close();
                 if (count == 0) NothingFound();
             }
-        
-        
+
+
         }
 
         private void TextBox_Search_KeyDown(object sender, KeyEventArgs e)
