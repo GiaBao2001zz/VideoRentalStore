@@ -88,7 +88,15 @@ namespace VideoRentalStore
 
         private void Button_Cancel_Click(object sender, EventArgs e)
         {
+            Main_Staff main_Admin = (Main_Staff)ParentForm;
+            if (main_Admin.Panel_SwtichForm.Controls.Count > 0)
+                main_Admin.Panel_SwtichForm.Controls[0].Dispose();
+
+            Manage_Stock manage_stock = new Manage_Stock() { Dock = DockStyle.Fill, TopLevel = false };
+            main_Admin.Panel_SwtichForm.Controls.Add(manage_stock);
+            manage_stock.Show();
             this.Close();
+
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -122,6 +130,17 @@ namespace VideoRentalStore
                     Load_Info();
                 }
                 con.Close();
+
+
+
+                Main_Staff main_Admin = (Main_Staff)ParentForm;
+                if (main_Admin.Panel_SwtichForm.Controls.Count > 0)
+                    main_Admin.Panel_SwtichForm.Controls[0].Dispose();
+                Manage_Stock manage_stock = new Manage_Stock() { Dock = DockStyle.Fill, TopLevel = false };
+                main_Admin.Panel_SwtichForm.Controls.Add(manage_stock);
+                
+                manage_stock.Show();
+                
             }
         }
     }

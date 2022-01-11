@@ -281,22 +281,22 @@ namespace VideoRentalStore
             // 
             // Label_UserName
             // 
-            this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(765, 72);
+            this.Label_UserName.Location = new System.Drawing.Point(106, 37);
             this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
+            this.Label_UserName.Size = new System.Drawing.Size(196, 60);
             this.Label_UserName.TabIndex = 1;
             this.Label_UserName.Text = "Nguyen Trong Tinh";
+            this.Label_UserName.Click += new System.EventHandler(this.Label_UserName_Click);
             // 
             // Picture_UserPFP
             // 
             this.Picture_UserPFP.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_UserPFP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Picture_UserPFP.Dock = System.Windows.Forms.DockStyle.Left;
             this.Picture_UserPFP.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
             this.Picture_UserPFP.ImageActive = null;
-            this.Picture_UserPFP.Location = new System.Drawing.Point(944, 0);
+            this.Picture_UserPFP.Location = new System.Drawing.Point(0, 0);
             this.Picture_UserPFP.Name = "Picture_UserPFP";
             this.Picture_UserPFP.Size = new System.Drawing.Size(100, 100);
             this.Picture_UserPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -333,7 +333,6 @@ namespace VideoRentalStore
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.Panel_Title.ResumeLayout(false);
-            this.Panel_Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_UserPFP)).EndInit();
             this.ResumeLayout(false);
 

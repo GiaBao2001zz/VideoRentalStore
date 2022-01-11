@@ -97,12 +97,18 @@ namespace VideoRentalStore
 
         private void Button_ShowInfo_Click(object sender, EventArgs e)
         {
-            Main_Staff main_Staff = (Main_Staff)ParentForm;
+            Main_Staff main_Admin = (Main_Staff)ParentForm;
+           
             var value = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
-            Video_Info video_Info = new Video_Info(value.ToString()) { Dock = DockStyle.Fill, TopLevel = false };
-            main_Staff.Panel_SwtichForm.Controls.Add(video_Info);
-            video_Info.Show();
-            video_Info.BringToFront();
+            Video_Info Video_info = new Video_Info(value.ToString()) { Dock = DockStyle.Fill, TopLevel = false };
+            main_Admin.Panel_SwtichForm.Controls.Add(Video_info);
+            this.Hide();
+            Video_info.Show();
+           
+
+
+
+
         }
     }
 }

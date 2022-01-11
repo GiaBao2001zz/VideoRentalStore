@@ -62,7 +62,7 @@ namespace VideoRentalStore
             this.Label_Actor.ForeColor = System.Drawing.Color.White;
             this.Label_Actor.Location = new System.Drawing.Point(60, 260);
             this.Label_Actor.Name = "Label_Actor";
-            this.Label_Actor.Size = new System.Drawing.Size(85, 32);
+            this.Label_Actor.Size = new System.Drawing.Size(86, 32);
             this.Label_Actor.TabIndex = 31;
             this.Label_Actor.Text = "Actors:";
             // 
@@ -73,7 +73,7 @@ namespace VideoRentalStore
             this.Label_Director.ForeColor = System.Drawing.Color.White;
             this.Label_Director.Location = new System.Drawing.Point(60, 200);
             this.Label_Director.Name = "Label_Director";
-            this.Label_Director.Size = new System.Drawing.Size(104, 32);
+            this.Label_Director.Size = new System.Drawing.Size(105, 32);
             this.Label_Director.TabIndex = 30;
             this.Label_Director.Text = "Director:";
             // 
@@ -84,7 +84,7 @@ namespace VideoRentalStore
             this.Label_Category.ForeColor = System.Drawing.Color.White;
             this.Label_Category.Location = new System.Drawing.Point(60, 140);
             this.Label_Category.Name = "Label_Category";
-            this.Label_Category.Size = new System.Drawing.Size(115, 32);
+            this.Label_Category.Size = new System.Drawing.Size(116, 32);
             this.Label_Category.TabIndex = 35;
             this.Label_Category.Text = "Category:";
             // 
@@ -95,7 +95,7 @@ namespace VideoRentalStore
             this.Label_Price.ForeColor = System.Drawing.Color.White;
             this.Label_Price.Location = new System.Drawing.Point(60, 20);
             this.Label_Price.Name = "Label_Price";
-            this.Label_Price.Size = new System.Drawing.Size(148, 32);
+            this.Label_Price.Size = new System.Drawing.Size(149, 32);
             this.Label_Price.TabIndex = 41;
             this.Label_Price.Text = "Price  (VNĐ):";
             // 
@@ -106,7 +106,7 @@ namespace VideoRentalStore
             this.Label_Quantity.ForeColor = System.Drawing.Color.White;
             this.Label_Quantity.Location = new System.Drawing.Point(60, 80);
             this.Label_Quantity.Name = "Label_Quantity";
-            this.Label_Quantity.Size = new System.Drawing.Size(111, 32);
+            this.Label_Quantity.Size = new System.Drawing.Size(112, 32);
             this.Label_Quantity.TabIndex = 42;
             this.Label_Quantity.Text = "In stocks:";
             // 
@@ -181,7 +181,7 @@ namespace VideoRentalStore
             this.Label_ShowActor.ForeColor = System.Drawing.Color.White;
             this.Label_ShowActor.Location = new System.Drawing.Point(232, 260);
             this.Label_ShowActor.Name = "Label_ShowActor";
-            this.Label_ShowActor.Size = new System.Drawing.Size(158, 32);
+            this.Label_ShowActor.Size = new System.Drawing.Size(159, 32);
             this.Label_ShowActor.TabIndex = 47;
             this.Label_ShowActor.Text = "Elson , Chime";
             // 
@@ -192,7 +192,7 @@ namespace VideoRentalStore
             this.Label_ShowDirector.ForeColor = System.Drawing.Color.White;
             this.Label_ShowDirector.Location = new System.Drawing.Point(232, 200);
             this.Label_ShowDirector.Name = "Label_ShowDirector";
-            this.Label_ShowDirector.Size = new System.Drawing.Size(103, 32);
+            this.Label_ShowDirector.Size = new System.Drawing.Size(104, 32);
             this.Label_ShowDirector.TabIndex = 46;
             this.Label_ShowDirector.Text = "Chikitori";
             // 
@@ -203,7 +203,7 @@ namespace VideoRentalStore
             this.Label_ShowCategory.ForeColor = System.Drawing.Color.White;
             this.Label_ShowCategory.Location = new System.Drawing.Point(232, 140);
             this.Label_ShowCategory.Name = "Label_ShowCategory";
-            this.Label_ShowCategory.Size = new System.Drawing.Size(83, 32);
+            this.Label_ShowCategory.Size = new System.Drawing.Size(84, 32);
             this.Label_ShowCategory.TabIndex = 45;
             this.Label_ShowCategory.Text = "Horror";
             this.Label_ShowCategory.Click += new System.EventHandler(this.Label_ShowCategory_Click);
@@ -215,7 +215,7 @@ namespace VideoRentalStore
             this.Label_ShowQuantity.ForeColor = System.Drawing.Color.LimeGreen;
             this.Label_ShowQuantity.Location = new System.Drawing.Point(232, 80);
             this.Label_ShowQuantity.Name = "Label_ShowQuantity";
-            this.Label_ShowQuantity.Size = new System.Drawing.Size(53, 32);
+            this.Label_ShowQuantity.Size = new System.Drawing.Size(54, 32);
             this.Label_ShowQuantity.TabIndex = 44;
             this.Label_ShowQuantity.Text = "123";
             // 
@@ -226,7 +226,7 @@ namespace VideoRentalStore
             this.Label_ShowPrice.ForeColor = System.Drawing.Color.Yellow;
             this.Label_ShowPrice.Location = new System.Drawing.Point(232, 20);
             this.Label_ShowPrice.Name = "Label_ShowPrice";
-            this.Label_ShowPrice.Size = new System.Drawing.Size(86, 32);
+            this.Label_ShowPrice.Size = new System.Drawing.Size(87, 32);
             this.Label_ShowPrice.TabIndex = 43;
             this.Label_ShowPrice.Text = "50 000";
             // 

@@ -85,7 +85,7 @@ namespace VideoRentalStore
             {
                 Main_User main_User = (Main_User)ParentForm;
 
-                string userName = main_User.Label_UserName.Text;
+                string userName = main_User.UserName;
                 double price = (double.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat)) * 0.1;                            
 
                 SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
@@ -185,6 +185,7 @@ namespace VideoRentalStore
             Main_User main_User = (Main_User)ParentForm;
             if (main_User.Panel_SwitchForm.Controls.Count > 0)
                 main_User.Panel_SwitchForm.Controls[0].Dispose();
+
             Video_Shelf video_Info = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
             main_User.Panel_SwitchForm.Controls.Add(video_Info);
             video_Info.Show();

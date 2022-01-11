@@ -202,5 +202,10 @@ namespace VideoRentalStore
             
 
         }
+
+        private void Label_UserName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

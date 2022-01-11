@@ -95,6 +95,8 @@ namespace VideoRentalStore
             SelectTop5SoldDisc();
             panel3.AutoScroll = true;
             ShowTop5ProductSold();
+            Load_Chart();
+            Load_Info();
         }
         //Disable horizontal scrollbar
         const int SB_HORZ = 0;
@@ -274,95 +276,62 @@ namespace VideoRentalStore
             }
         }
 
-        private void Update_Chart(DataTable dt)
+      
+        
+
+        private void Load_Chart()
         {
-            
-            foreach (DataRow row in dt.Rows)
-            {
-                
-            }
-
-        }
-        public class Earning
-        {
-            public int Year { get; set; }
-            public int Month { get; set; }
-
-            public int Value { get; set; }
-        }
-
-        private void ComboBox_ChartType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Chart_Earning.Series.Clear();
-            if (ComboBox_ChartType.Text == "This Year")
-            {
-                Chart_Earning.AxisX.Add(new LiveCharts.Wpf.Axis
-                {
-                    Title = "Month",
-                    Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec" }
-                }
-                    );
-                Chart_Earning.AxisY.Add(new LiveCharts.Wpf.Axis
-                {
-
-                    LabelFormatter = value => value.ToString("C")
-                });
-                Chart_Earning.LegendLocation = LiveCharts.LegendLocation.Right;
-
-            }
             SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
 
-            string query = "Select DateRequest, Price from Request";
+            string query = "select datepart(yyyy, [DateRequest]) as [Year], datepart(mm, [DateRequest]) as [Month] ,SUM(Price) as Value from Request group by datepart(yyyy, [DateRequest]), datepart(mm, [DateRequest])";
 
             connection.Open();
             SqlCommand command = new SqlCommand(query, connection);
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             adapter.Fill(dt);
-     
+
+            connection.Close();
+           
+
+       
+            Chart_Earning.DataSource = dt;
+            //set the member of the chart data source used to data bind to the X-values of the series  
+            Chart_Earning.Series["2021"].XValueMember = "Month";
+            //set the member columns of the chart data source used to data bind to the X-values of the series  
+            Chart_Earning.Series["2021"].YValueMembers = "Value";
+            Chart_Earning.ChartAreas[0].AxisY.LabelStyle.Format = "{0:0,}K";
+            Chart_Earning.ChartAreas[0].AxisX.Title = "Month";
+            Chart_Earning.Titles.Add("Earning");
+            
+            
+
+        }
+
+        private void Load_Info()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+
+            string query = "select datepart(yyyy, [DateRequest]) as [Year], datepart(mm, [DateRequest]) as [Month] ,SUM(Price) as Value from Request group by datepart(yyyy, [DateRequest]), datepart(mm, [DateRequest])";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
             connection.Close();
 
-            DataTable source = new DataTable();
-            
-            source.Columns.Add("Year", typeof(int)); // dt.Columns.Add("Id", typeof(int));
-            dt.Columns.Add("Month", typeof(int));
-            dt.Columns.Add("Value", typeof(float));
-            int i = 0;
+            string sMonth = DateTime.Now.ToString("MM");
+            int convert = Int32.Parse(sMonth);
+            sMonth = convert.ToString();
+            MessageBox.Show(sMonth);
+            int j = 0;
             foreach (DataRow row in dt.Rows)
             {
-
-                source.Rows[i]["Year"] =  dt.Rows[i].Field<DateTime>("DateRequest").Year;
-                source.Rows[i]["Month"] = dt.Rows[i].Field<DateTime>("DateRequest").Month;
-                
-                i++;
+                if (dt.Rows[j]["Month"].ToString() == sMonth) Label_Totalprofit_Number.Text = dt.Rows[j]["Value"].ToString();
+                j++;
             }
-            SeriesCollection series = new SeriesCollection(); 
-            Earning_Source.DataSource = new List<Earning>();
-            Earning_Source.DataSource = dt;
-
-            var years = (from o in Earning_Source.DataSource as List<Earning>
-                         select new { Year = o.Year }).Distinct();
-            foreach(var year in years)
-            {
-                List<double> values = new List<double>();
-                for (int month = 1; month <= 12; month++)
-                {
-                    double value = 0;
-                    var data = from o in Earning_Source.DataSource as List<Earning>
-                               where o.Year.Equals(year.Year) && o.Month.Equals(month)
-                               orderby o.Month ascending
-                               select new { o.Value, o.Month };
-                    if (data.SingleOrDefault() != null)
-                    {
-                        value = data.SingleOrDefault().Value;
-                        values.Add(value);
-                    }
-                    series.Add(new LineSeries() { Title = year.Year.ToString(), Values = new ChartValues<double>(values) });
-                }
-                Chart_Earning.Series = series;
-
-            }
-
 
         }
     }

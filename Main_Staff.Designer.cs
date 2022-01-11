@@ -276,22 +276,21 @@ namespace VideoRentalStore
             // 
             // Label_UserName
             // 
-            this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(765, 72);
+            this.Label_UserName.Location = new System.Drawing.Point(106, 41);
             this.Label_UserName.Name = "Label_UserName";
-            this.Label_UserName.Size = new System.Drawing.Size(173, 25);
+            this.Label_UserName.Size = new System.Drawing.Size(203, 56);
             this.Label_UserName.TabIndex = 2;
             this.Label_UserName.Text = "Nguyen Trong Tinh";
             // 
             // Picture_StaffPFP
             // 
             this.Picture_StaffPFP.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Left;
             this.Picture_StaffPFP.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
             this.Picture_StaffPFP.ImageActive = null;
-            this.Picture_StaffPFP.Location = new System.Drawing.Point(944, 0);
+            this.Picture_StaffPFP.Location = new System.Drawing.Point(0, 0);
             this.Picture_StaffPFP.Name = "Picture_StaffPFP";
             this.Picture_StaffPFP.Size = new System.Drawing.Size(100, 100);
             this.Picture_StaffPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -325,7 +324,6 @@ namespace VideoRentalStore
             this.Panel_Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picture_Logo)).EndInit();
             this.Panel_Title.ResumeLayout(false);
-            this.Panel_Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_StaffPFP)).EndInit();
             this.ResumeLayout(false);
 

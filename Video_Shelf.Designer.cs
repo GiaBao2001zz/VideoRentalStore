@@ -29,12 +29,15 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Panel_ControlButton = new System.Windows.Forms.Panel();
             this.Panel_ShowVideo = new System.Windows.Forms.Panel();
             this.Panel_Search = new System.Windows.Forms.Panel();
             this.ComboBox_Category = new System.Windows.Forms.ComboBox();
             this.Button_Search = new Bunifu.Framework.UI.BunifuImageButton();
             this.TextBox_Search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Elipse_SearchBar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Elipse_ComboBox = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_ShowVideo.SuspendLayout();
             this.Panel_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_Search)).BeginInit();
@@ -77,7 +80,7 @@ namespace VideoRentalStore
             // 
             this.ComboBox_Category.BackColor = System.Drawing.Color.White;
             this.ComboBox_Category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox_Category.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_Category.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox_Category.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_Category.FormattingEnabled = true;
             this.ComboBox_Category.Items.AddRange(new object[] {
@@ -95,9 +98,9 @@ namespace VideoRentalStore
             "Thriller",
             "Western",
             ""});
-            this.ComboBox_Category.Location = new System.Drawing.Point(418, 26);
+            this.ComboBox_Category.Location = new System.Drawing.Point(423, 13);
             this.ComboBox_Category.Name = "ComboBox_Category";
-            this.ComboBox_Category.Size = new System.Drawing.Size(121, 31);
+            this.ComboBox_Category.Size = new System.Drawing.Size(128, 40);
             this.ComboBox_Category.TabIndex = 2;
             // 
             // Button_Search
@@ -124,7 +127,7 @@ namespace VideoRentalStore
             this.TextBox_Search.HintText = "Search";
             this.TextBox_Search.isPassword = false;
             this.TextBox_Search.LineFocusedColor = System.Drawing.Color.Green;
-            this.TextBox_Search.LineIdleColor = System.Drawing.Color.Gray;
+            this.TextBox_Search.LineIdleColor = System.Drawing.Color.Green;
             this.TextBox_Search.LineMouseHoverColor = System.Drawing.Color.Green;
             this.TextBox_Search.LineThickness = 4;
             this.TextBox_Search.Location = new System.Drawing.Point(558, 13);
@@ -134,6 +137,16 @@ namespace VideoRentalStore
             this.TextBox_Search.TabIndex = 0;
             this.TextBox_Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_Search_KeyDown);
+            // 
+            // Elipse_SearchBar
+            // 
+            this.Elipse_SearchBar.ElipseRadius = 10;
+            this.Elipse_SearchBar.TargetControl = this.TextBox_Search;
+            // 
+            // Elipse_ComboBox
+            // 
+            this.Elipse_ComboBox.ElipseRadius = 15;
+            this.Elipse_ComboBox.TargetControl = this.ComboBox_Category;
             // 
             // Video_Shelf
             // 
@@ -164,5 +177,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.ComboBox ComboBox_Category;
         private Bunifu.Framework.UI.BunifuImageButton Button_Search;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBox_Search;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_SearchBar;
+        private Bunifu.Framework.UI.BunifuElipse Elipse_ComboBox;
     }
 }

@@ -23,6 +23,7 @@ namespace VideoRentalStore
             MovieName = Movie_Name;
             Category = _Category;
             LoadInfo();
+           
         }
         private void LoadInfo()
         {
@@ -300,9 +301,9 @@ namespace VideoRentalStore
         {
 
             PictureBox picture = new PictureBox();
-            picture.Location = new Point(0, 0);
+            picture.Location = new Point(60, 0);
             picture.Image = Properties.Resources.Sorry;
-            picture.Size = new Size(900, 500);
+            picture.Size = new Size(900, 600);
             picture.SizeMode = PictureBoxSizeMode.Zoom;
             this.Panel_ShowVideo.Controls.Add(picture);
 
