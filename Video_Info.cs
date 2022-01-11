@@ -17,7 +17,6 @@ namespace VideoRentalStore
         {
             InitializeComponent();
             ID = VideoID;
-            MessageBox.Show(ID);
             //Check if Description need to have scrollbars or not
             if (TextBox_Description.TextLength > 600)
             {

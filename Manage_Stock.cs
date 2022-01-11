@@ -19,7 +19,7 @@ namespace VideoRentalStore
             Load_DataGrid();
         }
 
-        
+
 
         private void Button_Import_Click(object sender, EventArgs e)
         {
@@ -62,16 +62,16 @@ namespace VideoRentalStore
 
         }
 
-         void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
+        void DataGrid_ManageStock_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
 
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
             connection.Open();
 
             var value2 = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
-            
+
 
             string type = "SELECT Thumbnail FROM Video WHERE id = @value2" /*+ value2*/;
             SqlCommand command = new SqlCommand(type, connection);
@@ -85,29 +85,34 @@ namespace VideoRentalStore
             string link = data.Rows[0][0].ToString();
 
             PictureBox_Thumbnail.Image = Image.FromFile(link.ToString());
-            
+
         }
 
         private void Button_Import_Click_1(object sender, EventArgs e)
         {
             NhapDia form = new NhapDia();
-            
+
             form.ShowDialog();
         }
 
         private void Button_ShowInfo_Click(object sender, EventArgs e)
         {
-            Main_Staff main_Admin = (Main_Staff)ParentForm;
-           
             var value = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
-            Video_Info Video_info = new Video_Info(value.ToString()) { Dock = DockStyle.Fill, TopLevel = false };
-            main_Admin.Panel_SwtichForm.Controls.Add(Video_info);
-            this.Hide();
-            Video_info.Show();
-           
+
+            Main_Staff main_Staff = (Main_Staff)ParentForm;
+            if (main_Staff.Panel_SwtichForm.Controls.Count > 0)
+
+                main_Staff.Panel_SwtichForm.Controls[0].Dispose();
 
 
 
+            Video_Info video_Info = new Video_Info(value.ToString()) { Dock = DockStyle.Fill, TopLevel = false };
+            main_Staff.Panel_SwtichForm.Controls.Add(video_Info);
+            video_Info.Show();
+            Button_ShowInfo.Enabled = false;
+            Button_Import.Enabled = false;
+            Button_Delete.Enabled = false;
+            this.Close();
 
         }
     }

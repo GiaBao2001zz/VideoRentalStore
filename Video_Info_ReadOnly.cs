@@ -182,7 +182,7 @@ namespace VideoRentalStore
 
         private void Button_Back_Click(object sender, EventArgs e)
         {
-            Main_User main_User = (Main_User)ParentForm;
+            Main_User main_User = new Main_User();
             if (main_User.Panel_SwitchForm.Controls.Count > 0)
                 main_User.Panel_SwitchForm.Controls[0].Dispose();
 
