@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace VideoRentalStore
             InitializeComponent();
 
              this.UserName = username;
+            Label_AccountType.Text = Get_DisplayName(username);
+
         }
         private string UserName; 
         public void Button_Account_Info_Click(object sender, EventArgs e)
@@ -31,6 +34,7 @@ namespace VideoRentalStore
             Account_Info grid = new Account_Info(UserName) { Dock = DockStyle.Fill, TopLevel = false };
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
+            
         }
         
        
@@ -45,7 +49,26 @@ namespace VideoRentalStore
             this.Panel_Switching.Controls.Add(grid);
             grid.Show();
         }
+     private string Get_DisplayName(string user)
+        {
+            //Label_UserName.Text = Get_DisplayName(UserName);
 
+            //MessageBox.Show(user);
+
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+
+            string query = "Select DisplayName FROM Account WHERE Username = '" + user + "'";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+
+            connection.Close();
+            data.Rows[0]["DisplayName"].ToString();
+            return data.Rows[0]["DisplayName"].ToString();
+        }
         private void Button_LogOut_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to log out? ", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -38,15 +38,15 @@ namespace VideoRentalStore
             this.Button_Delete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_ShowInfo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PictureBox_Thumbnail = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DataGrid_ManageStock = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.PictureBox_Thumbnail = new System.Windows.Forms.PictureBox();
             this.Panel_ThumbNail.SuspendLayout();
             this.Panel_Buttons.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_ManageStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_ThumbNail
@@ -178,6 +178,7 @@ namespace VideoRentalStore
             this.Button_ShowInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_ShowInfo.Textcolor = System.Drawing.Color.White;
             this.Button_ShowInfo.TextFont = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_ShowInfo.Click += new System.EventHandler(this.Button_ShowInfo_Click);
             // 
             // panel1
             // 
@@ -187,17 +188,6 @@ namespace VideoRentalStore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(354, 243);
             this.panel1.TabIndex = 3;
-            // 
-            // PictureBox_Thumbnail
-            // 
-            this.PictureBox_Thumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PictureBox_Thumbnail.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
-            this.PictureBox_Thumbnail.Location = new System.Drawing.Point(0, 0);
-            this.PictureBox_Thumbnail.Name = "PictureBox_Thumbnail";
-            this.PictureBox_Thumbnail.Size = new System.Drawing.Size(354, 243);
-            this.PictureBox_Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_Thumbnail.TabIndex = 30;
-            this.PictureBox_Thumbnail.TabStop = false;
             // 
             // panel2
             // 
@@ -256,6 +246,17 @@ namespace VideoRentalStore
             this.DataGrid_ManageStock.TabIndex = 1;
             this.DataGrid_ManageStock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_ManageStock_CellClick);
             // 
+            // PictureBox_Thumbnail
+            // 
+            this.PictureBox_Thumbnail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PictureBox_Thumbnail.Image = global::VideoRentalStore.Properties.Resources.placeholder;
+            this.PictureBox_Thumbnail.Location = new System.Drawing.Point(0, 0);
+            this.PictureBox_Thumbnail.Name = "PictureBox_Thumbnail";
+            this.PictureBox_Thumbnail.Size = new System.Drawing.Size(354, 243);
+            this.PictureBox_Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Thumbnail.TabIndex = 30;
+            this.PictureBox_Thumbnail.TabStop = false;
+            // 
             // Manage_Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -270,9 +271,9 @@ namespace VideoRentalStore
             this.Panel_ThumbNail.ResumeLayout(false);
             this.Panel_Buttons.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_ManageStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Thumbnail)).EndInit();
             this.ResumeLayout(false);
 
         }

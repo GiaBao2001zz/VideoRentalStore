@@ -93,7 +93,7 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_Staff x = new Main_Staff();
-                    x.Label_UserName.Text = tk;
+                    x.Label_UserName.Text = Get_DisplayName(tk);
                     this.Hide();
                     x.UserName = tk ;
                     
@@ -106,7 +106,7 @@ namespace VideoRentalStore
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main_User y = new Main_User();
-                    y.Label_UserName.Text = tk;
+                    y.Label_UserName.Text = Get_DisplayName(tk);
                     this.Hide();
                     y.UserName = tk;
                     
@@ -145,6 +145,26 @@ namespace VideoRentalStore
         }
         // DragControl
 
+        private string Get_DisplayName(string user)
+        {
+            //Label_UserName.Text = Get_DisplayName(UserName);
+
+            //MessageBox.Show(user);
+
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+
+            string query = "Select DisplayName FROM Account WHERE Username = '" + user + "'";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+
+            connection.Close();
+            data.Rows[0]["DisplayName"].ToString();
+            return data.Rows[0]["DisplayName"].ToString();
+        }
 
 
 

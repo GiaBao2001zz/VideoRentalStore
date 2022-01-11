@@ -71,7 +71,7 @@ namespace VideoRentalStore
             connection.Open();
 
             var value2 = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
-
+            
 
             string type = "SELECT Thumbnail FROM Video WHERE id = @value2" /*+ value2*/;
             SqlCommand command = new SqlCommand(type, connection);
@@ -93,6 +93,16 @@ namespace VideoRentalStore
             NhapDia form = new NhapDia();
             
             form.ShowDialog();
+        }
+
+        private void Button_ShowInfo_Click(object sender, EventArgs e)
+        {
+            Main_Staff main_Staff = (Main_Staff)ParentForm;
+            var value = DataGrid_ManageStock.SelectedRows[0].Cells["id"].Value; //Tostring 
+            Video_Info video_Info = new Video_Info(value.ToString()) { Dock = DockStyle.Fill, TopLevel = false };
+            main_Staff.Panel_SwtichForm.Controls.Add(video_Info);
+            video_Info.Show();
+            video_Info.BringToFront();
         }
     }
 }

@@ -294,7 +294,7 @@ namespace VideoRentalStore
             // 
             this.Picture_UserPFP.BackColor = System.Drawing.Color.Transparent;
             this.Picture_UserPFP.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Picture_UserPFP.Image = global::VideoRentalStore.Properties.Resources.Place_Holder;
+            this.Picture_UserPFP.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
             this.Picture_UserPFP.ImageActive = null;
             this.Picture_UserPFP.Location = new System.Drawing.Point(944, 0);
             this.Picture_UserPFP.Name = "Picture_UserPFP";

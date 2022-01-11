@@ -31,14 +31,14 @@ namespace VideoRentalStore
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Settings));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Label_AccountType = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Panel_Switching = new System.Windows.Forms.Panel();
             this.Button_LogOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_ChangePassword = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_AccountInfo = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Label_AccountType = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Panel_Switching = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,43 +55,6 @@ namespace VideoRentalStore
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 622);
             this.panel1.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.Label_AccountType);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(259, 244);
-            this.panel4.TabIndex = 0;
-            // 
-            // Label_AccountType
-            // 
-            this.Label_AccountType.AutoSize = true;
-            this.Label_AccountType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_AccountType.ForeColor = System.Drawing.Color.White;
-            this.Label_AccountType.Location = new System.Drawing.Point(97, 194);
-            this.Label_AccountType.Name = "Label_AccountType";
-            this.Label_AccountType.Size = new System.Drawing.Size(49, 25);
-            this.Label_AccountType.TabIndex = 1;
-            this.Label_AccountType.Text = "Staff";
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(259, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(769, 94);
-            this.panel2.TabIndex = 1;
-            // 
-            // Panel_Switching
-            // 
-            this.Panel_Switching.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Switching.Location = new System.Drawing.Point(259, 94);
-            this.Panel_Switching.Name = "Panel_Switching";
-            this.Panel_Switching.Size = new System.Drawing.Size(769, 528);
-            this.Panel_Switching.TabIndex = 2;
             // 
             // Button_LogOut
             // 
@@ -201,6 +164,28 @@ namespace VideoRentalStore
             this.Button_AccountInfo.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_AccountInfo.Click += new System.EventHandler(this.Button_Account_Info_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.Label_AccountType);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(259, 244);
+            this.panel4.TabIndex = 0;
+            // 
+            // Label_AccountType
+            // 
+            this.Label_AccountType.AutoSize = true;
+            this.Label_AccountType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_AccountType.ForeColor = System.Drawing.Color.White;
+            this.Label_AccountType.Location = new System.Drawing.Point(66, 195);
+            this.Label_AccountType.Name = "Label_AccountType";
+            this.Label_AccountType.Size = new System.Drawing.Size(49, 25);
+            this.Label_AccountType.TabIndex = 1;
+            this.Label_AccountType.Text = "Staff";
+            this.Label_AccountType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -210,6 +195,22 @@ namespace VideoRentalStore
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(259, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(769, 94);
+            this.panel2.TabIndex = 1;
+            // 
+            // Panel_Switching
+            // 
+            this.Panel_Switching.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Switching.Location = new System.Drawing.Point(259, 94);
+            this.Panel_Switching.Name = "Panel_Switching";
+            this.Panel_Switching.Size = new System.Drawing.Size(769, 528);
+            this.Panel_Switching.TabIndex = 2;
             // 
             // Account_Settings
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,18 @@ namespace VideoRentalStore
         {
             
             InitializeComponent();
+            
             LeftBorderBtn = new Panel();
             LeftBorderBtn.Size = new Size(10, 60);
             Panel_Menu.Controls.Add(LeftBorderBtn);
             LeftBorderBtn.BackColor = Color.White;
+           
 
         }
 
         private void Button_Request_Click(object sender, EventArgs e)
         {
+            
             ActivateBtn(sender);
 
             // Check if is there any form already opened in Switch Form Panel
@@ -47,22 +51,35 @@ namespace VideoRentalStore
            
 
         }
+
+
         public string UserName;
         private void ActivateBtn(object senderBtn)
         {
             if (senderBtn != null)
             {
-                DeactivateButton();
-                this.CurrentButton = (Bunifu.Framework.UI.BunifuFlatButton)senderBtn;
-                this.CurrentButton.IconMarginLeft += 30;
-                this.CurrentButton.BackColor = Color.White;
+                if (senderBtn != null)
+                {
+                    DeactivateButton();
+
+                    this.CurrentButton = (Bunifu.Framework.UI.BunifuFlatButton)senderBtn;
+                    /*
+                    this.CurrentButton.IconMarginLeft += 30;
+                    this.CurrentButton.BackColor = Color.White;
 
 
 
-                //Left border button
-                LeftBorderBtn.Location = new Point(0, this.CurrentButton.Location.Y);
-                LeftBorderBtn.Visible = true;
-                LeftBorderBtn.BringToFront();
+                    //Left border button
+                    LeftBorderBtn.Location = new Point(0, this.CurrentButton.Location.Y);
+                    LeftBorderBtn.Visible = true;
+                    LeftBorderBtn.BringToFront();
+                    */
+                    this.CurrentButton.Activecolor = Color.Green;
+                    this.CurrentButton.Normalcolor = Color.Green;
+                    this.CurrentButton.OnHovercolor = Color.Green;
+
+
+                }
 
 
             }
@@ -72,8 +89,8 @@ namespace VideoRentalStore
             if (CurrentButton != null)
             {
 
-                CurrentButton.BackColor = Color.FromArgb(43, 43, 43);
-                CurrentButton.IconMarginLeft -= 30;
+                CurrentButton.Normalcolor = Color.FromArgb(45, 45, 45);
+                CurrentButton.OnHovercolor = Color.FromArgb(90, 90, 90);
 
 
 

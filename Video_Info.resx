@@ -120,4 +120,39 @@
   <data name="TextBox_Description.Text" xml:space="preserve">
     <value>The Promised Neverland (Japanese: 約束のネバーランド, Hepburn: Yakusoku no Nebārando) is a Japanese manga series written by Kaiu Shirai and illustrated by Posuka Demizu. It was serialized in Shueisha's Weekly Shōnen Jump from August 2016 to June 2020, with its chapters collected in twenty tankōbon volumes. In North America, Viz Media licensed the manga for English release and serialized it on their digital Weekly Shonen Jump magazine. The series follows a group of orphaned children in their plan to escape from their orphanage, after learning the dark truth behind their existence and the purpose of</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button_Cancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJkAAAApCAYAAAAmlovPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVHhe7ZzLaxNRHEb9i1yIGDOdTExjKopisWramtQK
+        ERUVERXxgVSEUpOmiC6EIlLEhfhCcCFKBBXrQhdFig+6qCBkoSKKdFF08ck3M04bMw3a3rv7DhwoTNLV
+        Ye7cyW9mmeu6kNKmikxaV5FJ6yoyaV1FJq2ryKR1W0bW5qWQyOeQOtkN71wByUoRyyt5Kf0W2IR3pher
+        ejrQlknFNkQXjGz1liyc4T7svzGIB+/G8erjG9S/f4YQhC2wicdTL3H0bhXuSD+c4obYlpoiY5HpE90o
+        jp3Cl5lv4b8UojU/Zmdw+FYZ3tkCnKzX0FRDZAzMK/fj9kQt/KoQ/8fz6QnkRnbDyaXjI+MZTIGJpcJl
+        lNdrTZHxGoxLpBAmGHp0Fe6ezXORcRfJi3xdgwlTzP76iXWX9sFZnwki4xaUOwQhTDI6fgfOgc4gMt7r
+        4FZUCJO8//QB7lBfuFyeL2L6az08JIQZuGSuGO4JIltZ2eHf5xDCNPx1wI+MfwhhA0UmrKPIhHUUmbCO
+        IhPWUWTCOopMWEeRCetEkfGuLO/OCmGaKDLOa2u0Wtggiowjs5xoFMIk/D2cv4sHZ7LSRpRrY+EhIcxw
+        b/IJUse3B5FxHrv9QknXZcIopesDSGxdG0TmL5kHu1CtXQsPC7E07k8+Rfp0b+OMP0ewM4M78bo+FX5M
+        iMXBMf50dVf0wG8UGeU8dsfFvRpgFIuGgW0bPYJkZzbqqiEymtzU7j97efnZzfBrQvwbD9++8M9g8wOj
+        TZFRLp2pQ13IXznm7xD0FJNYCE5U8zUWfJ3FmoFC7DsxYiP7I4vkFjRRKfg31aT8W47u84U8fDFPXEO0
+        ZWRSmlCRSesqMmldRSatq8ikZV38Bliv6tshbx8nAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAJgAAAApCAYAAADJVODxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKPSURBVHhe7ZzNa9NwHIf9izyIWJslqV3tRFEcTu022zmh
+        oqIioiK+IBNhzHYdogdhiAzxIL4heBClgorzoIchwxd2mCD0oCKK7DD08JFPEuNKs6lLfic/DzwwSLvT
+        Q37Jr99kiW3bkNKUCkwaVYFJoyowaVQFJo2qwKRRFwyszXWQKuThHO+Ge6aIdLWEpdWC/M9lB+zBPdWL
+        FT0daMs6kf3QeQNbuSkHa7gPe68N4t6bcbx4/wqNrx8hBDtgDw+nnuPw7RrskX5YpXWRHbUExhozx7pR
+        GjuBTzNfgn8pxPx8m53BwRsVuKeLsHJuU09NgTEut9KPmxP14KtC/D1PpyeQH9kJK5+JDoxnLsUl4sCl
+        k9dnLYHxmovLohBxGXpwGfaujb8D490iL+h1zSWSYPbHd6y5sAfW2qwfGG81eTcgRFKMjt+Cta/TD4z7
+        GbzlFCIp3n54B3uoL1giz5Yw/bkRHBIiPlwmlw33+IEtr27z9jKESBLu+nuB8Q8hkkaBCaMoMGEUBSaM
+        osCEURSYMIoCE0ZRYMIoYWDcceXOqxBJEgbGGWuNQ4ukCQPjqCunEYVICv62zd+4/TNYeT0q9bHgkBDx
+        uTP5CM7RrX5gnKFuP1fWdZhIjPLVAaQ2r/YD85bJ/V2o1a8Eh4VYPHcnHyNzsrd5Jp9j09nB7XjZmAo+
+        JsS/w7H7TG1H+DBuGBjlDHXH+d0aPhSLgnFtGT2EdGcubKopMJre0O49G3nxyfXga0L8mfuvn3lnrrlx
+        0ZbAKJdL50AXCpeOeHcDetpIRMEpaL5Wgq+XWDVQjHxHRWRgv2SNvNVMVYveppmUc+WoPV+MwxfkRPVD
+        FwxMyrgqMGlUBSaNqsCkURWYNKiNn/fwZHzVtg0YAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

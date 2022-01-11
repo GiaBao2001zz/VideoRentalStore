@@ -29,7 +29,6 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Staff));
             this.Panel_Menu = new System.Windows.Forms.Panel();
             this.Button_AccountInfo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_Report = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -280,7 +279,7 @@ namespace VideoRentalStore
             this.Label_UserName.AutoSize = true;
             this.Label_UserName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.Label_UserName.ForeColor = System.Drawing.Color.White;
-            this.Label_UserName.Location = new System.Drawing.Point(106, 40);
+            this.Label_UserName.Location = new System.Drawing.Point(765, 72);
             this.Label_UserName.Name = "Label_UserName";
             this.Label_UserName.Size = new System.Drawing.Size(173, 25);
             this.Label_UserName.TabIndex = 2;
@@ -289,10 +288,10 @@ namespace VideoRentalStore
             // Picture_StaffPFP
             // 
             this.Picture_StaffPFP.BackColor = System.Drawing.Color.Transparent;
-            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Picture_StaffPFP.Image = ((System.Drawing.Image)(resources.GetObject("Picture_StaffPFP.Image")));
+            this.Picture_StaffPFP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Picture_StaffPFP.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
             this.Picture_StaffPFP.ImageActive = null;
-            this.Picture_StaffPFP.Location = new System.Drawing.Point(0, 0);
+            this.Picture_StaffPFP.Location = new System.Drawing.Point(944, 0);
             this.Picture_StaffPFP.Name = "Picture_StaffPFP";
             this.Picture_StaffPFP.Size = new System.Drawing.Size(100, 100);
             this.Picture_StaffPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -343,8 +342,8 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_ManageGood;
         private Bunifu.Framework.UI.BunifuImageButton Picture_StaffPFP;
         private System.Windows.Forms.PictureBox Picture_Logo;
-        private System.Windows.Forms.Panel Panel_SwtichForm;
         private Bunifu.Framework.UI.BunifuFlatButton Button_Request;
         public System.Windows.Forms.Label Label_UserName;
+        public System.Windows.Forms.Panel Panel_SwtichForm;
     }
 }

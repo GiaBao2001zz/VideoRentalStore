@@ -266,6 +266,7 @@ namespace VideoRentalStore
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGrid_YCThueMua.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DataGrid_YCThueMua.RowHeadersVisible = false;
             this.DataGrid_YCThueMua.RowHeadersWidth = 100;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.DataGrid_YCThueMua.RowsDefaultCellStyle = dataGridViewCellStyle5;

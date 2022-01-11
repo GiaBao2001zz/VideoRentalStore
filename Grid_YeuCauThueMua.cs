@@ -16,8 +16,17 @@ namespace VideoRentalStore
         public Grid_YeuCauThueMua()
         {
             InitializeComponent();
-           
-           LoadRequest();
+
+
+            LoadRequest();
+            Label_RequestCount.Visible = true;
+            Label_RequestCount.BackColor = Color.Green;
+            Button_ActiveRequest.Activecolor = Color.Green;
+            Button_ActiveRequest.OnHovercolor = Color.Green;
+            Button_ActiveRequest.Normalcolor = Color.Green;
+
+            Button_History.Normalcolor = Color.FromArgb(60, 60, 60);
+            Button_History.OnHovercolor = Color.FromArgb(90, 90, 90);
         }
 
         void LoadRequest()
@@ -147,11 +156,26 @@ namespace VideoRentalStore
         private void Button_ActiveRequest_Click(object sender, EventArgs e)
         {
             LoadRequest();
+            Label_RequestCount.Visible = true;
+            Label_RequestCount.BackColor = Color.Green;
+            Button_ActiveRequest.Activecolor = Color.Green;
+            Button_ActiveRequest.OnHovercolor = Color.Green;
+            Button_ActiveRequest.Normalcolor = Color.Green;
+
+            Button_History.Normalcolor = Color.FromArgb(60, 60, 60);
+            Button_History.OnHovercolor = Color.FromArgb(90, 90, 90);
         }
 
         private void Button_History_Click(object sender, EventArgs e)
         {
             LoadHistory();
+            Label_RequestCount.Visible = false;
+            Button_History.Activecolor = Color.Green;
+            Button_History.OnHovercolor = Color.Green;
+            Button_History.Normalcolor = Color.Green;
+
+            Button_ActiveRequest.Normalcolor = Color.FromArgb(60, 60, 60);
+            Button_ActiveRequest.OnHovercolor = Color.FromArgb(90, 90, 90);
 
         }
 

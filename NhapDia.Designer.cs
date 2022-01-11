@@ -47,10 +47,10 @@ namespace VideoRentalStore
             this.pictureBox_Disc = new System.Windows.Forms.PictureBox();
             this.TextBox_Director = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.TextBox_Description = new System.Windows.Forms.TextBox();
             this.Label_Description = new System.Windows.Forms.Label();
             this.TextBox_Actor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Disc)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -295,7 +295,7 @@ namespace VideoRentalStore
             // 
             // pictureBox_Disc
             // 
-            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.DiskThumbnail_PlaceHolder;
+            this.pictureBox_Disc.Image = global::VideoRentalStore.Properties.Resources.placeholder;
             this.pictureBox_Disc.Location = new System.Drawing.Point(481, 98);
             this.pictureBox_Disc.Name = "pictureBox_Disc";
             this.pictureBox_Disc.Size = new System.Drawing.Size(214, 210);
@@ -341,6 +341,15 @@ namespace VideoRentalStore
             this.panel1.Size = new System.Drawing.Size(380, 683);
             this.panel1.TabIndex = 13;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(149, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "label1";
+            // 
             // TextBox_Description
             // 
             this.TextBox_Description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
@@ -382,15 +391,6 @@ namespace VideoRentalStore
             this.TextBox_Actor.TabIndex = 15;
             this.TextBox_Actor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.TextBox_Actor.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "label1";
             // 
             // NhapDia
             // 
