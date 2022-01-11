@@ -37,7 +37,7 @@ namespace VideoRentalStore
         {
             if (e.RowIndex.Equals(-1))
             {
-                MessageBox.Show("Không được click vào header!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DataGrid_AccountManagement.Columns[e.ColumnIndex].SortMode = DataGridViewColumnSortMode.Automatic;
             }
             else if (DataGrid_AccountManagement.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
