@@ -39,12 +39,17 @@ namespace VideoRentalStore
             this.Label_TotalProfit_Currency = new System.Windows.Forms.Label();
             this.Label_Totalprofit_Number = new System.Windows.Forms.Label();
             this.Label_TotalProfit = new System.Windows.Forms.Label();
+            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
             this.Panel_TotalSale = new System.Windows.Forms.Panel();
             this.Label_TotalSales_Currency = new System.Windows.Forms.Label();
             this.Label_TotalSales_Number = new System.Windows.Forms.Label();
             this.Label_TotalSale = new System.Windows.Forms.Label();
+            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
             this.Panel_DashBoard = new System.Windows.Forms.Panel();
             this.Panel_Earning = new System.Windows.Forms.Panel();
+            this.Label_Earning = new System.Windows.Forms.Label();
+            this.ComboBox_ChartType = new System.Windows.Forms.ComboBox();
+            this.Chart_Earning = new LiveCharts.WinForms.CartesianChart();
             this.Panel_ProductSales = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,6 +63,7 @@ namespace VideoRentalStore
             this.Panel_TotalUsers = new System.Windows.Forms.Panel();
             this.Label_TotalUsers_Number = new System.Windows.Forms.Label();
             this.Label_TotalUsers = new System.Windows.Forms.Label();
+            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
             this.Panel_StaffList = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Panel_StoreStatus = new System.Windows.Forms.Panel();
@@ -66,18 +72,18 @@ namespace VideoRentalStore
             this.Elipse_TotalSale = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_TotalUsers = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_StoreStatus = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
+            this.Earning_Source = new System.Windows.Forms.BindingSource(this.components);
             this.Panel_Title.SuspendLayout();
             this.Panel_TotalProfit.SuspendLayout();
             this.Panel_TotalSale.SuspendLayout();
             this.Panel_DashBoard.SuspendLayout();
+            this.Panel_Earning.SuspendLayout();
             this.Panel_ProductSales.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Panel_TotalUsers.SuspendLayout();
             this.Panel_StaffList.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Earning_Source)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -185,6 +191,18 @@ namespace VideoRentalStore
             this.Label_TotalProfit.TabIndex = 1;
             this.Label_TotalProfit.Text = "Total Profit";
             // 
+            // Icon_TotalProfit
+            // 
+            this.Icon_TotalProfit.Angle = 0F;
+            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
+            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
+            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
+            this.Icon_TotalProfit.TabIndex = 0;
+            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_TotalSale
             // 
             this.Panel_TotalSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -230,6 +248,18 @@ namespace VideoRentalStore
             this.Label_TotalSale.TabIndex = 3;
             this.Label_TotalSale.Text = "Total Sales";
             // 
+            // Icon_TotalSale
+            // 
+            this.Icon_TotalSale.Angle = 0F;
+            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
+            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalSale.Name = "Icon_TotalSale";
+            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalSale.TabIndex = 0;
+            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_DashBoard
             // 
             this.Panel_DashBoard.Controls.Add(this.Panel_Earning);
@@ -248,10 +278,47 @@ namespace VideoRentalStore
             // Panel_Earning
             // 
             this.Panel_Earning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_Earning.Controls.Add(this.Label_Earning);
+            this.Panel_Earning.Controls.Add(this.ComboBox_ChartType);
+            this.Panel_Earning.Controls.Add(this.Chart_Earning);
             this.Panel_Earning.Location = new System.Drawing.Point(502, 10);
             this.Panel_Earning.Name = "Panel_Earning";
             this.Panel_Earning.Size = new System.Drawing.Size(500, 230);
             this.Panel_Earning.TabIndex = 8;
+            // 
+            // Label_Earning
+            // 
+            this.Label_Earning.AutoSize = true;
+            this.Label_Earning.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Earning.ForeColor = System.Drawing.Color.White;
+            this.Label_Earning.Location = new System.Drawing.Point(216, 0);
+            this.Label_Earning.Name = "Label_Earning";
+            this.Label_Earning.Size = new System.Drawing.Size(85, 30);
+            this.Label_Earning.TabIndex = 2;
+            this.Label_Earning.Text = "Earning";
+            // 
+            // ComboBox_ChartType
+            // 
+            this.ComboBox_ChartType.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ComboBox_ChartType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_ChartType.FormattingEnabled = true;
+            this.ComboBox_ChartType.Items.AddRange(new object[] {
+            "This Month",
+            "This Year"});
+            this.ComboBox_ChartType.Location = new System.Drawing.Point(385, 0);
+            this.ComboBox_ChartType.Name = "ComboBox_ChartType";
+            this.ComboBox_ChartType.Size = new System.Drawing.Size(115, 29);
+            this.ComboBox_ChartType.TabIndex = 1;
+            this.ComboBox_ChartType.SelectedIndexChanged += new System.EventHandler(this.ComboBox_ChartType_SelectedIndexChanged);
+            // 
+            // Chart_Earning
+            // 
+            this.Chart_Earning.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Chart_Earning.Location = new System.Drawing.Point(0, 30);
+            this.Chart_Earning.Name = "Chart_Earning";
+            this.Chart_Earning.Size = new System.Drawing.Size(500, 200);
+            this.Chart_Earning.TabIndex = 0;
+            this.Chart_Earning.Text = "cartesianChart1";
             // 
             // Panel_ProductSales
             // 
@@ -393,6 +460,18 @@ namespace VideoRentalStore
             this.Label_TotalUsers.TabIndex = 3;
             this.Label_TotalUsers.Text = "Total Users";
             // 
+            // Icon_TotalUsers
+            // 
+            this.Icon_TotalUsers.Angle = 0F;
+            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
+            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
+            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalUsers.TabIndex = 0;
+            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_StaffList
             // 
             this.Panel_StaffList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -464,42 +543,6 @@ namespace VideoRentalStore
             this.Elipse_StoreStatus.ElipseRadius = 10;
             this.Elipse_StoreStatus.TargetControl = this.Panel_StoreStatus;
             // 
-            // Icon_TotalUsers
-            // 
-            this.Icon_TotalUsers.Angle = 0F;
-            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
-            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
-            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalUsers.TabIndex = 0;
-            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
-            // 
-            // Icon_TotalSale
-            // 
-            this.Icon_TotalSale.Angle = 0F;
-            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
-            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalSale.Name = "Icon_TotalSale";
-            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalSale.TabIndex = 0;
-            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
-            // 
-            // Icon_TotalProfit
-            // 
-            this.Icon_TotalProfit.Angle = 0F;
-            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
-            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
-            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
-            this.Icon_TotalProfit.TabIndex = 0;
-            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
-            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,6 +562,8 @@ namespace VideoRentalStore
             this.Panel_TotalSale.ResumeLayout(false);
             this.Panel_TotalSale.PerformLayout();
             this.Panel_DashBoard.ResumeLayout(false);
+            this.Panel_Earning.ResumeLayout(false);
+            this.Panel_Earning.PerformLayout();
             this.Panel_ProductSales.ResumeLayout(false);
             this.Panel_ProductSales.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -529,6 +574,7 @@ namespace VideoRentalStore
             this.Panel_StaffList.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Earning_Source)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -573,5 +619,9 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_Quantity;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private LiveCharts.WinForms.CartesianChart Chart_Earning;
+        private System.Windows.Forms.ComboBox ComboBox_ChartType;
+        private System.Windows.Forms.Label Label_Earning;
+        private System.Windows.Forms.BindingSource Earning_Source;
     }
 }

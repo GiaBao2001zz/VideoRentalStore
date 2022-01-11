@@ -266,3 +266,12 @@ C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\ExcelDataReader.DataSe
 C:\Users\Administrator\Desktop\VideoRentalStore\bin\Debug\Z.Dapper.Plus.xml
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.Import_Disk_WithFile.resources
 C:\Users\Administrator\Desktop\VideoRentalStore\obj\Debug\VideoRentalStore.Report.resources
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.WinForms.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.Wpf.dll
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.pdb
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.xml
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.WinForms.pdb
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.WinForms.xml
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.Wpf.pdb
+D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.Wpf.xml

@@ -65,7 +65,7 @@ namespace VideoRentalStore
                 using (var command = connection.CreateCommand())
                 {
                     Main_User main_User = (Main_User)ParentForm;
-                    command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
+                    command.Parameters.AddWithValue("@userName", main_User.UserName);
                     command.CommandText =
                     "SELECT Video.id, Name, Thumbnail, Payment, AddToCart.Price, Video.Quantity AS VideoQuantity, AddToCart.Quantity AS AddToCartQuantity " +
                     "FROM (Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username " +
@@ -305,7 +305,7 @@ namespace VideoRentalStore
             quantity[index].Text = currentQuantity[index].ToString();
 
             Main_User main_User = (Main_User)ParentForm;
-            string userName = main_User.Label_UserName.Text;
+            string userName = main_User.UserName;
             string idVideo2 = idVideo[index];
             string payment2 = payment[index].Text;
             int quantity2 = currentQuantity[index];
@@ -360,7 +360,7 @@ namespace VideoRentalStore
             quantity[index].Text = currentQuantity[index].ToString();
 
             Main_User main_User = (Main_User)ParentForm;
-            string userName = main_User.Label_UserName.Text;
+            string userName = main_User.UserName;
             string idVideo2 = idVideo[index];
             string payment2 = payment[index].Text;
             int quantity2 = currentQuantity[index];
@@ -514,7 +514,7 @@ namespace VideoRentalStore
             {
                 using (var command = connection.CreateCommand())
                 {
-                    command.Parameters.AddWithValue("@userName", main_User.Label_UserName.Text);
+                    command.Parameters.AddWithValue("@userName", main_User.UserName);
                     command.CommandText =
                     "SELECT Video.id, Payment, AddToCart.CurrentPrice AS Price, AddToCart.Quantity AS Quantity  FROM " +
                     "(Video INNER JOIN AddToCart ON Video.id = AddToCart.idVideo) INNER JOIN Account ON Account.Username = AddToCart.Username " +
@@ -539,7 +539,7 @@ namespace VideoRentalStore
                             SqlCommand cmd = new SqlCommand(query, con);
 
 
-                            string userName = main_User.Label_UserName.Text;
+                            string userName = main_User.UserName;
                             string idVideo = (string)value1;
                             float price = float.Parse(value3.ToString());
                             int quantity = Int32.Parse(value4.ToString());

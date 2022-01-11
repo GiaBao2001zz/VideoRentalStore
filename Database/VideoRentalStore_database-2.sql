@@ -115,3 +115,11 @@ SELECT  TOP 5 idVideo, SUM(Quantity) as count FROM Request WHERE Status = 'Compl
 DELETE FROM AddToCart
 DROP TABLE TopProductSold
 sp_help 'Request'
+
+
+Select DateRequest, Price
+From Request 
+
+select datepart(yyyy, [DateRequest]) as [year], datepart(mm, [DateRequest]) as [month] ,SUM (Price) as Earning
+from Request
+group by datepart(yyyy, [DateRequest]), datepart(mm, [DateRequest])

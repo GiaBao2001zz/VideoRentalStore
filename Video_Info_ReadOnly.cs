@@ -47,7 +47,7 @@ namespace VideoRentalStore
             {
                 Main_User main_User = (Main_User)ParentForm;
 
-                string userName = main_User.Label_UserName.Text;
+                string userName = main_User.UserName;
                 float price = float.Parse(Label_ShowPrice.Text, new CultureInfo("vi-VN").NumberFormat);                                          
 
                 SqlConnection con = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
