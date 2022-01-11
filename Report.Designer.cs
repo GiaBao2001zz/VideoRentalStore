@@ -48,6 +48,7 @@ namespace VideoRentalStore
             this.Label_TotalSale = new System.Windows.Forms.Label();
             this.Panel_DashBoard = new System.Windows.Forms.Panel();
             this.Panel_Earning = new System.Windows.Forms.Panel();
+            this.Chart_Earning = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Panel_ProductSales = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,24 +70,23 @@ namespace VideoRentalStore
             this.Elipse_TotalSale = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_TotalUsers = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_StoreStatus = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Chart_Earning = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
             this.Elipse_StaffList = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_productSales = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_Chart = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
+            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
+            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
             this.Panel_Title.SuspendLayout();
             this.Panel_TotalProfit.SuspendLayout();
             this.Panel_TotalSale.SuspendLayout();
             this.Panel_DashBoard.SuspendLayout();
             this.Panel_Earning.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_Earning)).BeginInit();
             this.Panel_ProductSales.SuspendLayout();
             this.panel1.SuspendLayout();
             this.Panel_TotalUsers.SuspendLayout();
             this.Panel_StaffList.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart_Earning)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -132,6 +132,7 @@ namespace VideoRentalStore
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // Label_DashBoard
             // 
@@ -213,9 +214,9 @@ namespace VideoRentalStore
             this.Label_TotalSales_Currency.ForeColor = System.Drawing.Color.Yellow;
             this.Label_TotalSales_Currency.Location = new System.Drawing.Point(70, 71);
             this.Label_TotalSales_Currency.Name = "Label_TotalSales_Currency";
-            this.Label_TotalSales_Currency.Size = new System.Drawing.Size(43, 21);
+            this.Label_TotalSales_Currency.Size = new System.Drawing.Size(50, 21);
             this.Label_TotalSales_Currency.TabIndex = 5;
-            this.Label_TotalSales_Currency.Text = "Unit";
+            this.Label_TotalSales_Currency.Text = "Units";
             // 
             // Label_TotalSales_Number
             // 
@@ -262,6 +263,23 @@ namespace VideoRentalStore
             this.Panel_Earning.Name = "Panel_Earning";
             this.Panel_Earning.Size = new System.Drawing.Size(500, 230);
             this.Panel_Earning.TabIndex = 8;
+            // 
+            // Chart_Earning
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.Chart_Earning.ChartAreas.Add(chartArea1);
+            this.Chart_Earning.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.Chart_Earning.Legends.Add(legend1);
+            this.Chart_Earning.Location = new System.Drawing.Point(0, 0);
+            this.Chart_Earning.Name = "Chart_Earning";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "2021";
+            this.Chart_Earning.Series.Add(series1);
+            this.Chart_Earning.Size = new System.Drawing.Size(500, 230);
+            this.Chart_Earning.TabIndex = 3;
+            this.Chart_Earning.Text = "chart1";
             // 
             // Panel_ProductSales
             // 
@@ -474,22 +492,20 @@ namespace VideoRentalStore
             this.Elipse_StoreStatus.ElipseRadius = 10;
             this.Elipse_StoreStatus.TargetControl = this.Panel_StoreStatus;
             // 
-            // Chart_Earning
+            // Elipse_StaffList
             // 
-            chartArea1.Name = "ChartArea1";
-            this.Chart_Earning.ChartAreas.Add(chartArea1);
-            this.Chart_Earning.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.Chart_Earning.Legends.Add(legend1);
-            this.Chart_Earning.Location = new System.Drawing.Point(0, 0);
-            this.Chart_Earning.Name = "Chart_Earning";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "2021";
-            this.Chart_Earning.Series.Add(series1);
-            this.Chart_Earning.Size = new System.Drawing.Size(500, 230);
-            this.Chart_Earning.TabIndex = 3;
-            this.Chart_Earning.Text = "chart1";
+            this.Elipse_StaffList.ElipseRadius = 10;
+            this.Elipse_StaffList.TargetControl = this.Panel_StaffList;
+            // 
+            // Elipse_productSales
+            // 
+            this.Elipse_productSales.ElipseRadius = 10;
+            this.Elipse_productSales.TargetControl = this.Panel_ProductSales;
+            // 
+            // Elipse_Chart
+            // 
+            this.Elipse_Chart.ElipseRadius = 10;
+            this.Elipse_Chart.TargetControl = this.Panel_Earning;
             // 
             // Icon_TotalUsers
             // 
@@ -527,21 +543,6 @@ namespace VideoRentalStore
             this.Icon_TotalProfit.TabIndex = 0;
             this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
             // 
-            // Elipse_StaffList
-            // 
-            this.Elipse_StaffList.ElipseRadius = 10;
-            this.Elipse_StaffList.TargetControl = this.Panel_StaffList;
-            // 
-            // Elipse_productSales
-            // 
-            this.Elipse_productSales.ElipseRadius = 10;
-            this.Elipse_productSales.TargetControl = this.Panel_ProductSales;
-            // 
-            // Elipse_Chart
-            // 
-            this.Elipse_Chart.ElipseRadius = 10;
-            this.Elipse_Chart.TargetControl = this.Panel_Earning;
-            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,6 +563,7 @@ namespace VideoRentalStore
             this.Panel_TotalSale.PerformLayout();
             this.Panel_DashBoard.ResumeLayout(false);
             this.Panel_Earning.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Chart_Earning)).EndInit();
             this.Panel_ProductSales.ResumeLayout(false);
             this.Panel_ProductSales.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -572,7 +574,6 @@ namespace VideoRentalStore
             this.Panel_StaffList.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Chart_Earning)).EndInit();
             this.ResumeLayout(false);
 
         }

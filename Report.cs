@@ -97,6 +97,8 @@ namespace VideoRentalStore
             ShowTop5ProductSold();
             Load_Chart();
             Load_Info();
+            Load_Accounts();
+            Load_TotalSale();
         }
         //Disable horizontal scrollbar
         const int SB_HORZ = 0;
@@ -325,13 +327,51 @@ namespace VideoRentalStore
             string sMonth = DateTime.Now.ToString("MM");
             int convert = Int32.Parse(sMonth);
             sMonth = convert.ToString();
-            MessageBox.Show(sMonth);
             int j = 0;
             foreach (DataRow row in dt.Rows)
             {
                 if (dt.Rows[j]["Month"].ToString() == sMonth) Label_Totalprofit_Number.Text = dt.Rows[j]["Value"].ToString();
                 j++;
+
             }
+
+        }
+        private void Load_Accounts()
+        {
+
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+
+            string query = "Select COUNT(Username) as Accounts From Account";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
+            connection.Close();
+
+            Label_TotalUsers_Number.Text = dt.Rows[0]["Accounts"].ToString();
+        }
+        private void Load_TotalSale()
+        {
+
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
+
+            string query = "Select SUM(Quantity) as Sale from Request where Status = 'Completed'";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
+            connection.Close();
+            Label_TotalSales_Number.Text = dt.Rows[0]["Sale"].ToString();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
 
         }
     }

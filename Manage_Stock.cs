@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace VideoRentalStore
 {
@@ -44,21 +45,30 @@ namespace VideoRentalStore
             adapter.Fill(data);
 
             connection.Close();
-
+            
             DataGrid_ManageStock.DataSource = data;
             DataGrid_ManageStock.ReadOnly = true;
 
             DataGrid_ManageStock.Columns[0].HeaderText = "ID";
             DataGrid_ManageStock.Columns[1].HeaderText = "Name";
             DataGrid_ManageStock.Columns[2].HeaderText = "Price";
+
+            
             DataGrid_ManageStock.Columns[3].HeaderText = "Quantity";
             DataGrid_ManageStock.Columns[4].HeaderText = "Provider";
-            DataGrid_ManageStock.Columns[0].FillWeight = 5;
+            DataGrid_ManageStock.Columns[0].FillWeight = 10;
             DataGrid_ManageStock.Columns[1].FillWeight = 35;
             DataGrid_ManageStock.Columns[2].FillWeight = 20;
             DataGrid_ManageStock.Columns[3].FillWeight = 20;
             DataGrid_ManageStock.Columns[4].FillWeight = 20;
 
+           /* var culture = CultureInfo.CreateSpecificCulture("vi-VN");
+            culture.NumberFormat.NumberGroupSeparator = " ";
+            DataGrid_ManageStock.DefaultCellStyle.FormatProvider = culture;*/
+
+            DataGrid_ManageStock.Columns[2].DefaultCellStyle.Format = "C0";
+       
+            DataGrid_ManageStock.Columns[2].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("vi-VN");
 
         }
 
