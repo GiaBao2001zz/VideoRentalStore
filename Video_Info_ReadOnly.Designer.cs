@@ -154,6 +154,7 @@ namespace VideoRentalStore
             // Panel_Discription
             // 
             this.Panel_Discription.AutoScroll = true;
+            this.Panel_Discription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel_Discription.Controls.Add(this.Label_Discription);
             this.Panel_Discription.Location = new System.Drawing.Point(66, 325);
             this.Panel_Discription.Name = "Panel_Discription";
@@ -163,9 +164,10 @@ namespace VideoRentalStore
             // Label_Discription
             // 
             this.Label_Discription.AutoSize = true;
+            this.Label_Discription.Dock = System.Windows.Forms.DockStyle.Top;
             this.Label_Discription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Discription.ForeColor = System.Drawing.Color.White;
-            this.Label_Discription.Location = new System.Drawing.Point(3, 0);
+            this.Label_Discription.Location = new System.Drawing.Point(0, 0);
             this.Label_Discription.MaximumSize = new System.Drawing.Size(420, 0);
             this.Label_Discription.Name = "Label_Discription";
             this.Label_Discription.Size = new System.Drawing.Size(420, 273);
