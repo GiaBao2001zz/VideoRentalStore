@@ -41,7 +41,7 @@ namespace VideoRentalStore
             this.Panel_Title = new System.Windows.Forms.Panel();
             this.Label_UserName = new System.Windows.Forms.Label();
             this.Picture_UserPFP = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Panel_SwtichForm = new System.Windows.Forms.Panel();
+            this.Panel_SwitchForm = new System.Windows.Forms.Panel();
             this.Panel_Menu.SuspendLayout();
             this.Panel_Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -304,14 +304,14 @@ namespace VideoRentalStore
             this.Picture_UserPFP.TabStop = false;
             this.Picture_UserPFP.Zoom = 10;
             // 
-            // Panel_SwtichForm
+            // Panel_SwitchForm
             // 
-            this.Panel_SwtichForm.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Panel_SwtichForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_SwtichForm.Location = new System.Drawing.Point(220, 100);
-            this.Panel_SwtichForm.Name = "Panel_SwtichForm";
-            this.Panel_SwtichForm.Size = new System.Drawing.Size(1044, 661);
-            this.Panel_SwtichForm.TabIndex = 2;
+            this.Panel_SwitchForm.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Panel_SwitchForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_SwitchForm.Location = new System.Drawing.Point(220, 100);
+            this.Panel_SwitchForm.Name = "Panel_SwitchForm";
+            this.Panel_SwitchForm.Size = new System.Drawing.Size(1044, 661);
+            this.Panel_SwitchForm.TabIndex = 2;
             // 
             // Main_User
             // 
@@ -319,7 +319,7 @@ namespace VideoRentalStore
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1264, 761);
-            this.Controls.Add(this.Panel_SwtichForm);
+            this.Controls.Add(this.Panel_SwitchForm);
             this.Controls.Add(this.Panel_Title);
             this.Controls.Add(this.Panel_Menu);
             this.DoubleBuffered = true;
@@ -350,7 +350,7 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuFlatButton Button_ContactUs;
         private System.Windows.Forms.Panel Panel_Title;
         private Bunifu.Framework.UI.BunifuImageButton Picture_UserPFP;
-        public System.Windows.Forms.Panel Panel_SwtichForm;
+        public System.Windows.Forms.Panel Panel_SwitchForm;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         public System.Windows.Forms.Label Label_UserName;
         /*

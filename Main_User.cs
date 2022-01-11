@@ -21,12 +21,12 @@ namespace VideoRentalStore
           
 
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls.RemoveAt(0);
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls.RemoveAt(0);
 
             // Add New Form 
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
 
             grid.Button_Action.Click += (s, args) => this.ActivateBuy();
             grid.Button_Comedy.Click += (s, args) => this.ActivateBuy();
@@ -89,15 +89,15 @@ namespace VideoRentalStore
         {
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                 this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                 this.Panel_SwitchForm.Controls[0].Dispose();
                
 
 
             // Add New Form 
             Video_Shelf grid = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
            // this.Closed += (s, args) => grid.Close();
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
             grid.Show();
             
             
@@ -108,12 +108,12 @@ namespace VideoRentalStore
         {
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls[0].Dispose();
 
             // Add New Form 
             ShoppingCart grid = new ShoppingCart() { Dock = DockStyle.Fill, TopLevel = false };
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
             grid.Show();
         }
 
@@ -121,12 +121,12 @@ namespace VideoRentalStore
         {
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls[0].Dispose();
 
             // Add New Form 
             History_Payment grid = new History_Payment() { Dock = DockStyle.Fill, TopLevel = false };
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
             grid.Show();
         }
 
@@ -134,15 +134,15 @@ namespace VideoRentalStore
         {
             ActivateBtn(sender);
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls[0].Dispose();
 
 
 
 
             // Add New Form (Grid_YeuCauThueMua)
             Account_Settings grid = new Account_Settings(UserName) { Dock = DockStyle.Fill, TopLevel = false };
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
             
             grid.Show();
 
@@ -151,8 +151,8 @@ namespace VideoRentalStore
         private void Button_ContactUs_Click(object sender, EventArgs e)
         {
             ActivateBtn(sender);
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls[0].Dispose();
         }
 
         private void Button_ContactUs_Click_1(object sender, EventArgs e)
@@ -177,13 +177,13 @@ namespace VideoRentalStore
         {
             DeactivateButton();
             // Check if is there any form already opened in Switch Form Panel
-            if (this.Panel_SwtichForm.Controls.Count > 0)
-                this.Panel_SwtichForm.Controls[0].Dispose();
+            if (this.Panel_SwitchForm.Controls.Count > 0)
+                this.Panel_SwitchForm.Controls[0].Dispose();
 
 
             // Add New Form (Grid_YeuCauThueMua)
             User_Home grid = new User_Home() { Dock = DockStyle.Fill, TopLevel = false };
-            this.Panel_SwtichForm.Controls.Add(grid);
+            this.Panel_SwitchForm.Controls.Add(grid);
             grid.Show();
             grid.Button_Action.Click += (s, args) => this.ActivateBuy();
             grid.Button_Comedy.Click += (s, args) => this.ActivateBuy();

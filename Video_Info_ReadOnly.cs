@@ -182,6 +182,12 @@ namespace VideoRentalStore
 
         private void Button_Back_Click(object sender, EventArgs e)
         {
+            Main_User main_User = (Main_User)ParentForm;
+            if (main_User.Panel_SwitchForm.Controls.Count > 0)
+                main_User.Panel_SwitchForm.Controls[0].Dispose();
+            Video_Shelf video_Info = new Video_Shelf() { Dock = DockStyle.Fill, TopLevel = false };
+            main_User.Panel_SwitchForm.Controls.Add(video_Info);
+            video_Info.Show();
             this.Close();
         }
     }

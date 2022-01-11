@@ -275,3 +275,12 @@ D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.WinForms.pdb
 D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.WinForms.xml
 D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.Wpf.pdb
 D:\Projects\VideoRentalStore#5\bin\Debug\LiveCharts.Wpf.xml
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.WinForms.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.Wpf.dll
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.pdb
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.xml
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.WinForms.pdb
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.WinForms.xml
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.Wpf.pdb
+D:\Video rental store system\VideoRentalStore\bin\Debug\LiveCharts.Wpf.xml
