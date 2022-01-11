@@ -143,7 +143,7 @@ namespace VideoRentalStore
             {
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT Name, Thumbnail, id FROM Video";
+                    command.CommandText = "SELECT Name, Thumbnail, id, Quantity FROM Video";
                     int count = 0;
                     connection.Open();
                     using (var reader = command.ExecuteReader())
@@ -151,6 +151,7 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
+                        var indexOfColumn4 = reader.GetOrdinal("Quantity");
                         while (reader.Read())
                         {
                             var value1 = reader.GetValue(indexOfColumn1);
@@ -165,6 +166,7 @@ namespace VideoRentalStore
                         var indexOfColumn1 = reader.GetOrdinal("Name");
                         var indexOfColumn2 = reader.GetOrdinal("Thumbnail");
                         var indexOfColumn3 = reader.GetOrdinal("id");
+                        var indexOfColumn4 = reader.GetOrdinal("Quantity");
                         int x = 0;
                         int y = 20;
                         PictureBox[] picturebox = new PictureBox[count];
@@ -174,49 +176,52 @@ namespace VideoRentalStore
                         {
                             var value1 = reader.GetValue(indexOfColumn1);
                             var value2 = reader.GetValue(indexOfColumn2);
-                            var value3 = reader.GetValue(indexOfColumn3);                        
-                            if ((x % 4 == 0) && (index != 0))
+                            var value3 = reader.GetValue(indexOfColumn3);
+                            var value4 = reader.GetValue(indexOfColumn4);
+                            if (Int32.Parse(value4.ToString()) != 0)
                             {
-                                y = y + 325; // Mỗi hàng 4 hình
-                                x = 0;
+                                if ((x % 4 == 0) && (index != 0))
+                                {
+                                    y = y + 325; // Mỗi hàng 4 hình
+                                    x = 0;
+                                }
+                                picturebox[index] = new PictureBox();
+                                label[index] = new Label();
+                                picturebox[index].Image = Image.FromFile(value2.ToString());
+                                picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
+                                picturebox[index].Location = new Point(x * 250 + 60, y);
+                                picturebox[index].Size = new Size(175, 250); //150,200
+                                picturebox[index].Tag = value3;
+                                label[index].Text = (string)value1;
+                                label[index].Font = new Font("Segoe UI", 13);
+                                label[index].Size = new Size(175, 70);
+                                label[index].ForeColor = Color.White;
+                                label[index].AutoSize = false;
+                                label[index].TextAlign = ContentAlignment.MiddleCenter;
+                                label[index].AutoSize = false;
+                                label[index].Location = new Point(x * 250 + 60, y + 245);
+                                picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
+                                picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
+                                picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
+
+                                //Make rounded corner picturebox
+                                Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
+                                System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+                                int d = 10;
+                                gp.AddArc(r.X, r.Y, d, d, 180, 90);
+                                gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+                                gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+                                gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+                                picturebox[index].Region = new Region(gp);
+
+                                this.Panel_ShowVideo.Controls.Add(picturebox[index]);
+                                this.Panel_ShowVideo.Controls.Add(label[index]);
+                                label[index].BringToFront();
+                                picturebox[index].BringToFront();
+                                index++;
+                                x++;
                             }
-                            picturebox[index] = new PictureBox();
-                            label[index] = new Label();
-                            picturebox[index].Image = Image.FromFile(value2.ToString());
-                            picturebox[index].SizeMode = PictureBoxSizeMode.StretchImage;
-                            picturebox[index].Location = new Point(x * 250 +60, y);
-                            picturebox[index].Size = new Size(175, 250); //150,200
-                            picturebox[index].Tag = value3;                         
-                            label[index].Text = (string)value1;
-                            label[index].Font = new Font("Segoe UI", 13);
-                            label[index].Size = new Size(175, 70);
-                            label[index].ForeColor = Color.White;
-                            label[index].AutoSize = false;
-                            label[index].TextAlign = ContentAlignment.MiddleCenter;
-                            label[index].AutoSize = false;
-                            label[index].Location = new Point(x * 250 + 60, y + 245 );
-                            picturebox[index].MouseEnter += new EventHandler(this.HoverMouseEnter);
-                            picturebox[index].MouseLeave += new EventHandler(this.HoverMouseLeave);
-                            picturebox[index].MouseClick += new System.Windows.Forms.MouseEventHandler(this.Active);
-
-                            //Make rounded corner picturebox
-                            Rectangle r = new Rectangle(0, 0, picturebox[index].Width, picturebox[index].Height);
-                            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-                            int d = 10;
-                            gp.AddArc(r.X, r.Y, d, d, 180, 90);
-                            gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
-                            gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
-                            gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
-                            picturebox[index].Region = new Region(gp);
-
-                            this.Panel_ShowVideo.Controls.Add(picturebox[index]);
-                            this.Panel_ShowVideo.Controls.Add(label[index]);                                                     
-                            label[index].BringToFront();
-                            picturebox[index].BringToFront();
-                            index++;
-                            x++;
                         }
-
                     }
                     if (count == 0) NothingFound();
                     connection.Close();
