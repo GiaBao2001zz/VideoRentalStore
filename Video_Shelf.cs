@@ -236,6 +236,7 @@ namespace VideoRentalStore
             Video_Info_ReadOnly video_Info = new Video_Info_ReadOnly() { Dock = DockStyle.Fill, TopLevel = false };
             main_User.Panel_SwtichForm.Controls.Add(video_Info);
             video_Info.Show();
+            video_Info.BringToFront();
             
 
             //Show infomation of disc
