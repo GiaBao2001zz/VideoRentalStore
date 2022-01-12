@@ -29,12 +29,12 @@ namespace VideoRentalStore
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid_YeuCauThueMua));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid_YeuCauThueMua));
             this.Panel_Title = new System.Windows.Forms.Panel();
             this.Label_RequestCount = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Button_History = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -44,6 +44,7 @@ namespace VideoRentalStore
             this.Button_ChuyenHang = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panel_GridContainer = new System.Windows.Forms.Panel();
             this.DataGrid_YCThueMua = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Button_RejectRequest = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panel_Title.SuspendLayout();
             this.Panel_ButtonContainer.SuspendLayout();
             this.Panel_GridContainer.SuspendLayout();
@@ -150,6 +151,7 @@ namespace VideoRentalStore
             // 
             // Panel_ButtonContainer
             // 
+            this.Panel_ButtonContainer.Controls.Add(this.Button_RejectRequest);
             this.Panel_ButtonContainer.Controls.Add(this.Button_ViewInfo);
             this.Panel_ButtonContainer.Controls.Add(this.Button_ChuyenHang);
             this.Panel_ButtonContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -177,12 +179,13 @@ namespace VideoRentalStore
             this.Button_ViewInfo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_ViewInfo.IdleForecolor = System.Drawing.Color.SeaShell;
             this.Button_ViewInfo.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_ViewInfo.Location = new System.Drawing.Point(671, 8);
+            this.Button_ViewInfo.Location = new System.Drawing.Point(15, 9);
             this.Button_ViewInfo.Margin = new System.Windows.Forms.Padding(6);
             this.Button_ViewInfo.Name = "Button_ViewInfo";
             this.Button_ViewInfo.Size = new System.Drawing.Size(187, 40);
             this.Button_ViewInfo.TabIndex = 1;
             this.Button_ViewInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_ViewInfo.Click += new System.EventHandler(this.Button_ViewInfo_Click);
             // 
             // Button_ChuyenHang
             // 
@@ -279,6 +282,33 @@ namespace VideoRentalStore
             this.DataGrid_YCThueMua.TabIndex = 3;
             this.DataGrid_YCThueMua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGrid_YCThueMua_CellClick);
             // 
+            // Button_RejectRequest
+            // 
+            this.Button_RejectRequest.ActiveBorderThickness = 1;
+            this.Button_RejectRequest.ActiveCornerRadius = 20;
+            this.Button_RejectRequest.ActiveFillColor = System.Drawing.Color.Red;
+            this.Button_RejectRequest.ActiveForecolor = System.Drawing.Color.White;
+            this.Button_RejectRequest.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Button_RejectRequest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Button_RejectRequest.BackColor = System.Drawing.SystemColors.Control;
+            this.Button_RejectRequest.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_RejectRequest.BackgroundImage")));
+            this.Button_RejectRequest.ButtonText = "Reject Request";
+            this.Button_RejectRequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_RejectRequest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_RejectRequest.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Button_RejectRequest.IdleBorderThickness = 1;
+            this.Button_RejectRequest.IdleCornerRadius = 20;
+            this.Button_RejectRequest.IdleFillColor = System.Drawing.Color.White;
+            this.Button_RejectRequest.IdleForecolor = System.Drawing.Color.Red;
+            this.Button_RejectRequest.IdleLineColor = System.Drawing.Color.Red;
+            this.Button_RejectRequest.Location = new System.Drawing.Point(697, 8);
+            this.Button_RejectRequest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Button_RejectRequest.Name = "Button_RejectRequest";
+            this.Button_RejectRequest.Size = new System.Drawing.Size(163, 41);
+            this.Button_RejectRequest.TabIndex = 2;
+            this.Button_RejectRequest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_RejectRequest.Click += new System.EventHandler(this.Button_RejectRequest_Click);
+            // 
             // Grid_YeuCauThueMua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,5 +339,6 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuThinButton2 Button_ViewInfo;
         private Bunifu.Framework.UI.BunifuThinButton2 Button_ChuyenHang;
         private Bunifu.Framework.UI.BunifuCustomLabel Label_RequestCount;
+        private Bunifu.Framework.UI.BunifuThinButton2 Button_RejectRequest;
     }
 }

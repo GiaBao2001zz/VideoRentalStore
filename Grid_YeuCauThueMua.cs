@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,10 +34,11 @@ namespace VideoRentalStore
         {
             Button_ViewInfo.Visible = false;
             Button_ChuyenHang.Visible = false;
+            Button_RejectRequest.Visible = false;
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
 
-            string query = "SELECT Request.id, Request.userName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Waiting'; ";
+            string query = "SELECT Request.id, Account.DisplayName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Waiting'; ";
                 
 
             connection.Open();                  
@@ -75,7 +77,11 @@ namespace VideoRentalStore
             //Update Font,Size,etc
             UpdateFont(DataGrid_YCThueMua);
             DataGrid_YCThueMua.RowTemplate.Height = 30;
-            
+            //Set currency format
+            DataGrid_YCThueMua.Columns[5].DefaultCellStyle.Format = "C0";
+
+            DataGrid_YCThueMua.Columns[5].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("vi-VN");
+
 
         }
 
@@ -83,10 +89,11 @@ namespace VideoRentalStore
         {
             Button_ViewInfo.Visible = false;
             Button_ChuyenHang.Visible = false;
+            Button_RejectRequest.Visible = false;
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
         SqlConnection connection = new SqlConnection(connectionSTR);
 
-        string query = "SELECT Request.id, Request.userName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Completed';";
+        string query = "SELECT Request.id, Account.DisplayName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Completed';";
 
 
         connection.Open();                  
@@ -126,7 +133,11 @@ namespace VideoRentalStore
 
             //Update Font,Size,etc
             UpdateFont(DataGrid_YCThueMua);
-        DataGrid_YCThueMua.RowTemplate.Height = 30;
+            //update currency format
+            DataGrid_YCThueMua.Columns[5].DefaultCellStyle.Format = "C0";
+
+            DataGrid_YCThueMua.Columns[5].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("vi-VN");
+            DataGrid_YCThueMua.RowTemplate.Height = 30;
         }
         private void UpdateFont(Bunifu.Framework.UI.BunifuCustomDataGrid a)
         {
@@ -194,6 +205,7 @@ namespace VideoRentalStore
 
             command.ExecuteNonQuery();
             connection.Close();
+            MessageBox.Show("Accept Request successfully!");
             LoadRequest();
             
 
@@ -213,6 +225,37 @@ namespace VideoRentalStore
 
             Button_ChuyenHang.Visible = true;
             Button_ViewInfo.Visible = true;
+            Button_RejectRequest.Visible = true;
+        }
+
+        private void Button_ViewInfo_Click(object sender, EventArgs e)
+        {
+           string value = DataGrid_YCThueMua.SelectedRows[0].Cells["ID"].Value.ToString();
+
+            
+            Request_Detail grid = new Request_Detail(Int32.Parse(value)) { Dock = DockStyle.Fill, TopLevel = true };
+            
+            grid.ShowDialog();
+            LoadRequest();
+        }
+
+        private void Button_RejectRequest_Click(object sender, EventArgs e)
+        {
+
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionSTR);
+            connection.Open();
+
+            string ID = DataGrid_YCThueMua.SelectedRows[0].Cells["id"].Value.ToString();
+            string VideoID = DataGrid_YCThueMua.SelectedRows[0].Cells["idVideo"].Value.ToString();
+            string Quantity = DataGrid_YCThueMua.SelectedRows[0].Cells["Quantity"].Value.ToString();
+            string type = "UPDATE Request SET Status = 'Rejected' Where id ='" + ID +"";
+            SqlCommand command = new SqlCommand(type, connection);
+
+            command.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Reject Request successfully!");
+            LoadRequest();
         }
     }
 }

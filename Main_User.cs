@@ -157,9 +157,8 @@ namespace VideoRentalStore
 
         private void Button_ContactUs_Click_1(object sender, EventArgs e)
         {
-            ActivateBtn(sender);
-            int count = Application.OpenForms.Count;
-            MessageBox.Show(count.ToString());
+            
+            MessageBox.Show("This feature is still under development ! Thank you for your patience!");
 
         }
 

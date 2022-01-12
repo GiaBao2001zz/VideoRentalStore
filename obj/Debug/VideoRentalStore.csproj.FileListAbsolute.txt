@@ -292,3 +292,4 @@ D:\Projects\VideoRentalStore#5\bin\Debug\ClosedXML.xml
 D:\Projects\VideoRentalStore#5\bin\Debug\DocumentFormat.OpenXml.xml
 D:\Projects\VideoRentalStore#5\bin\Debug\ExcelNumberFormat.xml
 D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.csproj.AssemblyReference.cache
+D:\Projects\VideoRentalStore#5\obj\Debug\VideoRentalStore.Request_Detail.resources
