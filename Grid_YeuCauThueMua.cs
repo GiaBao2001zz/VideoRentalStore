@@ -93,7 +93,7 @@ namespace VideoRentalStore
             string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=VideoRentalStore;Integrated Security=True";
         SqlConnection connection = new SqlConnection(connectionSTR);
 
-        string query = "SELECT Request.id, Account.DisplayName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Completed';";
+        string query = "SELECT Request.id, Account.DisplayName,Account.Address, Request.idVideo, Request.DateRequest,Request.Price,Request.Quantity,Request.Type FROM Request JOIN Account ON Request.userName = Account.Username WHERE  Request.Status = 'Completed' or Request.Status = 'Rejected'";
 
 
         connection.Open();                  
@@ -167,6 +167,7 @@ namespace VideoRentalStore
         private void Button_ActiveRequest_Click(object sender, EventArgs e)
         {
             LoadRequest();
+            i = 0;
             Label_RequestCount.Visible = true;
             Label_RequestCount.BackColor = Color.Green;
             Button_ActiveRequest.Activecolor = Color.Green;
@@ -176,10 +177,11 @@ namespace VideoRentalStore
             Button_History.Normalcolor = Color.FromArgb(60, 60, 60);
             Button_History.OnHovercolor = Color.FromArgb(90, 90, 90);
         }
-
+        private int i = 0;
         private void Button_History_Click(object sender, EventArgs e)
         {
             LoadHistory();
+            i = 1;
             Label_RequestCount.Visible = false;
             Button_History.Activecolor = Color.Green;
             Button_History.OnHovercolor = Color.Green;
@@ -222,10 +224,13 @@ namespace VideoRentalStore
 
         private void DataGrid_YCThueMua_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            Button_ChuyenHang.Visible = true;
+            if (i == 0)
+            {
+                Button_ChuyenHang.Visible = true;
+                
+                Button_RejectRequest.Visible = true;
+            }
             Button_ViewInfo.Visible = true;
-            Button_RejectRequest.Visible = true;
         }
 
         private void Button_ViewInfo_Click(object sender, EventArgs e)
@@ -236,7 +241,9 @@ namespace VideoRentalStore
             Request_Detail grid = new Request_Detail(Int32.Parse(value)) { Dock = DockStyle.Fill, TopLevel = true };
             
             grid.ShowDialog();
-            LoadRequest();
+            if (i == 0)
+                LoadRequest();
+            else LoadHistory();
         }
 
         private void Button_RejectRequest_Click(object sender, EventArgs e)
@@ -249,7 +256,7 @@ namespace VideoRentalStore
             string ID = DataGrid_YCThueMua.SelectedRows[0].Cells["id"].Value.ToString();
             string VideoID = DataGrid_YCThueMua.SelectedRows[0].Cells["idVideo"].Value.ToString();
             string Quantity = DataGrid_YCThueMua.SelectedRows[0].Cells["Quantity"].Value.ToString();
-            string type = "UPDATE Request SET Status = 'Rejected' Where id ='" + ID +"";
+            string type = "UPDATE Request SET Status = 'Rejected' Where id ='" + ID +"'";
             SqlCommand command = new SqlCommand(type, connection);
 
             command.ExecuteNonQuery();

@@ -54,6 +54,8 @@ namespace VideoRentalStore
             this.Label_Type = new System.Windows.Forms.Label();
             this.Label_Quantity = new System.Windows.Forms.Label();
             this.Label_ShowQuantity = new System.Windows.Forms.Label();
+            this.Label_ShowStatus = new System.Windows.Forms.Label();
+            this.Label_Status = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Video)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +112,7 @@ namespace VideoRentalStore
             this.Button_Close.IdleFillColor = System.Drawing.Color.White;
             this.Button_Close.IdleForecolor = System.Drawing.Color.Red;
             this.Button_Close.IdleLineColor = System.Drawing.Color.Red;
-            this.Button_Close.Location = new System.Drawing.Point(801, 435);
+            this.Button_Close.Location = new System.Drawing.Point(740, 435);
             this.Button_Close.Margin = new System.Windows.Forms.Padding(5);
             this.Button_Close.Name = "Button_Close";
             this.Button_Close.Size = new System.Drawing.Size(153, 41);
@@ -176,7 +178,7 @@ namespace VideoRentalStore
             // PictureBox_Video
             // 
             this.PictureBox_Video.Image = global::VideoRentalStore.Properties.Resources.placeholder;
-            this.PictureBox_Video.Location = new System.Drawing.Point(782, 41);
+            this.PictureBox_Video.Location = new System.Drawing.Point(713, 41);
             this.PictureBox_Video.Name = "PictureBox_Video";
             this.PictureBox_Video.Size = new System.Drawing.Size(214, 210);
             this.PictureBox_Video.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,7 +200,7 @@ namespace VideoRentalStore
             // 
             this.Label_VideoName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_VideoName.ForeColor = System.Drawing.Color.White;
-            this.Label_VideoName.Location = new System.Drawing.Point(807, 269);
+            this.Label_VideoName.Location = new System.Drawing.Point(746, 270);
             this.Label_VideoName.Name = "Label_VideoName";
             this.Label_VideoName.Size = new System.Drawing.Size(147, 85);
             this.Label_VideoName.TabIndex = 50;
@@ -295,7 +297,7 @@ namespace VideoRentalStore
             this.Label_Quantity.AutoSize = true;
             this.Label_Quantity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Quantity.ForeColor = System.Drawing.Color.White;
-            this.Label_Quantity.Location = new System.Drawing.Point(778, 369);
+            this.Label_Quantity.Location = new System.Drawing.Point(716, 369);
             this.Label_Quantity.Name = "Label_Quantity";
             this.Label_Quantity.Size = new System.Drawing.Size(91, 21);
             this.Label_Quantity.TabIndex = 59;
@@ -305,18 +307,42 @@ namespace VideoRentalStore
             // 
             this.Label_ShowQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_ShowQuantity.ForeColor = System.Drawing.Color.White;
-            this.Label_ShowQuantity.Location = new System.Drawing.Point(876, 362);
+            this.Label_ShowQuantity.Location = new System.Drawing.Point(814, 362);
             this.Label_ShowQuantity.Name = "Label_ShowQuantity";
             this.Label_ShowQuantity.Size = new System.Drawing.Size(172, 30);
             this.Label_ShowQuantity.TabIndex = 60;
             this.Label_ShowQuantity.Text = "00";
+            // 
+            // Label_ShowStatus
+            // 
+            this.Label_ShowStatus.AutoSize = true;
+            this.Label_ShowStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ShowStatus.ForeColor = System.Drawing.Color.White;
+            this.Label_ShowStatus.Location = new System.Drawing.Point(625, 409);
+            this.Label_ShowStatus.Name = "Label_ShowStatus";
+            this.Label_ShowStatus.Size = new System.Drawing.Size(49, 30);
+            this.Label_ShowStatus.TabIndex = 62;
+            this.Label_ShowStatus.Text = "Buy";
+            // 
+            // Label_Status
+            // 
+            this.Label_Status.AutoSize = true;
+            this.Label_Status.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_Status.ForeColor = System.Drawing.Color.White;
+            this.Label_Status.Location = new System.Drawing.Point(626, 369);
+            this.Label_Status.Name = "Label_Status";
+            this.Label_Status.Size = new System.Drawing.Size(63, 21);
+            this.Label_Status.TabIndex = 61;
+            this.Label_Status.Text = "STATUS";
             // 
             // Request_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1064, 490);
+            this.ClientSize = new System.Drawing.Size(985, 490);
+            this.Controls.Add(this.Label_ShowStatus);
+            this.Controls.Add(this.Label_Status);
             this.Controls.Add(this.Label_ShowQuantity);
             this.Controls.Add(this.Label_Quantity);
             this.Controls.Add(this.Label_ShowType);
@@ -373,5 +399,7 @@ namespace VideoRentalStore
         private System.Windows.Forms.Label Label_ShowAddress;
         private System.Windows.Forms.Label Label_ShowQuantity;
         private System.Windows.Forms.Label Label_Quantity;
+        private System.Windows.Forms.Label Label_ShowStatus;
+        private System.Windows.Forms.Label Label_Status;
     }
 }

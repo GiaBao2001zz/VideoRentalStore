@@ -76,6 +76,7 @@ namespace VideoRentalStore
             this.TextBox_VideoName.Size = new System.Drawing.Size(326, 75);
             this.TextBox_VideoName.TabIndex = 27;
             this.TextBox_VideoName.Text = "The Promised Neverland";
+            this.TextBox_VideoName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox_Disc
             // 

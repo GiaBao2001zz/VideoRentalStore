@@ -24,7 +24,7 @@ namespace VideoRentalStore
         {
             SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
 
-            string query = "SELECT Request.id AS 'ID', Account.DisplayName AS 'Customer Name' ,Account.Address ,Account.Email, Account.PhoneNumber,Account.CMND, Request.idVideo AS 'Video ID', Video.Name AS 'Video Name', Request.Price, Request.Quantity,Video.Thumbnail, Request.DateDelivered AS 'Transaction date', Request.Type FROM Request INNER JOIN Video ON Request.idVideo = Video.id  INNER JOIN Account ON Request.userName = Account.Username Where Request.ID = '" + ID+"'";
+            string query = "SELECT Request.id AS 'ID', Account.DisplayName AS 'Customer Name' ,Account.Address ,Account.Email, Account.PhoneNumber,Account.CMND, Request.idVideo AS 'Video ID', Video.Name AS 'Video Name', Request.Price, Request.Quantity,Video.Thumbnail, Request.DateDelivered AS 'Transaction date', Request.Type ,Request.Status FROM Request INNER JOIN Video ON Request.idVideo = Video.id  INNER JOIN Account ON Request.userName = Account.Username Where Request.ID = '" + ID+"'";
 
             connection.Open();
             SqlCommand command = new SqlCommand(query, connection);
@@ -43,6 +43,7 @@ namespace VideoRentalStore
             Label_ShowType.Text = dt.Rows[0]["Type"].ToString();
             Label_VideoName.Text = dt.Rows[0]["Video Name"].ToString();
             Label_ShowQuantity.Text = dt.Rows[0]["Quantity"].ToString();
+            Label_ShowStatus.Text = dt.Rows[0]["Status"].ToString();
             string link = dt.Rows[0]["Thumbnail"].ToString();
             PictureBox_Video.Image = Image.FromFile(link.ToString());
 

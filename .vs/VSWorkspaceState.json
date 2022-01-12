@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Resources\\Fantasy"
   ],
-  "SelectedNode": "\\VideoRentalStore.sln",
+  "SelectedNode": "\\Account_Management.cs",
   "PreviewInSolutionExplorer": false
 }
