@@ -30,9 +30,9 @@ namespace VideoRentalStore
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.Panel_Title = new System.Windows.Forms.Panel();
             this.Button_PrintReport = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -42,10 +42,12 @@ namespace VideoRentalStore
             this.Label_TotalProfit_Currency = new System.Windows.Forms.Label();
             this.Label_Totalprofit_Number = new System.Windows.Forms.Label();
             this.Label_TotalProfit = new System.Windows.Forms.Label();
+            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
             this.Panel_TotalSale = new System.Windows.Forms.Panel();
             this.Label_TotalSales_Currency = new System.Windows.Forms.Label();
             this.Label_TotalSales_Number = new System.Windows.Forms.Label();
             this.Label_TotalSale = new System.Windows.Forms.Label();
+            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
             this.Panel_DashBoard = new System.Windows.Forms.Panel();
             this.Panel_Earning = new System.Windows.Forms.Panel();
             this.Chart_Earning = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -62,6 +64,7 @@ namespace VideoRentalStore
             this.Panel_TotalUsers = new System.Windows.Forms.Panel();
             this.Label_TotalUsers_Number = new System.Windows.Forms.Label();
             this.Label_TotalUsers = new System.Windows.Forms.Label();
+            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
             this.Panel_StaffList = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.Panel_StoreStatus = new System.Windows.Forms.Panel();
@@ -73,9 +76,15 @@ namespace VideoRentalStore
             this.Elipse_StaffList = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_productSales = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Elipse_Chart = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Icon_TotalUsers = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalSale = new VideoRentalStore.GradiantPanel();
-            this.Icon_TotalProfit = new VideoRentalStore.GradiantPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Picture_StaffPFP = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.Panel_Title.SuspendLayout();
             this.Panel_TotalProfit.SuspendLayout();
             this.Panel_TotalSale.SuspendLayout();
@@ -87,6 +96,9 @@ namespace VideoRentalStore
             this.Panel_TotalUsers.SuspendLayout();
             this.Panel_StaffList.SuspendLayout();
             this.Panel_StoreStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture_StaffPFP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Title
@@ -195,6 +207,18 @@ namespace VideoRentalStore
             this.Label_TotalProfit.TabIndex = 1;
             this.Label_TotalProfit.Text = "Total Profit";
             // 
+            // Icon_TotalProfit
+            // 
+            this.Icon_TotalProfit.Angle = 0F;
+            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
+            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
+            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
+            this.Icon_TotalProfit.TabIndex = 0;
+            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_TotalSale
             // 
             this.Panel_TotalSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
@@ -240,6 +264,18 @@ namespace VideoRentalStore
             this.Label_TotalSale.TabIndex = 3;
             this.Label_TotalSale.Text = "Total Sales";
             // 
+            // Icon_TotalSale
+            // 
+            this.Icon_TotalSale.Angle = 0F;
+            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
+            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalSale.Name = "Icon_TotalSale";
+            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalSale.TabIndex = 0;
+            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_DashBoard
             // 
             this.Panel_DashBoard.Controls.Add(this.Panel_Earning);
@@ -266,17 +302,17 @@ namespace VideoRentalStore
             // 
             // Chart_Earning
             // 
-            chartArea2.Name = "ChartArea1";
-            this.Chart_Earning.ChartAreas.Add(chartArea2);
+            chartArea4.Name = "ChartArea1";
+            this.Chart_Earning.ChartAreas.Add(chartArea4);
             this.Chart_Earning.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.Chart_Earning.Legends.Add(legend2);
+            legend4.Name = "Legend1";
+            this.Chart_Earning.Legends.Add(legend4);
             this.Chart_Earning.Location = new System.Drawing.Point(0, 0);
             this.Chart_Earning.Name = "Chart_Earning";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "2021";
-            this.Chart_Earning.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "2021";
+            this.Chart_Earning.Series.Add(series4);
             this.Chart_Earning.Size = new System.Drawing.Size(500, 230);
             this.Chart_Earning.TabIndex = 3;
             this.Chart_Earning.Text = "chart1";
@@ -421,9 +457,30 @@ namespace VideoRentalStore
             this.Label_TotalUsers.TabIndex = 3;
             this.Label_TotalUsers.Text = "Total Users";
             // 
+            // Icon_TotalUsers
+            // 
+            this.Icon_TotalUsers.Angle = 0F;
+            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
+            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
+            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
+            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
+            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
+            this.Icon_TotalUsers.TabIndex = 0;
+            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
+            // 
             // Panel_StaffList
             // 
             this.Panel_StaffList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Panel_StaffList.Controls.Add(this.bunifuImageButton2);
+            this.Panel_StaffList.Controls.Add(this.bunifuImageButton1);
+            this.Panel_StaffList.Controls.Add(this.Picture_StaffPFP);
+            this.Panel_StaffList.Controls.Add(this.label8);
+            this.Panel_StaffList.Controls.Add(this.label7);
+            this.Panel_StaffList.Controls.Add(this.label6);
+            this.Panel_StaffList.Controls.Add(this.label5);
+            this.Panel_StaffList.Controls.Add(this.label4);
+            this.Panel_StaffList.Controls.Add(this.label1);
             this.Panel_StaffList.Controls.Add(this.label3);
             this.Panel_StaffList.Location = new System.Drawing.Point(20, 278);
             this.Panel_StaffList.Name = "Panel_StaffList";
@@ -507,41 +564,108 @@ namespace VideoRentalStore
             this.Elipse_Chart.ElipseRadius = 10;
             this.Elipse_Chart.TargetControl = this.Panel_Earning;
             // 
-            // Icon_TotalUsers
+            // label1
             // 
-            this.Icon_TotalUsers.Angle = 0F;
-            this.Icon_TotalUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Icon_TotalUsers.BackgroundImage")));
-            this.Icon_TotalUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalUsers.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalUsers.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalUsers.Name = "Icon_TotalUsers";
-            this.Icon_TotalUsers.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalUsers.TabIndex = 0;
-            this.Icon_TotalUsers.TopColor = System.Drawing.Color.Empty;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(49, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tinh Nguyen";
             // 
-            // Icon_TotalSale
+            // label4
             // 
-            this.Icon_TotalSale.Angle = 0F;
-            this.Icon_TotalSale.BackgroundImage = global::VideoRentalStore.Properties.Resources.bar_chart;
-            this.Icon_TotalSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalSale.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalSale.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalSale.Name = "Icon_TotalSale";
-            this.Icon_TotalSale.Size = new System.Drawing.Size(40, 40);
-            this.Icon_TotalSale.TabIndex = 0;
-            this.Icon_TotalSale.TopColor = System.Drawing.Color.Empty;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(49, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Gia Bao";
             // 
-            // Icon_TotalProfit
+            // label5
             // 
-            this.Icon_TotalProfit.Angle = 0F;
-            this.Icon_TotalProfit.BackgroundImage = global::VideoRentalStore.Properties.Resources.Profit;
-            this.Icon_TotalProfit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Icon_TotalProfit.BottomColor = System.Drawing.Color.Empty;
-            this.Icon_TotalProfit.Location = new System.Drawing.Point(15, 30);
-            this.Icon_TotalProfit.Name = "Icon_TotalProfit";
-            this.Icon_TotalProfit.Size = new System.Drawing.Size(35, 35);
-            this.Icon_TotalProfit.TabIndex = 0;
-            this.Icon_TotalProfit.TopColor = System.Drawing.Color.Empty;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(49, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Tien Lao";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(48, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 43);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "19521024@gm.uit.edu.vn";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(50, 155);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(191, 43);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "19521258@gm.uit.edu.vn";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(48, 223);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 43);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "19521747@gm.uit.edu.vn";
+            // 
+            // Picture_StaffPFP
+            // 
+            this.Picture_StaffPFP.BackColor = System.Drawing.Color.Transparent;
+            this.Picture_StaffPFP.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
+            this.Picture_StaffPFP.ImageActive = null;
+            this.Picture_StaffPFP.Location = new System.Drawing.Point(10, 58);
+            this.Picture_StaffPFP.Name = "Picture_StaffPFP";
+            this.Picture_StaffPFP.Size = new System.Drawing.Size(40, 40);
+            this.Picture_StaffPFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picture_StaffPFP.TabIndex = 7;
+            this.Picture_StaffPFP.TabStop = false;
+            this.Picture_StaffPFP.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(10, 130);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 40);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 8;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = global::VideoRentalStore.Properties.Resources.PFP_PlaceHolder;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(10, 198);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(40, 40);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 9;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
             // 
             // Report
             // 
@@ -574,6 +698,9 @@ namespace VideoRentalStore
             this.Panel_StaffList.PerformLayout();
             this.Panel_StoreStatus.ResumeLayout(false);
             this.Panel_StoreStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picture_StaffPFP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,5 +749,14 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuElipse Elipse_StaffList;
         private Bunifu.Framework.UI.BunifuElipse Elipse_productSales;
         private Bunifu.Framework.UI.BunifuElipse Elipse_Chart;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton Picture_StaffPFP;
     }
 }

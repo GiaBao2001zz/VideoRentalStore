@@ -331,7 +331,12 @@ namespace VideoRentalStore
             int j = 0;
             foreach (DataRow row in dt.Rows)
             {
-                if (dt.Rows[j]["Month"].ToString() == sMonth) Label_Totalprofit_Number.Text = dt.Rows[j]["Value"].ToString();
+                if (dt.Rows[j]["Month"].ToString() == sMonth) 
+                        {
+                        Label_Totalprofit_Number.Text =  string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", float.Parse(dt.Rows[j]["Value"].ToString()));
+                        }
+                    
+
                 j++;
 
             }
@@ -375,7 +380,7 @@ namespace VideoRentalStore
         {
             SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
 
-            string query = "SELECT Request.id AS 'ID', Request.userName AS 'Customer Name' , Request.idVideo AS 'Video ID', Video.Name AS 'Video Name', Request.Price, Request.Quantity, Request.DateDelivered AS 'Transaction date', Request.Type  FROM Request INNER JOIN Video ON Request.idVideo = Video.id Where Request.Status = 'Completed'";
+            string query = "SELECT Request.id AS 'ID', Account.DisplayName AS 'Customer Name' , Request.idVideo AS 'Video ID', Video.Name AS 'Video Name', Request.Price, Request.Quantity, Request.DateDelivered AS 'Transaction date', Request.Type  FROM Request INNER JOIN Video ON Request.idVideo = Video.id INNER JOIN Account On Request.userName = Account.Username Where Request.Status = 'Completed'";
 
             connection.Open();
             SqlCommand command = new SqlCommand(query, connection);
@@ -407,6 +412,11 @@ namespace VideoRentalStore
                     
                 }
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -176,12 +176,11 @@ namespace VideoRentalStore
             // 
             // Label_AccountType
             // 
-            this.Label_AccountType.AutoSize = true;
             this.Label_AccountType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_AccountType.ForeColor = System.Drawing.Color.White;
-            this.Label_AccountType.Location = new System.Drawing.Point(66, 195);
+            this.Label_AccountType.Location = new System.Drawing.Point(46, 177);
             this.Label_AccountType.Name = "Label_AccountType";
-            this.Label_AccountType.Size = new System.Drawing.Size(49, 25);
+            this.Label_AccountType.Size = new System.Drawing.Size(150, 64);
             this.Label_AccountType.TabIndex = 1;
             this.Label_AccountType.Text = "Staff";
             this.Label_AccountType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,7 +226,6 @@ namespace VideoRentalStore
             this.Text = "Account_Settings";
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
