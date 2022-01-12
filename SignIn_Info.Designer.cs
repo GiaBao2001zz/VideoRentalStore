@@ -189,7 +189,7 @@ namespace VideoRentalStore
             this.Button_CancelSignIn.IdleFillColor = System.Drawing.Color.White;
             this.Button_CancelSignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_CancelSignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_CancelSignIn.Location = new System.Drawing.Point(708, 475);
+            this.Button_CancelSignIn.Location = new System.Drawing.Point(448, 475);
             this.Button_CancelSignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_CancelSignIn.Name = "Button_CancelSignIn";
             this.Button_CancelSignIn.Size = new System.Drawing.Size(206, 52);
@@ -215,7 +215,7 @@ namespace VideoRentalStore
             this.Button_SignIn.IdleFillColor = System.Drawing.Color.White;
             this.Button_SignIn.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_SignIn.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_SignIn.Location = new System.Drawing.Point(448, 475);
+            this.Button_SignIn.Location = new System.Drawing.Point(716, 475);
             this.Button_SignIn.Margin = new System.Windows.Forms.Padding(5);
             this.Button_SignIn.Name = "Button_SignIn";
             this.Button_SignIn.Size = new System.Drawing.Size(206, 52);

@@ -166,8 +166,21 @@ namespace VideoRentalStore
             return data.Rows[0]["DisplayName"].ToString();
         }
 
+        private void Picture_Store_SM1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/karik.lysircs/");
+        }
 
+        private void Picture_Store_SM2_Click(object sender, EventArgs e)
+        {
+       
+            System.Diagnostics.Process.Start(" https://twitter.com/Chikitori5");
+        }
 
-
+        private void Picture_Store_SM3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/i_am_chikitori/");
+        
+        }
     }
 }

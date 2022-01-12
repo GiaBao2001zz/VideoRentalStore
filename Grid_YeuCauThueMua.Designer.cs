@@ -177,7 +177,7 @@ namespace VideoRentalStore
             this.Button_ViewInfo.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Button_ViewInfo.IdleForecolor = System.Drawing.Color.SeaShell;
             this.Button_ViewInfo.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_ViewInfo.Location = new System.Drawing.Point(671, 9);
+            this.Button_ViewInfo.Location = new System.Drawing.Point(671, 8);
             this.Button_ViewInfo.Margin = new System.Windows.Forms.Padding(6);
             this.Button_ViewInfo.Name = "Button_ViewInfo";
             this.Button_ViewInfo.Size = new System.Drawing.Size(187, 40);

@@ -16,6 +16,7 @@ namespace VideoRentalStore
         public SignIn()
         {
             InitializeComponent();
+            Label_Title_SignIn.Focus();
         }
         public static string usname;
 

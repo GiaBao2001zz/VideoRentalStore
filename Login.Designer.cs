@@ -90,6 +90,7 @@ namespace VideoRentalStore
             this.Picture_Store_SM3.TabIndex = 4;
             this.Picture_Store_SM3.TabStop = false;
             this.Picture_Store_SM3.Zoom = 10;
+            this.Picture_Store_SM3.Click += new System.EventHandler(this.Picture_Store_SM3_Click);
             // 
             // Picture_Store_SM2
             // 
@@ -104,6 +105,7 @@ namespace VideoRentalStore
             this.Picture_Store_SM2.TabIndex = 3;
             this.Picture_Store_SM2.TabStop = false;
             this.Picture_Store_SM2.Zoom = 10;
+            this.Picture_Store_SM2.Click += new System.EventHandler(this.Picture_Store_SM2_Click);
             // 
             // Picture_Store_SM1
             // 
@@ -118,6 +120,7 @@ namespace VideoRentalStore
             this.Picture_Store_SM1.TabIndex = 2;
             this.Picture_Store_SM1.TabStop = false;
             this.Picture_Store_SM1.Zoom = 10;
+            this.Picture_Store_SM1.Click += new System.EventHandler(this.Picture_Store_SM1_Click);
             // 
             // Label_StoreInfo
             // 
@@ -276,7 +279,7 @@ namespace VideoRentalStore
             this.Button_CancelLogin.IdleFillColor = System.Drawing.Color.White;
             this.Button_CancelLogin.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_CancelLogin.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_CancelLogin.Location = new System.Drawing.Point(709, 475);
+            this.Button_CancelLogin.Location = new System.Drawing.Point(472, 475);
             this.Button_CancelLogin.Margin = new System.Windows.Forms.Padding(5);
             this.Button_CancelLogin.Name = "Button_CancelLogin";
             this.Button_CancelLogin.Size = new System.Drawing.Size(206, 52);
@@ -302,7 +305,7 @@ namespace VideoRentalStore
             this.Button_Login.IdleFillColor = System.Drawing.Color.White;
             this.Button_Login.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.Button_Login.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.Button_Login.Location = new System.Drawing.Point(445, 475);
+            this.Button_Login.Location = new System.Drawing.Point(709, 475);
             this.Button_Login.Margin = new System.Windows.Forms.Padding(5);
             this.Button_Login.Name = "Button_Login";
             this.Button_Login.Size = new System.Drawing.Size(206, 52);
