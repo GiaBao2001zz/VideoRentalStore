@@ -30,12 +30,12 @@ namespace VideoRentalStore
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.Panel_Title = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_PrintReport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Label_DashBoard = new System.Windows.Forms.Label();
             this.Elipse_TotalProfit = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel_TotalProfit = new System.Windows.Forms.Panel();
@@ -91,7 +91,7 @@ namespace VideoRentalStore
             // 
             // Panel_Title
             // 
-            this.Panel_Title.Controls.Add(this.bunifuFlatButton1);
+            this.Panel_Title.Controls.Add(this.Button_PrintReport);
             this.Panel_Title.Controls.Add(this.Label_DashBoard);
             this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Title.Location = new System.Drawing.Point(0, 0);
@@ -99,40 +99,40 @@ namespace VideoRentalStore
             this.Panel_Title.Size = new System.Drawing.Size(1044, 100);
             this.Panel_Title.TabIndex = 0;
             // 
-            // bunifuFlatButton1
+            // Button_PrintReport
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Print Report";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::VideoRentalStore.Properties.Resources.Report;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 70D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(761, 29);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 45);
-            this.bunifuFlatButton1.TabIndex = 1;
-            this.bunifuFlatButton1.Text = "Print Report";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.Button_PrintReport.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.Button_PrintReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Button_PrintReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_PrintReport.BorderRadius = 0;
+            this.Button_PrintReport.ButtonText = "Print Report";
+            this.Button_PrintReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_PrintReport.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_PrintReport.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_PrintReport.Iconimage = global::VideoRentalStore.Properties.Resources.Report;
+            this.Button_PrintReport.Iconimage_right = null;
+            this.Button_PrintReport.Iconimage_right_Selected = null;
+            this.Button_PrintReport.Iconimage_Selected = null;
+            this.Button_PrintReport.IconMarginLeft = 0;
+            this.Button_PrintReport.IconMarginRight = 0;
+            this.Button_PrintReport.IconRightVisible = true;
+            this.Button_PrintReport.IconRightZoom = 0D;
+            this.Button_PrintReport.IconVisible = true;
+            this.Button_PrintReport.IconZoom = 70D;
+            this.Button_PrintReport.IsTab = false;
+            this.Button_PrintReport.Location = new System.Drawing.Point(761, 29);
+            this.Button_PrintReport.Name = "Button_PrintReport";
+            this.Button_PrintReport.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.Button_PrintReport.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.Button_PrintReport.OnHoverTextColor = System.Drawing.Color.White;
+            this.Button_PrintReport.selected = false;
+            this.Button_PrintReport.Size = new System.Drawing.Size(241, 45);
+            this.Button_PrintReport.TabIndex = 1;
+            this.Button_PrintReport.Text = "Print Report";
+            this.Button_PrintReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_PrintReport.Textcolor = System.Drawing.Color.White;
+            this.Button_PrintReport.TextFont = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_PrintReport.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // Label_DashBoard
             // 
@@ -266,17 +266,17 @@ namespace VideoRentalStore
             // 
             // Chart_Earning
             // 
-            chartArea1.Name = "ChartArea1";
-            this.Chart_Earning.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.Chart_Earning.ChartAreas.Add(chartArea2);
             this.Chart_Earning.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.Chart_Earning.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.Chart_Earning.Legends.Add(legend2);
             this.Chart_Earning.Location = new System.Drawing.Point(0, 0);
             this.Chart_Earning.Name = "Chart_Earning";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "2021";
-            this.Chart_Earning.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "2021";
+            this.Chart_Earning.Series.Add(series2);
             this.Chart_Earning.Size = new System.Drawing.Size(500, 230);
             this.Chart_Earning.TabIndex = 3;
             this.Chart_Earning.Text = "chart1";
@@ -608,7 +608,7 @@ namespace VideoRentalStore
         private Bunifu.Framework.UI.BunifuElipse Elipse_StoreStatus;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Label_StoreStatus;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_PrintReport;
         private System.Windows.Forms.Label Label_TopProductSales;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_Ranking;

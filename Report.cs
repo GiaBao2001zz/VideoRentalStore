@@ -1,4 +1,5 @@
-﻿using LiveCharts;
+﻿using ClosedXML.Excel;
+using LiveCharts;
 using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
@@ -372,7 +373,40 @@ namespace VideoRentalStore
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = VideoRentalStore; Integrated Security = True");
 
+            string query = "SELECT Request.id AS 'ID', Request.userName AS 'Customer Name' , Request.idVideo AS 'Video ID', Video.Name AS 'Video Name', Request.Price, Request.Quantity, Request.DateDelivered AS 'Transaction date', Request.Type  FROM Request INNER JOIN Video ON Request.idVideo = Video.id Where Request.Status = 'Completed'";
+
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(dt);
+
+            connection.Close();
+
+            using (SaveFileDialog openFileDialog = new SaveFileDialog() { Filter = "Excel WorkBook | *.xlsx" })
+            {
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook wb = new XLWorkbook())
+                        {
+                            wb.Worksheets.Add(dt, "Sale Report");
+                            wb.SaveAs(openFileDialog.FileName);
+                        }
+                        MessageBox.Show("Print Sale report successfully!! ");
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    
+                }
+            }
         }
     }
 }
